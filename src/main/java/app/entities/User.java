@@ -3,15 +3,26 @@ package app.entities;
 import java.util.Objects;
 
 public class User {
+    public int getId() {
+        return id;
+    }
+
+    private int id;
     private String name;
-    private String dick;
+    private int dick;
 
     public User() {
     }
 
-    public User(String name, String password) {
+    public User(String name, int dick) {
         this.name = name;
-        this.dick = password;
+        this.dick = dick;
+    }
+
+    public User(int id, String name, int dick) {
+        this.id = id;
+        this.name = name;
+        this.dick = dick;
     }
 
     public String getName() {
@@ -22,13 +33,10 @@ public class User {
         this.name = name;
     }
 
-    public String getPassword() {
+    public int getDick() {
         return dick;
     }
 
-    public void setPassword(String password) {
-        this.dick = password;
-    }
 
     @Override
     public String toString() {
@@ -38,22 +46,18 @@ public class User {
                 '}';
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         User user = (User) o;
-
-        if (name != null ? !name.equals(user.name) : user.name != null) return false;
-        return dick != null ? dick.equals(user.dick) : user.dick == null;
-
+        return dick == user.dick &&
+                Objects.equals(name, user.name);
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (dick != null ? dick.hashCode() : 0);
-        return result;
+        return Objects.hash(name, dick);
     }
 }

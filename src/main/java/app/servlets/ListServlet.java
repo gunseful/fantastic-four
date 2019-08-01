@@ -1,5 +1,6 @@
 package app.servlets;
 
+import app.entities.User;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -11,13 +12,23 @@ import java.io.IOException;
 import java.util.List;
 
 public class ListServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Model model = Model.getInstance();
-        List<String> pacani = model.list();
+        List<User> pacani = model.getList();
         req.setAttribute("pacani", pacani);
 
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/list.jsp");
         requestDispatcher.forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String[] usersID= req.getParameterValues("friend");
+        for(String user : usersID){
+            System.out.println(user);
+        }
+
     }
 }

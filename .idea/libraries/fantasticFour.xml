@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="fantasticFour">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/db/lib/fantasticFour.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
