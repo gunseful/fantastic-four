@@ -3,15 +3,21 @@ package app.entities;
 import java.util.Objects;
 
 public class User {
-    public int getId() {
-        return id;
-    }
 
     private int id;
     private String name;
     private int age;
+    private String nickname;
+    private String password;
+    private boolean isAdministrator;
 
     public User() {
+    }
+
+    public User(String nickname, String password, boolean isAdministrator) {
+        this.nickname = nickname;
+        this.password = password;
+        this.isAdministrator = isAdministrator;
     }
 
     public User(String name, int age) {
@@ -23,6 +29,34 @@ public class User {
         this.id = id;
         this.name = name;
         this.age = age;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isAdministrator() {
+        return isAdministrator;
+    }
+
+    public void setAdministrator(boolean administrator) {
+        isAdministrator = administrator;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
