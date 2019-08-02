@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
 
 public class ListServlet extends HttpServlet {
 
@@ -25,10 +27,32 @@ public class ListServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String[] usersID= req.getParameterValues("friend");
-        for(String user : usersID){
-            System.out.println(user);
+        List<String> list = new ArrayList<>();
+        try {
+            if (!req.getParameterValues("friend").equals(null)) {
+                String[] usersID = req.getParameterValues("friend");
+                Model model = Model.getInstance();
+
+                int i = 0;
+                for (String userID : usersID) {
+                    model.delete(userID.split(" ")[0]);
+                    list.add((userID.split(" ")[1]));
+                }
+            }
+        }catch (NullPointerException e){
+
         }
+
+        String[] array = new String[list.size()];
+        list.toArray(array);
+        if(list.size()>0) {
+            req.setAttribute("deleted", array);
+
+        }else{
+            String s = "Вы не выбрали никого";
+            req.setAttribute("NullPoint", s);
+        }
+        doGet(req, resp);
 
     }
 }

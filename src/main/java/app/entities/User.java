@@ -9,20 +9,20 @@ public class User {
 
     private int id;
     private String name;
-    private int dick;
+    private int age;
 
     public User() {
     }
 
-    public User(String name, int dick) {
+    public User(String name, int age) {
         this.name = name;
-        this.dick = dick;
+        this.age = age;
     }
 
-    public User(int id, String name, int dick) {
+    public User(int id, String name, int age) {
         this.id = id;
         this.name = name;
-        this.dick = dick;
+        this.age = age;
     }
 
     public String getName() {
@@ -33,8 +33,8 @@ public class User {
         this.name = name;
     }
 
-    public int getDick() {
-        return dick;
+    public int getAge() {
+        return age;
     }
 
 
@@ -42,7 +42,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
-                ", password='" + dick + '\'' +
+                ", password='" + age + '\'' +
                 '}';
     }
 
@@ -52,12 +52,12 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return dick == user.dick &&
+        return age == user.age &&
                 Objects.equals(name, user.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, dick);
+        return Objects.hash(name, age);
     }
 }
