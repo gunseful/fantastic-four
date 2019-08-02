@@ -2,8 +2,13 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <html lang="ru">
 <head>
+
     <style>
+        div.ex2 {
+            padding-left: 30%;
+        }
         div.ex1 {
+            padding-left: 30%;
             padding-top:5px;
         }
         i.normal {
@@ -27,47 +32,39 @@
 
 <body class="w3-light-grey">
 <div>
-    <i class="fa fa-spinner fa-spin w3-jumbo"></i>
-    <i class="fa fa-home w3-jumbo" onclick="location.href='/'"></i>
-</div>
-<div>
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
-        <i class="fas fa-dragon w3-jumbo" style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
+        <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'" style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
     </div>
-    <div>
 
-<div>
+
+<div class="ex2">
         <%
                 if (request.getAttribute("NoData") != null) {
-                    out.println("<p>Не написано имя либо возраст</p>");
+                    out.println("<p style=\"font-size:20px;\">Не написано имя либо возраст</p>");
                 }
             %>
-    <div>
+    </div>
 
 
-        <div>
+        <div class="ex2">
         <%
                 if (request.getAttribute("name") != null) {
-                    out.println("<p>Кентишка '" + request.getAttribute("name") + "' добавлен!</p>");
+                    out.println("<p style=\"font-size:20px;\">Кентишка '" + request.getAttribute("name") + "' добавлен!</p>");
                 }
             %>
-            <div>
-
+            </div>
+    <div class="ex2">
         <form method="post">
-            <label>Имя:
-                <input type="text" name="name"><br/>
+            <label>
+                <p style="font-size:15px;">Имя:</p> <input type="text" name="name"><br/>
             </label>
 
-            <label>Возраст:
-                <input type="number" name="age"><br/>
+            <label>
+                <p style="font-size:15px;">Возраст:</p> <input type="number" name="age"><br/>
             </label>
             <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" type="submit">Добавится в друганы</button>
         </form>
 <br><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"  onclick="location.href='/list'" name="friends">Показать всех друзей</button>
-
-
-
-
-
+            </div>
 </body>
 </html>

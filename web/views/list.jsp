@@ -5,7 +5,11 @@
 <head>
     <style>
         div.ex1 {
+            padding-left: 30%;
             padding-top:5px;
+        }
+        div.ex2 {
+            padding-left: 30%;
         }
         i.normal {
             font-style: normal;
@@ -22,18 +26,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <title>Список пацанов Илюхи</title>
+    <title>Список друзей Ильи</title>
 </head>
 
 <body class="w3-light-grey" >
-<div>
-    <i class="fa fa-spinner fa-spin w3-jumbo"></i>
-    <i class="fa fa-home w3-jumbo" onclick="location.href='/'"></i>
-</div>
+
 <div>
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
 
-        <i class="fas fa-dragon w3-jumbo" style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
+        <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'" style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
 
     </div>
 
@@ -42,7 +43,7 @@
 <div>
         <%
                 if (request.getAttribute("NullPoint") != null) {
-                    out.println("<p>" + request.getAttribute("NullPoint") + "!</p>");
+                    out.println("<p style=\"font-size:15px;\">" + request.getAttribute("NullPoint") + "!</p>");
                 }
             %>
     <div>
@@ -52,12 +53,12 @@
                 if (request.getAttribute("deleted") != null) {
                     String[] str = (String[]) request.getAttribute("deleted");
                     for(String s : str){
-                        out.println("<p>Кентишка '" + s + "' удален:(</p>");
+                        out.println("<p style=\"font-size:15px;\">Кентишка '" + s + "' удален:(</p>");
                     }
 
                 }
             %>
-    <div>
+    <div class="ex2">
 
     <form name="input" method="post">
     <%
