@@ -5,6 +5,7 @@
 
     <style>
         div.ex1 {
+            width: 30%;
             padding-top:5px;
         }
         i.normal {

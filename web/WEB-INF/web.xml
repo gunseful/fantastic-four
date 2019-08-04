@@ -15,12 +15,43 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>list</servlet-name>
-        <servlet-class>app.servlets.ListServlet</servlet-class>
+        <servlet-name>listAdmin</servlet-name>
+        <servlet-class>app.servlets.ListAdminServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>list</servlet-name>
-        <url-pattern>/list</url-pattern>
+        <servlet-name>listAdmin</servlet-name>
+        <url-pattern>/listAdmin</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>listBuyer</servlet-name>
+        <servlet-class>app.servlets.ListBuyerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>listBuyer</servlet-name>
+        <url-pattern>/listBuyer</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>loggin</servlet-name>
+        <servlet-class>app.servlets.LogginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>loggin</servlet-name>
+        <url-pattern>/loggin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addNewUser</servlet-name>
+        <servlet-class>app.servlets.AddNewUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addNewUser</servlet-name>
+        <url-pattern>/addNewUser</url-pattern>
+    </servlet-mapping>
+
 </web-app>

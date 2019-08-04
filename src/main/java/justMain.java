@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +11,28 @@ public class justMain {
     public static final String DB_URL = "jdbc:h2:/c:/Users/Ares/IdeaProjects/fantasticFour/db/fantasticFour";
     public static final String DB_Driver = "org.h2.Driver";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
+//
+
+        //ДОБАВЛЯЕТ ИЗОБРАЖЕНИЕ В БАЗУ ДАННЫХ, КАК ДОСТАТЬ ПОКА ХЗ
+//                Class.forName(DB_Driver);
+//        Connection conn = DriverManager
+//                .getConnection(DB_URL);
+//        String INSERT_PICTURE = "INSERT INTO MY(name, photo) VALUES (?, ?, ?)";
+//
+//        conn.setAutoCommit(false);
+//        File file = new File("g:\\file.jpg");
+//        try (FileInputStream fis = new FileInputStream(file);
+//             PreparedStatement ps = conn.prepareStatement(INSERT_PICTURE)) {
+//            ps.setString(2, "name");
+//            ps.setBinaryStream(3, fis, (int) file.length());
+//            ps.executeUpdate();
+//            conn.commit();
+//        }
+
+
+
+
 
 //        try {
 //            Class.forName(DB_Driver); //Проверяем наличие JDBC драйвера для работы с БД

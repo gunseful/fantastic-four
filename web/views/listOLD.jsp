@@ -64,19 +64,10 @@
             for (User user : pacani) {
                 String age = "";
                 int years = 0;
-                if(user.getAge()<10){
-                    years=user.getAge();
-                }else{
-                    years=user.getAge()%10;
-                }
-                if(years==1){
-                    age="год";
-                }else{
-                    if(years>1 && years<5){
-                        age="года";
-                    }else{
-                        age="лет";
-                    }
+                if(user.getNickname()!=null){
+
+
+
                 }
                 out.println("<input type=\"checkbox\" name = \"friend\" value=\""+user.getId()+" "+user.getName()+"\">"+user.getName()+" - "+user.getAge()+" "+age+
 

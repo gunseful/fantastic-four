@@ -5,6 +5,7 @@
 
     <style>
         div.ex1 {
+            width: 30%;
             padding-top:5px;
         }
         i.normal {
@@ -37,31 +38,23 @@
 <div>
         <%
                 if (request.getAttribute("NoData") != null) {
-                    out.println("<p style=\"font-size:20px;\">Не написано имя либо возраст</p>");
+                    out.println("<p style=\"font-size:20px;\">Вы ввели данные неверно</p>");
                 }
             %>
     </div>
 
 
-        <div>
-        <%
-                if (request.getAttribute("name") != null) {
-                    out.println("<p style=\"font-size:20px;\">Кентишка '" + request.getAttribute("name") + "' добавлен!</p>");
-                }
-            %>
-            </div>
     <div>
         <form method="post" accept-charset="ISO-8859-1">
             <label>
-                <p style="font-size:15px;">Имя:</p> <input type="text" name="name"><br/>
+                <p style="font-size:15px;">Логин:</p> <input type="text" name="nickname"><br/>
             </label>
 
             <label>
-                <p style="font-size:15px;">Возраст:</p> <input type="number" name="age"><br/>
+                <p style="font-size:15px;">Пароль:</p> <input type="password" name="password"><br/>
             </label>
-            <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" type="submit">Добавится в друганы</button>
+            <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off  btn-block" onclick="location.href='/list'" type="submit">Логин</button>
         </form>
-<br><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"  onclick="location.href='/list'" name="friends">Показать всех друзей</button>
             </div>
 </body>
 </html>

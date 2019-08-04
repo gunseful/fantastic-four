@@ -1,34 +1,42 @@
 package app.entities;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class User {
 
     private int id;
     private String name;
-    private int age;
     private String nickname;
     private String password;
     private boolean isAdministrator;
+    private Basket basket;
+
+
+    // NADO ISPRAVIT NA PRIVATE
+    public List<Product> basketList = new ArrayList<>();
+
+    public Basket getBasket() {
+        return basket;
+    }
+
+    public void setBasket(Basket basket) {
+        this.basket = basket;
+    }
 
     public User() {
     }
 
-    public User(String nickname, String password, boolean isAdministrator) {
+    public User(String nickname, String password) {
         this.nickname = nickname;
         this.password = password;
-        this.isAdministrator = isAdministrator;
     }
 
-    public User(String name, int age) {
+    public User(String name, String nickname, String password) {
         this.name = name;
-        this.age = age;
-    }
-
-    public User(int id, String name, int age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
+        this.nickname = nickname;
+        this.password = password;
     }
 
     public String getNickname() {
@@ -59,6 +67,11 @@ public class User {
         return id;
     }
 
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -67,31 +80,32 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", password='" + age + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", password='" + password + '\'' +
+                ", isAdministrator=" + isAdministrator +
+                ", basketList=" + basketList +
                 '}';
     }
-
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return age == user.age &&
-                Objects.equals(name, user.name);
+        return id == user.id &&
+                isAdministrator == user.isAdministrator &&
+                Objects.equals(name, user.name) &&
+                Objects.equals(nickname, user.nickname) &&
+                Objects.equals(password, user.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age);
+        return Objects.hash(id, name, nickname, password, isAdministrator);
     }
 }

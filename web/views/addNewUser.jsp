@@ -5,6 +5,7 @@
 
     <style>
         div.ex1 {
+            width: 30%;
             padding-top:5px;
         }
         i.normal {
@@ -32,24 +33,17 @@
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
         <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'" style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
     </div>
-
+</div>
 
 <div>
-        <%
-                if (request.getAttribute("NoData") != null) {
-                    out.println("<p style=\"font-size:20px;\">Не написано имя либо возраст</p>");
-                }
-            %>
-    </div>
+    <%
+        if (request.getAttribute("nickIsBusy") != null) {
+            out.println("<p style=\"font-size:20px;\">Введенные данные не верны, либо пользователь с таким ником уже существует</p>");
+        }
+    %>
+</div>
 
 
-        <div>
-        <%
-                if (request.getAttribute("name") != null) {
-                    out.println("<p style=\"font-size:20px;\">Кентишка '" + request.getAttribute("name") + "' добавлен!</p>");
-                }
-            %>
-            </div>
     <div>
         <form method="post" accept-charset="ISO-8859-1">
             <label>
@@ -57,11 +51,15 @@
             </label>
 
             <label>
-                <p style="font-size:15px;">Возраст:</p> <input type="number" name="age"><br/>
+                <p style="font-size:15px;">Никнейм:</p> <input type="text" name="nickname"><br/>
             </label>
-            <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" type="submit">Добавится в друганы</button>
+
+            <label>
+                <p style="font-size:15px;">Пароль:</p> <input type="password" name="password"><br/>
+            </label>
+
+            <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" type="submit">Зарегестрироваться</button>
         </form>
-<br><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"  onclick="location.href='/list'" name="friends">Показать всех друзей</button>
             </div>
 </body>
 </html>
