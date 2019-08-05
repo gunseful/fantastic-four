@@ -45,13 +45,33 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>addNewUser</servlet-name>
-        <servlet-class>app.servlets.AddNewUserServlet</servlet-class>
-    </servlet>
+    <servlet-name>addNewUser</servlet-name>
+    <servlet-class>app.servlets.AddNewUserServlet</servlet-class>
+</servlet>
 
     <servlet-mapping>
         <servlet-name>addNewUser</servlet-name>
         <url-pattern>/addNewUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>basket</servlet-name>
+        <servlet-class>app.servlets.BasketServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>basket</servlet-name>
+        <url-pattern>/basket</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>orders</servlet-name>
+        <servlet-class>app.servlets.OrdersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>orders</servlet-name>
+        <url-pattern>/orders</url-pattern>
     </servlet-mapping>
 
 </web-app>

@@ -10,6 +10,7 @@ public class Basket {
     private List<Product> basket;
 
     public Basket() {
+        this.basket = new ArrayList<>();
     }
 
     public Basket(List<Product> basket) {

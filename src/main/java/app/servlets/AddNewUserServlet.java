@@ -15,15 +15,23 @@ import java.util.List;
 public class AddNewUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         try {
+
+
+            if (!Model.getInstance().getCurrentUser().equals(null)) {
+                resp.sendRedirect("/loggin");
+            } else {
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/addNewUser.jsp");
+                requestDispatcher.forward(req, resp);
+            }
+        }catch (Exception e) {
             if (req.getAttribute("loggin") != null) {
                 resp.sendRedirect("/loggin");
             } else {
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/addNewUser.jsp");
                 requestDispatcher.forward(req, resp);
             }
-        }catch (Exception e){
-
         }
     }
 

@@ -11,11 +11,8 @@ public class User {
     private String nickname;
     private String password;
     private boolean isAdministrator;
-    private Basket basket;
+    private Basket basket = new Basket();
 
-
-    // NADO ISPRAVIT NA PRIVATE
-    public List<Product> basketList = new ArrayList<>();
 
     public Basket getBasket() {
         return basket;
@@ -88,7 +85,7 @@ public class User {
                 ", nickname='" + nickname + '\'' +
                 ", password='" + password + '\'' +
                 ", isAdministrator=" + isAdministrator +
-                ", basketList=" + basketList +
+                ", basket=" + basket +
                 '}';
     }
 

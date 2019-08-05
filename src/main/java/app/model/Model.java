@@ -5,6 +5,7 @@ import app.entities.Product;
 import app.entities.User;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,20 +34,19 @@ public class Model {
         model = new ArrayList<>();
     }
 
-    public void delete(String id){
+    public void delete(String id) {
 
-        try{
+        try {
 
             Class.forName(DB_Driver);
 
-            try (Connection conn = DriverManager.getConnection(DB_URL)){
+            try (Connection conn = DriverManager.getConnection(DB_URL)) {
 
                 Statement statement = conn.createStatement();
 
-                int rows = statement.executeUpdate("DELETE FROM PRODUCTS WHERE Id = "+id);
+                int rows = statement.executeUpdate("DELETE FROM PRODUCTS WHERE Id = " + id);
             }
-        }
-        catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println("Connection failed...");
 
             System.out.println(ex);
@@ -55,11 +55,11 @@ public class Model {
 
     public void add(Product product) {
 
-        try{
+        try {
 
             Class.forName(DB_Driver);
 
-            try (Connection conn = DriverManager.getConnection(DB_URL)){
+            try (Connection conn = DriverManager.getConnection(DB_URL)) {
 
                 String sql = "INSERT INTO PRODUCTS (Name, Price) Values (?, ?)";
                 PreparedStatement preparedStatement = conn.prepareStatement(sql);
@@ -69,20 +69,19 @@ public class Model {
                 preparedStatement.executeUpdate();
 
             }
-        }
-        catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println("Connection failed...");
 
             System.out.println(ex);
         }
     }
 
-    public User getUser(int id){
+    public User getUser(int id) {
 
-        try{
+        try {
             Class.forName(DB_Driver);
 
-            try (Connection connection = DriverManager.getConnection(DB_URL)){
+            try (Connection connection = DriverManager.getConnection(DB_URL)) {
                 PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Users WHERE Id = ?");
                 preparedStatement.setInt(1, id);
 
@@ -90,32 +89,30 @@ public class Model {
                 ResultSet resultSet = preparedStatement.executeQuery();
 
                 User user = new User();
-                while(resultSet.next()){
-                        user.setName(resultSet.getString(4));
-                        user.setNickname(resultSet.getString(2));
-                        user.setAdministrator(resultSet.getBoolean(5));
-                        user.setId(resultSet.getInt(1));
-                        user.setPassword(resultSet.getString(3));
+                while (resultSet.next()) {
+                    user.setName(resultSet.getString(4));
+                    user.setNickname(resultSet.getString(2));
+                    user.setAdministrator(resultSet.getBoolean(5));
+                    user.setId(resultSet.getInt(1));
+                    user.setPassword(resultSet.getString(3));
+                    user.setBasket(new Basket());
 
-                        Basket basket = new Basket();
-                        if(resultSet.getString(6) != null) {
-                            for (String str : resultSet.getString(6).split(" ")) {
-                                System.out.println(resultSet.getString(6));
-                                for (Product product : Model.getInstance().getList()) {
-                                    if (str.trim().equals(String.valueOf(product.getId()))) {
-                                        user.basketList.add(product);
-                                    }
+                    if (resultSet.getString(6) != null) {
+                        for (String str : resultSet.getString(6).split(" ")) {
+                            System.out.println(resultSet.getString(6));
+                            for (Product product : Model.getInstance().getList()) {
+                                if (str.trim().equals(String.valueOf(product.getId()))) {
+                                    user.getBasket().add(product);
                                 }
                             }
                         }
-
-                        user.setBasket(basket);
-
                     }
+
+
+                }
                 return user;
             }
-        }
-        catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println("Connection failed...");
             System.out.println(ex);
             return null;
@@ -124,26 +121,25 @@ public class Model {
         }
 
 
-
     }
 
-    public void addToBasket(User user, String basket){
-        try{
+    public void addToBasket(User user, String basket) {
+        try {
 
             Class.forName(DB_Driver);
 
-            try (Connection conn = DriverManager.getConnection(DB_URL)){
+            try (Connection conn = DriverManager.getConnection(DB_URL)) {
 
                 String sql = "UPDATE Users SET basket = ? WHERE id = ?";
 
                 System.out.println("add to basket 1");
 
                 String basketLast = "";
-                for(Product product : user.basketList){
-                    basketLast+=product.getId()+" ";
+                for (Product product : user.getBasket().getList()) {
+                    basketLast += product.getId() + " ";
                 }
 
-                basketLast+=basket;
+                basketLast += basket;
 
 
                 PreparedStatement preparedStatement = conn.prepareStatement(sql);
@@ -152,24 +148,21 @@ public class Model {
 
                 preparedStatement.executeUpdate();
             }
-        }
-        catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println("Connection failed...");
             System.out.println(ex);
         }
 
 
-
-
     }
 
-        public boolean addNewUser(User user) {
+    public boolean addNewUser(User user) {
 
-        try{
+        try {
 
             Class.forName(DB_Driver);
 
-            try (Connection conn = DriverManager.getConnection(DB_URL)){
+            try (Connection conn = DriverManager.getConnection(DB_URL)) {
 
                 String sql = "INSERT INTO Users (Nickname, Password, Name) Values (?, ?, ?)";
                 PreparedStatement preparedStatement = conn.prepareStatement(sql);
@@ -181,8 +174,7 @@ public class Model {
                 return true;
 
             }
-        }
-        catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println("Connection failed...");
             System.out.println(ex);
             return false;
@@ -193,18 +185,18 @@ public class Model {
 
     }
 
-    public boolean checkLogginAndPassword(User user){
-        try{
+    public boolean checkLogginAndPassword(User user) {
+        try {
             Class.forName(DB_Driver);
 
-            try (Connection connection = DriverManager.getConnection(DB_URL)){
+            try (Connection connection = DriverManager.getConnection(DB_URL)) {
                 PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Users WHERE Nickname = ?");
                 preparedStatement.setString(1, user.getNickname().toUpperCase());
 
 
                 ResultSet resultSet = preparedStatement.executeQuery();
-                while(resultSet.next()){
-                    if(resultSet.getString(3).equals(user.getPassword())){
+                while (resultSet.next()) {
+                    if (resultSet.getString(3).equals(user.getPassword())) {
                         int i = resultSet.getInt(1);
                         currentUser = getUser(i);
 
@@ -212,15 +204,13 @@ public class Model {
 
 
                         return true;
-                    }else{
+                    } else {
                         return false;
                     }
 
                 }
-                connection.close();
             }
-        }
-        catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println("Connection failed...");
 
             System.out.println(ex);
@@ -230,29 +220,105 @@ public class Model {
 
     }
 
-    public List<Product> getList() {
-      List<Product> list = new ArrayList<>();
-        try{
+    public void makeOrder() {
+        String order = "";
+        for (Product product : currentUser.getBasket().getList()) {
+            order += product.getId() + " ";
+        }
+        System.out.println("Making order...");
+        System.out.println(order);
+
+
+        try {
+
             Class.forName(DB_Driver);
 
-            try (Connection connection = DriverManager.getConnection(DB_URL)){
+            try (Connection conn = DriverManager.getConnection(DB_URL)) {
+
+                String sql = "INSERT INTO ORDERS (PRODUCTS, CUSTOMERID, CREATEDAT) Values (?, ?, ?)";
+                PreparedStatement preparedStatement = conn.prepareStatement(sql);
+                preparedStatement.setString(1, order);
+                preparedStatement.setInt(2, currentUser.getId());
+                LocalDate todayLocalDate = LocalDate.now();
+                preparedStatement.setObject(3, todayLocalDate);
+                currentUser.setBasket(new Basket());
+                addToBasket(currentUser, "");
+
+
+                preparedStatement.executeUpdate();
+            }
+        } catch (Exception ex) {
+            System.out.println("Connection failed...");
+            System.out.println(ex);
+        }
+    }
+
+    public List<String> getOrders() {
+        List<String> list = new ArrayList<>();
+        if (!currentUser.isAdministrator()) {
+
+
+            try {
+                Class.forName(DB_Driver);
+
+                try (Connection connection = DriverManager.getConnection(DB_URL)) {
+                    PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Orders WHERE CustomerID = ?");
+                    preparedStatement.setInt(1, currentUser.getId());
+                    ResultSet resultSet = preparedStatement.executeQuery();
+                    while (resultSet.next()) {
+                        int id = resultSet.getInt(1);
+                        LocalDate localDate = resultSet.getObject(4, LocalDate.class);
+                        String s = "Заказ №" + id + ". Создан " + localDate.toString() + ". <br>Товары: ";
+                        boolean ispaid = resultSet.getBoolean(5);
+                        String paid = "";
+                        if(ispaid){
+                            paid = "Оплачено";
+                        }else{
+                            paid = "Неплачено";
+                        }
+                        String products = resultSet.getString(2);
+                        for (String str : products.split(" ")) {
+                            for (Product product : Model.getInstance().getList()) {
+                                if (String.valueOf(product.getId()).equals(str)) {
+                                    System.out.println("           есть");
+                                    s += "<br>"+product.getName() + " - " + product.getPrice();
+                                }
+                            }
+                        }
+                        s+= "<br>"+paid;
+                        list.add(s);
+                    }
+                } catch (Exception e) {
+                }
+            } catch (Exception e) {
+
+            }
+        }
+        return list;
+    }
+
+    public List<Product> getList() {
+        List<Product> list = new ArrayList<>();
+        try {
+            Class.forName(DB_Driver);
+
+            try (Connection connection = DriverManager.getConnection(DB_URL)) {
 
                 Statement statement = connection.createStatement();
 
                 ResultSet resultSet = statement.executeQuery("SELECT * FROM PRODUCTS");
-                while(resultSet.next()){
+                while (resultSet.next()) {
 
                     int id = resultSet.getInt(1);
                     String name = resultSet.getString(2);
                     int price = resultSet.getInt(4);
-                    String str = id+" "+ name;
+                    String str = id + " " + name;
 
                     list.add(new Product(id, name, price));
                 }
                 connection.close();
             }
-        }
-        catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println("Connection failed...");
 
             System.out.println(ex);
@@ -260,5 +326,4 @@ public class Model {
 
         return list;
     }
-
 }
