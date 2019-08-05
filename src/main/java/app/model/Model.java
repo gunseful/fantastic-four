@@ -1,6 +1,7 @@
 package app.model;
 
 import app.entities.Basket;
+import app.entities.Order;
 import app.entities.Product;
 import app.entities.User;
 
@@ -10,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Model {
-    public static final String DB_URL = "jdbc:h2:/c:/Users/Ares/IdeaProjects/fantasticFour/db/fantasticFour";
-    public static final String DB_Driver = "org.h2.Driver";
+    private static final String DB_URL = "jdbc:h2:/c:/Users/Ares/IdeaProjects/fantasticFour/db/fantasticFour";
+    private static final String DB_Driver = "org.h2.Driver";
     private static final Model instance = new Model();
 
     private User currentUser;
@@ -24,16 +25,11 @@ public class Model {
         this.currentUser = currentUser;
     }
 
-    private List<User> model;
-
     public static Model getInstance() {
         return instance;
     }
 
-    private Model() {
-        model = new ArrayList<>();
-    }
-
+    @SuppressWarnings("ThrowablePrintedToSystemOut")
     public void delete(String id) {
 
         try {
@@ -76,7 +72,7 @@ public class Model {
         }
     }
 
-    public User getUser(int id) {
+    private User getUser(int id) {
 
         try {
             Class.forName(DB_Driver);
@@ -195,6 +191,8 @@ public class Model {
 
 
                 ResultSet resultSet = preparedStatement.executeQuery();
+
+                //noinspection LoopStatementThatDoesntLoop
                 while (resultSet.next()) {
                     if (resultSet.getString(3).equals(user.getPassword())) {
                         int i = resultSet.getInt(1);
@@ -253,8 +251,40 @@ public class Model {
         }
     }
 
-    public List<String> getOrders() {
-        List<String> list = new ArrayList<>();
+    public void payOrder(int id){
+
+        try {
+
+            Class.forName(DB_Driver);
+
+            try (Connection conn = DriverManager.getConnection(DB_URL)) {
+
+                String sql = "UPDATE ORDERS SET isPaid = ? WHERE id = ?";
+
+                PreparedStatement preparedStatement = conn.prepareStatement(sql);
+                preparedStatement.setBoolean(1, true);
+                preparedStatement.setInt(2, id);
+
+                preparedStatement.executeUpdate();
+            }
+        } catch (Exception ex) {
+            System.out.println("Connection failed...");
+            System.out.println(ex);
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+
+    public List<Order> getOrders() {
+        List<Order> list = new ArrayList<>();
         if (!currentUser.isAdministrator()) {
 
 
@@ -268,7 +298,7 @@ public class Model {
                     while (resultSet.next()) {
                         int id = resultSet.getInt(1);
                         LocalDate localDate = resultSet.getObject(4, LocalDate.class);
-                        String s = "Заказ №" + id + ". Создан " + localDate.toString() + ". <br>Товары: ";
+                        String s;
                         boolean ispaid = resultSet.getBoolean(5);
                         String paid = "";
                         if(ispaid){
@@ -277,24 +307,43 @@ public class Model {
                             paid = "Неплачено";
                         }
                         String products = resultSet.getString(2);
+                        Order order = new Order(id, localDate, new ArrayList<>());
+                        order.setPaid(ispaid);
                         for (String str : products.split(" ")) {
                             for (Product product : Model.getInstance().getList()) {
                                 if (String.valueOf(product.getId()).equals(str)) {
-                                    System.out.println("           есть");
-                                    s += "<br>"+product.getName() + " - " + product.getPrice();
+                                    order.addProduct(product);
+
                                 }
                             }
                         }
-                        s+= "<br>"+paid;
-                        list.add(s);
+                        list.add(order);
                     }
-                } catch (Exception e) {
+                } catch (Exception ignored) {
                 }
-            } catch (Exception e) {
+            } catch (Exception ignored) {
 
             }
         }
         return list;
+    }
+
+    public void deleteOrder(int id){
+        try {
+
+            Class.forName(DB_Driver);
+
+            try (Connection conn = DriverManager.getConnection(DB_URL)) {
+
+                Statement statement = conn.createStatement();
+
+                int rows = statement.executeUpdate("DELETE FROM ORDERS WHERE Id = " + id);
+            }
+        } catch (Exception ex) {
+            System.out.println("Connection failed...");
+
+            System.out.println(ex);
+        }
     }
 
     public List<Product> getList() {

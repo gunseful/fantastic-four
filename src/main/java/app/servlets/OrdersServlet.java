@@ -114,31 +114,44 @@ public class OrdersServlet extends HttpServlet {
         }catch (Exception e){
         }
 
+//        try{if(!req.getParameter("Pay").equals(null)){
+//            System.out.println("                    pay");
+//
+//        }else{
+//            System.out.println("                hehe pay");
+//        }
+//
+//        }catch (Exception e){
+//            System.out.println("              no pay");
+//        }
+//        System.out.println(req.getParameter("Pay"));
 
         try {
-            if (!req.getParameterValues("productForDelete").equals(null)) {
-                String[] productsID = req.getParameterValues("productForDelete");
-
+            if (!req.getParameter("Pay").equals(null) && !req.getParameterValues("orderForDelete").equals(null)) {
+                String[] ordersID = req.getParameterValues("orderForDelete");
                 String basket = "";
-                for (String productID : productsID) {
-                    System.out.println(productID);
-                    for (Product product : Model.getInstance().getList()) {
-                        if (String.valueOf(product.getId()).equals(productID.split(" ")[0])) {
-                            for (int i = 0; i < Model.getInstance().getCurrentUser().getBasket().getList().size(); i++) {
-                                if (product.equals(Model.getInstance().getCurrentUser().getBasket().getList().get(i))) {
-                                    Model.getInstance().getCurrentUser().getBasket().getList().remove(i);
-                                }
-
-                            }
-                        }
-
-                    }
+                for (String orderID : ordersID) {
+                    System.out.println(orderID);
+                    Model.getInstance().payOrder(Integer.parseInt(orderID));
 
                 }
             }
         }catch (NullPointerException exeption){
-            req.setAttribute("nullData", "");
-            doGet(req, resp);
+            try {
+                System.out.println("         Deleting order...");
+                String[] ordersID = req.getParameterValues("orderForDelete");
+                String basket = "";
+                for (String orderID : ordersID) {
+                    System.out.println(orderID);
+                    Model.getInstance().deleteOrder(Integer.parseInt(orderID.trim()));
+
+                }
+            }catch (Exception e){
+                req.setAttribute("nullData", "");
+                doGet(req, resp);
+            }
+
+
         }
 
         doGet(req, resp);

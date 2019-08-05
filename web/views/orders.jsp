@@ -1,9 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="app.entities.User" %>
-<%@ page import="app.entities.Product" %>
-<%@ page import="java.util.Base64" %>
-<%@ page import="app.entities.Basket" %>
-<%@ page import="app.model.Model" %>
+
+<%@ page import="app.entities.Order" %>
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" language="java"%>
 <html lang="ru">
 <head>
@@ -64,7 +61,6 @@
 
 
     </style>
-    <span style="white-space: pre-line">@Model.CommentText</span>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -112,14 +108,16 @@
 
         <form name="input" method="post">
             <%
-                List<String> orders = (List<String>) request.getAttribute("orders");
+                List<Order> orders = (List<Order>) request.getAttribute("orders");
                 if (orders != null && !orders.isEmpty()) {
                     out.println("<p>Ваши заказы:</p>");
-                    for (String str : orders) {
-                        out.println("<input type=\"checkbox\" name = \"productForDelete\" >"+str+"<br>");
+                    for (Order order : orders) {
+                        out.println("<input type=\"checkbox\" name = \"orderForDelete\" value=\""+order.getId()+"\">"+order.toString()+"<br>");
                     }
 
-                    out.println("<input class=\"w3-button w3-green \" onclick=\"location.href='/'\" type=\"submit\" value=\"Удалить заказ\">");
+                    out.println("<input class=\"w3-button w3-red \" onclick=\"location.href='/'\" type=\"submit\" value=\"Удалить заказ\">");
+                    out.println("<input class=\"w3-button w3-black \" onclick=\"location.href='/'\" name=\"Pay\" type=\"submit\" value=\"Pay\" value=\"Оплатить\">");
+
 
 
 
