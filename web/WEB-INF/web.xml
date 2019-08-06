@@ -5,16 +5,6 @@
          version="4.0">
 
     <servlet>
-        <servlet-name>add</servlet-name>
-        <servlet-class>app.servlets.AddServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>add</servlet-name>
-        <url-pattern>/add</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>listAdmin</servlet-name>
         <servlet-class>app.servlets.ListAdminServlet</servlet-class>
     </servlet>
@@ -45,13 +35,13 @@
     </servlet-mapping>
 
     <servlet>
-    <servlet-name>addNewUser</servlet-name>
-    <servlet-class>app.servlets.AddNewUserServlet</servlet-class>
+    <servlet-name>registration</servlet-name>
+    <servlet-class>app.servlets.RegistrationServlet</servlet-class>
 </servlet>
 
     <servlet-mapping>
-        <servlet-name>addNewUser</servlet-name>
-        <url-pattern>/addNewUser</url-pattern>
+        <servlet-name>registration</servlet-name>
+        <url-pattern>/registration</url-pattern>
     </servlet-mapping>
 
     <servlet>

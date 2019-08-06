@@ -37,8 +37,8 @@
 
 <div>
     <%
-        if (request.getAttribute("nickIsBusy") != null) {
-            out.println("<p style=\"font-size:20px;\">Введенные данные не верны, либо пользователь с таким ником уже существует</p>");
+        if (request.getAttribute("fail") != null) {
+            out.println("<p style=\"font-size:20px;\">Введенные данные не верны, либо пользователь с таким ником уже существует <br> Правильно введеные данные - пароль от 6 до 15 символов<br> Имя и Никнейм от 3 до 15 символов</p>");
         }
     %>
 </div>
@@ -47,15 +47,15 @@
     <div>
         <form method="post" accept-charset="ISO-8859-1">
             <label>
-                <p style="font-size:15px;">Имя:</p> <input type="text" name="name"><br/>
+                <p style="font-size:15px;">Имя:</p> <input type="text" name="name" value=""><br/>
             </label>
 
             <label>
-                <p style="font-size:15px;">Никнейм:</p> <input type="text" name="nickname"><br/>
+                <p style="font-size:15px;">Никнейм:</p> <input type="text" name="nickname" value=""><br/>
             </label>
 
             <label>
-                <p style="font-size:15px;">Пароль:</p> <input type="password" name="password"><br/>
+                <p style="font-size:15px;">Пароль:</p> <input type="password" name="password" value=""><br/>
             </label>
 
             <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" type="submit">Зарегестрироваться</button>
