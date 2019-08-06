@@ -67,7 +67,7 @@ public class Model {
     }
 
     //This method return the User with id that you give as attribute
-    private User getUser(int id) {
+    public User getUser(int id) {
 
         System.out.println("Model getUser...");
         try {
@@ -186,6 +186,23 @@ public class Model {
         return false;
     }
 
+    public void addUserToBlackList(User user){
+
+        System.out.println("Model addUserToBlackList");
+        try {
+            Class.forName(DB_Driver);
+            try (Connection conn = DriverManager.getConnection(DB_URL)) {
+                String sql = "insert into blacklist select * from users WHERE ID = ?";
+                PreparedStatement preparedStatement = conn.prepareStatement(sql);
+                preparedStatement.setInt(1, user.getId());
+                preparedStatement.executeUpdate();
+            }
+        } catch (Exception ex) {
+            System.out.println("Connection failed...");
+            System.out.println(ex);
+        }
+    }
+
     //This method making some Order based on the current User's basket
     public void makeOrder() {
 
@@ -243,7 +260,7 @@ public class Model {
                 Class.forName(DB_Driver);
                 try (Connection connection = DriverManager.getConnection(DB_URL)) {
                     ResultSet resultSet = null;
-                    if (currentUser.isAdministrator()) {
+                    if (!currentUser.isAdministrator()) {
                         PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Orders WHERE CustomerID = ?");
                         preparedStatement.setInt(1, currentUser.getId());
                         resultSet = preparedStatement.executeQuery();
@@ -264,6 +281,7 @@ public class Model {
                         String products = resultSet.getString(2);
                         Order order = new Order(id, localDate, new ArrayList<>());
                         order.setPaid(ispaid);
+                        order.setCustomerID(resultSet.getInt(3));
                         for (String str : products.split(" ")) {
                             for (Product product : Model.getInstance().getList()) {
                                 if (String.valueOf(product.getId()).equals(str)) {

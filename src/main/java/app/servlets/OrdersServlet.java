@@ -16,6 +16,14 @@ public class OrdersServlet extends HttpServlet {
         System.out.println("Orders servlet");
 
         try{
+            if(req.getAttribute("userPage")!=null) {
+                resp.sendRedirect("/userPage");
+            }
+        }catch (Exception e){
+
+        }
+
+        try{
             if(req.getAttribute("Orders")!=null) {
                 resp.sendRedirect("/orders");
             }
@@ -39,7 +47,8 @@ public class OrdersServlet extends HttpServlet {
         Model model = Model.getInstance();
         if(req.getAttribute("exit")==null){
             req.setAttribute("orders", model.getOrders());
-            System.out.println(model.getCurrentUser().getBasket().getList());
+            System.out.println("Orders:");
+            System.out.println(model.getOrders());
         }
         try {
             System.out.println("basket second try v1.0");
@@ -53,9 +62,11 @@ public class OrdersServlet extends HttpServlet {
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/orders.jsp");
                 requestDispatcher.forward(req, resp);
 
-            }else{
+            }else {
                 System.out.println("second try");
-                resp.sendRedirect("/listBuyer");}
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/orders.jsp");
+                requestDispatcher.forward(req, resp);
+            }
 
         }catch (Exception e){
             System.out.println("No current user");
@@ -114,23 +125,12 @@ public class OrdersServlet extends HttpServlet {
         }catch (Exception e){
         }
 
-//        try{if(!req.getParameter("Pay").equals(null)){
-//            System.out.println("                    pay");
-//
-//        }else{
-//            System.out.println("                hehe pay");
-//        }
-//
-//        }catch (Exception e){
-//            System.out.println("              no pay");
-//        }
-//        System.out.println(req.getParameter("Pay"));
-
-        try {
-            if (!req.getParameter("Pay").equals(null) && !req.getParameterValues("orderForDelete").equals(null)) {
+          try {
+            if (!req.getParameter("Payname").equals(null) && !req.getParameterValues("orderForDelete").equals(null)) {
                 String[] ordersID = req.getParameterValues("orderForDelete");
                 String basket = "";
                 for (String orderID : ordersID) {
+                    System.out.println(req.getParameter("Payname"));
                     System.out.println(orderID);
                     Model.getInstance().payOrder(Integer.parseInt(orderID));
 
@@ -147,8 +147,17 @@ public class OrdersServlet extends HttpServlet {
 
                 }
             }catch (Exception e){
-                req.setAttribute("nullData", "");
-                doGet(req, resp);
+                try{if(!req.getParameter("block").equals(null)){
+                    System.out.println(req.getParameter("block"));
+                    req.setAttribute("userPage", req.getParameter("block"));
+
+                }
+                }catch (Exception exept){
+                    System.out.println("ну точно не дошли");
+                    req.setAttribute("nullData", "");
+                    doGet(req, resp);
+                }
+
             }
 
 

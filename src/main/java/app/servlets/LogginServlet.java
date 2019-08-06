@@ -21,7 +21,7 @@ public class LogginServlet extends HttpServlet {
             if (Model.getInstance().getCurrentUser().isAdministrator()) {
                 resp.sendRedirect("/listAdmin");
             }else{
-                resp.sendRedirect("/listBuyer");
+                resp.sendRedirect("/listClient");
             }
         } catch (Exception e) {
 

@@ -8,6 +8,7 @@ public class Order {
     private LocalDate localDate;
     private List<Product> products;
     private boolean isPaid=false;
+    private int customerID;
 
 
     public Order(int id, LocalDate localDate, List<Product> products) {
@@ -30,6 +31,14 @@ public class Order {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getCustomerID() {
+        return customerID;
+    }
+
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
     }
 
     public LocalDate getLocalDate() {
@@ -66,6 +75,14 @@ public class Order {
 
         }
         return "Заказ №"+ id +", создан " + localDate.toString() +
-                "<br> Товары:" + sb.toString()+"<br>"+s;
+                "<br> Товары:" + sb.toString()+"<br><br>Итоговая сумма - "+totalPrice()+" тенге.<br><br>"+s+"<br>";
+    }
+
+    public int totalPrice(){
+        int total = 0;
+        for(Product product : this.products){
+            total += product.getPrice();
+        }
+        return total;
     }
 }

@@ -1,6 +1,8 @@
 <%@ page import="java.util.List" %>
 
 <%@ page import="app.entities.Order" %>
+<%@ page import="app.model.Model" %>
+<%@ page import="app.entities.User" %>
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" language="java"%>
 <html lang="ru">
 <head>
@@ -17,11 +19,20 @@
         }
 
         #clickme {
-            background-color: #4CAF50; /* Green */
+            background-color: #000000; /* Green */
             border: none;
             color: white;
             padding: 15px 32px;
             text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        #clickmeUser {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
@@ -110,13 +121,26 @@
             <%
                 List<Order> orders = (List<Order>) request.getAttribute("orders");
                 if (orders != null && !orders.isEmpty()) {
-                    out.println("<p>Ваши заказы:</p>");
+                    if(!Model.getInstance().getCurrentUser().isAdministrator()){
+                    out.println("<p>Ваши заказы:</p>");}
+                    {
+                        out.println("<p>Заказы:</p>");
+                    }
+                    int i = 0;
                     for (Order order : orders) {
+                        if(Model.getInstance().getCurrentUser().isAdministrator()){
+                            User user = Model.getInstance().getUser(order.getCustomerID());
+                            out.println("<p>Пользователь - "+user.getNickname()+"<p>" +
+                                    "<input class=\"w3-button w3-red btn-xs \" name=\"block\" type=\"submit\" value="+user.getId()+"><br>");
+
+                        }
                         out.println("<input type=\"checkbox\" name = \"orderForDelete\" value=\""+order.getId()+"\">"+order.toString()+"<br>");
                     }
 
                     out.println("<input class=\"w3-button w3-red \" onclick=\"location.href='/'\" type=\"submit\" value=\"Удалить заказ\">");
-                    out.println("<input class=\"w3-button w3-black \" onclick=\"location.href='/'\" name=\"Pay\" type=\"submit\" value=\"Pay\" value=\"Оплатить\">");
+                    if(!Model.getInstance().getCurrentUser().isAdministrator()) {
+                        out.println("<input class=\"w3-button w3-black \" onclick=\"location.href='/'\" name=\"Pay\" type=\"submit\" value=\"Pay\" value=\"Оплатить\">");
+                    }
 
 
 
@@ -137,7 +161,7 @@
 
 <div>
     <div>
-        <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/listBuyer'">К магазину</button>
+        <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/listClient'">К магазину</button>
     </div>
 </div>
 

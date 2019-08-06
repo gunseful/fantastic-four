@@ -37,7 +37,7 @@ public class ListAdminServlet extends HttpServlet {
             }
 
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listAdmin.jsp");
-            requestDispatcher.forward(req, resp);}else{resp.sendRedirect("/listBuyer");}
+            requestDispatcher.forward(req, resp);}else{resp.sendRedirect("/listClient");}
 
         }catch (Exception e){
             System.out.println("No current user");
@@ -57,6 +57,7 @@ public class ListAdminServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("list admin servlet");
+
         try{
             if(req.getParameter("exit")!=null) {
                 req.setAttribute("exit", "exit");

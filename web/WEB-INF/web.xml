@@ -4,10 +4,15 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
     <servlet>
         <servlet-name>listAdmin</servlet-name>
         <servlet-class>app.servlets.ListAdminServlet</servlet-class>
     </servlet>
+
 
     <servlet-mapping>
         <servlet-name>listAdmin</servlet-name>
@@ -15,13 +20,13 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>listBuyer</servlet-name>
-        <servlet-class>app.servlets.ListBuyerServlet</servlet-class>
+        <servlet-name>listClient</servlet-name>
+        <servlet-class>app.servlets.ListClientServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>listBuyer</servlet-name>
-        <url-pattern>/listBuyer</url-pattern>
+        <servlet-name>listClient</servlet-name>
+        <url-pattern>/listClient</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -33,6 +38,18 @@
         <servlet-name>loggin</servlet-name>
         <url-pattern>/loggin</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>userPage</servlet-name>
+        <servlet-class>app.servlets.UserPageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>userPage</servlet-name>
+        <url-pattern>/userPage</url-pattern>
+    </servlet-mapping>
+
+
 
     <servlet>
     <servlet-name>registration</servlet-name>

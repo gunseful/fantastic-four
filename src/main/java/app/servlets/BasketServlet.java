@@ -56,7 +56,7 @@ public class BasketServlet extends HttpServlet {
 
             }else{
                 System.out.println("second try");
-                resp.sendRedirect("/listBuyer");}
+                resp.sendRedirect("/listClient");}
 
         }catch (Exception e){
             System.out.println("No current user");

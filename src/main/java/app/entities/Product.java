@@ -45,7 +45,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return id+" "+name+" - "+price+" тг.";
+        return name+" - "+price+" тг.";
     }
 
     @Override

@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 
-public class ListBuyerServlet extends HttpServlet {
+public class ListClientServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -53,7 +53,7 @@ public class ListBuyerServlet extends HttpServlet {
                 System.out.println("set attribute loggin");
 
                 Model.getInstance().addToBasket(Model.getInstance().getCurrentUser(), "");
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listBuyer.jsp");
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listClient.jsp");
                 requestDispatcher.forward(req, resp);
 
             }else{
