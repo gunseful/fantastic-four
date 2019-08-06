@@ -39,17 +39,6 @@
         <url-pattern>/loggin</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>userPage</servlet-name>
-        <servlet-class>app.servlets.UserPageServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>userPage</servlet-name>
-        <url-pattern>/userPage</url-pattern>
-    </servlet-mapping>
-
-
 
     <servlet>
     <servlet-name>registration</servlet-name>
@@ -72,13 +61,23 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>orders</servlet-name>
-        <servlet-class>app.servlets.OrdersServlet</servlet-class>
-    </servlet>
+    <servlet-name>orders</servlet-name>
+    <servlet-class>app.servlets.OrdersServlet</servlet-class>
+</servlet>
 
     <servlet-mapping>
         <servlet-name>orders</servlet-name>
         <url-pattern>/orders</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>blacklist</servlet-name>
+        <servlet-class>app.servlets.BlackListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>blacklist</servlet-name>
+        <url-pattern>/blacklist</url-pattern>
     </servlet-mapping>
 
 </web-app>

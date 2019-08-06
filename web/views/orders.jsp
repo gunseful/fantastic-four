@@ -106,6 +106,12 @@
     </form>
 </div>
 
+<div>
+    <div>
+        <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/listClient'">К магазину</button>
+    </div>
+</div>
+
 <div class="ex2">
     <div>
         <%
@@ -130,11 +136,15 @@
                     for (Order order : orders) {
                         if(Model.getInstance().getCurrentUser().isAdministrator()){
                             User user = Model.getInstance().getUser(order.getCustomerID());
-                            out.println("<p>Пользователь - "+user.getNickname()+"<p>" +
-                                    "<input class=\"w3-button w3-red btn-xs \" name=\"block\" type=\"submit\" value="+user.getId()+"><br>");
+                            if(!Model.getInstance().checkBlackList(user)) {
+                                out.println("<p>Пользователь - " + user.getNickname() + "<p><button class=\"w3-button w3-red btn-block\" name=\"block\" value=" + user.getId() + ">Block this Client</button>\n<br>");
+                            }else{
+                                out.println("<p>Пользователь - " + user.getNickname() + "<p><div style=\"background-color:red; width: max-content;\"><h3>THIS CLIENT WAS BLOCKED</h3></div>");
+
+                            }
 
                         }
-                        out.println("<input type=\"checkbox\" name = \"orderForDelete\" value=\""+order.getId()+"\">"+order.toString()+"<br>");
+                        out.println("<input type=\"checkbox\" name = \"orderForDelete\" value=\""+order.getId()+"\">"+order.toString()+"_____________________________________________<br>");
                     }
 
                     out.println("<input class=\"w3-button w3-red \" onclick=\"location.href='/'\" type=\"submit\" value=\"Удалить заказ\">");
@@ -159,11 +169,7 @@
 
 </div>
 
-<div>
-    <div>
-        <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/listClient'">К магазину</button>
-    </div>
-</div>
+
 
 
 

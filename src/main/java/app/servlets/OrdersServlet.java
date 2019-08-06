@@ -126,11 +126,11 @@ public class OrdersServlet extends HttpServlet {
         }
 
           try {
-            if (!req.getParameter("Payname").equals(null) && !req.getParameterValues("orderForDelete").equals(null)) {
+            if (!req.getParameter("Pay").equals(null) && !req.getParameterValues("orderForDelete").equals(null)) {
                 String[] ordersID = req.getParameterValues("orderForDelete");
                 String basket = "";
                 for (String orderID : ordersID) {
-                    System.out.println(req.getParameter("Payname"));
+                    System.out.println(req.getParameter("Pay"));
                     System.out.println(orderID);
                     Model.getInstance().payOrder(Integer.parseInt(orderID));
 
@@ -148,8 +148,9 @@ public class OrdersServlet extends HttpServlet {
                 }
             }catch (Exception e){
                 try{if(!req.getParameter("block").equals(null)){
-                    System.out.println(req.getParameter("block"));
-                    req.setAttribute("userPage", req.getParameter("block"));
+                    Model.getInstance().addUserToBlackList(Model.getInstance().getUser(Integer.parseInt(req.getParameter("block"))));
+//                    System.out.println(req.getParameter("block"));
+//                    req.setAttribute("userPage", req.getParameter("block"));
 
                 }
                 }catch (Exception exept){

@@ -92,6 +92,10 @@
     %>
 </div>
 
+<button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">Заказы</button>
+<button class="w3-button w3-black w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/blacklist'" name="blacklist" type="submit" value="blacklist">Black List</button>
+
+
 <div>
     <form method="post" accept-charset="ISO-8859-1">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" name="exit" type="submit" value="exit">Выйти</button>
@@ -143,7 +147,6 @@
 </div>
 </div>
 
-<button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">Заказы</button>
 
 
 

@@ -26,6 +26,15 @@ public class ListAdminServlet extends HttpServlet {
 
         }
 
+        try{
+            if(req.getAttribute("blacklist")!=null) {
+                System.out.println("black list...");
+                resp.sendRedirect("/blacklist");
+            }
+        }catch (Exception e){
+
+        }
+
 
         Model model = Model.getInstance();
         req.setAttribute("products", model.getList());
@@ -65,6 +74,14 @@ public class ListAdminServlet extends HttpServlet {
             }
         }catch (Exception e){
             System.out.println("not exit");
+        }
+
+        try{
+            if(req.getParameter("blacklist")!=null) {
+                req.setAttribute("blacklist", "blacklist");
+                doGet(req, resp);
+            }
+        }catch (Exception e){
         }
 
 

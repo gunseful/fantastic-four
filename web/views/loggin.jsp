@@ -35,6 +35,14 @@
     </div>
 
 
+    <div>
+        <%
+            if (request.getAttribute("inBlackList") != null) {
+                out.println("<p style=\"font-size:20px;\">Пользователь - "+request.getAttribute("inBlackList")+" заблокирован, так как делал заказы и не оплачивал</p>");
+            }
+        %>
+    </div>
+
 <div>
         <%
                 if (request.getAttribute("NoData") != null) {

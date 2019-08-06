@@ -16,6 +16,10 @@ import java.util.List;
 public class LogginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if(req.getAttribute("inBlackList")!=null){
+            System.out.println("set current user - null");
+            Model.getInstance().setCurrentUser(null);
+        }
 
         try {
             if (Model.getInstance().getCurrentUser().isAdministrator()) {
@@ -44,8 +48,15 @@ public class LogginServlet extends HttpServlet {
             Model model = Model.getInstance();
 
             if(model.checkLogginAndPassword(user)){
+                System.out.println(Model.getInstance().getCurrentUser().getName());
+                if(model.checkBlackList(model.getCurrentUser())){
+                    System.out.println(model.getCurrentUser()+" in blackLIST!");
+                    req.setAttribute("inBlackList", Model.getInstance().getCurrentUser().getName());
+                    doGet(req, resp);
+                    return;
+                }else{
                 req.setAttribute("loggin", Model.getInstance().getCurrentUser().getName());
-                doGet(req, resp);
+                doGet(req, resp);}
             }else{
                 req.setAttribute("NoData","NoData");
                 System.out.println("not found user with this nickname");
@@ -53,8 +64,9 @@ public class LogginServlet extends HttpServlet {
             }
 
         }catch (Exception e){
-            req.setAttribute("NoData","NoData");
-            doGet(req, resp);
+            e.printStackTrace();
+                req.setAttribute("NoData", "NoData");
+                doGet(req, resp);
         }
 
 

@@ -337,4 +337,91 @@ public class Model {
         }
         return list;
     }
+
+
+    public boolean checkBlackList(User user){
+
+        System.out.println("Model checkBlackList");
+        List<Product> list = new ArrayList<>();
+        try {
+            Class.forName(DB_Driver);
+            try (Connection connection = DriverManager.getConnection(DB_URL)) {
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery("SELECT * FROM BlackList");
+                while (resultSet.next()) {
+                    if(resultSet.getInt(1)==user.getId()){
+                        return true;
+                    }
+                }
+            }
+        } catch (Exception ex) {
+            System.out.println("Connection failed...");
+            System.out.println(ex);
+        }
+        return false;
+    }
+
+    public List<User> getBlackList() {
+
+        System.out.println("Model getBlackList");
+        List<User> list = new ArrayList<>();
+        try {
+            Class.forName(DB_Driver);
+            try (Connection connection = DriverManager.getConnection(DB_URL)) {
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery("SELECT * FROM BLACKLIST");
+                User user=null;
+                while (resultSet.next()) {
+                    user = new User();
+
+                    int id = resultSet.getInt(1);
+                    user.setId(id);
+                    String nickname = resultSet.getString(2);
+                    user.setNickname(nickname);
+                    String password = resultSet.getString(3);
+                    user.setPassword(password);
+                    String name = resultSet.getString(4);
+                    user.setName(name);
+                    boolean isAdmin =  resultSet.getBoolean(5);
+                    user.setAdministrator(isAdmin);
+                    user.setBasket(new Basket());
+
+                    //This part of method is checking db for User basket, gets String with product ID's and
+                    //check does the current list of product has this product
+                    //if does - add to User's basket.
+                    if (resultSet.getString(6) != null) {
+                        for (String str : resultSet.getString(6).split(" ")) {
+                            for (Product product : getList()) {
+                                if (str.trim().equals(String.valueOf(product.getId()))) {
+                                    user.getBasket().add(product);
+                                }
+                            }
+                        }
+                    }
+                    list.add(user);
+                }
+
+                }
+
+        } catch (Exception ex) {
+            System.out.println("Connection failed...");
+            System.out.println(ex);
+        }
+        return list;
+    }
+
+    public void deleteFromBlackList(int id){
+
+        System.out.println("Model delete");
+        try {
+            Class.forName(DB_Driver);
+            try (Connection conn = DriverManager.getConnection(DB_URL)) {
+                Statement statement = conn.createStatement();
+                statement.executeUpdate("DELETE FROM blacklist WHERE Id = " + id);
+            }
+        } catch (Exception exception) {
+            System.out.println("Connection failed...");
+            System.out.println(exception);
+        }
+    }
 }
