@@ -15,46 +15,53 @@ import java.util.List;
 public class LogginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        System.out.println("LogginServlet doGet");
+            //прост бросает на вьюшку
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/loggin.jsp");
             requestDispatcher.forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("loggin servlet");
+        System.out.println("LogginServlet doPost");
+        //прилетает то что было в полях, логи и пароль, чтобы зайти, создается пользователь промежуточный
         try {
             String nickname = req.getParameter("nickname");
             String password = req.getParameter("password");
-
+            //вот здесь
             User user = new User(nickname, password);
-            Model model = Model.getInstance();
-
-            if(model.checkLogginAndPassword(user)){
+            //опять таки нужна нам наша модель, для работы с базой данной только ее и будет юзать
+            //ну и проверяем логин и пароль, ничего не хэшируется, тупо строкой пароль идет - небезопасно офк, ну а как еще
+            if(Model.getInstance().checkLogginAndPassword(user)){
                 User currentUser = Model.getInstance().getUserByNickName(nickname);
+                //проверяется, а не в черном ли списке чувак
                 if(Model.getInstance().checkBlackList(currentUser)){
+                    //если да то бросает опять на логин с атрибутом inBlackList (вылезит уведомление)
                     RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/loggin.jsp");
                     resp.setContentType("text/html;charset=UTF-8");
                     req.setAttribute("inBlackList", currentUser.getNickname());
                     rd.include(req , resp);
-                }
-                System.out.println("adding session");
-                HttpSession session = req.getSession();
-                session.setAttribute("user", currentUser);
-                session.setMaxInactiveInterval(30*60);
-                Cookie userName = new Cookie("user", nickname);
-                userName.setMaxAge(30*60);
-                resp.addCookie(userName);
-                System.out.println(currentUser);
-                if(currentUser.isAdministrator()) {
-                    System.out.println("redirect to listAdmin");
-                    resp.sendRedirect("/listAdmin");
-                }else{
-                    System.out.println("redirect to listClient");
-                    resp.sendRedirect("/listClient");
+                    doGet(req,resp);
+                }else {
+                    //если все ок, и не в черном списке, то добавляем сессию, туда кидает юзера, устанавливаем интервал инактивности
+                    //добавляем юзера в куки
+                    HttpSession session = req.getSession();
+                    session.setAttribute("user", currentUser);
+                    session.setMaxInactiveInterval(30 * 60);
+                    Cookie userName = new Cookie("user", nickname);
+                    userName.setMaxAge(30 * 60);
+                    resp.addCookie(userName);
+                    //если юзер админ редиректим на лист админа
+                    if (currentUser.isAdministrator()) {
+                        resp.sendRedirect("/listAdmin");
+                    } else {
+                        //если обычный клиент, бросаем его на лист Клиента
+                        resp.sendRedirect("/listClient");
+                    }
                 }
 
             }else{
+                //если такого юзера в базе нет, кидает опять в логин с ошибкой ноудата
                 RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/loggin.jsp");
                 resp.setContentType("text/html;charset=UTF-8");
                 req.setAttribute("NoData", "NoData");
@@ -62,9 +69,6 @@ public class LogginServlet extends HttpServlet {
             }
 
         }catch (Exception e){
-                e.printStackTrace();
-                req.setAttribute("NoData", "NoData");
-                doGet(req, resp);
         }
 
 

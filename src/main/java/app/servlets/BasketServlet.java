@@ -16,15 +16,18 @@ public class BasketServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("basket buyer servlet");
-
-        Model model = Model.getInstance();
+        //getting this session user to work with
         User user = (User)req.getSession().getAttribute("user");
-        if(req.getAttribute("exit")==null){
         req.setAttribute("basket", user.getBasket().getList());
-        }
+        //здесь проверяем является ли текущий юзер админом, если нет то обновляем корзину и переходим к вьюшке
+        //не уверен надо ли юзать фильтры в таком случае...по идее админ никак сюда не попадает, только если в строке браузера впишет
+        // / basket
+
+        //обновляется корзина добавлением пустой строки в нее
+        //вопрос - зачем. Может случится что удаляется товар какой-то с магаза, а в этом методе проверка есть ли она в базе данных
+        //чтобы не висел в корзине левый товар и чтобы не писать отдельный метод, юзается такая хитрость
         try {
             if(!user.isAdministrator()){
-                System.out.println("add to basket");
                 Model.getInstance().addToBasket(user, "");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/basket.jsp");
                 requestDispatcher.forward(req, resp);
@@ -38,32 +41,20 @@ public class BasketServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //getting this session user to work with
         User user = (User)req.getSession().getAttribute("user");
-
-                try{
-            if(req.getParameter("goToBasket")!=null) {
-                req.setAttribute("goToBasket", "goToBasket");
-                doGet(req, resp);
-            }
-        }catch (Exception e){
-            System.out.println("not goToBasket");
-        }
-
+        //when we click on bottom "Заказа" we give parameter getOrder and then making some order by special methid in Model.class and redirect to -> orders
         try{
             if(req.getParameter("getOrder")!=null) {
-                System.out.println("hehe");
                 Model.getInstance().makeOrder(user);
                 resp.sendRedirect("/orders");
-            }
-        }catch (Exception e){
-        }
+            }}catch (Exception ignored){}
 
-
+        //we get some product for delete from the basket, taking products, checks is there in the db those product -> removing
+        //if client choose nothing -> exception
         try {
             if (!req.getParameterValues("productForDelete").equals(null)) {
                 String[] productsID = req.getParameterValues("productForDelete");
-
-                String basket = "";
                 for (String productID : productsID) {
                     System.out.println(productID);
                     for (Product product : Model.getInstance().getList()) {
@@ -77,7 +68,7 @@ public class BasketServlet extends HttpServlet {
                     }
                 }
             }
-        }catch (NullPointerException exeption){
+        }catch (NullPointerException exception){
             req.setAttribute("nullData", "");
             doGet(req, resp);
         }

@@ -1,11 +1,9 @@
 <%@ page import="java.util.List" %>
 <%@ page import="app.entities.User" %>
 <%@ page import="app.entities.Product" %>
-<%@ page import="java.util.Base64" %>
-<%@ page import="app.entities.Basket" %>
-<%@ page import="app.model.Model" %>
-<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" language="java"%>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <html lang="ru">
+<%--в хеде ничего интересного--%>
 <head>
     <style>
 
@@ -48,7 +46,6 @@
             font-size: 30px;
         }
 
-
         .content {
             margin-top: 10px;
             display: none;
@@ -71,45 +68,38 @@
     <title>Ваша корзина</title>
 </head>
 
-
+<%--прост шапка сайта, везде одинковая--%>
 <div>
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
-
         <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'" style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
-
-
     </div>
 </div>
-
-
-
+<%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
 <div>
     <%
         User user = (User)session.getAttribute("user");
         out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как "+user.getNickname()+"</p>");
     %>
 </div>
-
-
-
+<%--просто кнопка "к магазину", которая переносит на стандартную страницу клиентлиста--%>
 <div>
     <div>
         <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/listClient'">К магазину</button>
     </div>
 </div>
-
+<%--просто кнопка "Заказы", которая переносит на стандартную страницу заказов--%>
 <div>
     <div>
         <button class="w3-button w3-yellow w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/orders'">Заказы</button>
     </div>
 </div>
-
+<%--кнопка вызывает сервлет выхода и системы, обнуляет сессию и переносим на хоумпейдж--%>
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" type="submit" value="logout">Выйти</button>
     </form>
 </div>
-
+<%--если клиент ошибся, ему подсказка--%>
 <div class="ex2">
     <div>
         <%
@@ -119,8 +109,8 @@
         %>
     </div>
 
+    <%--большой блок где из сервлета прилетают лист с продуктами, он и выводится--%>
     <div>
-
         <form name="input" method="post">
             <%
                 List<Product> products = (List<Product>) request.getAttribute("basket");
@@ -129,35 +119,23 @@
                     for (Product product : products) {
                         out.println("<input type=\"checkbox\" name = \"productForDelete\" value=\""+product.getId()+" "+product.getName()+"\">"+product.getName()+" - "+product.getPrice()+" тенге"+"<br>");
                     }
-
+//                    так же тут есть кнопка, которая удаляет из корзины
                     out.println("<input class=\"w3-button w3-green \" onclick=\"location.href='/'\" type=\"submit\" value=\"Удалить из корзины\">");
-
-
-
-
-
+//                    и если ничего не пришло, выскочит что ничего нет
                 } else out.println("<p>В вашей корзине товаров пока нет.</p>");
             %>
-
         </form>
-
         <form name="input" method="post">
         <%
         if (products != null && !products.isEmpty()) {
+            //так же есть кнопка заказа
             out.println("<button class=\"w3-button w3-yellow w3-padding-large w3-large w3-hover-opacity-off btn-block\" name=\"getOrder\" type=\"submit\" value=\"getOrder\">Заказать</button>\n");
         }
         %>
-            </form>
-
+        </form>
     </div>
 </div>
 </div>
 </div>
-
-
-
-
-
-
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 package app.servlets.filters;
 
 import java.io.IOException;
@@ -27,16 +26,22 @@ public class AuthenticationFilter implements Filter {
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
+        //сервлеты создаем
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
+        //получаем адрес запроса
         String uri = req.getRequestURI();
         this.context.log("Requested Resource::"+uri);
 
+        //мутим сессию
         HttpSession session = req.getSession(false);
 
+        //если сессии нет либо нет юзера в сессии то фелс, а так тру
         boolean isLoggedIn = (session != null && session.getAttribute("user") != null);
 
+        //если никто не залогинился, если страница не хоум и не логин или регистрация
+        //то переводит на страницу логина
         if (!isLoggedIn && !(uri.equals("/") || uri.endsWith("loggin") || uri.endsWith("registration") ) ){
             this.context.log("Unauthorized access request");
             res.sendRedirect("/loggin");
@@ -48,7 +53,6 @@ public class AuthenticationFilter implements Filter {
     }
 
     public void destroy() {
-        //close any resources here
     }
 
 }

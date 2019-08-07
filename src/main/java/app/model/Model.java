@@ -4,7 +4,6 @@ import app.entities.Basket;
 import app.entities.Order;
 import app.entities.Product;
 import app.entities.User;
-
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -13,18 +12,14 @@ import java.util.List;
 public class Model {
     private static final String DB_URL = "jdbc:h2:/c:/Users/Ares/IdeaProjects/fantasticFour/db/fantasticFour";
     private static final String DB_Driver = "org.h2.Driver";
-
     private static final Model instance = new Model();
-
     public static Model getInstance() {
         return instance;
     }
 
     //This method delete the product with id that you give as attribute from db
-
     public void delete(String id) {
-
-        System.out.println("Model delete");
+        System.out.println("Model deleteProduct");
         try {
             Class.forName(DB_Driver);
             try (Connection conn = DriverManager.getConnection(DB_URL)) {
@@ -39,8 +34,8 @@ public class Model {
 
     //This method add the product which you give as attribute to db
     public void add(Product product) {
-
         System.out.println("Model add");
+
         try {
             Class.forName(DB_Driver);
             try (Connection conn = DriverManager.getConnection(DB_URL)) {
@@ -58,15 +53,14 @@ public class Model {
 
     //This method return the User with id that you give as attribute
     public User getUser(int id) {
-
         System.out.println("Model getUser...");
+
         try {
             Class.forName(DB_Driver);
             try (Connection connection = DriverManager.getConnection(DB_URL)) {
                 PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Users WHERE Id = ?");
                 preparedStatement.setInt(1, id);
                 ResultSet resultSet = preparedStatement.executeQuery();
-
                 User user = new User();
                 while (resultSet.next()) {
                     user.setId(resultSet.getInt(1));
@@ -75,7 +69,6 @@ public class Model {
                     user.setName(resultSet.getString(4));
                     user.setAdministrator(resultSet.getBoolean(5));
                     user.setBasket(new Basket());
-
                     //This part of method is checking db for User basket, gets String with product ID's and
                     //check does the current list of product has this product
                     //if does - add to User's basket.
@@ -100,15 +93,14 @@ public class Model {
 
     //This method return the User with nickname that you give as attribute
     public User getUserByNickName(String nickname) {
-
         System.out.println("Model getUser...");
+
         try {
             Class.forName(DB_Driver);
             try (Connection connection = DriverManager.getConnection(DB_URL)) {
                 PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Users WHERE nickname = ?");
                 preparedStatement.setString(1, nickname.toUpperCase());
                 ResultSet resultSet = preparedStatement.executeQuery();
-
                 User user = new User();
                 while (resultSet.next()) {
                     user.setId(resultSet.getInt(1));
@@ -117,7 +109,6 @@ public class Model {
                     user.setName(resultSet.getString(4));
                     user.setAdministrator(resultSet.getBoolean(5));
                     user.setBasket(new Basket());
-
                     //This part of method is checking db for User basket, gets String with product ID's and
                     //check does the current list of product has this product
                     //if does - add to User's basket.
@@ -142,20 +133,18 @@ public class Model {
 
     //This method add basket as a string (product ID's with spaces) to User's (that you give as attribute) basket
     public void addToBasket(User user, String basket) {
-
         System.out.println("Model addToBasket");
+
         try {
             Class.forName(DB_Driver);
             try (Connection conn = DriverManager.getConnection(DB_URL)) {
                 String sql = "UPDATE Users SET basket = ? WHERE id = ?";
-
                 String basketLast = "";
                 //checking User's current basket and translates it to a string
                 for (Product product : user.getBasket().getList()) {
                     basketLast += product.getId() + " ";
                 }
                 basketLast += basket;
-
                 PreparedStatement preparedStatement = conn.prepareStatement(sql);
                 preparedStatement.setString(1, basketLast);
                 preparedStatement.setInt(2, user.getId());
@@ -169,8 +158,8 @@ public class Model {
 
     //This method add new user, that you give as attribute to db
     public boolean addNewUser(User user) {
-
         System.out.println("Add new user");
+
         try {
             Class.forName(DB_Driver);
             try (Connection conn = DriverManager.getConnection(DB_URL)) {
@@ -191,8 +180,8 @@ public class Model {
 
     //This method checks loggin and password that you write on loggin page with the same in the db
     public boolean checkLogginAndPassword(User user) {
-
         System.out.println("Model checkLogginAndPassword");
+
         try {
             Class.forName(DB_Driver);
             try (Connection connection = DriverManager.getConnection(DB_URL)) {
@@ -218,9 +207,9 @@ public class Model {
         return false;
     }
 
-    public void addUserToBlackList(User user){
-
+    public void addUserToBlackList(User user) {
         System.out.println("Model addUserToBlackList");
+
         try {
             Class.forName(DB_Driver);
             try (Connection conn = DriverManager.getConnection(DB_URL)) {
@@ -237,8 +226,8 @@ public class Model {
 
     //This method making some Order based on the current User's basket
     public void makeOrder(User user) {
-
         System.out.println("Model makeOrder");
+
         //convert basket to string
         String order = "";
         for (Product product : user.getBasket().getList()) {
@@ -266,8 +255,8 @@ public class Model {
 
     //This method make Order (in db) as paid
     public void payOrder(int id) {
-
         System.out.println("Model payOrder");
+
         try {
             Class.forName(DB_Driver);
             try (Connection conn = DriverManager.getConnection(DB_URL)) {
@@ -285,48 +274,48 @@ public class Model {
 
     //This method return list of orders. Current User is Administrator -> return all orders, if not - only orders of current user
     public List<Order> getOrders(User user) {
-
         System.out.println("Model getOrders");
+
         List<Order> list = new ArrayList<>();
-            try {
-                Class.forName(DB_Driver);
-                try (Connection connection = DriverManager.getConnection(DB_URL)) {
-                    ResultSet resultSet = null;
-                    if (!user.isAdministrator()) {
-                        PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Orders WHERE CustomerID = ?");
-                        preparedStatement.setInt(1, user.getId());
-                        resultSet = preparedStatement.executeQuery();
-                    }else {
-                        PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Orders");
-                        resultSet = preparedStatement.executeQuery();
+        try {
+            Class.forName(DB_Driver);
+            try (Connection connection = DriverManager.getConnection(DB_URL)) {
+                ResultSet resultSet = null;
+                if (!user.isAdministrator()) {
+                    PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Orders WHERE CustomerID = ?");
+                    preparedStatement.setInt(1, user.getId());
+                    resultSet = preparedStatement.executeQuery();
+                } else {
+                    PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Orders");
+                    resultSet = preparedStatement.executeQuery();
+                }
+                while (resultSet.next()) {
+                    int id = resultSet.getInt(1);
+                    LocalDate localDate = resultSet.getObject(4, LocalDate.class);
+                    boolean ispaid = resultSet.getBoolean(5);
+                    String paid = "";
+                    if (ispaid) {
+                        paid = "Оплачено";
+                    } else {
+                        paid = "Неплачено";
                     }
-                    while (resultSet.next()) {
-                        int id = resultSet.getInt(1);
-                        LocalDate localDate = resultSet.getObject(4, LocalDate.class);
-                        boolean ispaid = resultSet.getBoolean(5);
-                        String paid = "";
-                        if (ispaid) {
-                            paid = "Оплачено";
-                        } else {
-                            paid = "Неплачено";
-                        }
-                        String products = resultSet.getString(2);
-                        Order order = new Order(id, localDate, new ArrayList<>());
-                        order.setPaid(ispaid);
-                        order.setCustomerID(resultSet.getInt(3));
-                        for (String str : products.split(" ")) {
-                            for (Product product : Model.getInstance().getList()) {
-                                if (String.valueOf(product.getId()).equals(str)) {
-                                    order.addProduct(product);
-                                }
+                    String products = resultSet.getString(2);
+                    Order order = new Order(id, localDate, new ArrayList<>());
+                    order.setPaid(ispaid);
+                    order.setCustomerID(resultSet.getInt(3));
+                    for (String str : products.split(" ")) {
+                        for (Product product : Model.getInstance().getList()) {
+                            if (String.valueOf(product.getId()).equals(str)) {
+                                order.addProduct(product);
                             }
                         }
-                        list.add(order);
                     }
-                } catch (Exception ignored) {
+                    list.add(order);
                 }
             } catch (Exception ignored) {
             }
+        } catch (Exception ignored) {
+        }
         return list;
     }
 
@@ -348,8 +337,8 @@ public class Model {
 
     //This method return list of all products from db
     public List<Product> getList() {
-
         System.out.println("Model getList");
+
         List<Product> list = new ArrayList<>();
         try {
             Class.forName(DB_Driver);
@@ -371,17 +360,16 @@ public class Model {
     }
 
 
-    public boolean checkBlackList(User user){
-
+    public boolean checkBlackList(User user) {
         System.out.println("Model checkBlackList");
-        List<Product> list = new ArrayList<>();
+
         try {
             Class.forName(DB_Driver);
             try (Connection connection = DriverManager.getConnection(DB_URL)) {
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery("SELECT * FROM BlackList");
                 while (resultSet.next()) {
-                    if(resultSet.getInt(1)==user.getId()){
+                    if (resultSet.getInt(1) == user.getId()) {
                         return true;
                     }
                 }
@@ -394,18 +382,17 @@ public class Model {
     }
 
     public List<User> getBlackList() {
-
         System.out.println("Model getBlackList");
+
         List<User> list = new ArrayList<>();
         try {
             Class.forName(DB_Driver);
             try (Connection connection = DriverManager.getConnection(DB_URL)) {
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery("SELECT * FROM BLACKLIST");
-                User user=null;
+                User user = null;
                 while (resultSet.next()) {
                     user = new User();
-
                     int id = resultSet.getInt(1);
                     user.setId(id);
                     String nickname = resultSet.getString(2);
@@ -414,10 +401,9 @@ public class Model {
                     user.setPassword(password);
                     String name = resultSet.getString(4);
                     user.setName(name);
-                    boolean isAdmin =  resultSet.getBoolean(5);
+                    boolean isAdmin = resultSet.getBoolean(5);
                     user.setAdministrator(isAdmin);
                     user.setBasket(new Basket());
-
                     //This part of method is checking db for User basket, gets String with product ID's and
                     //check does the current list of product has this product
                     //if does - add to User's basket.
@@ -432,8 +418,7 @@ public class Model {
                     }
                     list.add(user);
                 }
-
-                }
+            }
 
         } catch (Exception ex) {
             System.out.println("Connection failed...");
@@ -442,9 +427,9 @@ public class Model {
         return list;
     }
 
-    public void deleteFromBlackList(int id){
+    public void deleteFromBlackList(int id) {
+        System.out.println("Model deleteFromBlackList");
 
-        System.out.println("Model delete");
         try {
             Class.forName(DB_Driver);
             try (Connection conn = DriverManager.getConnection(DB_URL)) {

@@ -21,8 +21,10 @@ public class LogoutServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("LogoutServlet doPost");
         response.setContentType("text/html");
         Cookie[] cookies = request.getCookies();
+        //ну этот метод вызываем только чтобы обнулить куки и сессию
         if(cookies != null){
             for(Cookie cookie : cookies){
                 if(cookie.getName().equals("JSESSIONID")){
@@ -31,15 +33,12 @@ public class LogoutServlet extends HttpServlet {
                 }
             }
         }
-        //invalidate the session if exists
+        //ну вот обнуляем кароче и редиректимкся на хоум пейдж
         HttpSession session = request.getSession(false);
         System.out.println("User="+session.getAttribute("user"));
         if(session != null){
             session.invalidate();
         }
-        System.out.println(session);
-        System.out.println("before sendRedrect");
         response.sendRedirect("/");
     }
-
 }
