@@ -18,13 +18,9 @@ public class ListAdminServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try{
-            if(req.getAttribute("exit")!=null) {
-                Model.getInstance().setCurrentUser(null);
-            }
-        }catch (Exception e){
 
-        }
+        System.out.println("list admin servlet");
+
 
         try{
             if(req.getAttribute("blacklist")!=null) {
@@ -38,34 +34,24 @@ public class ListAdminServlet extends HttpServlet {
 
         Model model = Model.getInstance();
         req.setAttribute("products", model.getList());
+        User user = (User)req.getSession().getAttribute("user");
+        System.out.println(user);
         try {
-            if(model.getCurrentUser().isAdministrator()){
-            req.setAttribute("loggin", model.getCurrentUser().getNickname());
-            if (model.getCurrentUser().isAdministrator()) {
-                req.setAttribute("admin", "");
-            }
-
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listAdmin.jsp");
-            requestDispatcher.forward(req, resp);}else{resp.sendRedirect("/listClient");}
+            if(user.isAdministrator()) {
+                resp.sendRedirect("/listAdmin");
+            }else{
+                resp.sendRedirect("/listClient");}
 
         }catch (Exception e){
-            System.out.println("No current user");
-            try {
-                resp.sendRedirect("/loggin");
-            }catch (Exception x){
-
-            }
+            e.printStackTrace();
+            System.out.println("Failed...");
         }
-
-
-
-
-
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("list admin servlet");
+
 
         try{
             if(req.getParameter("exit")!=null) {
@@ -101,14 +87,14 @@ public class ListAdminServlet extends HttpServlet {
 
             try{
 
-            String name = req.getParameter("name");
-            int price = Integer.parseInt(req.getParameter("price"));
-            Product product = new Product(name, price);
-            Model model = Model.getInstance();
-            model.add(product);
+                String name = req.getParameter("name");
+                int price = Integer.parseInt(req.getParameter("price"));
+                Product product = new Product(name, price);
+                Model model = Model.getInstance();
+                model.add(product);
 
-            req.setAttribute("name", name);
-            doGet(req, resp);
+                req.setAttribute("name", name);
+                doGet(req, resp);
 
             }catch (Exception f){
                 req.setAttribute("nullData", "");

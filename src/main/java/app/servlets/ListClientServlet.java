@@ -20,7 +20,8 @@ public class ListClientServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("list buyer servlet");
+        System.out.println("List Client Servlet");
+
 
         try{
             if(req.getAttribute("goToBasket")!=null) {
@@ -43,16 +44,17 @@ public class ListClientServlet extends HttpServlet {
 
 
         Model model = Model.getInstance();
+        User user = (User)req.getSession().getAttribute("user");
         req.setAttribute("products", model.getList());
         try {
             System.out.println("second try v1.0");
-            if(!model.getCurrentUser().isAdministrator()){
+            if(user.isAdministrator()){
                 System.out.println("second try v2.0");
 
-                req.setAttribute("loggin", model.getCurrentUser().getNickname());
+                req.setAttribute("loggin", user.getNickname());
                 System.out.println("set attribute loggin");
 
-                Model.getInstance().addToBasket(Model.getInstance().getCurrentUser(), "");
+                Model.getInstance().addToBasket(user, "");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listClient.jsp");
                 requestDispatcher.forward(req, resp);
 
@@ -78,14 +80,6 @@ public class ListClientServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try{
-            if(req.getParameter("exit")!=null) {
-                req.setAttribute("exit", "exit");
-                doGet(req, resp);
-            }
-        }catch (Exception e){
-            System.out.println("not exit");
-        }
 
         try{
             if(req.getParameter("goToBasket")!=null) {

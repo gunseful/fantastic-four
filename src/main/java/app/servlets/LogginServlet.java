@@ -6,16 +6,16 @@ import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LogginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         if(req.getAttribute("inBlackList")!=null){
             System.out.println("set current user - null");
             Model.getInstance().setCurrentUser(null);
@@ -40,6 +40,7 @@ public class LogginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("loggin servlet");
         try {
             String nickname = req.getParameter("nickname");
             String password = req.getParameter("password");
@@ -48,23 +49,32 @@ public class LogginServlet extends HttpServlet {
             Model model = Model.getInstance();
 
             if(model.checkLogginAndPassword(user)){
-                System.out.println(Model.getInstance().getCurrentUser().getName());
-                if(model.checkBlackList(model.getCurrentUser())){
-                    System.out.println(model.getCurrentUser()+" in blackLIST!");
-                    req.setAttribute("inBlackList", Model.getInstance().getCurrentUser().getName());
-                    doGet(req, resp);
-                    return;
+                User currentUser = Model.getInstance().getUserByNickName(nickname);
+                System.out.println("adding session");
+                HttpSession session = req.getSession();
+                session.setAttribute("user", currentUser);
+                session.setMaxInactiveInterval(30*60);
+                Cookie userName = new Cookie("user", nickname);
+                userName.setMaxAge(30*60);
+                resp.addCookie(userName);
+                System.out.println(currentUser);
+                if(currentUser.isAdministrator()) {
+                    System.out.println("redirect to listAdmin");
+                    resp.sendRedirect("/listAdmin");
                 }else{
-                req.setAttribute("loggin", Model.getInstance().getCurrentUser().getName());
-                doGet(req, resp);}
+                    System.out.println("redirect to listClient");
+                    resp.sendRedirect("/listClient");
+                }
+
             }else{
-                req.setAttribute("NoData","NoData");
-                System.out.println("not found user with this nickname");
-                doGet(req, resp);
+                RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/loggin.jsp");
+                resp.setContentType("text/html;charset=UTF-8");
+                req.setAttribute("NoData", "NoData");
+                rd.include(req , resp);
             }
 
         }catch (Exception e){
-            e.printStackTrace();
+                e.printStackTrace();
                 req.setAttribute("NoData", "NoData");
                 doGet(req, resp);
         }

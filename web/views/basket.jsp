@@ -92,8 +92,8 @@
 </div>
 
 <div>
-    <form method="post" accept-charset="ISO-8859-1">
-        <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" name="exit" type="submit" value="exit">Выйти</button>
+    <form action="LogoutServlet" method="post">
+        <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" type="submit" value="logout">Выйти</button>
     </form>
 </div>
 

@@ -82,13 +82,9 @@
 
 <div>
     <%
-        if (request.getAttribute("loggin") != null) {
-            out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как "+request.getAttribute("loggin")+"</p>");
-            if(request.getAttribute("admin")!=null){
-                out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы Администратор</p>");
-                out.println("<p class=\"ex1\" style=\"font-size:12px;\">Вы можете добавлять или удалять товар из магазина</p>");
-            }
-        }
+            out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как "+session.getAttribute("user")+"</p>");
+            out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы Администратор</p>");
+            out.println("<p class=\"ex1\" style=\"font-size:12px;\">Вы можете добавлять или удалять товар из магазина</p>");
     %>
 </div>
 
@@ -97,8 +93,8 @@
 
 
 <div>
-    <form method="post" accept-charset="ISO-8859-1">
-        <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" name="exit" type="submit" value="exit">Выйти</button>
+    <form action="LogoutServlet" method="post">
+        <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" type="submit" value="logout">Выйти</button>
     </form>
 </div>
 
@@ -146,6 +142,31 @@
     </div>
 </div>
 </div>
+
+
+
+
+
+
+
+<%
+    //allow access only if session exists
+    String user = (String) session.getAttribute("user");
+    String userName = null;
+    String sessionID = null;
+    Cookie[] cookies = request.getCookies();
+    if(cookies !=null){
+        for(Cookie cookie : cookies){
+            if(cookie.getName().equals("user")) userName = cookie.getValue();
+            if(cookie.getName().equals("JSESSIONID")) sessionID = cookie.getValue();
+        }
+    }
+%>
+<h3>Hi <%=userName %>, Login successful. Your Session ID=<%=sessionID %></h3>
+<br>
+User=<%=user %>
+<br>
+
 
 
 

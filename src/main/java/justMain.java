@@ -1,3 +1,8 @@
+
+
+import app.entities.User;
+import app.model.Model;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,6 +17,7 @@ public class justMain {
     public static final String DB_Driver = "org.h2.Driver";
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
+
 //
 
         //ДОБАВЛЯЕТ ИЗОБРАЖЕНИЕ В БАЗУ ДАННЫХ, КАК ДОСТАТЬ ПОКА ХЗ

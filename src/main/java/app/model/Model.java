@@ -108,6 +108,48 @@ public class Model {
         }
     }
 
+    //This method return the User with nickname that you give as attribute
+    public User getUserByNickName(String nickname) {
+
+        System.out.println("Model getUser...");
+        try {
+            Class.forName(DB_Driver);
+            try (Connection connection = DriverManager.getConnection(DB_URL)) {
+                PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Users WHERE nickname = ?");
+                preparedStatement.setString(1, nickname.toUpperCase());
+                ResultSet resultSet = preparedStatement.executeQuery();
+
+                User user = new User();
+                while (resultSet.next()) {
+                    user.setId(resultSet.getInt(1));
+                    user.setNickname(resultSet.getString(2));
+                    user.setPassword(resultSet.getString(3));
+                    user.setName(resultSet.getString(4));
+                    user.setAdministrator(resultSet.getBoolean(5));
+                    user.setBasket(new Basket());
+
+                    //This part of method is checking db for User basket, gets String with product ID's and
+                    //check does the current list of product has this product
+                    //if does - add to User's basket.
+                    if (resultSet.getString(6) != null) {
+                        for (String str : resultSet.getString(6).split(" ")) {
+                            for (Product product : getList()) {
+                                if (str.trim().equals(String.valueOf(product.getId()))) {
+                                    user.getBasket().add(product);
+                                }
+                            }
+                        }
+                    }
+                }
+                return user;
+            }
+        } catch (Exception ex) {
+            System.out.println("Connection failed...");
+            System.out.println(ex);
+            return null;
+        }
+    }
+
     //This method add basket as a string (product ID's with spaces) to User's (that you give as attribute) basket
     public void addToBasket(User user, String basket) {
 
