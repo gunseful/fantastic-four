@@ -38,7 +38,8 @@ public class ListAdminServlet extends HttpServlet {
         System.out.println(user);
         try {
             if(user.isAdministrator()) {
-                resp.sendRedirect("/listAdmin");
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listAdmin.jsp");
+                requestDispatcher.forward(req, resp);
             }else{
                 resp.sendRedirect("/listClient");}
 

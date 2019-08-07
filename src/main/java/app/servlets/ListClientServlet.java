@@ -31,91 +31,43 @@ public class ListClientServlet extends HttpServlet {
 
         }
 
-        try{
-            if(req.getAttribute("exit")!=null) {
-                Model.getInstance().setCurrentUser(null);
-
-            }
-        }catch (Exception e){
-
-        }
-
-
-
-
-        Model model = Model.getInstance();
+        req.setAttribute("products", Model.getInstance().getList());
         User user = (User)req.getSession().getAttribute("user");
-        req.setAttribute("products", model.getList());
+        System.out.println(user);
         try {
-            System.out.println("second try v1.0");
-            if(user.isAdministrator()){
-                System.out.println("second try v2.0");
-
-                req.setAttribute("loggin", user.getNickname());
-                System.out.println("set attribute loggin");
-
-                Model.getInstance().addToBasket(user, "");
+            if(!user.isAdministrator()) {
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listClient.jsp");
                 requestDispatcher.forward(req, resp);
-
             }else{
-                System.out.println("second try");
                 resp.sendRedirect("/listAdmin");}
 
         }catch (Exception e){
-            System.out.println("No current user");
             e.printStackTrace();
-            try {
-                resp.sendRedirect("/loggin");
-            }catch (Exception x){
-
-            }
+            System.out.println("Failed...");
         }
-
-
-
-
-
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        try{
-            if(req.getParameter("goToBasket")!=null) {
-                req.setAttribute("goToBasket", "goToBasket");
-                doGet(req, resp);
-            }
-        }catch (Exception e){
-            System.out.println("not goToBasket");
-        }
-
-
         try {
             if (!req.getParameterValues("productForBuy").equals(null)) {
                 String[] productsID = req.getParameterValues("productForBuy");
-
+                User user = (User)req.getSession().getAttribute("user");
                 String basket = "";
                 for (String productID : productsID) {
                     System.out.println(productID);
                     for(Product product : Model.getInstance().getList()){
                         if(String.valueOf(product.getId()).equals(productID.split(" ")[0])){
-                            Model.getInstance().getCurrentUser().getBasket().getList().add(product);
-                            Model.getInstance().addToBasket(Model.getInstance().getCurrentUser(), product.getId()+" ");
-                            System.out.println(Model.getInstance().getCurrentUser().getBasket().getList());
-
-                        }
+                            user.getBasket().getList().add(product);
+                            Model.getInstance().addToBasket(user, product.getId()+" ");
+                            }
                     }
-
                 }
-
             }
         }catch (NullPointerException e){
             req.setAttribute("nullData", "");
             doGet(req, resp);
         }
-
         doGet(req, resp);
-
     }
 }

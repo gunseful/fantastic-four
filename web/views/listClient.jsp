@@ -85,8 +85,15 @@
 
 <div>
     <%
-            out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как "+session.getAttribute("user")+"</p>");
+            User user = (User)session.getAttribute("user");
+            out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как "+user.getNickname()+"</p>");
     %>
+</div>
+
+<div>
+    <div>
+        <button class="w3-button w3-yellow w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/orders'">Заказы</button>
+    </div>
 </div>
 
 <div>
@@ -127,20 +134,14 @@
 
 </div>
     <%
-        if (!Model.getInstance().getCurrentUser().getBasket().equals(null)) {
+        if (!user.getBasket().equals(null)) {
 
-            out.println("<div>");
-    out.println("<form method=\"post\" accept-charset=\"ISO-8859-1\">");
-        out.println("<button class=\"w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block\" name=\"goToBasket\" type=\"submit\" value=\"goToBasket\">Корзина</button>");
-    out.println("</form>");
-out.println("</div>");
-
+            out.println("" +
+                    "<button class=\"w3-button w3-green w3-padding-large w3-large w3-hover-opacity-off btn-block\" onclick=\"location.href='/basket'\">Корзина</button>\n");
         }
     %>
 </div>
 </div>
-
-
 </div>
 
 

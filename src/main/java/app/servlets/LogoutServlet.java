@@ -39,7 +39,6 @@ public class LogoutServlet extends HttpServlet {
         }
         System.out.println(session);
         System.out.println("before sendRedrect");
-        Model.getInstance().setCurrentUser(null);
         response.sendRedirect("/");
     }
 

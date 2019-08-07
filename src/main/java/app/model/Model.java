@@ -16,16 +16,6 @@ public class Model {
 
     private static final Model instance = new Model();
 
-    private User currentUser;
-
-    public User getCurrentUser() {
-        return currentUser;
-    }
-
-    public void setCurrentUser(User currentUser) {
-        this.currentUser = currentUser;
-    }
-
     public static Model getInstance() {
         return instance;
     }
@@ -214,7 +204,7 @@ public class Model {
                 resultSet.next();
                 if (resultSet.getString(3).equals(user.getPassword())) {
                     int i = resultSet.getInt(1);
-                    currentUser = getUser(i);
+                    User currentUser = getUser(i);
                     System.out.println(currentUser);
                     return true;
                 } else {
@@ -246,12 +236,12 @@ public class Model {
     }
 
     //This method making some Order based on the current User's basket
-    public void makeOrder() {
+    public void makeOrder(User user) {
 
         System.out.println("Model makeOrder");
         //convert basket to string
         String order = "";
-        for (Product product : currentUser.getBasket().getList()) {
+        for (Product product : user.getBasket().getList()) {
             order += product.getId() + " ";
         }
         try {
@@ -261,11 +251,11 @@ public class Model {
                 String sql = "INSERT INTO ORDERS (PRODUCTS, CUSTOMERID, CREATEDAT) Values (?, ?, ?)";
                 PreparedStatement preparedStatement = conn.prepareStatement(sql);
                 preparedStatement.setString(1, order);
-                preparedStatement.setInt(2, currentUser.getId());
+                preparedStatement.setInt(2, user.getId());
                 LocalDate todayLocalDate = LocalDate.now();
                 preparedStatement.setObject(3, todayLocalDate);
-                currentUser.setBasket(new Basket());
-                addToBasket(currentUser, "");
+                user.setBasket(new Basket());
+                addToBasket(user, "");
                 preparedStatement.executeUpdate();
             }
         } catch (Exception ex) {
@@ -294,7 +284,7 @@ public class Model {
     }
 
     //This method return list of orders. Current User is Administrator -> return all orders, if not - only orders of current user
-    public List<Order> getOrders() {
+    public List<Order> getOrders(User user) {
 
         System.out.println("Model getOrders");
         List<Order> list = new ArrayList<>();
@@ -302,9 +292,9 @@ public class Model {
                 Class.forName(DB_Driver);
                 try (Connection connection = DriverManager.getConnection(DB_URL)) {
                     ResultSet resultSet = null;
-                    if (!currentUser.isAdministrator()) {
+                    if (!user.isAdministrator()) {
                         PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Orders WHERE CustomerID = ?");
-                        preparedStatement.setInt(1, currentUser.getId());
+                        preparedStatement.setInt(1, user.getId());
                         resultSet = preparedStatement.executeQuery();
                     }else {
                         PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Orders");

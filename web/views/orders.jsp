@@ -95,20 +95,30 @@
 
 <div>
     <%
-        out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как " + session.getAttribute("user") + "</p>");
+        User user = (User)session.getAttribute("user");
+        out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как "+user.getNickname()+"</p>");
+        if(user.isAdministrator()){
+            out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы Администратор</p>");
+            out.println("<p class=\"ex1\" style=\"font-size:12px;\">Вы можете удалять заказы и блокировать неплатильщиков</p>");}
     %>
+</div>
+
+
+<div>
+    <div>
+        <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/listClient'">К магазину</button>
+        <%
+            if(user.isAdministrator()){
+                out.println("<button class=\"w3-button w3-black w3-padding-large w3-large w3-hover-opacity-off btn-block\" onclick=\"location.href='/blacklist'\" name=\"blacklist\" type=\"submit\" value=\"blacklist\">Black List</button>\n");
+            }
+        %>
+    </div>
 </div>
 
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block" type="submit" value="logout">Выйти</button>
     </form>
-</div>
-
-<div>
-    <div>
-        <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/listClient'">К магазину</button>
-    </div>
 </div>
 
 <div class="ex2">
@@ -126,19 +136,19 @@
             <%
                 List<Order> orders = (List<Order>) request.getAttribute("orders");
                 if (orders != null && !orders.isEmpty()) {
-                    if(!Model.getInstance().getCurrentUser().isAdministrator()){
+                    if(!user.isAdministrator()){
                     out.println("<p>Ваши заказы:</p>");}
                     {
                         out.println("<p>Заказы:</p>");
                     }
                     int i = 0;
                     for (Order order : orders) {
-                        if(Model.getInstance().getCurrentUser().isAdministrator()){
-                            User user = Model.getInstance().getUser(order.getCustomerID());
-                            if(!Model.getInstance().checkBlackList(user)) {
-                                out.println("<p>Пользователь - " + user.getNickname() + "<p><button class=\"w3-button w3-red btn-block\" name=\"block\" value=" + user.getId() + ">Block this Client</button>\n<br>");
+                        if(user.isAdministrator()){
+                            User user2 = Model.getInstance().getUser(order.getCustomerID());
+                            if(!Model.getInstance().checkBlackList(user2)) {
+                                out.println("<p>Пользователь - " + user2.getNickname() + "<p><button class=\"w3-button w3-red btn-block\" name=\"block\" value=" + user2.getId() + ">Block this Client</button>\n<br>");
                             }else{
-                                out.println("<p>Пользователь - " + user.getNickname() + "<p><div style=\"background-color:red; width: max-content;\"><h3>THIS CLIENT WAS BLOCKED</h3></div>");
+                                out.println("<p>Пользователь - " + user2.getNickname() + "<p><div style=\"background-color:red; width: max-content;\"><h3>THIS CLIENT WAS BLOCKED</h3></div>");
 
                             }
 
@@ -147,7 +157,7 @@
                     }
 
                     out.println("<input class=\"w3-button w3-red \" onclick=\"location.href='/'\" type=\"submit\" value=\"Удалить заказ\">");
-                    if(!Model.getInstance().getCurrentUser().isAdministrator()) {
+                    if(!user.isAdministrator()) {
                         out.println("<input class=\"w3-button w3-black \" onclick=\"location.href='/'\" name=\"Pay\" type=\"submit\" value=\"Pay\" value=\"Оплатить\">");
                     }
 

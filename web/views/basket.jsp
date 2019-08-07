@@ -85,10 +85,23 @@
 
 <div>
     <%
-        if (request.getAttribute("loggin") != null) {
-            out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как "+request.getAttribute("loggin")+"</p>");
-        }
+        User user = (User)session.getAttribute("user");
+        out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как "+user.getNickname()+"</p>");
     %>
+</div>
+
+
+
+<div>
+    <div>
+        <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/listClient'">К магазину</button>
+    </div>
+</div>
+
+<div>
+    <div>
+        <button class="w3-button w3-yellow w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/orders'">Заказы</button>
+    </div>
 </div>
 
 <div>
@@ -130,7 +143,6 @@
 
         <form name="input" method="post">
         <%
-        List<Product> basket = (List<Product>) request.getAttribute("basket");
         if (products != null && !products.isEmpty()) {
             out.println("<button class=\"w3-button w3-yellow w3-padding-large w3-large w3-hover-opacity-off btn-block\" name=\"getOrder\" type=\"submit\" value=\"getOrder\">Заказать</button>\n");
         }
@@ -138,31 +150,11 @@
             </form>
 
     </div>
-    <%
-        if (!Model.getInstance().getCurrentUser().getBasket().equals(null)) {
-
-            out.println("<div>");
-            out.println("<form method=\"post\" accept-charset=\"ISO-8859-1\">");
-            out.println("<button class=\"w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block\" name=\"Orders\" type=\"submit\" value=\"Orders\">Заказы</button>");
-            out.println("</form>");
-            out.println("</div>");
-
-        }
-    %>
+</div>
+</div>
 </div>
 
 
-
-    </div>
-
-
-</div>
-
-<div>
-    <div>
-        <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/listBuyer'">К магазину</button>
-    </div>
-</div>
 
 
 

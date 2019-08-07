@@ -16,26 +16,8 @@ public class LogginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        if(req.getAttribute("inBlackList")!=null){
-            System.out.println("set current user - null");
-            Model.getInstance().setCurrentUser(null);
-        }
-
-        try {
-            if (Model.getInstance().getCurrentUser().isAdministrator()) {
-                resp.sendRedirect("/listAdmin");
-            }else{
-                resp.sendRedirect("/listClient");
-            }
-        } catch (Exception e) {
-
-        if (req.getAttribute("loggin") != null) {
-            resp.sendRedirect("/listAdmin");
-        } else {
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/loggin.jsp");
             requestDispatcher.forward(req, resp);
-        }
-    }
     }
 
     @Override
@@ -50,6 +32,12 @@ public class LogginServlet extends HttpServlet {
 
             if(model.checkLogginAndPassword(user)){
                 User currentUser = Model.getInstance().getUserByNickName(nickname);
+                if(Model.getInstance().checkBlackList(currentUser)){
+                    RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/loggin.jsp");
+                    resp.setContentType("text/html;charset=UTF-8");
+                    req.setAttribute("inBlackList", currentUser.getNickname());
+                    rd.include(req , resp);
+                }
                 System.out.println("adding session");
                 HttpSession session = req.getSession();
                 session.setAttribute("user", currentUser);

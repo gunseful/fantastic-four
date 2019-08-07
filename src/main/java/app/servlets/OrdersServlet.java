@@ -1,6 +1,7 @@
 package app.servlets;
 
 import app.entities.Product;
+import app.entities.User;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -15,13 +16,6 @@ public class OrdersServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("Orders servlet");
 
-        try{
-            if(req.getAttribute("userPage")!=null) {
-                resp.sendRedirect("/userPage");
-            }
-        }catch (Exception e){
-
-        }
 
         try{
             if(req.getAttribute("Orders")!=null) {
@@ -31,34 +25,24 @@ public class OrdersServlet extends HttpServlet {
 
         }
 
-
-        try{
-            if(req.getAttribute("exit")!=null) {
-                Model.getInstance().setCurrentUser(null);
-
-            }
-        }catch (Exception e){
-
-        }
-
-
+        User user = (User)req.getSession().getAttribute("user");
 
 
         Model model = Model.getInstance();
         if(req.getAttribute("exit")==null){
-            req.setAttribute("orders", model.getOrders());
+            req.setAttribute("orders", model.getOrders(user));
             System.out.println("Orders:");
-            System.out.println(model.getOrders());
+            System.out.println(model.getOrders(user));
         }
         try {
             System.out.println("basket second try v1.0");
-            if(!model.getCurrentUser().isAdministrator()){
+            if(!user.isAdministrator()){
                 System.out.println("basket second try v2.0");
 
-                req.setAttribute("loggin", model.getCurrentUser().getNickname());
+                req.setAttribute("loggin", user.getNickname());
                 System.out.println("set attribute loggin");
 
-                Model.getInstance().addToBasket(Model.getInstance().getCurrentUser(), "");
+                Model.getInstance().addToBasket(user, "");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/orders.jsp");
                 requestDispatcher.forward(req, resp);
 
@@ -69,56 +53,51 @@ public class OrdersServlet extends HttpServlet {
             }
 
         }catch (Exception e){
-            System.out.println("No current user");
-            try {
-                resp.sendRedirect("/loggin");
-            }catch (Exception x){
+            e.printStackTrace();
 
             }
         }
 
-
-
-
-
-    }
 
 
 
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try{
-            if(req.getParameter("exit")!=null) {
-                System.out.println("exit");
-                req.setAttribute("exit", "exit");
-                doGet(req, resp);
-            }
-        }catch (Exception e){
-            System.out.println("not exit");
-        }
+//        try{
+//            if(req.getParameter("exit")!=null) {
+//                System.out.println("exit");
+//                req.setAttribute("exit", "exit");
+//                doGet(req, resp);
+//            }
+//        }catch (Exception e){
+//            System.out.println("not exit");
+//        }
+//
+//        try{
+//            if(req.getParameter("Orders")!=null) {
+//                System.out.println("            GO TO ORDERS");
+//                req.setAttribute("Orders", "Orders");
+//                doGet(req, resp);
+//            }
+//        }catch (Exception e){
+//            System.out.println("not goToBasket");
+//        }
+//
+//        try{
+//            if(req.getParameter("goToBasket")!=null) {
+//                req.setAttribute("goToBasket", "goToBasket");
+//                doGet(req, resp);
+//            }
+//        }catch (Exception e){
+//            System.out.println("not goToBasket");
+//        }
 
-        try{
-            if(req.getParameter("Orders")!=null) {
-                req.setAttribute("Orders", "Orders");
-                doGet(req, resp);
-            }
-        }catch (Exception e){
-            System.out.println("not goToBasket");
-        }
-
-        try{
-            if(req.getParameter("goToBasket")!=null) {
-                req.setAttribute("goToBasket", "goToBasket");
-                doGet(req, resp);
-            }
-        }catch (Exception e){
-            System.out.println("not goToBasket");
-        }
+        User user = (User)req.getSession().getAttribute("user");
 
         try{
             if(req.getParameter("getOrder")!=null) {
-                Model.getInstance().makeOrder();
+                Model.getInstance().makeOrder(user);
                 System.out.println("get Order");
                 doGet(req, resp);
             }

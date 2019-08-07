@@ -85,15 +85,19 @@
 
 <div>
     <%
-        if (request.getAttribute("loggin") != null) {
-            out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как "+request.getAttribute("loggin")+"</p>");
-        }
+        User user = (User)session.getAttribute("user");
+        out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как "+user.getNickname()+"</p>");
+        out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы Администратор</p>");
+        out.println("<p class=\"ex1\" style=\"font-size:12px;\">Вы можете разблокировать кого-нибудь из пользователей</p>");
     %>
 </div>
 
 <div>
     <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/listAdmin'">К магазину</button>
 </div>
+
+<button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block" onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">Заказы</button>
+
 
 <div>
     <form action="LogoutServlet" method="post">
@@ -118,30 +122,16 @@
                 System.out.println(users);
                 if (users != null && !users.isEmpty()) {
                     out.println("<p>Ваша корзина:</p>");
-                    for (User user : users) {
-                        out.println("<input type=\"checkbox\" name = \"userForDelete\" value=\""+user.getId()+"\">"+user.getName()+"<br>");
+                    for (User user2 : users) {
+                        out.println("<input type=\"checkbox\" name = \"userForDelete\" value=\""+user2.getId()+"\">"+user2.getName()+"<br>");
                     }
-
                     out.println("<input class=\"w3-button w3-green \" onclick=\"location.href='/'\" type=\"submit\" value=\"Удалить из черного списка\">");
-
-
-
-
-
                 } else out.println("<p>Черный список пуст</p>");
             %>
-
         </form>
-
-
-
 </div>
-
-
 </div>
-
 <div>
-
 </div>
 
 

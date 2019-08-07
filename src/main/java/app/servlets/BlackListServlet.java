@@ -1,6 +1,7 @@
 package app.servlets;
 
 import app.entities.Product;
+import app.entities.User;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -24,27 +25,16 @@ public class BlackListServlet extends HttpServlet {
         }
 
 
-        try{
-            if(req.getAttribute("exit")!=null) {
-                Model.getInstance().setCurrentUser(null);
-
-            }
-        }catch (Exception e){
-
-        }
 
 
-
-
-        Model model = Model.getInstance();
+        User user = (User)req.getSession().getAttribute("user");
         if(req.getAttribute("exit")==null){
-            req.setAttribute("blacklist", model.getBlackList());
+            req.setAttribute("blacklist", Model.getInstance().getBlackList());
         }
         try {
-            if(!model.getCurrentUser().isAdministrator()){
-                req.setAttribute("loggin", model.getCurrentUser().getNickname());
+            if(!user.isAdministrator()){
 
-                Model.getInstance().addToBasket(Model.getInstance().getCurrentUser(), "");
+                Model.getInstance().addToBasket(user, "");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listAdmin.jsp");
                 requestDispatcher.forward(req, resp);
 
@@ -53,12 +43,7 @@ public class BlackListServlet extends HttpServlet {
                 requestDispatcher.forward(req, resp);}
 
         }catch (Exception e){
-            System.out.println("No current user");
-            try {
-                resp.sendRedirect("/loggin");
-            }catch (Exception x){
-
-            }
+            e.printStackTrace();
         }
 
 
@@ -69,15 +54,6 @@ public class BlackListServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try{
-            if(req.getParameter("exit")!=null) {
-                System.out.println("exit");
-                req.setAttribute("exit", "exit");
-                doGet(req, resp);
-            }
-        }catch (Exception e){
-            System.out.println("not exit");
-        }
 
         try{
             if(req.getParameter("Orders")!=null) {

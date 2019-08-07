@@ -17,8 +17,9 @@ public class RegistrationServlet extends HttpServlet {
 
         //проверяем есть ли текущий пользователь, если есть то пропускаем регистрацию и переходим на страницу логина
         //так как мы уже залогинены нас бросит на страницу либо админа либо покупателя
+        User user = (User)req.getSession().getAttribute("user");
         try {
-            if (Model.getInstance().getCurrentUser() != null) {
+            if (user != null) {
                 resp.sendRedirect("/loggin");
             } else {
                 //если текущего пользователя нет, проверим передан ли атрибут "зарегестрирован", если да - то прыгаем на страницу логина
