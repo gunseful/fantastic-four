@@ -104,7 +104,7 @@
             <c:if test="${!blacklist.isEmpty()}">
                 <p>Черный список:</p>
                 <c:forEach var="user" items="${blacklist}">
-                    <input type="checkbox" name="userForDelete" value=" ${user.getId()} ">${user.getName()}<br>
+                    <input type="checkbox" name="userForDelete" value=" ${user.getId()} ">${user.getNickname()}<br>
                 </c:forEach>
                 <input class="w3-button w3-red " onclick="location.href='../..'" type="submit"
                        value="Удалить из черного списка">

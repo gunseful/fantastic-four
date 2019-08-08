@@ -25,7 +25,7 @@ public class RegistrationServlet extends HttpServlet {
                 //если текущего пользователя нет, проверим передан ли атрибут "зарегестрирован", если да - то прыгаем на страницу логина
                 //если нет то снова на страницу регистрации
                 if(req.getAttribute("registered") == null) {
-                    RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/registration.jsp");
+                    RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/initialization/registration.jsp");
                     requestDispatcher.forward(req, resp);
                 }else{
                     resp.sendRedirect("/loggin");

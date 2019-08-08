@@ -43,10 +43,7 @@ public class ListAdminServlet extends HttpServlet {
                 for (String productID : productsID) {
                     Model.getInstance().delete(productID);
                 }
-            }
-        }catch (NullPointerException e){
-            //если товаров для удаления нет, а кнопки нажимались, падает эксепшн и чекается а не добавился ли новый товар
-            try{
+            }else{
                 //в первой строке писали имя, по идее здесь можно ограничить, типа чтобы имя не было меньше 5 символов етц
                 //но решил главное чтобы работала, как я ограничивал я показал в никах
                 String name = req.getParameter("name");
@@ -55,15 +52,15 @@ public class ListAdminServlet extends HttpServlet {
                 //создаем продукт
                 Product product = new Product(name, price);
                 //добавляем в базу
+                System.out.println("товар добавляется");
                 Model.getInstance().add(product);
                 doGet(req, resp);
-
-            }catch (Exception f){
+            }
+        }catch (NullPointerException e){
                 //если и ни того ни сего нет, либо забыли цену написать либо чо еще, короче косяк - вылетает нуллдата
                 req.setAttribute("nullData", "");
                 doGet(req, resp);
             }
-        }
         //удалили продукт - прост обновляется вьюшка и все
         doGet(req, resp);
     }

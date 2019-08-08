@@ -40,27 +40,20 @@ public class OrdersServlet extends HttpServlet {
                 for (String orderID : ordersID) {
                     Model.getInstance().payOrder(Integer.parseInt(orderID));
                 }
-            }
-            //если падает эксепшен и нет пея, но есть были выбраны ордеры - удаляем их
-        } catch (NullPointerException exception) {
-            try {
+            }else if(req.getParameterValues("orders")!=null) {
                 String[] ordersID = req.getParameterValues("orders");
                 for (String orderID : ordersID) {
                     Model.getInstance().deleteOrder(Integer.parseInt(orderID.trim()));
                 }
-                //если еще один эксепшн, типа значит ничего не выбиралось, значит нажалась кнопка блок
-                //вызывается метод из Модели который добавляет юзера в черный список по айдишнику
-            } catch (Exception e) {
-                try {
-                    if (req.getParameter("block") != null) {
-                        Model.getInstance().addUserToBlackList(Model.getInstance().getUser(Integer.parseInt(req.getParameter("block"))));
-                    }
-                    //это ласт эксепшн, значит ничего ваще не выбиралось и вот значит нулдата и выскакивает ошибка
-                } catch (Exception exept) {
+            }else{
+                if (req.getParameter("block") != null) {
+                    Model.getInstance().addUserToBlackList(Model.getInstance().getUser(Integer.parseInt(req.getParameter("block"))));
+                }else{
                     req.setAttribute("nullData", "");
                     doGet(req, resp);
                 }
             }
+        } catch (NullPointerException ignored) {
         }
         doGet(req, resp);
     }

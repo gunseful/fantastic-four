@@ -42,7 +42,7 @@ public class LogginServlet extends HttpServlet {
                 //проверяется, а не в черном ли списке чувак
                 if(Model.getInstance().checkBlackList(currentUser)){
                     //если да то бросает опять на логин с атрибутом inBlackList (вылезит уведомление)
-                    RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/loggin.jsp");
+                    RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
                     resp.setContentType("text/html;charset=UTF-8");
                     req.setAttribute("inBlackList", currentUser.getNickname());
                     rd.include(req , resp);
@@ -66,13 +66,18 @@ public class LogginServlet extends HttpServlet {
                 }
             }else{
                 //если такого юзера в базе нет, кидает опять в логин с ошибкой ноудата
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/loggin.jsp");
+                RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
                 resp.setContentType("text/html;charset=UTF-8");
                 req.setAttribute("NoData", "NoData");
                 rd.include(req , resp);
             }
 
         }catch (Exception ignored){
+            //если такого юзера в базе нет, кидает опять в логин с ошибкой ноудата
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
+            resp.setContentType("text/html;charset=UTF-8");
+            req.setAttribute("NoData", "NoData");
+            rd.include(req , resp);
         }
 
 
