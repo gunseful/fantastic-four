@@ -17,7 +17,7 @@ public class Model {
         return instance;
     }
 
-    //This method delete the product with id that you give as attribute from db
+    //This method delete the product with id (which the client gives as attribute) from db
     public void delete(String id) {
         System.out.println("Model deleteProduct");
         try {

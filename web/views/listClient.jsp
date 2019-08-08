@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="java.util.List" %>
 <%@ page import="app.entities.User" %>
 <%@ page import="app.entities.Product" %>
@@ -13,9 +14,11 @@
             width: 30%;
             padding-top: 5px;
         }
+
         div.ex2 {
             padding-left: 30%
         }
+
         #clickme {
             background-color: #4CAF50; /* Green */
             border: none;
@@ -32,23 +35,28 @@
             top: -9999px;
             left: -9999px;
         }
+
         #hider:checked + .content {
             display: block;
         }
+
         i.normal {
             font-style: normal;
             font-family: "Lucida Console";
             font-size: 20px;
         }
+
         i.normals {
             font-style: normal;
             font-family: "Lucida Console";
             font-size: 30px;
         }
+
         .content {
             margin-top: 10px;
             display: none;
         }
+
         p.ex1 {
             padding: 0px;
         }
@@ -70,17 +78,20 @@
     </div>
 </div>
 <%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
-<div>
-    <%
-        User user = (User) session.getAttribute("user");
-        out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как " + user.getNickname() + "</p>");
-    %>
-</div>
+<p class="ex1" style="font-size:15px;">Вы вошли как ${user.getNickname()} </p>
 <%--просто кнопка "Заказы", которая переносит на страницу заказов--%>
 <div>
     <div>
         <button class="w3-button w3-yellow w3-padding-large w3-large w3-hover-opacity-off btn-block"
                 onclick="location.href='/orders'">Заказы
+        </button>
+    </div>
+</div>
+<%--просто кнопка "Корзина", которая переносит на страницу корзины--%>
+<div>
+    <div>
+        <button class="w3-button w3-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
+                onclick="location.href='/basket'">Корзина
         </button>
     </div>
 </div>
@@ -95,35 +106,24 @@
 <%--если клиент ошибся, ему подсказка--%>
 <div class="ex2">
     <div>
-        <%
-            if (request.getAttribute("nullData") != null) {
-                out.println("<p style=\"font-size:15px;\">Вы ничего не выбрали</p>");
-            }
-        %>
+        <c:if test="${nullData != null}">
+            <p style="font-size:15px;">Вы ничего не выбрали</p>
+        </c:if>
     </div>
-    <%--прилетают из сервлета список продуктов, он выводится--%>
+<%--этот блок выводит все товары на экран, и по желанию клиент выбирает и добавляет себе в корзину--%>
     <div>
         <form name="input" method="post">
-            <%
-                List<Product> products = (List<Product>) request.getAttribute("products");
-                if (products != null && !products.isEmpty()) {
-                    out.println("<p>Список товаров нашего магазина:</p>");
-                    for (Product product : products) {
-                        out.println("<input type=\"checkbox\" name = \"productForBuy\" value=\"" + product.getId() + "\">" + product.getName() + " - " + product.getPrice() + " тенге" + "<br>");
-                    }
-                    //кнопка добавляющая выбранные продукты в корзину текущего пользователя
-                    out.println("<input class=\"w3-button w3-green \" onclick=\"location.href='/'\" type=\"submit\" value=\"Добавить в корзину\">");
-                } else out.println("<p>Товаров пока нет.</p>");
-            %>
-        </form>
+            <c:if test="${products != null}">
+            <p>Список товаров нашего магазина:</p>
+            <c:forEach var="product" items="${products}">
+            <input type="checkbox" name="productForBuy" value=" ${product.getId()} ">${product}<br>
+            </c:forEach>
+            <input class="w3-button w3-green " onclick="location.href='/'" type="submit" value="Добавить в корзину">
+            </c:if>
+            <c:if test="${products == null}">
+            <p>Товаров пока нет.</p>
+            </c:if>
     </div>
-    <%
-        if (!user.getBasket().equals(null)) {
-            //кнопка перехода к корзине
-            out.println("" +
-                    "<button class=\"w3-button w3-green w3-padding-large w3-large w3-hover-opacity-off btn-block\" onclick=\"location.href='/basket'\">Корзина</button>\n");
-        }
-    %>
 </div>
 </div>
 </div>

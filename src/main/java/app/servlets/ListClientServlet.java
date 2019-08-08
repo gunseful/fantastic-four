@@ -34,7 +34,8 @@ public class ListClientServlet extends HttpServlet {
                 requestDispatcher.forward(req, resp);
             }else{
                 resp.sendRedirect("/listAdmin");}
-        }catch (Exception ignored){
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 
@@ -49,18 +50,21 @@ public class ListClientServlet extends HttpServlet {
                 //опять юзера из сессии достаем
                 User user = (User)req.getSession().getAttribute("user");
                 for (String productID : productsID) {
+                    System.out.println(productID.trim());
                     for(Product product : Model.getInstance().getList()){
                         //проверяем есть ли ваще продукт в базе данных
-                        if(String.valueOf(product.getId()).equals(productID)){
+                        if(String.valueOf(product.getId()).equals(productID.trim())){
                             user.getBasket().getList().add(product);
                             //если есть добавляет в базу данных
                             Model.getInstance().addToBasket(user, product.getId()+" ");
                             }
                     }
                 }
+            }else{
+                req.setAttribute("nullData", "");
+                doGet(req, resp);
             }
         }catch (NullPointerException e){
-            //если ничего не выбрано, то нул дата и вылазит ошибка
             req.setAttribute("nullData", "");
             doGet(req, resp);
         }
