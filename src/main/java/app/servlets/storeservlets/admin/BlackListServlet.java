@@ -24,10 +24,10 @@ public class BlackListServlet extends HttpServlet {
         //прост мне кажется такое решение довольно простым и очевидным
         try {
             if(!user.isAdministrator()){
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listClient.jsp");
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/listClient.jsp");
                 requestDispatcher.forward(req, resp);
             }else{
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/blacklist.jsp");
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/admin/blacklist.jsp");
                 requestDispatcher.forward(req, resp);}
         }catch (Exception e){
             e.printStackTrace();

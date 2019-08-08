@@ -33,7 +33,7 @@ public class BasketServlet extends HttpServlet {
 //                if(user.getBasket().getList().isEmpty()){
 //                    req.setAttribute("basket", null);
 //                }
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/basket.jsp");
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/basket.jsp");
                 requestDispatcher.forward(req, resp);
             }else{
                 resp.sendRedirect("/listAdmin");}

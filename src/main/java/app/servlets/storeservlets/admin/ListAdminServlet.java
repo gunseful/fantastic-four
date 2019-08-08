@@ -23,7 +23,7 @@ public class ListAdminServlet extends HttpServlet {
         //проверяем не залез ли шпион и переводим на страницу клиента если залез все таки
         try {
             if(user.isAdministrator()) {
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listAdmin.jsp");
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/admin/listAdmin.jsp");
                 requestDispatcher.forward(req, resp);
             }else{
                 resp.sendRedirect("/listClient");}

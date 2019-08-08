@@ -26,7 +26,7 @@ public class OrdersServlet extends HttpServlet {
 
 
         req.setAttribute("orders", Model.getInstance().getOrders(user));
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/orders.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/common/orders.jsp");
         requestDispatcher.forward(req, resp);
     }
 

@@ -26,7 +26,7 @@ public class ListClientServlet extends HttpServlet {
         //проверяем, если админ сюда зайдет его кинет на страницу админа, если обычный клиент, открывает вьюшку
         try {
             if(!user.isAdministrator()) {
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/listClient.jsp");
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/listClient.jsp");
                 requestDispatcher.forward(req, resp);
             }else{
                 resp.sendRedirect("/listAdmin");}

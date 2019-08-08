@@ -22,7 +22,7 @@ public class LogginServlet extends HttpServlet {
             }
         }else{
             //прост бросает на вьюшку
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/loggin.jsp");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/initialization/loggin.jsp");
             requestDispatcher.forward(req, resp);}
     }
 
