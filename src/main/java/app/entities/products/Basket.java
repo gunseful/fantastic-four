@@ -1,11 +1,9 @@
-package app.entities;
+package app.entities.products;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Basket {
-
-
 
     private List<Product> basket;
 

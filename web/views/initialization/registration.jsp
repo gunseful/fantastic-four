@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <html lang="ru">
@@ -31,16 +32,16 @@
 <body class="w3-light-grey">
 <div>
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
-        <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'" style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
+        <i class="fas fa-dragon w3-jumbo" onclick="location.href='../..'" style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
     </div>
 </div>
 <%--ну либо неверные данные, либо юзер уже есть, классическая надпись если что-то пошло не так--%>
 <div>
-    <%
-        if (request.getAttribute("fail") != null) {
-            out.println("<p style=\"font-size:20px;\">Введенные данные не верны, либо пользователь с таким ником уже существует <br> Правильно введеные данные - пароль от 6 до 15 символов<br> Имя и Никнейм от 3 до 15 символов</p>");
-        }
-    %>
+    <div>
+        <c:if test="${fail != null}">
+            <p style="font-size:15px;">Введенные данные не верны, либо пользователь с таким ником уже существует <br> Правильно введеные данные - пароль от 6 до 15 символов<br> Имя и Никнейм от 3 до 15 символов</p>
+        </c:if>
+    </div>
 </div>
 <%--имя, ник, пароль, поля для ввода и кнопка добавляющая юзера в базу данных--%>
     <div>

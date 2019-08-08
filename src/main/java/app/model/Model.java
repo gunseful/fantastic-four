@@ -1,9 +1,11 @@
 package app.model;
 
-import app.entities.Basket;
-import app.entities.Order;
-import app.entities.Product;
-import app.entities.User;
+import app.entities.products.Basket;
+import app.entities.products.Order;
+import app.entities.products.Product;
+import app.entities.user.User;
+import app.model.encrypt.Encrypt;
+
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -13,7 +15,8 @@ public class Model {
     private static final String DB_URL = "jdbc:h2:/c:/Users/Ares/IdeaProjects/fantasticFour/db/fantasticFour";
     private static final String DB_Driver = "org.h2.Driver";
     private static final Model instance = new Model();
-    public static Model getInstance() {
+    //делаю потокобезопасный синглтон
+    public static synchronized Model getInstance() {
         return instance;
     }
 
@@ -166,7 +169,8 @@ public class Model {
                 String sql = "INSERT INTO Users (Nickname, Password, Name) Values (?, ?, ?)";
                 PreparedStatement preparedStatement = conn.prepareStatement(sql);
                 preparedStatement.setString(1, user.getNickname());
-                preparedStatement.setString(2, user.getPassword());
+                String password = Encrypt.encrypt(user.getPassword(),"secret key");
+                preparedStatement.setString(2, password);
                 preparedStatement.setString(3, user.getName());
                 preparedStatement.executeUpdate();
                 return true;
@@ -191,7 +195,8 @@ public class Model {
                 ResultSet resultSet = preparedStatement.executeQuery();
                 //checks password that you gets from db with User's password, if - true -> getUser with id and make the current User
                 resultSet.next();
-                if (resultSet.getString(3).equals(user.getPassword())) {
+                String password = Encrypt.encrypt(user.getPassword(), "secret key");
+                if (resultSet.getString(3).equals(password)) {
                     int i = resultSet.getInt(1);
                     User currentUser = getUser(i);
                     System.out.println(currentUser);
@@ -303,6 +308,7 @@ public class Model {
                     Order order = new Order(id, localDate, new ArrayList<>());
                     order.setPaid(ispaid);
                     order.setCustomerID(resultSet.getInt(3));
+                    order.setUser();
                     for (String str : products.split(" ")) {
                         for (Product product : Model.getInstance().getList()) {
                             if (String.valueOf(product.getId()).equals(str)) {

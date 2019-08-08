@@ -1,17 +1,10 @@
 
-package app.servlets;
-
-import app.model.Model;
-
-import java.io.IOException;
+package app.servlets.prestoreservlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
+import java.io.IOException;
 
 /**
  * Servlet implementation class LogoutServlet
@@ -36,9 +29,7 @@ public class LogoutServlet extends HttpServlet {
         //ну вот обнуляем кароче и редиректимкся на хоум пейдж
         HttpSession session = request.getSession(false);
         System.out.println("User="+session.getAttribute("user"));
-        if(session != null){
-            session.invalidate();
-        }
+        session.invalidate();
         response.sendRedirect("/");
     }
 }

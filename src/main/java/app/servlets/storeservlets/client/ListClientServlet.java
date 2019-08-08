@@ -1,8 +1,7 @@
-package app.servlets;
+package app.servlets.storeservlets.client;
 
-import app.entities.Basket;
-import app.entities.Product;
-import app.entities.User;
+import app.entities.products.Product;
+import app.entities.user.User;
 import app.model.Model;
 
 
@@ -12,9 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.BlockingQueue;
 
 public class ListClientServlet extends HttpServlet {
 

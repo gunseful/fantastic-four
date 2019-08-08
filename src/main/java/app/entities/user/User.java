@@ -1,7 +1,8 @@
-package app.entities;
+package app.entities.user;
 
-import java.util.ArrayList;
-import java.util.List;
+import app.entities.products.Basket;
+import app.model.Model;
+
 import java.util.Objects;
 
 public class User {
@@ -75,6 +76,10 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isInBlackList(){
+        return Model.getInstance().checkBlackList(Model.getInstance().getUser(this.id));
     }
 
     @Override

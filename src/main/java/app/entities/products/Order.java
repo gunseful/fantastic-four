@@ -1,4 +1,7 @@
-package app.entities;
+package app.entities.products;
+
+import app.entities.user.User;
+import app.model.Model;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -9,7 +12,7 @@ public class Order {
     private List<Product> products;
     private boolean isPaid=false;
     private int customerID;
-
+    private User user;
 
     public Order(int id, LocalDate localDate, List<Product> products) {
         this.id = id;
@@ -59,6 +62,14 @@ public class Order {
 
     public void addProduct(Product product){
         this.products.add(product);
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser() {
+        this.user = Model.getInstance().getUser(customerID);
     }
 
     @Override

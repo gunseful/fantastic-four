@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <html lang="ru">
@@ -34,25 +35,21 @@
 <body class="w3-light-grey">
 <%--стандартная шапка--%>
 <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
-    <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'"
+    <i class="fas fa-dragon w3-jumbo" onclick="location.href='../..'"
        style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
         class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
 </div>
 <%--если в черном списке юзер введенный, то вылазит вот это--%>
 <div>
-    <%
-        if (request.getAttribute("inBlackList") != null) {
-            out.println("<p style=\"font-size:20px;\">Пользователь - " + request.getAttribute("inBlackList") + " заблокирован, так как делал заказы и не оплачивал</p>");
-        }
-    %>
+    <c:if test="${inBlackList != null}">
+        <p style="font-size:15px;"><p style="font-size:20px;">Пользователь - ${inBlackList} заблокирован, так как делал заказы и не оплачивал</p>
+    </c:if>
 </div>
 <%--если ввели неправильно, то выводит это--%>
 <div>
-    <%
-        if (request.getAttribute("NoData") != null) {
-            out.println("<p style=\"font-size:20px;\">Вы ввели данные неверно</p>");
-        }
-    %>
+    <c:if test="${NoData != null}">
+        <p style="font-size:15px;">Вы ввели данные неверно</p>
+    </c:if>
 </div>
 <%--форма ввода ника и пароля, и кнопка сабмит--%>
 <div>

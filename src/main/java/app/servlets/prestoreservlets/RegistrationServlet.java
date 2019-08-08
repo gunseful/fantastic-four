@@ -1,6 +1,6 @@
-package app.servlets;
+package app.servlets.prestoreservlets;
 
-import app.entities.User;
+import app.entities.user.User;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -14,7 +14,7 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        System.out.println("RegistrationServlet doGet");
         //проверяем есть ли текущий пользователь, если есть то пропускаем регистрацию и переходим на страницу логина
         //так как мы уже залогинены нас бросит на страницу либо админа либо покупателя
         User user = (User)req.getSession().getAttribute("user");
@@ -38,9 +38,10 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("RegistrationServlet doPost");
         try {
             //Проверяем пришедшие параметры Имени, Ника и Пароль на правильность (или вообще наличие).
-            if (!req.getParameter("name").equals("") && req.getParameter("nickname").length()>3 && req.getParameter("nickname").length()<15 && req.getParameter("password").length()>6 && req.getParameter("password").length()<15) {
+            if (!req.getParameter("name").equals("") && req.getParameter("nickname").length()>=3 && req.getParameter("nickname").length()<=15 && req.getParameter("password").length()>=6 && req.getParameter("password").length()<=15) {
                 // Они оказались верны. Создаем нового юзера
                 User user = new User(req.getParameter("name"), req.getParameter("nickname").toUpperCase(), req.getParameter("password"));
                 //Проверяем есть ли юзер с таким именем в базе, если есть - ошибка. Если нет - Прыгаем на страницу Логина

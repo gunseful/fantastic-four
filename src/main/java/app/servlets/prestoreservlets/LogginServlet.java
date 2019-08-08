@@ -1,24 +1,29 @@
-package app.servlets;
+package app.servlets.prestoreservlets;
 
-import app.entities.Product;
-import app.entities.User;
+import app.entities.user.User;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 
 public class LogginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("LogginServlet doGet");
+        User user = (User)req.getSession().getAttribute("user");
+        //если чел уже залогинился, его бросает сразу на страницу магазина
+        if(user!=null) {
+            if (user.isAdministrator()) {
+                    resp.sendRedirect("/listAdmin");
+                } else {
+                    resp.sendRedirect("/listClient");
+            }
+        }else{
             //прост бросает на вьюшку
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/loggin.jsp");
-            requestDispatcher.forward(req, resp);
+            requestDispatcher.forward(req, resp);}
     }
 
     @Override
@@ -59,7 +64,6 @@ public class LogginServlet extends HttpServlet {
                         resp.sendRedirect("/listClient");
                     }
                 }
-
             }else{
                 //если такого юзера в базе нет, кидает опять в логин с ошибкой ноудата
                 RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/loggin.jsp");
@@ -68,7 +72,7 @@ public class LogginServlet extends HttpServlet {
                 rd.include(req , resp);
             }
 
-        }catch (Exception e){
+        }catch (Exception ignored){
         }
 
 

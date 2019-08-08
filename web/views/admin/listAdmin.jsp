@@ -1,6 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="java.util.List" %>
-<%@ page import="app.entities.User" %>
-<%@ page import="app.entities.Product" %>
+<%@ page import="app.entities.user.User" %>
+<%@ page import="app.entities.products.Product" %>
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" language="java" %>
 <html lang="ru">
 <head>
@@ -70,20 +71,15 @@
 <%--прост шапка сайта, везде одинковая--%>
 <div>
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
-        <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'"
+        <i class="fas fa-dragon w3-jumbo" onclick="location.href='../..'"
            style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
             class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
     </div>
 </div>
 <%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
-<div>
-    <%
-        User user = (User) session.getAttribute("user");
-        out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы вошли как " + user.getNickname() + "</p>");
-        out.println("<p class=\"ex1\" style=\"font-size:15px;\">Вы Администратор</p>");
-        out.println("<p class=\"ex1\" style=\"font-size:12px;\">Вы можете добавлять или удалять товар из магазина</p>");
-    %>
-</div>
+<p class="ex1" style="font-size:15px;">Вы вошли как ${user.getNickname()} </p>
+<p class="ex1" style="font-size:15px;">Вы Администратор</p>
+<p class="ex1" style="font-size:12px;">Вы можете добавлять или удалять товар из магазина</p>
 <%--просто кнопка "Заказы", которая переносит на страницу заказов--%>
 <button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
         onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">Заказы
@@ -103,29 +99,27 @@
 <%--если админ ошибся, ему подсказка--%>
 <div class="ex2">
     <div>
-        <%
-            if (request.getAttribute("nullData") != null) {
-                out.println("<p style=\"font-size:15px;\">Вы ничего не выбрали</p>");
-            }
-        %>
+        <c:if test="${nullData != null}">
+            <p style="font-size:15px;">Вы ничего не выбрали</p>
+        </c:if>
     </div>
 <%--прилетают из сервлета список продуктов, он выводится--%>
     <div>
         <form name="input" method="post">
-            <%
-                List<Product> products = (List<Product>) request.getAttribute("products");
-                if (products != null && !products.isEmpty()) {
-                    out.println("<p>Список товаров нашего магазина:</p>");
-                    for (Product product : products) {
-                        out.println("<input type=\"checkbox\" name = \"productForDelete\" value=\"" + product.getId() + "\">" + product.getName() + " - " + product.getPrice() + " тенге" + "<br>");
-                    }
-                    //кнопка удалить продукт
-                    out.println("<input class=\"w3-button w3-red \" onclick=\"location.href='/'\" type=\"submit\" value=\"Удалить\">");
-                } else out.println("<p>Товаров пока нет.</p>");
-            %>
+            <form name="input" method="post">
+                <c:if test="${products != null}">
+                    <p>Список товаров нашего магазина:</p>
+                    <c:forEach var="product" items="${products}">
+                        <input type="checkbox" name="productForDelete" value=" ${product.getId()} ">${product}<br>
+                    </c:forEach>
+                    <input class="w3-button w3-red " onclick="location.href='../..'" type="submit" value="Удалить">
+                </c:if>
+                <c:if test="${products == null}">
+                    <p>Товаров пока нет.</p>
+                </c:if>
+            </form>
         </form>
     </div>
-
 <%--    открывающийся блок добавления нового товара--%>
     <label class="link" for="hider" id="clickme">Добавить новый товар</label>
     <input type="checkbox" id="hider">

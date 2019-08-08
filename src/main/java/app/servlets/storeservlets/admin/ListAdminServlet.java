@@ -1,7 +1,7 @@
-package app.servlets;
+package app.servlets.storeservlets.admin;
 
-import app.entities.Product;
-import app.entities.User;
+import app.entities.products.Product;
+import app.entities.user.User;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.BlockingQueue;
 
 public class ListAdminServlet extends HttpServlet {
 
@@ -41,7 +38,7 @@ public class ListAdminServlet extends HttpServlet {
         //админ выбирает какие продукты удалить и тыкает кнопку удалить, сюда прилетают товары в виде массива
         //ну разумеется строкой их айдишники, которые потом берутся и вызывается метод Модели по удалению товара из базы данных(по айдишнику)
         try {
-            if (!req.getParameterValues("productForDelete").equals(null)) {
+            if (req.getParameterValues("productForDelete") != null) {
                 String[] productsID = req.getParameterValues("productForDelete");
                 for (String productID : productsID) {
                     Model.getInstance().delete(productID);

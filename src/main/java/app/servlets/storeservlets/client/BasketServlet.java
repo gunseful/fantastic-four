@@ -1,7 +1,7 @@
-package app.servlets;
+package app.servlets.storeservlets.client;
 
-import app.entities.Product;
-import app.entities.User;
+import app.entities.products.Product;
+import app.entities.user.User;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -29,6 +29,10 @@ public class BasketServlet extends HttpServlet {
         try {
             if(!user.isAdministrator()){
                 Model.getInstance().addToBasket(user, "");
+                System.out.println("ПУСТАЯ КОРЗИНА - "+user.getBasket().getList().isEmpty());
+//                if(user.getBasket().getList().isEmpty()){
+//                    req.setAttribute("basket", null);
+//                }
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/basket.jsp");
                 requestDispatcher.forward(req, resp);
             }else{
@@ -53,12 +57,12 @@ public class BasketServlet extends HttpServlet {
         //we get some product for delete from the basket, taking products, checks is there in the db those product -> removing
         //if client choose nothing -> exception
         try {
-            if (!req.getParameterValues("productForDelete").equals(null)) {
+            if (req.getParameterValues("productForDelete") != null) {
                 String[] productsID = req.getParameterValues("productForDelete");
                 for (String productID : productsID) {
                     System.out.println(productID);
                     for (Product product : Model.getInstance().getList()) {
-                        if (String.valueOf(product.getId()).equals(productID.split(" ")[0])) {
+                        if (String.valueOf(product.getId()).equals(productID.trim())) {
                             for (int i = 0; i < user.getBasket().getList().size(); i++) {
                                 if (product.equals(user.getBasket().getList().get(i))) {
                                     user.getBasket().getList().remove(i);
@@ -69,6 +73,7 @@ public class BasketServlet extends HttpServlet {
                 }
             }
         }catch (NullPointerException exception){
+            System.out.println("нул дата");
             req.setAttribute("nullData", "");
             doGet(req, resp);
         }

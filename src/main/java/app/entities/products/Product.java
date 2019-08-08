@@ -1,4 +1,4 @@
-package app.entities;
+package app.entities.products;
 
 import java.util.Objects;
 
@@ -45,7 +45,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return name+" - "+price+" тг.";
+        return name + " - " + price + " тг.";
     }
 
     @Override

@@ -1,7 +1,6 @@
-package app.servlets;
+package app.servlets.storeservlets.admin;
 
-import app.entities.Product;
-import app.entities.User;
+import app.entities.user.User;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -44,7 +43,7 @@ public class BlackListServlet extends HttpServlet {
                 String[] usersID = req.getParameterValues("userForDelete");
                 Model model = Model.getInstance();
                 for (String userID : usersID) {
-                    model.deleteFromBlackList(Integer.parseInt(userID));
+                    model.deleteFromBlackList(Integer.parseInt(userID.trim()));
                 }
             }
         }catch (NullPointerException ignored) {}
