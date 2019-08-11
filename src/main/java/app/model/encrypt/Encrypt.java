@@ -7,19 +7,19 @@ import java.util.Arrays;
 import java.util.Base64;
 
 public class Encrypt {
-    private static SecretKeySpec secretKey;
 
-    private static void setKey(String myKey)
+    private static SecretKeySpec setKey(String myKey)
     {
-        MessageDigest sha = null;
+        MessageDigest sha;
         try {
             byte[] key = myKey.getBytes(StandardCharsets.UTF_8);
             sha = MessageDigest.getInstance("SHA-1");
             key = sha.digest(key);
             key = Arrays.copyOf(key, 16);
-            secretKey = new SecretKeySpec(key, "AES");
+            return new SecretKeySpec(key, "AES");
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
     }
 
@@ -27,9 +27,8 @@ public class Encrypt {
     {
         try
         {
-            setKey(secret);
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
-            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+            cipher.init(Cipher.ENCRYPT_MODE, setKey(secret));
             return Base64.getEncoder().encodeToString(cipher.doFinal(stringToEncrypt.getBytes(StandardCharsets.UTF_8)));
         }
         catch (Exception e)

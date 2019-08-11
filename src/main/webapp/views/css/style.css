@@ -1,0 +1,42 @@
+div.ex1 {
+    width: 30%;
+    padding-top: 5px;
+}
+div.ex2 {
+    padding-left: 30%
+}
+#clickme {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#hider {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+#hider:checked + .content {
+    display: block;
+}
+i.normal {
+    font-style: normal;
+    font-family: "Lucida Console";
+    font-size: 20px;
+}
+i.normals {
+    font-style: normal;
+    font-family: "Lucida Console";
+    font-size: 30px;
+}
+.content {
+    margin-top: 10px;
+    display: none;
+}
+p.ex1 {
+    padding: 0px;
+}

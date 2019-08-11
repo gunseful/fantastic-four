@@ -2,7 +2,8 @@ package app.servlets.storeservlets.admin;
 
 import app.entities.products.Product;
 import app.entities.user.User;
-import app.model.Model;
+import app.model.controller.AbstractController;
+import app.model.controller.UserController;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,7 +20,8 @@ public class ListAdminServlet extends HttpServlet {
         //как всегда берем юзера из сесси для работы с ним
         User user = (User)req.getSession().getAttribute("user");
         //кидаем все продукты из базы данных аттрибутом
-        req.setAttribute("products", Model.getInstance().getList());
+        UserController uc = new UserController();
+        req.setAttribute("products", uc.getList());
         //проверяем не залез ли шпион и переводим на страницу клиента если залез все таки
         try {
             if(user.isAdministrator()) {
@@ -41,7 +43,8 @@ public class ListAdminServlet extends HttpServlet {
             if (req.getParameterValues("productForDelete") != null) {
                 String[] productsID = req.getParameterValues("productForDelete");
                 for (String productID : productsID) {
-                    Model.getInstance().delete(productID);
+                    AbstractController controller = (UserController)req.getSession().getAttribute("controller");
+                    controller.deleteProduct(productID);
                 }
             }else{
                 //в первой строке писали имя, по идее здесь можно ограничить, типа чтобы имя не было меньше 5 символов етц
@@ -53,7 +56,8 @@ public class ListAdminServlet extends HttpServlet {
                 Product product = new Product(name, price);
                 //добавляем в базу
                 System.out.println("товар добавляется");
-                Model.getInstance().add(product);
+                AbstractController controller = (UserController)req.getSession().getAttribute("controller");
+                controller.add(product);
                 doGet(req, resp);
             }
         }catch (NullPointerException e){

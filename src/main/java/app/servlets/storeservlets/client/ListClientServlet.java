@@ -2,8 +2,8 @@ package app.servlets.storeservlets.client;
 
 import app.entities.products.Product;
 import app.entities.user.User;
-import app.model.Model;
-
+import app.model.controller.AbstractController;
+import app.model.controller.UserController;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,10 +19,10 @@ public class ListClientServlet extends HttpServlet {
         System.out.println("ListClientServlet doGet");
         //получаем юзера
         User user = (User)req.getSession().getAttribute("user");
+        AbstractController controller = (UserController) req.getSession().getAttribute("controller");
 
         //получаем лист товаров
-        req.setAttribute("products", Model.getInstance().getList());
-        System.out.println(Model.getInstance().getList());
+        req.setAttribute("products", controller.getList());
         //проверяем, если админ сюда зайдет его кинет на страницу админа, если обычный клиент, открывает вьюшку
         try {
             if(!user.isAdministrator()) {
@@ -38,6 +38,7 @@ public class ListClientServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("ListClientServlet doPost");
+        AbstractController controller = (UserController) req.getSession().getAttribute("controller");
 
         //выбираем в списке чо хотим купить, то есть добавить в корзину и кликаем - > Летит в корзину
         try {
@@ -47,12 +48,12 @@ public class ListClientServlet extends HttpServlet {
                 User user = (User)req.getSession().getAttribute("user");
                 for (String productID : productsID) {
                     System.out.println(productID.trim());
-                    for(Product product : Model.getInstance().getList()){
+                    for(Product product : controller.getList()){
                         //проверяем есть ли ваще продукт в базе данных
                         if(String.valueOf(product.getId()).equals(productID.trim())){
                             user.getBasket().getList().add(product);
                             //если есть добавляет в базу данных
-                            Model.getInstance().addToBasket(user, product.getId()+" ");
+                            controller.addToBasket(user, product.getId()+" ");
                             }
                     }
                 }

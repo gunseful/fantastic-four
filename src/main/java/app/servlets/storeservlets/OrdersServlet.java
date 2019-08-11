@@ -1,7 +1,8 @@
 package app.servlets.storeservlets;
 
 import app.entities.user.User;
-import app.model.Model;
+import app.model.controller.AbstractController;
+import app.model.controller.UserController;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,7 +26,9 @@ public class OrdersServlet extends HttpServlet {
         User user = (User) req.getSession().getAttribute("user");
 
 
-        req.setAttribute("orders", Model.getInstance().getOrders(user));
+        AbstractController controller = (UserController) req.getSession().getAttribute("controller");
+        req.setAttribute("isInBlackList", controller.checkBlackList(user));
+        req.setAttribute("orders", controller.getOrders(user));
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/common/orders.jsp");
         requestDispatcher.forward(req, resp);
     }
@@ -33,21 +36,24 @@ public class OrdersServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("Orders servlet doPost");
+        AbstractController controller = (UserController)req.getSession().getAttribute("controller");
         //если нажимается кнопка Pay и был выбран хоть один Заказ, то оплачивается
         try {
             if (req.getParameter("Pay") != null && req.getParameterValues("orders") != null) {
                 String[] ordersID = req.getParameterValues("orders");
                 for (String orderID : ordersID) {
-                    Model.getInstance().payOrder(Integer.parseInt(orderID));
+                    controller.payOrder((Integer.parseInt((orderID))));
+//                    Model.getInstance().payOrder(Integer.parseInt(orderID));
                 }
             }else if(req.getParameterValues("orders")!=null) {
                 String[] ordersID = req.getParameterValues("orders");
                 for (String orderID : ordersID) {
-                    Model.getInstance().deleteOrder(Integer.parseInt(orderID.trim()));
+                    controller.deleteOrder(Integer.parseInt(orderID.trim()));
                 }
             }else{
                 if (req.getParameter("block") != null) {
-                    Model.getInstance().addUserToBlackList(Model.getInstance().getUser(Integer.parseInt(req.getParameter("block"))));
+                    User user = controller.getUser(Integer.parseInt(req.getParameter("block")));
+                    controller.addUserToBlackList(user);
                 }else{
                     req.setAttribute("nullData", "");
                     doGet(req, resp);

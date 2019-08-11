@@ -1,22 +1,21 @@
 package app.entities.products;
 
 import app.entities.user.User;
-import app.model.Model;
 
 import java.time.LocalDate;
 import java.util.List;
 
 public class Order {
     private int id;
-    private LocalDate localDate;
+    private LocalDate creationDate;
     private List<Product> products;
     private boolean isPaid=false;
     private int customerID;
     private User user;
 
-    public Order(int id, LocalDate localDate, List<Product> products) {
+    public Order(int id, LocalDate creationDate, List<Product> products) {
         this.id = id;
-        this.localDate = localDate;
+        this.creationDate = creationDate;
         this.products = products;
     }
 
@@ -44,12 +43,12 @@ public class Order {
         this.customerID = customerID;
     }
 
-    public LocalDate getLocalDate() {
-        return localDate;
+    public LocalDate getCreationDate() {
+        return creationDate;
     }
 
-    public void setLocalDate(LocalDate localDate) {
-        this.localDate = localDate;
+    public void setCreationDate(LocalDate creationDate) {
+        this.creationDate = creationDate;
     }
 
     public List<Product> getProducts() {
@@ -68,8 +67,8 @@ public class Order {
         return user;
     }
 
-    public void setUser() {
-        this.user = Model.getInstance().getUser(customerID);
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
@@ -85,7 +84,7 @@ public class Order {
             s = "Неоплачено";
 
         }
-        return "Заказ №"+ id +", создан " + localDate.toString() +
+        return "Заказ №"+ id +", создан " + creationDate.toString() +
                 "<br> Товары:" + sb.toString()+"<br><br>Итоговая сумма - "+totalPrice()+" тенге.<br><br>"+s+"<br>";
     }
 

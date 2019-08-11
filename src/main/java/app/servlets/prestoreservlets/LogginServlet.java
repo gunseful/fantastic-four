@@ -1,7 +1,8 @@
 package app.servlets.prestoreservlets;
 
 import app.entities.user.User;
-import app.model.Model;
+import app.model.controller.AbstractController;
+import app.model.controller.UserController;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,18 +30,22 @@ public class LogginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("LogginServlet doPost");
+
         //прилетает то что было в полях, логи и пароль, чтобы зайти, создается пользователь промежуточный
         try {
             String nickname = req.getParameter("nickname");
             String password = req.getParameter("password");
             //вот здесь
             User user = new User(nickname, password);
+            HttpSession session = req.getSession();
+            session.setAttribute("controller", new UserController());
+            AbstractController controller = (UserController)req.getSession().getAttribute("controller");
             //опять таки нужна нам наша модель, для работы с базой данной только ее и будет юзать
             //ну и проверяем логин и пароль, ничего не хэшируется, тупо строкой пароль идет - небезопасно офк, ну а как еще
-            if(Model.getInstance().checkLogginAndPassword(user)){
-                User currentUser = Model.getInstance().getUserByNickName(nickname);
+            if(controller.checkLogginAndPassword(user)){
+                User currentUser = controller.getUserByNickName(nickname);
                 //проверяется, а не в черном ли списке чувак
-                if(Model.getInstance().checkBlackList(currentUser)){
+                if(controller.checkBlackList(currentUser)){
                     //если да то бросает опять на логин с атрибутом inBlackList (вылезит уведомление)
                     RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
                     resp.setContentType("text/html;charset=UTF-8");
@@ -50,7 +55,6 @@ public class LogginServlet extends HttpServlet {
                 }else {
                     //если все ок, и не в черном списке, то добавляем сессию, туда кидает юзера, устанавливаем интервал инактивности
                     //добавляем юзера в куки
-                    HttpSession session = req.getSession();
                     session.setAttribute("user", currentUser);
                     session.setMaxInactiveInterval(30 * 60);
                     Cookie userName = new Cookie("user", nickname);
