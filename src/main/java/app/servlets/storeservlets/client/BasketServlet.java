@@ -20,6 +20,7 @@ public class BasketServlet extends HttpServlet {
         //getting this session user to work with
         User user = (User)req.getSession().getAttribute("user");
         req.setAttribute("basket", user.getBasket().getList());
+        System.out.println(user.getBasket().getList());
         AbstractController controller = (UserController)req.getSession().getAttribute("controller");
         //здесь проверяем является ли текущий юзер админом, если нет то обновляем корзину и переходим к вьюшке
         //не уверен надо ли юзать фильтры в таком случае...по идее админ никак сюда не попадает, только если в строке браузера впишет

@@ -14,8 +14,7 @@ public class Language_en extends ListResourceBundle {
 
             { "welcome", "Welcome to our cozy store White Dragon <br> to continue you have to log in " },
             { "loggin.title", "Entry the system" },
-            { "listClient.productlist", "This is the product list" },
-            { "Currency", "EUR" },
+            { "list.client.productlist", "This is the product list" },
             { "log.in", "Log in" },
             { "registration", "Registration" },
             { "user", "User" },
@@ -24,7 +23,7 @@ public class Language_en extends ListResourceBundle {
             { "password", "Password" },
             { "nickname", "Nickname" },
             { "name", "Name" },
-            { "fail", "The entered data is incorrect or user with this nickname is already exist<br> Correct data - password from 6 to 15 symbols<br> Name and Nickname from 3 to 15 symbols" },
+            { "registration.fail", "The entered data is incorrect or user with this nickname is already exist<br> Correct data - password from 6 to 15 symbols<br> Name and Nickname from 3 to 15 symbols" },
             { "nodata", "The entered data is incorrect" },
             { "blacklist.title", "Black List" },
             { "entry", "You are logged in as" },
@@ -36,6 +35,60 @@ public class Language_en extends ListResourceBundle {
             { "nulldata", "You chose nothing" },
             { "blacklist.delete", "Delete from BlackList" },
             { "blacklist.empty", "Black list is empty" },
+            { "admin.list.title", "Product list" },
+            { "admin.list.hint", "You can add or delete products to/from the list" },
+            { "admin.list.no.products", "No products now" },
+            { "admin.list.add.product", "Add new product to the list" },
+            { "price", "Price" },
+            { "nomination", "Nomination" },
+            { "add", "Add" },
+            { "delete", "Delete" },
+            { "exchange.rates", 0.00256 },
+            { "currency", "$" },
+            { "basket.title", "Your basket" },
+            { "basket.empty", "Your basket is empty right now" },
+            { "basket.get.order", "Get Order" },
+            { "add.to.the.basket", "Add to the Basket"},
+            { "orders.hint", "You can delete orders and block the users"},
+            { "orders.admin", "Orders"},
+            { "orders.client", "Your orders"},
+            { "order.admin", "Orders"},
+            { "order.client", "Your orders"},
+            { "orders.pay", "pay"},
+            { "orders.client.title", "Client"},
+            { "orders.client.blocked", "THIS CLIENT WAS BLOCKED"},
+            { "orders.client.block", "Block this client"},
+            { "orders.empty", "No orders"},
+            { "orders.order", "Order №"},
+            { "orders.creation", "created at"},
+            { "orders.paid", "Paid"},
+            { "orders.notpaid", "Not paid"},
+            { "orders.total.price", "Total price - "},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

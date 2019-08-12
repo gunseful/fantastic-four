@@ -31,10 +31,10 @@
     <div>
         <form method="post" accept-charset="ISO-8859-1">
             <label>
-                <p style="font-size:15px;">${bundle.getObject("Name")}</p> <input type="text" name="name" value=""><br/>
+                <p style="font-size:15px;">${bundle.getObject("name")}</p> <input type="text" name="name" value=""><br/>
             </label>
             <label>
-                <p style="font-size:15px;">${bundle.getObject("Nickname")}</p> <input type="text" name="nickname" value=""><br/>
+                <p style="font-size:15px;">${bundle.getObject("nickname")}</p> <input type="text" name="nickname" value=""><br/>
             </label>
             <label>
                 <p style="font-size:15px;">${bundle.getObject("password")}</p> <input type="password" name="password" value=""><br/>

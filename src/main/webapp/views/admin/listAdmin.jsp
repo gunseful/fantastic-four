@@ -9,7 +9,7 @@
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="UTF-8">
-    <title>Список товаров магазина</title>
+    <title>${bundle.getObject("admin.list.title")}</title>
 </head>
 <%--прост шапка сайта, везде одинковая--%>
 <div>
@@ -20,22 +20,23 @@
     </div>
 </div>
 <%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
-<p class="ex1" style="font-size:15px;">Вы вошли как ${user.getNickname()} </p>
-<p class="ex1" style="font-size:15px;">Вы Администратор</p>
-<p class="ex1" style="font-size:12px;">Вы можете добавлять или удалять товар из магазина</p>
+<p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
+<p class="ex1" style="font-size:15px;">${bundle.getObject("admin")} </p>
+<p class="ex1" style="font-size:12px;">${bundle.getObject("admin.list.hint")}</p>
+
 <%--просто кнопка "Заказы", которая переносит на страницу заказов--%>
 <button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
-        onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">Заказы
+        onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">${bundle.getObject("orders")}
 </button>
 <%--просто кнопка "Черный список", которая переносит на страницу черного списка--%>
 <button class="w3-button w3-black w3-padding-large w3-large w3-hover-opacity-off btn-block"
-        onclick="location.href='/blacklist'" name="blacklist" type="submit" value="blacklist">Black List
+        onclick="location.href='/blacklist'" name="blacklist" type="submit" value="blacklist">${bundle.getObject("blacklist.title")}
 </button>
 <%--кнопка вызывает сервлет выхода и системы, обнуляет сессию и переносим на хоумпейдж--%>
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
-                type="submit" value="logout">Выйти
+                type="submit" value="logout">${bundle.getObject("out")}
         </button>
     </form>
 </div>
@@ -43,7 +44,7 @@
 <div class="ex2">
     <div>
         <c:if test="${nullData != null}">
-            <p style="font-size:15px;">Вы ничего не выбрали</p>
+            <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
 <%--прилетают из сервлета список продуктов, он выводится--%>
@@ -51,31 +52,31 @@
         <form name="input" method="post">
             <form name="input" method="post">
                 <c:if test="${products != null}">
-                    <p>Список товаров нашего магазина:</p>
+                    <p>${bundle.getObject("admin.list.title")}</p>
                     <c:forEach var="product" items="${products}">
-                        <input type="checkbox" name="productForDelete" value=" ${product.getId()} ">${product}<br>
+                        <input type="checkbox" name="productForDelete" value=" ${product.getId()} ">${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}<br>
                     </c:forEach>
-                    <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit" value="Удалить">
+                    <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit" value=${bundle.getObject("delete")}>
                 </c:if>
                 <c:if test="${products == null}">
-                    <p>Товаров пока нет.</p>
+                    <p>${bundle.getObject("admin.list.no.products")}</p>
                 </c:if>
             </form>
         </form>
     </div>
 <%--    открывающийся блок добавления нового товара--%>
-    <label class="link" for="hider" id="clickme">Добавить новый товар</label>
+    <label class="link" for="hider" id="clickme">${bundle.getObject("admin.list.add.product")}</label>
     <input type="checkbox" id="hider">
     <div class="content">
         <form method="post" accept-charset="ISO-8859-1">
-            <label>
+            <label
 <%--                здесь можно ввести имя и цену--%>
-                <p style="font-size:13px;">Наименование:</p> <input type="text" name="name">
-                <p style="font-size:13px;">Цена (в тенге):</p> <input type="number" name="price"><br/>
+                <p style="font-size:13px;">${bundle.getObject("nomination")}</p> <input type="text" name="name">
+                <p style="font-size:13px;">${bundle.getObject("price")}</p> <input type="number" name="price"><br/>
             </label>
             <br/>
 <%--            кнопка сабмитищая то что ввели сверху, закидывает в базу данных товара--%>
-            <button class="w3-button w3-green w3-padding-large" type="submit">Добавить</button>
+            <button class="w3-button w3-green w3-padding-large" type="submit">${bundle.getObject("add")}</button>
         </form>
     </div>
 </div>

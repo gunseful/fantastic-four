@@ -21,11 +21,11 @@
 </div>
 <%--Выводит текущего пользователя, если админ еще добавляет кое что--%>
 <div>
-    <p class="ex1" style="font-size:15px;">Вы вошли как ${user.getNickname()} </p>
+    <p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
     <form name="input" method="post">
         <c:if test="${user.isAdministrator()}">
-            <p class="ex1" style="font-size:15px;">Вы Администратор</p>
-            <p class="ex1" style="font-size:12px;">Вы можете удалять заказы и блокировать неплатильщиков</p>
+            <p class="ex1" style="font-size:15px;">${bundle.getObject("admin")} </p>
+            <p class="ex1" style="font-size:15px;">${bundle.getObject("orders.hint")} </p>
         </c:if>
     </form>
 </div>
@@ -33,22 +33,23 @@
 <div>
     <div>
         <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block"
-                onclick="location.href='/listClient'">К магазину
+                onclick="location.href='/listAdmin'">${bundle.getObject("tothestore")}
         </button>
-            <div>
-                <c:if test="${user.isAdministrator()}">
+        <div>
+            <c:if test="${user.isAdministrator()}">
                 <button class="w3-button w3-black w3-padding-large w3-large w3-hover-opacity-off btn-block"
-                        onclick="location.href='/blacklist'">Black List
+                        onclick="location.href='/blacklist'" name="blacklist" type="submit"
+                        value="blacklist">${bundle.getObject("blacklist.title")}
                 </button>
-                </c:if>
-            </div>
+            </c:if>
+        </div>
     </div>
 </div>
 <%--ну по классике выход--%>
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
-                type="submit" value="logout">Выйти
+                type="submit" value="logout">${bundle.getObject("out")}
         </button>
     </form>
 </div>
@@ -56,7 +57,7 @@
 <div class="ex2">
     <div>
         <c:if test="${nullData != null}">
-            <p style="font-size:15px;">Вы ничего не выбрали</p>
+            <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
     <%--    здесь выводятся заказы, если админ то все заказы, если юзер - только его--%>
@@ -64,29 +65,55 @@
         <form name="input" method="post">
             <c:if test="${!orders.isEmpty()}">
                 <c:if test="${!user.isAdministrator()}">
-                    <p>Ваши заказы:</p>
+                    <p>${bundle.getObject("orders.admin")}</p>
                 </c:if>
                 <c:if test="${user.isAdministrator()}">
-                    <p>Заказы:</p>
+                    <p>${bundle.getObject("orders.client")}</p>
                 </c:if>
                 <c:forEach var="order" items="${orders}">
-                <c:if test="${user.isAdministrator()}">
-                <c:if test="${!order.getUser().isInBlackList()}">
-                <p><div style=" border: 6px solid green;  width:max-content;"><h3>Клиент - ${order.getUser().getNickname()} </h3></div><button class="w3-button w3-red btn-block" name="block" value="${order.getUser().getId()}">Block this Client</button><br>
-                </c:if>
-                <c:if test="${order.getUser().isInBlackList()}">
-                <p><div style=" border: 8px solid green;  width:max-content;"><h3>Клиент - ${order.getUser().getNickname()}</h3></div><p><div style="background-color:red; width: max-content;"><h3>THIS CLIENT WAS BLOCKED</h3></div>
-                </c:if>
-                </c:if>
-                    <input type="checkbox" name = "orders" value="${order.getId()}"> ${order.toString()} _____________________________________________<br>
+                    <c:if test="${user.isAdministrator()}">
+                        <c:if test="${!order.getUser().isInBlackList()}">
+                            <p>
+                            <div style=" border: 6px solid green;  width:max-content;">
+                                <h3>${bundle.getObject("orders.client.title")} - ${order.getUser().getNickname()} </h3>
+                            </div>
+                            <button class="w3-button w3-red btn-block" name="block"
+                                    value="${order.getUser().getId()}">${bundle.getObject("orders.client.block")}</button>
+                            <br>
+                        </c:if>
+                        <c:if test="${order.getUser().isInBlackList()}">
+                            <p>
+                            <div style=" border: 8px solid green;  width:max-content;">
+                                <h3>${bundle.getObject("orders.client.title")} - ${order.getUser().getNickname()}</h3>
+                            </div>
+                            <p>
+                            <div style="background-color:red; width: max-content;">
+                                <h3>${bundle.getObject("orders.client.blocked")}</h3></div>
+                        </c:if>
+                    </c:if>
+                    <input type="checkbox" name="orders" value="${order.getId()}">
+                    ${bundle.getObject("orders.order")} ${order.getId()}, ${bundle.getObject("orders.creation")} ${order.getCreationDate()}
+                    <br>
+                    <c:forEach var="product" items="${order.getProducts()}">
+                        ${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}
+                        <br>
+                    </c:forEach><br>
+                    ${bundle.getObject("orders.total.price")} ${String.format("%.2f", (order.totalPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}}<br>
+                    <c:if test="${order.isPaid()}">
+                        ${bundle.getObject("orders.paid")}
+                    </c:if>
+                    <c:if test="${!order.isPaid()}">
+                        ${bundle.getObject("orders.notpaid")}
+                    </c:if>
+                    <br>_____________________________________________<br>
                 </c:forEach>
-                <input class="w3-button w3-red " type="submit" value="Удалить заказ">
+                <input class="w3-button w3-red " type="submit" value=${bundle.getObject("delete")}>
                 <c:if test="${!user.isAdministrator()}">
-                    <input class="w3-button w3-black " name="Pay" type="submit" value="Pay" >
+                    <input class="w3-button w3-black " name="Pay" type="submit" value=${bundle.getObject("orders.pay")}>
                 </c:if>
             </c:if>
             <c:if test="${orders.isEmpty()}">
-                <p>Заказов нет</p>
+                <p>${bundle.getObject("orders.empty")}</p>
             </c:if>
         </form>
     </div>

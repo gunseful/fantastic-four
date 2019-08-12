@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class ListAdminServlet extends HttpServlet {
 
@@ -51,7 +52,9 @@ public class ListAdminServlet extends HttpServlet {
                 //но решил главное чтобы работала, как я ограничивал я показал в никах
                 String name = req.getParameter("name");
                 //цена офк в тенге, мы же патриоты
-                int price = Integer.parseInt(req.getParameter("price"));
+                ResourceBundle bundle = (ResourceBundle)req.getSession().getValue("bundle");
+                Double d = (Double) bundle.getObject("exchange.rates");
+                int price = (int) (Integer.parseInt(req.getParameter("price"))/d);
                 //создаем продукт
                 Product product = new Product(name, price);
                 //добавляем в базу

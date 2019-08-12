@@ -10,7 +10,7 @@
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="UTF-8">
-    <title>Ваша корзина</title>
+    <title>${bundle.getObject("basket.title")}</title>
 </head>
 <%--прост шапка сайта, везде одинковая--%>
 <div>
@@ -21,20 +21,20 @@
     </div>
 </div>
 <%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
-<p class="ex1" style="font-size:15px;">Вы вошли как ${user.getNickname()} </p>
+<p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
 <%--просто кнопка "к магазину", которая переносит на стандартную страницу клиентлиста--%>
 <div>
     <div>
         <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block"
-                onclick="location.href='/listClient'">К магазину
+                onclick="location.href='/listAdmin'">${bundle.getObject("tothestore")}
         </button>
     </div>
 </div>
 <%--просто кнопка "Заказы", которая переносит на стандартную страницу заказов--%>
 <div>
     <div>
-        <button class="w3-button w3-yellow w3-padding-large w3-large w3-hover-opacity-off btn-block"
-                onclick="location.href='/orders'">Заказы
+        <button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
+                onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">${bundle.getObject("orders")}
         </button>
     </div>
 </div>
@@ -42,7 +42,7 @@
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
-                type="submit" value="logout">Выйти
+                type="submit" value="logout">${bundle.getObject("out")}
         </button>
     </form>
 </div>
@@ -50,28 +50,28 @@
 <div class="ex2">
     <div>
         <c:if test="${nullData != null}">
-            <p style="font-size:15px;">Вы ничего не выбрали</p>
+            <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
     <%--большой блок где из сервлета прилетают корзина с продуктами, он и выводится--%>
     <div>
         <form name="input" method="post">
             <c:if test="${!basket.isEmpty()}">
-                <p>Ваша корзина:</p>
+                <p>${bundle.getObject("basket.title")}</p>
                 <c:forEach var="product" items="${basket}">
-                    <input type="checkbox" name="productForDelete" value=" ${product.getId()} ">${product}<br>
+                    <input type="checkbox" name="productForDelete" value=" ${product.getId()} ">${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}<br>
                 </c:forEach>
-                <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit" value="Удалить из корзины">
+                <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit" value=${bundle.getObject("delete")}>
             </c:if>
             <c:if test="${basket.isEmpty()}">
-                <p>Товаров в корзине пока нет.</p>
+                <p>${bundle.getObject("basket.empty")}</p>
             </c:if>
         </form>
 <%--        если корзина не пустая то на основее ее делается заказ, нажимается кнопка и он делается--%>
         <form name="input" method="post">
             <c:if test="${!basket.isEmpty()}">
                 <button class="w3-button w3-yellow w3-padding-large w3-large w3-hover-opacity-off btn-block"
-                        name="getOrder" type="submit" value="getOrder">Заказать
+                        name="getOrder" type="submit" value="getOrder">${bundle.getObject("basket.get.order")}
                 </button>
             </c:if>
         </form>
