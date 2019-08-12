@@ -14,6 +14,7 @@ public class LogginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("LogginServlet doGet");
         User user = (User)req.getSession().getAttribute("user");
+
         //если чел уже залогинился, его бросает сразу на страницу магазина
         if(user!=null) {
             if (user.isAdministrator()) {

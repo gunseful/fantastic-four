@@ -10,7 +10,7 @@
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Входим в систему</title>
+    <title>${bundle.getObject("loggin.title")}</title>
 </head>
 
 <body class="w3-light-grey">
@@ -25,26 +25,26 @@
 <%--если в черном списке юзер введенный, то вылазит вот это--%>
 <div>
     <c:if test="${inBlackList != null}">
-        <p style="font-size:15px;"><p style="font-size:20px;">Пользователь - ${inBlackList} заблокирован, так как делал заказы и не оплачивал</p>
+        <p style="font-size:15px;"><p style="font-size:20px;">${bundle.getObject("user")} - ${inBlackList} ${bundle.getObject("inblacklist")}</p>
     </c:if>
 </div>
 <%--если ввели неправильно, то выводит это--%>
 <div>
     <c:if test="${NoData != null}">
-        <p style="font-size:15px;">Вы ввели данные неверно</p>
+        <p style="font-size:15px;">${bundle.getObject("nodata")}</p>
     </c:if>
 </div>
 <%--форма ввода ника и пароля, и кнопка сабмит--%>
 <div>
     <form method="post" accept-charset="ISO-8859-1">
         <label>
-            <p style="font-size:15px;">Логин:</p> <input type="text" name="nickname"><br/>
+            <p style="font-size:15px;">${bundle.getObject("loggin")}</p> <input type="text" name="nickname"><br/>
         </label>
         <label>
-            <p style="font-size:15px;">Пароль:</p> <input type="password" name="password"><br/>
+            <p style="font-size:15px;">${bundle.getObject("password")}</p> <input type="password" name="password"><br/>
         </label>
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off  btn-block"
-                type="submit">Логин
+                type="submit">${bundle.getObject("log.in")}
         </button>
     </form>
 </div>

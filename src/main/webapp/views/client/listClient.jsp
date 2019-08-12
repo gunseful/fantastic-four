@@ -56,7 +56,7 @@
     <div>
         <form name="input" method="post">
             <c:if test="${products != null}">
-            <p>Список товаров нашего магазина:</p>
+            <p>${bundle.getObject("listClient.productlist")}</p>
             <c:forEach var="product" items="${products}">
             <input type="checkbox" name="productForBuy" value=" ${product.getId()} ">${product}<br>
             </c:forEach>

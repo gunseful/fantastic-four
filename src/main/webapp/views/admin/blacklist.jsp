@@ -9,7 +9,7 @@
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="UTF-8">
-    <title>Черный список</title>
+    <title>${bundle.getObject("blacklist.title")}</title>
 </head>
 <%--прост шапка сайта, везде одинковая--%>
 <div>
@@ -20,24 +20,24 @@
     </div>
 </div>
 <%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
-<p class="ex1" style="font-size:15px;">Вы вошли как ${user.getNickname()} </p>
-<p class="ex1" style="font-size:15px;">Вы Администратор</p>
-<p class="ex1" style="font-size:12px;">Вы можете разблокировать кого-нибудь из пользователей</p>
+<p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
+<p class="ex1" style="font-size:15px;">${bundle.getObject("admin")} </p>
+<p class="ex1" style="font-size:12px;">${bundle.getObject("blacklist.hint")}</p>
 <%--просто кнопка "к магазину", которая переносит на стандартную страницу клиентлиста--%>
 <div>
     <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block"
-            onclick="location.href='/listAdmin'">К магазину
+            onclick="location.href='/listAdmin'">${bundle.getObject("tothestore")}
     </button>
 </div>
 <%--просто кнопка "Заказы", которая переносит на стандартную страницу заказов--%>
 <button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
-        onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">Заказы
+        onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">${bundle.getObject("orders")}
 </button>
 <%--кнопка вызывает сервлет выхода и системы, обнуляет сессию и переносим на хоумпейдж--%>
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
-                type="submit" value="logout">Выйти
+                type="submit" value="logout">${bundle.getObject("out")}
         </button>
     </form>
 </div>
@@ -45,22 +45,22 @@
 <div class="ex2">
     <div>
         <c:if test="${nullData != null}">
-            <p style="font-size:15px;">Вы ничего не выбрали</p>
+            <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
     <%--    большой блок где от сервлета приходит черный список, он и выводится--%>
     <div>
         <form name="input" method="post">
             <c:if test="${!blacklist.isEmpty()}">
-                <p>Черный список:</p>
+                <p>${bundle.getObject("blacklist.title")}</p>
                 <c:forEach var="user" items="${blacklist}">
                     <input type="checkbox" name="userForDelete" value=" ${user.getId()} ">${user.getNickname()}<br>
                 </c:forEach>
                 <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit"
-                       value="Удалить из черного списка">
+                       value="${bundle.getObject("blacklist.delete")}">
             </c:if>
             <c:if test="${blacklist.isEmpty()}">
-                <p>Черный список пуст.</p>
+                <p>${bundle.getObject("blacklist.empty")}</p>
             </c:if>
         </form>
     </div>
