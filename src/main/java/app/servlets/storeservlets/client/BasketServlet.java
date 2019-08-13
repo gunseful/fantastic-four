@@ -78,7 +78,7 @@ public class BasketServlet extends HttpServlet {
                 }
             }
         }catch (NullPointerException exception){
-            logger.info("User=" + user.getNickname() + " was failed");
+            logger.error("User=" + user.getNickname() + " was failed");
             req.setAttribute("nullData", "");
             doGet(req, resp);
         }

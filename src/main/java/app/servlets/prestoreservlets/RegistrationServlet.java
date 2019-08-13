@@ -59,6 +59,7 @@ public class RegistrationServlet extends HttpServlet {
                 doGet(req, resp);
             }else{
                 //если пришедшие в параметрах данные не верны выдаем ошибку
+                logger.error("failed registration");
                 req.setAttribute("fail", "");
                 doGet(req, resp);
             }

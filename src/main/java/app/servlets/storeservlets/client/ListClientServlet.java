@@ -60,12 +60,12 @@ public class ListClientServlet extends HttpServlet {
                     }
                 }
             }else{
-                logger.info("User=" + user.getNickname() + " made a mistake");
+                logger.error("User=" + user.getNickname() + " made a mistake");
                 req.setAttribute("nullData", "");
                 doGet(req, resp);
             }
         }catch (NullPointerException e){
-            logger.info("User=" + user.getNickname() + " made a mistake");
+            logger.error("User=" + user.getNickname() + " made a mistake");
             req.setAttribute("nullData", "");
             doGet(req, resp);
         }

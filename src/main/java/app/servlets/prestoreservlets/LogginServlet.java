@@ -82,7 +82,7 @@ public class LogginServlet extends HttpServlet {
             }
 
         }catch (Exception ignored){
-            logger.info("failed log in");
+            logger.error("failed log in");
             //если такого юзера в базе нет, кидает опять в логин с ошибкой ноудата
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
             resp.setContentType("text/html;charset=UTF-8");

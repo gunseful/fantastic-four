@@ -40,7 +40,7 @@ public class AuthenticationFilter implements Filter {
         //если никто не залогинился, если страница не хоум и не логин или регистрация
         //то переводит на страницу логина
         if (!isLoggedIn && !(uri.equals("/") || uri.endsWith("loggin") || uri.endsWith("registration") || uri.endsWith("LangServlet") ) ){
-            logger.info("Unauthorized access request");
+            logger.error("Unauthorized access request");
 //            this.context.log("Unauthorized access request");
             res.sendRedirect("/loggin");
         } else {

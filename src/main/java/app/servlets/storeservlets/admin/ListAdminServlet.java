@@ -69,7 +69,7 @@ public class ListAdminServlet extends HttpServlet {
 
             }
         } catch (NullPointerException e) {
-            logger.info("User=" + user.getNickname() + " was failed");
+            logger.error("User=" + user.getNickname() + " was failed");
             //если и ни того ни сего нет, либо забыли цену написать либо чо еще, короче косяк - вылетает нуллдата
             req.setAttribute("nullData", "");
             doGet(req, resp);

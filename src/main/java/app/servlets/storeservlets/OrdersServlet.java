@@ -57,7 +57,7 @@ public class OrdersServlet extends HttpServlet {
             }else{
                 if (req.getParameter("block") != null) {
                     User blackUser = controller.getUser(Integer.parseInt(req.getParameter("block")));
-                    logger.info("User=" + blackUser.getNickname() + " has been banned");
+                    logger.error("User=" + blackUser.getNickname() + " has been banned");
                     controller.addUserToBlackList(blackUser);
                 }else{
                     req.setAttribute("nullData", "");
