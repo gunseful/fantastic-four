@@ -3,6 +3,8 @@ package app.servlets.storeservlets.admin;
 import app.entities.user.User;
 import app.model.controller.AbstractController;
 import app.model.controller.UserController;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class BlackListServlet extends HttpServlet {
+    public static Logger logger = LogManager.getLogger();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("Black List Servlet do get");
@@ -38,13 +41,13 @@ public class BlackListServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("Black List Servlet do post");
         AbstractController controller = (UserController)req.getSession().getAttribute("controller");
         //прилетает в виде параметров массив с айди юзеров которых надо удалить и вызываем спец метод из модели и удаляем из базы данных
         try {
             if (!req.getParameterValues("userForDelete").equals(null)) {
                 String[] usersID = req.getParameterValues("userForDelete");
                 for (String userID : usersID) {
+                    logger.info("Administrator is trying to delete user from blacklist");
                     controller.deleteFromBlackList(Integer.parseInt(userID.trim()));
                 }
             }

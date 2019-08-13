@@ -3,6 +3,8 @@ package app.servlets.prestoreservlets;
 import app.entities.user.User;
 import app.model.controller.AbstractController;
 import app.model.controller.UserController;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,9 +12,9 @@ import javax.servlet.http.*;
 import java.io.IOException;
 
 public class LogginServlet extends HttpServlet {
+    public static Logger logger = LogManager.getLogger();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("LogginServlet doGet");
         User user = (User)req.getSession().getAttribute("user");
 
         //если чел уже залогинился, его бросает сразу на страницу магазина
@@ -30,8 +32,7 @@ public class LogginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("LogginServlet doPost");
-
+        logger.info("Trying to log in");
         //прилетает то что было в полях, логи и пароль, чтобы зайти, создается пользователь промежуточный
         try {
             String nickname = req.getParameter("nickname");
@@ -47,6 +48,7 @@ public class LogginServlet extends HttpServlet {
                 User currentUser = controller.getUserByNickName(nickname);
                 //проверяется, а не в черном ли списке чувак
                 if(controller.checkBlackList(currentUser)){
+                    logger.error("user is in black list");
                     //если да то бросает опять на логин с атрибутом inBlackList (вылезит уведомление)
                     RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
                     resp.setContentType("text/html;charset=UTF-8");
@@ -61,6 +63,7 @@ public class LogginServlet extends HttpServlet {
                     Cookie userName = new Cookie("user", nickname);
                     userName.setMaxAge(30 * 60);
                     resp.addCookie(userName);
+                    logger.info("User="+user.getNickname()+" have been log in");
                     //если юзер админ редиректим на лист админа
                     if (currentUser.isAdministrator()) {
                         resp.sendRedirect("/listAdmin");
@@ -70,6 +73,7 @@ public class LogginServlet extends HttpServlet {
                     }
                 }
             }else{
+                logger.error("user is not found in database");
                 //если такого юзера в базе нет, кидает опять в логин с ошибкой ноудата
                 RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
                 resp.setContentType("text/html;charset=UTF-8");
@@ -78,6 +82,7 @@ public class LogginServlet extends HttpServlet {
             }
 
         }catch (Exception ignored){
+            logger.info("failed log in");
             //если такого юзера в базе нет, кидает опять в логин с ошибкой ноудата
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
             resp.setContentType("text/html;charset=UTF-8");

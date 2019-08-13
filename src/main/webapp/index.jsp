@@ -57,6 +57,7 @@
     <form action="LangServlet" method="post">
         Russian <input type="radio" name="lang" value="Russian" checked>
         English <input type="radio" name="lang" value="English">
+        French  <input type="radio" name="lang" value="French">
     <input type="submit" value="Continue">
     </form>
 </c:if>

@@ -5,6 +5,8 @@ import app.entities.products.Order;
 import app.entities.products.Product;
 import app.entities.user.User;
 import app.model.encrypt.Encrypt;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -12,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserController extends AbstractController {
-
+    public static Logger logger = LogManager.getLogger();
     @Override
     public synchronized List<Product> getList() {
         List<Product> list = new ArrayList<>();
@@ -102,7 +104,9 @@ public class UserController extends AbstractController {
         PreparedStatement ps = getPrepareStatement("DELETE FROM BLACKLIST WHERE Id = " + id);
         try {
             ps.executeUpdate();
+            logger.info("user "+id+" has been deleted from black list");
         } catch (SQLException e) {
+            logger.info("Fail connect to database");
             System.out.println("Connection failed...");
             e.printStackTrace();
         } finally {
@@ -115,8 +119,9 @@ public class UserController extends AbstractController {
         PreparedStatement ps = getPrepareStatement("DELETE FROM PRODUCTS WHERE Id = " + id);
         try {
             ps.executeUpdate();
+            logger.info("product "+id+" has been deleted from product list");
         } catch (SQLException e) {
-            System.out.println("Connection failed...");
+            logger.info("Fail connect to database");
             e.printStackTrace();
         } finally {
             closePrepareStatement(ps);
@@ -131,8 +136,9 @@ public class UserController extends AbstractController {
             preparedStatement.setString(1, product.getName());
             preparedStatement.setInt(2, product.getPrice());
             preparedStatement.executeUpdate();
+            logger.info("product "+product.getName()+" has been added to product list");
         } catch (Exception ex) {
-            System.out.println("Connection failed...");
+            logger.info("Fail connect to database");
             ex.printStackTrace();
         } finally {
             closePrepareStatement(preparedStatement);
@@ -173,7 +179,7 @@ public class UserController extends AbstractController {
             }
             return user;
         } catch (Exception ex) {
-            System.out.println("Connection failed...");
+            logger.info("Fail connect to database");
             ex.printStackTrace();
             return null;
         } finally {
@@ -233,8 +239,9 @@ public class UserController extends AbstractController {
             preparedStatement.setString(1, basketLast);
             preparedStatement.setInt(2, user.getId());
             preparedStatement.executeUpdate();
+            logger.info("User="+user.getNickname()+" added "+basket+" products to his basket");
         } catch (Exception ex) {
-            System.out.println("Connection failed...");
+            logger.info("Fail connect to database");
             ex.printStackTrace();
         } finally {
             closePrepareStatement(preparedStatement);
@@ -251,9 +258,10 @@ public class UserController extends AbstractController {
             preparedStatement.setString(2, password);
             preparedStatement.setString(3, user.getName());
             preparedStatement.executeUpdate();
+            logger.info("New User "+user.getNickname()+" has been added to database");
             return true;
         } catch (Exception ex) {
-            System.out.println("Connection failed...");
+            logger.info("Fail connect to database");
             ex.printStackTrace();
             return false;
         } finally {
@@ -273,11 +281,12 @@ public class UserController extends AbstractController {
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){
                 return true;
+
             }else{
                 return false;
             }
         } catch (Exception ex) {
-            System.out.println("Connection failed...");
+            logger.info("Fail connect to database");
             ex.printStackTrace();
             return false;
         } finally {
@@ -292,8 +301,9 @@ public class UserController extends AbstractController {
         try {
             preparedStatement.setInt(1, user.getId());
             preparedStatement.executeUpdate();
+            logger.info("User= "+user.getNickname()+" was added to blacklist");
         } catch (Exception ex) {
-            System.out.println("Connection failed...");
+            logger.info("Fail connect to database");
             ex.printStackTrace();
         } finally {
             closePrepareStatement(preparedStatement);
@@ -317,9 +327,10 @@ public class UserController extends AbstractController {
             user.setBasket(new Basket());
             addToBasket(user, "");
             preparedStatement.executeUpdate();
+            logger.info("order was added to database");
         } catch (Exception ex) {
-            System.out.println("Connection failed...");
-            System.out.println(ex);
+            logger.info("Fail connect to database");
+            ex.printStackTrace();
         } finally {
             closePrepareStatement(preparedStatement);
         }
@@ -333,9 +344,10 @@ public class UserController extends AbstractController {
             preparedStatement.setBoolean(1, true);
             preparedStatement.setInt(2, id);
             preparedStatement.executeUpdate();
+            logger.info("order was paid");
         } catch (Exception ex) {
-            System.out.println("Connection failed...");
-            System.out.println(ex);
+            logger.info("Fail connect to database");
+            ex.printStackTrace();
         } finally {
             closePrepareStatement(preparedStatement);
         }
@@ -370,6 +382,7 @@ public class UserController extends AbstractController {
                 list.add(order);
             }
         } catch (Exception e) {
+            logger.info("Fail connect to database");
             e.printStackTrace();
         } finally {
             closePrepareStatement(preparedStatement);
@@ -382,7 +395,9 @@ public class UserController extends AbstractController {
         PreparedStatement ps = getPrepareStatement("DELETE FROM ORDERS WHERE Id = " + id);
         try {
             ps.executeUpdate();
+            logger.info("Order= "+id+" was deleted from database");
         } catch (SQLException e) {
+            logger.info("Fail connect to database");
             e.printStackTrace();
         } finally {
             closePrepareStatement(ps);

@@ -98,7 +98,7 @@
                         ${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}
                         <br>
                     </c:forEach><br>
-                    ${bundle.getObject("orders.total.price")} ${String.format("%.2f", (order.totalPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}}<br>
+                    ${bundle.getObject("orders.total.price")} ${String.format("%.2f", (order.totalPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}<br>
                     <c:if test="${order.isPaid()}">
                         ${bundle.getObject("orders.paid")}
                     </c:if>

@@ -4,6 +4,8 @@ import app.entities.products.Product;
 import app.entities.user.User;
 import app.model.controller.AbstractController;
 import app.model.controller.UserController;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,14 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class BasketServlet extends HttpServlet {
+    public static Logger logger = LogManager.getLogger();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("basket buyer servlet");
+
         //getting this session user to work with
         User user = (User)req.getSession().getAttribute("user");
         req.setAttribute("basket", user.getBasket().getList());
-        System.out.println(user.getBasket().getList());
         AbstractController controller = (UserController)req.getSession().getAttribute("controller");
         //здесь проверяем является ли текущий юзер админом, если нет то обновляем корзину и переходим к вьюшке
         //не уверен надо ли юзать фильтры в таком случае...по идее админ никак сюда не попадает, только если в строке браузера впишет
@@ -32,6 +34,7 @@ public class BasketServlet extends HttpServlet {
         try {
             if(!user.isAdministrator()){
                 controller.addToBasket(user, "");
+                logger.info("User=" + user.getNickname() + "requests his basket list");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/basket.jsp");
                 requestDispatcher.forward(req, resp);
             }else{
@@ -51,6 +54,7 @@ public class BasketServlet extends HttpServlet {
         try{
             if(req.getParameter("getOrder")!=null) {
                 controller.makeOrder(user);
+                logger.info("User=" + user.getNickname() + " makes order");
                 resp.sendRedirect("/orders");
             }}catch (Exception ignored){}
 
@@ -65,6 +69,7 @@ public class BasketServlet extends HttpServlet {
                         if (String.valueOf(product.getId()).equals(productID.trim())) {
                             for (int i = 0; i < user.getBasket().getList().size(); i++) {
                                 if (product.equals(user.getBasket().getList().get(i))) {
+                                    logger.info("User=" + user.getNickname() + " delete product from his basket");
                                     user.getBasket().getList().remove(i);
                                 }
                             }
@@ -73,7 +78,7 @@ public class BasketServlet extends HttpServlet {
                 }
             }
         }catch (NullPointerException exception){
-            System.out.println("нул дата");
+            logger.info("User=" + user.getNickname() + " was failed");
             req.setAttribute("nullData", "");
             doGet(req, resp);
         }

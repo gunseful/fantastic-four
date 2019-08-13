@@ -1,6 +1,10 @@
 
 package app.servlets.prestoreservlets;
 
+import app.entities.user.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -12,9 +16,10 @@ import java.io.IOException;
 @WebServlet("/LogoutServlet")
 public class LogoutServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
+    public static Logger logger = LogManager.getLogger();
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("LogoutServlet doPost");
         response.setContentType("text/html");
         Cookie[] cookies = request.getCookies();
         //ну этот метод вызываем только чтобы обнулить куки и сессию
@@ -28,7 +33,8 @@ public class LogoutServlet extends HttpServlet {
         }
         //ну вот обнуляем кароче и редиректимкся на хоум пейдж
         HttpSession session = request.getSession(false);
-        System.out.println("User="+session.getAttribute("user"));
+        User user = (User)session.getAttribute("user");
+        logger.info("User="+user.getNickname()+" is out");
         session.invalidate();
         response.sendRedirect("/");
     }

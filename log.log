@@ -1,0 +1,16 @@
+2019-08-13 14:18:18,787 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-13 14:27:10,420 INFO a.s.p.LangServlet [http-nio-8081-exec-4] choose russian language 
+2019-08-13 14:27:17,246 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-13 14:27:17,914 ERROR a.s.p.LogginServlet [http-nio-8081-exec-9] user is not found in database 
+2019-08-13 14:29:20,009 INFO a.s.p.LangServlet [http-nio-8081-exec-5] choose russian language 
+2019-08-13 14:29:29,772 INFO a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-13 14:33:04,876 INFO a.s.p.LangServlet [http-nio-8081-exec-4] choose russian language 
+2019-08-13 14:33:07,618 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-13 14:33:09,901 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] User="+session.getAttribute("user") is logging out 
+2019-08-13 14:34:49,896 INFO a.s.p.LangServlet [http-nio-8081-exec-6] choose russian language 
+2019-08-13 14:34:56,179 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-13 14:34:58,018 INFO a.s.p.LogoutServlet [http-nio-8081-exec-2] User=User{id=1, name='&#1048;&#1083;&#1100;&#1103;', nickname='GUNSEFUL', password='hrKMHGl0wEqqkly6ocmQmA==', isAdministrator=true, basket=} is out 
+2019-08-13 14:43:47,761 INFO a.s.p.LangServlet [http-nio-8081-exec-10] choose russian language 
+2019-08-13 14:43:50,528 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-08-13 14:43:51,144 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] User=2 have been log in 
+2019-08-13 14:43:52,595 INFO a.s.p.LogoutServlet [http-nio-8081-exec-7] User=2 is out 

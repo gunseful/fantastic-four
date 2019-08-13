@@ -1,5 +1,8 @@
 package app.servlets.filters;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -9,12 +12,13 @@ import java.io.IOException;
 
 @WebFilter("/AuthenticationFilter")
 public class AuthenticationFilter implements Filter {
+    public static Logger logger = LogManager.getLogger();
 
-    private ServletContext context;
+//    private ServletContext context;
 
     public void init(FilterConfig fConfig) throws ServletException {
-        this.context = fConfig.getServletContext();
-        this.context.log("AuthenticationFilter initialized");
+//        this.context = fConfig.getServletContext();
+//        this.context.log("AuthenticationFilter initialized");
     }
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
@@ -25,7 +29,7 @@ public class AuthenticationFilter implements Filter {
 
         //получаем адрес запроса
         String uri = req.getRequestURI();
-        this.context.log("Requested Resource::"+uri);
+//        this.context.log("Requested Resource::"+uri);
 
         //мутим сессию
         HttpSession session = req.getSession(false);
@@ -36,8 +40,8 @@ public class AuthenticationFilter implements Filter {
         //если никто не залогинился, если страница не хоум и не логин или регистрация
         //то переводит на страницу логина
         if (!isLoggedIn && !(uri.equals("/") || uri.endsWith("loggin") || uri.endsWith("registration") || uri.endsWith("LangServlet") ) ){
-            System.out.println("Unauthorized access request");
-            this.context.log("Unauthorized access request");
+            logger.info("Unauthorized access request");
+//            this.context.log("Unauthorized access request");
             res.sendRedirect("/loggin");
         } else {
             chain.doFilter(request, response);
