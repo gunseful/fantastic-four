@@ -27,7 +27,7 @@ public class ListClientServlet extends HttpServlet {
         //проверяем, если админ сюда зайдет его кинет на страницу админа, если обычный клиент, открывает вьюшку
         try {
             if(!user.isAdministrator()) {
-                logger.info("User=" + user.getNickname() + " has been requested product list");
+                logger.info("User=" + user.getNickname() + " has requested product list");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/listClient.jsp");
                 requestDispatcher.forward(req, resp);
             }else{
@@ -52,7 +52,7 @@ public class ListClientServlet extends HttpServlet {
                     for(Product product : controller.getList()){
                         //проверяем есть ли ваще продукт в базе данных
                         if(String.valueOf(product.getId()).equals(productID.trim())){
-                            logger.info("User=" + user.getNickname() + " has been added product to his basket");
+                            logger.info("User=" + user.getNickname() + " has added product to his basket");
                             user.getBasket().getList().add(product);
                             //если есть добавляет в базу данных
                             controller.addToBasket(user, product.getId()+" ");
@@ -60,11 +60,12 @@ public class ListClientServlet extends HttpServlet {
                     }
                 }
             }else{
-                logger.info("User=" + user.getNickname() + " has been failed");
+                logger.info("User=" + user.getNickname() + " made a mistake");
                 req.setAttribute("nullData", "");
                 doGet(req, resp);
             }
         }catch (NullPointerException e){
+            logger.info("User=" + user.getNickname() + " made a mistake");
             req.setAttribute("nullData", "");
             doGet(req, resp);
         }

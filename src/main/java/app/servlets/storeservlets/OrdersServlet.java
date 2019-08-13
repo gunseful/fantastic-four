@@ -3,6 +3,8 @@ package app.servlets.storeservlets;
 import app.entities.user.User;
 import app.model.controller.AbstractController;
 import app.model.controller.UserController;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,9 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class OrdersServlet extends HttpServlet {
+    public static Logger logger = LogManager.getLogger();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("Orders servlet doGet");
 
         try {
             if (req.getAttribute("Orders") != null) {
@@ -35,25 +37,28 @@ public class OrdersServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("Orders servlet doPost");
+        User user = (User)req.getSession().getAttribute("user");
         AbstractController controller = (UserController)req.getSession().getAttribute("controller");
         //если нажимается кнопка Pay и был выбран хоть один Заказ, то оплачивается
         try {
             if (req.getParameter("Pay") != null && req.getParameterValues("orders") != null) {
                 String[] ordersID = req.getParameterValues("orders");
                 for (String orderID : ordersID) {
+                    logger.info("User=" + user.getNickname() + " has payed order");
                     controller.payOrder((Integer.parseInt((orderID))));
 //                    Model.getInstance().payOrder(Integer.parseInt(orderID));
                 }
             }else if(req.getParameterValues("orders")!=null) {
                 String[] ordersID = req.getParameterValues("orders");
                 for (String orderID : ordersID) {
+                    logger.info("User=" + user.getNickname() + " has deleted order "+orderID);
                     controller.deleteOrder(Integer.parseInt(orderID.trim()));
                 }
             }else{
                 if (req.getParameter("block") != null) {
-                    User user = controller.getUser(Integer.parseInt(req.getParameter("block")));
-                    controller.addUserToBlackList(user);
+                    User blackUser = controller.getUser(Integer.parseInt(req.getParameter("block")));
+                    logger.info("User=" + blackUser.getNickname() + " has been banned");
+                    controller.addUserToBlackList(blackUser);
                 }else{
                     req.setAttribute("nullData", "");
                     doGet(req, resp);

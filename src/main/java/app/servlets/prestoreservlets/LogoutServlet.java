@@ -34,7 +34,7 @@ public class LogoutServlet extends HttpServlet {
         //ну вот обнуляем кароче и редиректимкся на хоум пейдж
         HttpSession session = request.getSession(false);
         User user = (User)session.getAttribute("user");
-        logger.info("User="+user.getNickname()+" is out");
+        logger.info("User="+user.getNickname()+" has out");
         session.invalidate();
         response.sendRedirect("/");
     }

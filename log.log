@@ -14,3 +14,27 @@
 2019-08-13 14:43:50,528 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
 2019-08-13 14:43:51,144 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] User=2 have been log in 
 2019-08-13 14:43:52,595 INFO a.s.p.LogoutServlet [http-nio-8081-exec-7] User=2 is out 
+2019-08-13 18:03:58,839 INFO a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-13 18:03:59,352 INFO a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-13 18:04:00,437 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected russian language 
+2019-08-13 18:04:00,496 INFO a.s.f.AuthenticationFilter [http-nio-8081-exec-10] Unauthorized access request 
+2019-08-13 18:04:00,662 INFO a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-13 18:04:01,731 INFO a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-13 18:04:01,871 INFO a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-13 18:04:05,377 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-13 18:04:06,148 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=gunseful has been log in 
+2019-08-13 18:04:06,161 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-10] User=GUNSEFULrequests product list 
+2019-08-13 18:04:17,104 INFO a.m.c.UserController [http-nio-8081-exec-4] product What A FUCK has been added to product list 
+2019-08-13 18:04:17,112 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-4] User=GUNSEFULrequests product list 
+2019-08-13 18:04:17,129 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-4] User=GUNSEFUL has been added new product - What A FUCK 
+2019-08-13 18:04:17,131 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-4] User=GUNSEFULrequests product list 
+2019-08-13 18:04:21,416 INFO a.s.p.LangServlet [http-nio-8081-exec-9] selected english language 
+2019-08-13 18:04:22,116 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-3] User=GUNSEFULrequests product list 
+2019-08-13 18:04:37,316 INFO a.m.c.UserController [http-nio-8081-exec-4] product Salt And Water has been added to product list 
+2019-08-13 18:04:37,327 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-4] User=GUNSEFULrequests product list 
+2019-08-13 18:04:37,351 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-4] User=GUNSEFUL has been added new product - Salt And Water 
+2019-08-13 18:04:37,353 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-4] User=GUNSEFULrequests product list 
+2019-08-13 18:04:44,610 INFO a.s.s.OrdersServlet [http-nio-8081-exec-7] User=SEKIDADIMA has been banned 
+2019-08-13 18:04:44,611 INFO a.m.c.UserController [http-nio-8081-exec-7] User= SEKIDADIMA was added to blacklist 
+2019-08-13 18:04:49,020 INFO a.s.p.LogoutServlet [http-nio-8081-exec-2] User=GUNSEFUL has out 
+2019-08-13 18:04:50,217 INFO a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 

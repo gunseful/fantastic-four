@@ -48,7 +48,7 @@ public class LogginServlet extends HttpServlet {
                 User currentUser = controller.getUserByNickName(nickname);
                 //проверяется, а не в черном ли списке чувак
                 if(controller.checkBlackList(currentUser)){
-                    logger.error("user is in black list");
+                    logger.error("User= " +currentUser.getNickname()+ " is in black list");
                     //если да то бросает опять на логин с атрибутом inBlackList (вылезит уведомление)
                     RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
                     resp.setContentType("text/html;charset=UTF-8");
@@ -63,7 +63,7 @@ public class LogginServlet extends HttpServlet {
                     Cookie userName = new Cookie("user", nickname);
                     userName.setMaxAge(30 * 60);
                     resp.addCookie(userName);
-                    logger.info("User="+user.getNickname()+" have been log in");
+                    logger.info("User="+user.getNickname()+" has been log in");
                     //если юзер админ редиректим на лист админа
                     if (currentUser.isAdministrator()) {
                         resp.sendRedirect("/listAdmin");
@@ -73,7 +73,7 @@ public class LogginServlet extends HttpServlet {
                     }
                 }
             }else{
-                logger.error("user is not found in database");
+                logger.error("User= " +user.getNickname() +" is not found in database");
                 //если такого юзера в базе нет, кидает опять в логин с ошибкой ноудата
                 RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
                 resp.setContentType("text/html;charset=UTF-8");
