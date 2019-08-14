@@ -55,7 +55,7 @@ public class ListClientServlet extends HttpServlet {
                             logger.info("User=" + user.getNickname() + " has added product to his basket");
 //                            user.getBasket().getList().add(product);
 //                            //если есть добавляет в базу данных
-                            controller.addToBasketS(user, product.getId());
+                            controller.addToBasket(user, product.getId());
                             }
                     }
                 }

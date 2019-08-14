@@ -13,8 +13,16 @@ public class Order {
     private int customerID;
     private User user;
 
+    public Order() {
+    }
+
     public Order(int id, LocalDate creationDate, List<Product> products) {
         this.id = id;
+        this.creationDate = creationDate;
+        this.products = products;
+    }
+
+    public Order(LocalDate creationDate, List<Product> products) {
         this.creationDate = creationDate;
         this.products = products;
     }

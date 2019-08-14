@@ -51,7 +51,7 @@ public abstract class AbstractController {
     public abstract void add(Product product);
     public abstract User getUser(int id);
     public abstract User getUserByNickName(String nickname);
-    public abstract void addToBasket(User user, String basket);
+    public abstract void addToBasket(User user, int id);
     public abstract boolean addNewUser(User user);
     public abstract boolean checkLogginAndPassword(User user);
     public abstract void addUserToBlackList(User user);

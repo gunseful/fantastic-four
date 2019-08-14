@@ -32,7 +32,6 @@ public class BasketServlet extends HttpServlet {
         //чтобы не висел в корзине левый товар и чтобы не писать отдельный метод, юзается такая хитрость
         try {
             if (!user.isAdministrator()) {
-                controller.addToBasket(user, "");
                 logger.info("User=" + user.getNickname() + "requests his basket list");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/basket.jsp");
                 requestDispatcher.forward(req, resp);
@@ -68,7 +67,6 @@ public class BasketServlet extends HttpServlet {
                 for (String productID : productsID) {
                     logger.info("User=" + user.getNickname() + " delete product from his basket");
                     controller.deleteProductFromBasket(productID.trim());
-
                 }
             }
         } catch (NullPointerException exception) {
