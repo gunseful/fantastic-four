@@ -24,7 +24,7 @@ public class UserController extends AbstractController {
             while (rs.next()) {
                 int id = rs.getInt(1);
                 String name = rs.getString(2);
-                int price = rs.getInt(4);
+                int price = rs.getInt(3);
                 list.add(new Product(id, name, price));
             }
         } catch (SQLException e) {
@@ -35,84 +35,6 @@ public class UserController extends AbstractController {
         return list;
     }
 
-    @Override
-    public synchronized boolean checkBlackList(User user) {
-        String sql = "SELECT * FROM BLACKLIST";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
-        try {
-                ResultSet resultSet = preparedStatement.executeQuery();
-                while (resultSet.next()) {
-                    if (resultSet.getInt(1) == user.getId()) {
-                        return true;
-                    }
-                }
-        } catch (Exception ex) {
-            System.out.println("Connection failed...");
-            ex.printStackTrace();
-        }finally {
-            closePrepareStatement(preparedStatement);
-        }
-        return false;
-    }
-
-    @Override
-    public synchronized List<User> getBlackList() {
-        List<User> list = new ArrayList<>();
-        PreparedStatement ps = getPrepareStatement("SELECT * FROM BLACKLIST");
-        try {
-            ResultSet resultSet = ps.executeQuery();
-            User user;
-            while (resultSet.next()) {
-                user = new User();
-                int id = resultSet.getInt(1);
-                user.setId(id);
-                String nickname = resultSet.getString(2);
-                user.setNickname(nickname);
-                String password = resultSet.getString(3);
-                user.setPassword(password);
-                String name = resultSet.getString(4);
-                user.setName(name);
-                boolean isAdmin = resultSet.getBoolean(5);
-                user.setAdministrator(isAdmin);
-                user.setBasket(new Basket());
-                //This part of method is checking db for User basket, gets String with product ID's and
-                //check does the current list of product has this product
-                //if does - add to User's basket.
-                if (resultSet.getString(6) != null) {
-                    for (String str : resultSet.getString(6).split(" ")) {
-                        for (Product product : getList()) {
-                            if (str.trim().equals(String.valueOf(product.getId()))) {
-                                user.getBasket().add(product);
-                            }
-                        }
-                    }
-                }
-                list.add(user);
-            }
-
-        } catch (Exception ex) {
-            System.out.println("Connection failed...");
-            System.out.println(ex);
-        }finally {
-            closePrepareStatement(ps);
-        }
-        return list;
-    }
-
-    @Override
-    public synchronized void deleteFromBlackList(int id) {
-        PreparedStatement ps = getPrepareStatement("DELETE FROM BLACKLIST WHERE Id = " + id);
-        try {
-            ps.executeUpdate();
-            logger.info("user "+id+" has been deleted from black list");
-        } catch (SQLException e) {
-            logger.info("Fail connect to database");
-            System.out.println("Connection failed...");
-            e.printStackTrace();
-        } finally {
-            closePrepareStatement(ps);
-        }
-    }
 
     @Override
     public synchronized void deleteProduct(String id) {
@@ -159,6 +81,7 @@ public class UserController extends AbstractController {
                 user.setPassword(resultSet.getString(3));
                 user.setName(resultSet.getString(4));
                 user.setAdministrator(resultSet.getBoolean(5));
+                user.setInBlackList(resultSet.getBoolean("ISBLOCKED"));
                 user.setBasket(new Basket());
                 //This part of method is checking db for User basket, gets String with product ID's and
                 //check does the current list of product has this product
@@ -171,10 +94,6 @@ public class UserController extends AbstractController {
                             }
                         }
                     }
-                }
-                if(checkBlackList(user)){
-                    user.setInBlackList(true);}
-                else {user.setInBlackList(false);
                 }
             }
             return user;
@@ -295,22 +214,6 @@ public class UserController extends AbstractController {
     }
 
     @Override
-    public synchronized void addUserToBlackList(User user) {
-        String sql = "insert into blacklist select * from users WHERE ID = ?";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
-        try {
-            preparedStatement.setInt(1, user.getId());
-            preparedStatement.executeUpdate();
-            logger.info("User= "+user.getNickname()+" was added to blacklist");
-        } catch (Exception ex) {
-            logger.info("Fail connect to database");
-            ex.printStackTrace();
-        } finally {
-            closePrepareStatement(preparedStatement);
-        }
-    }
-
-    @Override
     public synchronized void makeOrder(User user) {
         String order = "";
         for (Product product : user.getBasket().getList()) {
@@ -403,4 +306,185 @@ public class UserController extends AbstractController {
             closePrepareStatement(ps);
         }
     }
+
+
+
+
+
+
+
+
+
+    @Override
+    public synchronized List<User> getBlackList() {
+        List<User> list = new ArrayList<>();
+        PreparedStatement ps = getPrepareStatement("SELECT * FROM USERS WHERE ISBLOCKED = TRUE");
+        try {
+            ResultSet resultSet = ps.executeQuery();
+            User user;
+            while (resultSet.next()) {
+                user = new User();
+                int id = resultSet.getInt("ID");
+                user.setId(id);
+                String nickname = resultSet.getString("NICKNAME");
+                user.setNickname(nickname);
+                String password = resultSet.getString("PASSWORD");
+                user.setPassword(password);
+                String name = resultSet.getString("NAME");
+                user.setName(name);
+                boolean isAdmin = resultSet.getBoolean("ISADMIN");
+                user.setAdministrator(isAdmin);
+                user.setBasket(new Basket());
+                //This part of method is checking db for User basket, gets String with product ID's and
+                //check does the current list of product has this product
+                //if does - add to User's basket.
+                if (resultSet.getString(6) != null) {
+                    for (String str : resultSet.getString(6).split(" ")) {
+                        for (Product product : getList()) {
+                            if (str.trim().equals(String.valueOf(product.getId()))) {
+                                user.getBasket().add(product);
+                            }
+                        }
+                    }
+                }
+                System.out.println(user.toString());
+                list.add(user);
+            }
+
+        } catch (Exception ex) {
+            System.out.println("Connection failed...");
+            System.out.println(ex);
+        }finally {
+            closePrepareStatement(ps);
+        }
+        return list;
+    }
+
+
+
+    @Override
+    public synchronized void deleteFromBlackList(int id) {
+        PreparedStatement ps = getPrepareStatement("UPDATE Users SET ISBLOCKED = FALSE WHERE id = "+id);
+        try {
+            ps.executeUpdate();
+            logger.info("user "+id+" has been deleted from black list");
+        } catch (SQLException e) {
+            logger.info("Fail connect to database");
+            System.out.println("Connection failed...");
+            e.printStackTrace();
+        } finally {
+            closePrepareStatement(ps);
+        }
+    }
+
+
+    @Override
+    public synchronized void addUserToBlackList(User user) {
+        String sql = "UPDATE Users SET ISBLOCKED = TRUE WHERE id = "+user.getId();
+        PreparedStatement preparedStatement = getPrepareStatement(sql);
+        try {
+            preparedStatement.executeUpdate();
+            logger.info("User= "+user.getNickname()+" was added to blacklist");
+        } catch (Exception ex) {
+            logger.info("Fail connect to database");
+            ex.printStackTrace();
+        } finally {
+            closePrepareStatement(preparedStatement);
+        }
+    }
+
+
+
+    @Override
+    public synchronized boolean checkBlackList(User user) {
+        PreparedStatement ps = getPrepareStatement("SELECT * FROM USERS WHERE ID = "+user.getId());
+        try {
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                if(resultSet.getBoolean("ISBLOCKED") == true) {
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+        } catch (Exception ex) {
+            System.out.println("Connection failed...");
+            System.out.println(ex);
+        }finally {
+            closePrepareStatement(ps);
+        }
+        return false;
+    }
+
+
+
+
+    public synchronized void addToBasketS(User user, int productID) {
+        String sql = "INSERT INTO BASKETS (CUSTOMERID, PRODUCTID) Values (?, ?)";
+        PreparedStatement preparedStatement = getPrepareStatement(sql);
+        try {
+
+            preparedStatement.setInt(1, user.getId());
+            preparedStatement.setInt(2, productID);
+            preparedStatement.executeUpdate();
+            logger.info("User="+user.getNickname()+" added "+productID+" product to his basket");
+        } catch (Exception ex) {
+            logger.info("Fail connect to database");
+            ex.printStackTrace();
+        } finally {
+            closePrepareStatement(preparedStatement);
+        }
+    }
+
+
+    public synchronized List<Product> getBasketList(User user) {
+        List<Product> list = new ArrayList<>();
+        PreparedStatement ps = getPrepareStatement("    SELECT * FROM BASKETS\n" +
+                "    INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid\n" +
+                "    INNER JOIN USERS ON USERS.ID = baskets.customerid\n" +
+                "\n" +
+                "    where USERS.id = ? AND ISORDERED = false");
+
+        try {
+            ps.setInt(1, user.getId());
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("PRODUCTID");
+                String name = rs.getString("NAME");
+                int price = rs.getInt("PRICE");
+                Product product = new Product(id,name,price);
+                product.setBasketID(rs.getInt(1));
+                list.add(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closePrepareStatement(ps);
+        }
+        return list;
+    }
+
+
+    public synchronized void deleteProductFromBasket(String id) {
+        PreparedStatement ps = getPrepareStatement("DELETE FROM BASKETS WHERE Id = " + id);
+        try {
+            ps.executeUpdate();
+            logger.info("product "+id+" has been deleted from basket list");
+        } catch (SQLException e) {
+            logger.info("Fail connect to database");
+            e.printStackTrace();
+        } finally {
+            closePrepareStatement(ps);
+        }
+    }
+
+
+
+
+
+
+
+
+
 }

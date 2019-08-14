@@ -39,7 +39,7 @@ public class ListClientServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        AbstractController controller = (UserController) req.getSession().getAttribute("controller");
+        UserController controller = (UserController) req.getSession().getAttribute("controller");
         User user = (User)req.getSession().getAttribute("user");
         //выбираем в списке чо хотим купить, то есть добавить в корзину и кликаем - > Летит в корзину
         try {
@@ -53,9 +53,9 @@ public class ListClientServlet extends HttpServlet {
                         //проверяем есть ли ваще продукт в базе данных
                         if(String.valueOf(product.getId()).equals(productID.trim())){
                             logger.info("User=" + user.getNickname() + " has added product to his basket");
-                            user.getBasket().getList().add(product);
-                            //если есть добавляет в базу данных
-                            controller.addToBasket(user, product.getId()+" ");
+//                            user.getBasket().getList().add(product);
+//                            //если есть добавляет в базу данных
+                            controller.addToBasketS(user, product.getId());
                             }
                     }
                 }

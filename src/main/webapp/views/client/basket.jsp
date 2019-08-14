@@ -59,7 +59,7 @@
             <c:if test="${!basket.isEmpty()}">
                 <p>${bundle.getObject("basket.title")}</p>
                 <c:forEach var="product" items="${basket}">
-                    <input type="checkbox" name="productForDelete" value=" ${product.getId()} ">${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}<br>
+                    <input type="checkbox" name="productForDelete" value=${product.getBasketID()}>${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}<br>
                 </c:forEach>
                 <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit" value=${bundle.getObject("delete")}>
             </c:if>

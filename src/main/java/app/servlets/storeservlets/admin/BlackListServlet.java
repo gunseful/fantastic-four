@@ -1,7 +1,6 @@
 package app.servlets.storeservlets.admin;
 
 import app.entities.user.User;
-import app.model.controller.AbstractController;
 import app.model.controller.UserController;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,7 +19,7 @@ public class BlackListServlet extends HttpServlet {
         System.out.println("Black List Servlet do get");
         //получаем текущего юзера
         User user = (User)req.getSession().getAttribute("user");
-        AbstractController controller = (UserController)req.getSession().getAttribute("controller");
+        UserController controller = (UserController)req.getSession().getAttribute("controller");
         //получаем черный список спец методом класса Модель и передаем его в параметре блеклист
         req.setAttribute("blacklist", controller.getBlackList());
 
@@ -41,7 +40,7 @@ public class BlackListServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        AbstractController controller = (UserController)req.getSession().getAttribute("controller");
+        UserController controller = (UserController)req.getSession().getAttribute("controller");
         //прилетает в виде параметров массив с айди юзеров которых надо удалить и вызываем спец метод из модели и удаляем из базы данных
         try {
             if (!req.getParameterValues("userForDelete").equals(null)) {
