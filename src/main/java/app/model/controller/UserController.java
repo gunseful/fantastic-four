@@ -1,6 +1,5 @@
 package app.model.controller;
 
-import app.entities.products.Basket;
 import app.entities.products.Order;
 import app.entities.products.Product;
 import app.entities.user.User;
@@ -83,19 +82,6 @@ public class UserController extends AbstractController {
                 user.setName(resultSet.getString(4));
                 user.setAdministrator(resultSet.getBoolean(5));
                 user.setInBlackList(resultSet.getBoolean("ISBLOCKED"));
-                user.setBasket(new Basket());
-                //This part of method is checking db for User basket, gets String with product ID's and
-                //check does the current list of product has this product
-                //if does - add to User's basket.
-                if (resultSet.getString(6) != null) {
-                    for (String str : resultSet.getString(6).split(" ")) {
-                        for (Product product : getList()) {
-                            if (str.trim().equals(String.valueOf(product.getId()))) {
-                                user.getBasket().add(product);
-                            }
-                        }
-                    }
-                }
             }
             return user;
         } catch (Exception ex) {
@@ -121,19 +107,6 @@ public class UserController extends AbstractController {
                 user.setPassword(resultSet.getString(3));
                 user.setName(resultSet.getString(4));
                 user.setAdministrator(resultSet.getBoolean(5));
-                user.setBasket(new Basket());
-                //This part of method is checking db for User basket, gets String with product ID's and
-                //check does the current list of product has this product
-                //if does - add to User's basket.
-                if (resultSet.getString(6) != null) {
-                    for (String str : resultSet.getString(6).split(" ")) {
-                        for (Product product : getList()) {
-                            if (str.trim().equals(String.valueOf(product.getId()))) {
-                                user.getBasket().add(product);
-                            }
-                        }
-                    }
-                }
             }
             return user;
         } catch (Exception ex) {
@@ -144,29 +117,6 @@ public class UserController extends AbstractController {
             closePrepareStatement(preparedStatement);
         }
     }
-
-//    @Override
-//    public synchronized void addToBasket(User user, String basket) {
-//        String sql = "UPDATE Users SET basket = ? WHERE id = ?";
-//        PreparedStatement preparedStatement = getPrepareStatement(sql);
-//        try {
-//            String basketLast = "";
-//            //checking User's current basket and translates it to a string
-//            for (Product product : user.getBasket().getList()) {
-//                basketLast += product.getId() + " ";
-//            }
-//            basketLast += basket;
-//            preparedStatement.setString(1, basketLast);
-//            preparedStatement.setInt(2, user.getId());
-//            preparedStatement.executeUpdate();
-//            logger.info("User="+user.getNickname()+" added "+basket+" products to his basket");
-//        } catch (Exception ex) {
-//            logger.info("Fail connect to database");
-//            ex.printStackTrace();
-//        } finally {
-//            closePrepareStatement(preparedStatement);
-//        }
-//    }
 
     @Override
     public synchronized boolean addNewUser(User user) {
@@ -216,10 +166,6 @@ public class UserController extends AbstractController {
 
     @Override
     public synchronized void makeOrder(User user) {
-        String order = "";
-        for (Product product : user.getBasket().getList()) {
-            order += product.getId() + " ";
-        }
         int orderId = 0;
         String sql1 = "SELECT * FROM BASKETS where customerid = ? AND isordered = false";
         PreparedStatement preparedStatement1 = getPrepareStatement(sql1);
@@ -257,7 +203,8 @@ public class UserController extends AbstractController {
         }
     }
 
-    public synchronized void payOrder2(int orderID) {
+    @Override
+    public synchronized void payOrder(int orderID) {
         String sql = "UPDATE BASKETS \n" +
                 "SET ISPAID= TRUE\n" +
                 "WHERE \n" +
@@ -267,24 +214,7 @@ public class UserController extends AbstractController {
         try {
             preparedStatement.setInt(1, orderID);
             preparedStatement.executeUpdate();
-            logger.info("basket was ordered");
-        } catch (Exception ex) {
-            logger.info("Fail connect to database");
-            ex.printStackTrace();
-        } finally {
-            closePrepareStatement(preparedStatement);
-        }
-    }
-
-    @Override
-    public synchronized void payOrder(int id) {
-        String sql = "UPDATE ORDERS SET isPaid = ? WHERE id = ?";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
-        try {
-            preparedStatement.setBoolean(1, true);
-            preparedStatement.setInt(2, id);
-            preparedStatement.executeUpdate();
-            logger.info("order was paid");
+            logger.info("order was payed");
         } catch (Exception ex) {
             logger.info("Fail connect to database");
             ex.printStackTrace();
@@ -295,48 +225,18 @@ public class UserController extends AbstractController {
 
     @Override
     public synchronized List<Order> getOrders(User user) {
-        String sql = (!user.isAdministrator()) ? "SELECT * FROM Orders WHERE CustomerID = ?" : "SELECT * FROM Orders";
+        String sql="";
+        if(!user.isAdministrator()) {
+            sql = "SELECT * FROM BASKETS INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid INNER JOIN USERS ON USERS.ID = baskets.customerid where USERS.id = ? AND ISORDERED = TRUE";
+        }else{
+            sql = "SELECT * FROM BASKETS INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid INNER JOIN USERS ON USERS.ID = baskets.customerid where ISORDERED = TRUE";
+        }
         PreparedStatement preparedStatement = getPrepareStatement(sql);
         List<Order> list = new ArrayList<>();
         try {
-            if (!user.isAdministrator()) {
+            if(!user.isAdministrator()) {
                 preparedStatement.setInt(1, user.getId());
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                int id = resultSet.getInt(1);
-                LocalDate localDate = resultSet.getObject(4, LocalDate.class);
-                boolean ispaid = resultSet.getBoolean(5);
-                String products = resultSet.getString(2);
-                Order order = new Order(id, localDate, new ArrayList<>());
-                order.setPaid(ispaid);
-                order.setCustomerID(resultSet.getInt(3));
-                order.setUser(getUser(resultSet.getInt(3)));
-                for (String str : products.split(" ")) {
-                    for (Product product : getList()) {
-                        if (String.valueOf(product.getId()).equals(str)) {
-                            order.addProduct(product);
-                        }
-                    }
-                }
-                list.add(order);
-            }
-        } catch (Exception e) {
-            logger.info("Fail connect to database");
-            e.printStackTrace();
-        } finally {
-            closePrepareStatement(preparedStatement);
-        }
-        return list;
-    }
-
-
-    public synchronized List<Order> getOrders2(User user) {
-        String sql = "SELECT * FROM BASKETS INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid INNER JOIN USERS ON USERS.ID = baskets.customerid where USERS.id = ? AND ISORDERED = TRUE";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
-        List<Order> list = new ArrayList<>();
-        try {
-            preparedStatement.setInt(1, user.getId());
             ResultSet resultSet = preparedStatement.executeQuery();
             int currentOrderId = 0;
             Order order = null;
@@ -363,7 +263,10 @@ public class UserController extends AbstractController {
                     Product product = new Product(productId, productName, productPrice);
                     order.getProducts().add(product);
                 }
-            if(list.isEmpty() && order.getId()!=0){
+            if(currentOrderId==0){
+                return list;
+            }
+            if(list.isEmpty()){
                 list.add(order);
             }else {
                 if (order.getId() != list.get(list.size() - 1).getId()) {
@@ -413,23 +316,8 @@ public class UserController extends AbstractController {
                     user.setName(name);
                     boolean isAdmin = resultSet.getBoolean("ISADMIN");
                     user.setAdministrator(isAdmin);
-                    user.setBasket(new Basket());
-                    //This part of method is checking db for User basket, gets String with product ID's and
-                    //check does the current list of product has this product
-                    //if does - add to User's basket.
-                    if (resultSet.getString(6) != null) {
-                        for (String str : resultSet.getString(6).split(" ")) {
-                            for (Product product : getList()) {
-                                if (str.trim().equals(String.valueOf(product.getId()))) {
-                                    user.getBasket().add(product);
-                                }
-                            }
-                        }
-                    }
-                    System.out.println(user.toString());
                     list.add(user);
                 }
-
             } catch (Exception ex) {
                 System.out.println("Connection failed...");
                 System.out.println(ex);
@@ -484,10 +372,9 @@ public class UserController extends AbstractController {
                         return false;
                     }
                 }
-
             } catch (Exception ex) {
                 System.out.println("Connection failed...");
-                System.out.println(ex);
+                ex.printStackTrace();
             } finally {
                 closePrepareStatement(ps);
             }
@@ -500,7 +387,6 @@ public class UserController extends AbstractController {
             String sql = "INSERT INTO BASKETS (CUSTOMERID, PRODUCTID) Values (?, ?)";
             PreparedStatement preparedStatement = getPrepareStatement(sql);
             try {
-
                 preparedStatement.setInt(1, user.getId());
                 preparedStatement.setInt(2, productID);
                 preparedStatement.executeUpdate();
@@ -521,7 +407,6 @@ public class UserController extends AbstractController {
                     "    INNER JOIN USERS ON USERS.ID = baskets.customerid\n" +
                     "\n" +
                     "    where USERS.id = ? AND ISORDERED = false");
-
             try {
                 ps.setInt(1, user.getId());
                 ResultSet rs = ps.executeQuery();
@@ -530,7 +415,7 @@ public class UserController extends AbstractController {
                     String name = rs.getString("NAME");
                     int price = rs.getInt("PRICE");
                     Product product = new Product(id, name, price);
-                    product.setBasketID(rs.getInt(1));
+                    product.setBasketID(rs.getInt("ID"));
                     list.add(product);
                 }
             } catch (SQLException e) {
@@ -540,7 +425,6 @@ public class UserController extends AbstractController {
             }
             return list;
         }
-
 
         public synchronized void deleteProductFromBasket (String id){
             PreparedStatement ps = getPrepareStatement("DELETE FROM BASKETS WHERE Id = " + id);
@@ -554,6 +438,4 @@ public class UserController extends AbstractController {
                 closePrepareStatement(ps);
             }
         }
-
-
     }

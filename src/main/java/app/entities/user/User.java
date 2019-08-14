@@ -1,7 +1,5 @@
 package app.entities.user;
 
-import app.entities.products.Basket;
-
 import java.util.Objects;
 
 public class User {
@@ -11,7 +9,6 @@ public class User {
     private String nickname;
     private String password;
     private boolean isAdministrator;
-    private Basket basket = new Basket();
     private boolean isInBlackList;
 
     public boolean isInBlackList() {
@@ -20,14 +17,6 @@ public class User {
 
     public void setInBlackList(boolean inBlackList) {
         isInBlackList = inBlackList;
-    }
-
-    public Basket getBasket() {
-        return basket;
-    }
-
-    public void setBasket(Basket basket) {
-        this.basket = basket;
     }
 
     public User() {
@@ -92,9 +81,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", password='" + password + '\'' +
-                ", isAdministrator=" + isAdministrator +
-                ", basket=" + basket +
-                '}';
+                ", isAdministrator=" + isAdministrator;
     }
 
     @Override

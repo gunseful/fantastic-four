@@ -17,41 +17,43 @@ import java.util.ResourceBundle;
 @WebServlet("/LangServlet")
 public class LangServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-            if(request.getParameter("lang")!=null){
-                session.setAttribute("ses", "session");
-                ResourceBundle bundle = null;
-                if(request.getParameter("lang").equals("Russian")){
-                    logger.info("selected russian language");
-                    Locale ru_loc = new Locale("ru", "RU");
-                    bundle =
-                            ResourceBundle.getBundle("app.locale.Language", ru_loc);
-
-                }if(request.getParameter("lang").equals("English")){
-                    logger.info("selected english language");
-
-                    Locale en_loc = new Locale("en", "EN");
-                    bundle =
-                            ResourceBundle.getBundle("app.locale.Language", en_loc);
-                }if(request.getParameter("lang").equals("French")){
-                    logger.info("selected english language");
-
-                    Locale fr_loc = new Locale("fr", "FR");
-                    bundle =
-                            ResourceBundle.getBundle("app.locale.Language", fr_loc);}
-
-                request.setAttribute("bundle",bundle);
-                request.getSession().putValue("bundle", bundle);
+        if (request.getParameter("lang") != null) {
+            session.setAttribute("ses", "session");
+            ResourceBundle bundle = null;
+            if (request.getParameter("lang").equals("Russian")) {
+                logger.info("selected russian language");
+                Locale ru_loc = new Locale("ru", "RU");
+                bundle =
+                        ResourceBundle.getBundle("app.locale.Language", ru_loc);
             }
-            if (request.getParameter("Choose Language") != null) {
-                request.getSession().setAttribute("ses", null);
-            }else {
+            if (request.getParameter("lang").equals("English")) {
+                logger.info("selected english language");
+
+                Locale en_loc = new Locale("en", "EN");
+                bundle =
+                        ResourceBundle.getBundle("app.locale.Language", en_loc);
             }
+            if (request.getParameter("lang").equals("French")) {
+                logger.info("selected english language");
 
-
-            response.sendRedirect("/");
-
-
+                Locale fr_loc = new Locale("fr", "FR");
+                bundle =
+                        ResourceBundle.getBundle("app.locale.Language", fr_loc);
+            }
+            request.setAttribute("bundle", bundle);
+            request.getSession().putValue("bundle", bundle);
         }
+        if (request.getParameter("Choose Language") != null) {
+            request.getSession().setAttribute("ses", null);
+        } else {
+        }
+
+
+        response.sendRedirect("/");
+
+
     }
+}

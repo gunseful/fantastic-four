@@ -29,7 +29,7 @@ public class OrdersServlet extends HttpServlet {
 
         UserController controller = (UserController) req.getSession().getAttribute("controller");
         req.setAttribute("isInBlackList", controller.checkBlackList(user));
-        req.setAttribute("orders", controller.getOrders2(user));
+        req.setAttribute("orders", controller.getOrders(user));
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/common/orders.jsp");
         requestDispatcher.forward(req, resp);
     }
@@ -44,9 +44,7 @@ public class OrdersServlet extends HttpServlet {
                 String[] ordersID = req.getParameterValues("orders");
                 for (String orderID : ordersID) {
                     logger.info("User=" + user.getNickname() + " has payed order");
-                    System.out.println("TRY TO PAY " +orderID);
-                    controller.payOrder2((Integer.parseInt((orderID.trim()))));
-//                    Model.getInstance().payOrder(Integer.parseInt(orderID));
+                    controller.payOrder((Integer.parseInt((orderID.trim()))));
                 }
             }else if(req.getParameterValues("orders")!=null) {
                 String[] ordersID = req.getParameterValues("orders");

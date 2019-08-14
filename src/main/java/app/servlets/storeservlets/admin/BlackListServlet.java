@@ -16,16 +16,12 @@ public class BlackListServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("Black List Servlet do get");
         //получаем текущего юзера
         User user = (User)req.getSession().getAttribute("user");
         UserController controller = (UserController)req.getSession().getAttribute("controller");
         //получаем черный список спец методом класса Модель и передаем его в параметре блеклист
         req.setAttribute("blacklist", controller.getBlackList());
 
-        //на случай если сюда обычный клиент залезет (по идее никак не может, только если вручную впишет в браузере
-        //не уверен юзаются ли в таком случае фильтры, если надо - скажи я постараюсь впихнуть
-        //прост мне кажется такое решение довольно простым и очевидным
         try {
             if(!user.isAdministrator()){
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/listClient.jsp");

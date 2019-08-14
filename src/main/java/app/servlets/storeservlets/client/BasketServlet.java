@@ -17,19 +17,11 @@ public class BasketServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         //getting this session user to work with
         User user = (User) req.getSession().getAttribute("user");
-
         UserController controller = (UserController) req.getSession().getAttribute("controller");
         req.setAttribute("basket", controller.getBasketList(user));
-        //здесь проверяем является ли текущий юзер админом, если нет то обновляем корзину и переходим к вьюшке
-        //не уверен надо ли юзать фильтры в таком случае...по идее админ никак сюда не попадает, только если в строке браузера впишет
-        // / basket
-
-        //обновляется корзина добавлением пустой строки в нее
-        //вопрос - зачем. Может случится что удаляется товар какой-то с магаза, а в этом методе проверка есть ли она в базе данных
-        //чтобы не висел в корзине левый товар и чтобы не писать отдельный метод, юзается такая хитрость
+        //если юзер не админ кидает на на вьюшку корзина
         try {
             if (!user.isAdministrator()) {
                 logger.info("User=" + user.getNickname() + "requests his basket list");
@@ -67,6 +59,7 @@ public class BasketServlet extends HttpServlet {
                 for (String productID : productsID) {
                     logger.info("User=" + user.getNickname() + " delete product from his basket");
                     controller.deleteProductFromBasket(productID.trim());
+                    doGet(req, resp);
                 }
             }
         } catch (NullPointerException exception) {
@@ -74,7 +67,6 @@ public class BasketServlet extends HttpServlet {
             req.setAttribute("nullData", "");
             doGet(req, resp);
         }
-        doGet(req, resp);
     }
 }
 
