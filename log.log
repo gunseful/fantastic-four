@@ -791,3 +791,105 @@
 2019-08-14 20:05:37,572 ERROR a.s.p.LogginServlet [http-nio-8081-exec-9] failed log in 
 2019-08-14 20:05:37,589 ERROR a.s.p.LogginServlet [http-nio-8081-exec-4] failed log in 
 2019-08-14 20:05:37,609 ERROR a.s.p.LogginServlet [http-nio-8081-exec-7] failed log in 
+2019-08-15 09:43:00,985 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-15 09:43:02,202 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-15 09:43:03,089 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected russian language 
+2019-08-15 09:43:03,187 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-08-15 09:43:03,324 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-15 09:43:04,568 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-15 09:43:04,708 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-15 09:43:11,144 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-15 09:43:11,282 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-15 09:43:12,474 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-15 09:43:12,590 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-08-15 09:43:13,348 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-15 09:43:13,398 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-15 09:43:13,564 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-15 09:43:14,902 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-10] Unauthorized access request 
+2019-08-15 09:43:15,017 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-15 09:43:16,445 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-15 09:43:16,485 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-15 09:43:16,596 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-15 09:43:17,664 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-15 09:43:17,835 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-15 09:43:19,533 INFO a.s.p.LangServlet [http-nio-8081-exec-7] selected russian language 
+2019-08-15 09:43:19,582 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-15 09:43:19,699 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-08-15 09:43:20,432 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-15 09:43:20,563 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-15 09:43:22,750 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-15 09:43:23,074 ERROR a.s.p.LogginServlet [http-nio-8081-exec-9] failed log in 
+2019-08-15 09:43:23,115 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-15 09:43:23,264 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-08-15 09:43:23,827 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-15 09:43:23,953 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-15 09:43:24,642 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-15 09:43:24,746 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-08-15 09:43:25,214 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-15 09:43:25,376 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-15 09:43:25,986 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-15 09:43:26,117 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-08-15 09:43:26,702 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-15 09:43:26,807 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-15 09:43:26,854 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-15 09:43:26,880 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-10] Unauthorized access request 
+2019-08-15 09:43:27,026 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-15 09:43:27,300 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-15 09:43:27,443 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-15 09:43:27,697 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-08-15 09:43:27,723 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-15 09:43:27,877 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-15 09:43:28,358 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-15 09:43:28,505 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-10] Unauthorized access request 
+2019-08-15 09:43:29,160 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-15 09:43:29,281 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-15 09:43:34,890 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-15 09:43:34,911 ERROR a.s.p.LogginServlet [http-nio-8081-exec-7] failed log in 
+2019-08-15 09:43:34,951 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-15 09:43:35,082 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-10] Unauthorized access request 
+2019-08-15 09:43:59,831 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-08-15 09:44:00,729 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] User=gunseful has been log in 
+2019-08-15 09:44:00,747 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-5] User=GUNSEFULrequests product list 
+2019-08-15 09:44:02,445 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID= EEF0EBFD157D4200992813AA69828726 
+2019-08-15 09:44:02,445 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] User=GUNSEFUL has out 
+2019-08-15 09:44:03,258 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-10] Unauthorized access request 
+2019-08-15 09:45:54,836 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected russian language 
+2019-08-15 09:46:01,341 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-15 09:46:01,969 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=gunseful has been log in 
+2019-08-15 09:46:01,985 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-10] User=GUNSEFULrequests product list 
+2019-08-15 09:46:06,890 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-3] User=GUNSEFULrequests product list 
+2019-08-15 09:46:08,861 INFO a.s.p.LogoutServlet [http-nio-8081-exec-6] JSESSIONID= D9CCAA14BF6B106E81F9D14330B03177 
+2019-08-15 09:46:08,861 INFO a.s.p.LogoutServlet [http-nio-8081-exec-6] User=GUNSEFUL has out 
+2019-08-15 09:46:09,738 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-15 09:52:54,425 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected russian language 
+2019-08-15 09:52:56,857 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-15 09:52:57,474 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-08-15 09:52:57,501 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-15 09:53:02,217 INFO a.s.p.LangServlet [http-nio-8081-exec-7] selected english language 
+2019-08-15 09:53:04,391 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected english language 
+2019-08-15 09:53:05,324 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-15 09:57:17,943 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected russian language 
+2019-08-15 10:33:14,215 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected russian language 
+2019-08-15 10:33:16,714 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-15 10:33:17,553 ERROR a.s.p.LogginServlet [http-nio-8081-exec-8] User= 2 is not found in database 
+2019-08-15 10:33:21,034 INFO a.s.p.LangServlet [http-nio-8081-exec-2] selected english language 
+2019-08-15 10:33:22,761 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-15 10:33:22,768 ERROR a.s.p.LogginServlet [http-nio-8081-exec-7] User=  is not found in database 
+2019-08-15 10:33:24,707 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-15 10:33:24,712 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-08-15 10:33:24,725 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-08-15 10:33:29,058 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has added product to his basket 
+2019-08-15 10:33:29,066 INFO a.m.c.UserController [http-nio-8081-exec-9] User=2 added 34 product to his basket 
+2019-08-15 10:33:29,067 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-15 10:33:30,313 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-15 10:33:35,135 INFO a.s.p.LangServlet [http-nio-8081-exec-7] selected russian language 
+2019-08-15 10:33:35,846 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-15 10:33:37,478 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-15 10:33:42,632 INFO a.s.p.LangServlet [http-nio-8081-exec-7] selected english language 
+2019-08-15 10:33:43,513 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-15 10:33:50,248 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has added product to his basket 
+2019-08-15 10:33:50,256 INFO a.m.c.UserController [http-nio-8081-exec-1] User=2 added 690 product to his basket 
+2019-08-15 10:33:50,257 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-15 10:33:50,865 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-15 10:33:54,060 INFO a.m.c.UserController [http-nio-8081-exec-4] basket was ordered 
+2019-08-15 10:33:54,060 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2 makes order 

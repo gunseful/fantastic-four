@@ -19,10 +19,13 @@ public class LangServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //создает сессию
         HttpSession session = request.getSession();
         if (request.getParameter("lang") != null) {
+            //если язык выбран - указывает аттрибут сессии
             session.setAttribute("ses", "session");
             ResourceBundle bundle = null;
+            //в зависимости от выбранного языка созадется бандл
             if (request.getParameter("lang").equals("Russian")) {
                 logger.info("selected russian language");
                 Locale ru_loc = new Locale("ru", "RU");
@@ -43,9 +46,10 @@ public class LangServlet extends HttpServlet {
                 bundle =
                         ResourceBundle.getBundle("app.locale.Language", fr_loc);
             }
-            request.setAttribute("bundle", bundle);
+            //бандл передается аттрибутом в сессию
             request.getSession().putValue("bundle", bundle);
         }
+        //если нажимается кнопка выбора языка вьюшка меняется
         if (request.getParameter("Choose Language") != null) {
             request.getSession().setAttribute("ses", null);
         } else {

@@ -3,6 +3,7 @@ package app.entities.products;
 import java.util.Objects;
 
 public class Product {
+    //переменная которая говорит в какой корзине находится продукт
     private int basketID;
     private int id;
     private String name;

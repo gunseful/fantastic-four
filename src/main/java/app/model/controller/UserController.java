@@ -22,9 +22,9 @@ public class UserController extends AbstractController {
         try {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                int id = rs.getInt(1);
-                String name = rs.getString(2);
-                int price = rs.getInt(3);
+                int id = rs.getInt("ID");
+                String name = rs.getString("NAME");
+                int price = rs.getInt("PRICE");
                 list.add(new Product(id, name, price));
             }
         } catch (SQLException e) {
@@ -69,18 +69,20 @@ public class UserController extends AbstractController {
 
     @Override
     public synchronized User getUser(int id) {
+        //получаем юзера из базы данных по его айдишнику
         String sql = "SELECT * FROM Users WHERE Id = ?";
         PreparedStatement preparedStatement = getPrepareStatement(sql);
         try {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
+            //создаем объект юзер и добавляем в него данные из базыданных
             User user = new User();
             while (resultSet.next()) {
-                user.setId(resultSet.getInt(1));
-                user.setNickname(resultSet.getString(2));
-                user.setPassword(resultSet.getString(3));
-                user.setName(resultSet.getString(4));
-                user.setAdministrator(resultSet.getBoolean(5));
+                user.setId(resultSet.getInt("ID"));
+                user.setNickname(resultSet.getString("NICKNAME"));
+                user.setPassword(resultSet.getString("PASSWORD"));
+                user.setName(resultSet.getString("NAME"));
+                user.setAdministrator(resultSet.getBoolean("ISADMIN"));
                 user.setInBlackList(resultSet.getBoolean("ISBLOCKED"));
             }
             return user;
@@ -95,6 +97,7 @@ public class UserController extends AbstractController {
 
     @Override
     public synchronized User getUserByNickName(String nickname) {
+        //получаем юзера из базы данных по никнейму
         String sql = "SELECT * FROM Users WHERE nickname = ?";
         PreparedStatement preparedStatement = getPrepareStatement(sql);
         try {
@@ -102,11 +105,11 @@ public class UserController extends AbstractController {
             ResultSet resultSet = preparedStatement.executeQuery();
             User user = new User();
             while (resultSet.next()) {
-                user.setId(resultSet.getInt(1));
-                user.setNickname(resultSet.getString(2));
-                user.setPassword(resultSet.getString(3));
-                user.setName(resultSet.getString(4));
-                user.setAdministrator(resultSet.getBoolean(5));
+                user.setId(resultSet.getInt("ID"));
+                user.setNickname(resultSet.getString("NICKNAME"));
+                user.setPassword(resultSet.getString("PASSWORD"));
+                user.setName(resultSet.getString("NAME"));
+                user.setAdministrator(resultSet.getBoolean("ISADMIN"));
             }
             return user;
         } catch (Exception ex) {
@@ -144,7 +147,7 @@ public class UserController extends AbstractController {
         String sql = "SELECT * FROM Users WHERE Nickname = ? AND PASSWORD = ?";
         PreparedStatement preparedStatement = getPrepareStatement(sql);
         try {
-            //gets all user list with User's nickname that you gave as attribute
+            //ищем в базе данных ник и пароль совпадения если есть хоть одно (а больше и не может быть) то кидаем тру, если не нашли то фелс
             String password = Encrypt.encrypt(user.getPassword(), "secret key");
             preparedStatement.setString(1, user.getNickname().toUpperCase());
             preparedStatement.setString(2, password);
@@ -166,6 +169,9 @@ public class UserController extends AbstractController {
 
     @Override
     public synchronized void makeOrder(User user) {
+        //в базе данных BASKETS хранятся товары(продукты) которые мы добавили в корзину, они не заказаны еще
+        //здесь мы делаем ISORDERED = TRUE и так как это один заказ присваиваем всем этим строкам один айдишник, чтобы можно было
+        //искать по заказу
         int orderId = 0;
         String sql1 = "SELECT * FROM BASKETS where customerid = ? AND isordered = false";
         PreparedStatement preparedStatement1 = getPrepareStatement(sql1);
@@ -205,6 +211,7 @@ public class UserController extends AbstractController {
 
     @Override
     public synchronized void payOrder(int orderID) {
+        //ищем в таблице BASKETS среди тех кто уже заказан и устанавливаем ispaid = true
         String sql = "UPDATE BASKETS \n" +
                 "SET ISPAID= TRUE\n" +
                 "WHERE \n" +
@@ -225,12 +232,10 @@ public class UserController extends AbstractController {
 
     @Override
     public synchronized List<Order> getOrders(User user) {
+        //здесь получаем список заказов, если юзер простой клиент он получает только свои заказы, если админ - все заказы
         String sql="";
-        if(!user.isAdministrator()) {
-            sql = "SELECT * FROM BASKETS INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid INNER JOIN USERS ON USERS.ID = baskets.customerid where USERS.id = ? AND ISORDERED = TRUE";
-        }else{
-            sql = "SELECT * FROM BASKETS INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid INNER JOIN USERS ON USERS.ID = baskets.customerid where ISORDERED = TRUE";
-        }
+        sql = (!user.isAdministrator()) ? "SELECT * FROM BASKETS INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid INNER JOIN USERS ON USERS.ID = baskets.customerid where USERS.id = ? AND ISORDERED = TRUE" :
+                "SELECT * FROM BASKETS INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid INNER JOIN USERS ON USERS.ID = baskets.customerid where ISORDERED = TRUE";
         PreparedStatement preparedStatement = getPrepareStatement(sql);
         List<Order> list = new ArrayList<>();
         try {
@@ -261,7 +266,8 @@ public class UserController extends AbstractController {
                     String productName = resultSet.getString(8);
                     int productPrice = resultSet.getInt(9);
                     Product product = new Product(productId, productName, productPrice);
-                    order.getProducts().add(product);
+                assert order != null;
+                order.getProducts().add(product);
                 }
             if(currentOrderId==0){
                 return list;
@@ -284,6 +290,7 @@ public class UserController extends AbstractController {
 
         @Override
         public synchronized void deleteOrder ( int id){
+            //удаляет заказ
             PreparedStatement ps = getPrepareStatement("DELETE FROM BASKETS WHERE Id = " + id+" AND ISORDERED = TRUE");
             try {
                 ps.executeUpdate();
@@ -299,6 +306,7 @@ public class UserController extends AbstractController {
 
         @Override
         public synchronized List<User> getBlackList () {
+            //из списка пользователей получает только тех у кого столбец isblocked = true
             List<User> list = new ArrayList<>();
             PreparedStatement ps = getPrepareStatement("SELECT * FROM USERS WHERE ISBLOCKED = TRUE");
             try {
@@ -330,6 +338,7 @@ public class UserController extends AbstractController {
 
         @Override
         public synchronized void deleteFromBlackList ( int id){
+            //удаляет из черного списка, то есть меняет значение isblocked на false
             PreparedStatement ps = getPrepareStatement("UPDATE Users SET ISBLOCKED = FALSE WHERE id = " + id);
             try {
                 ps.executeUpdate();
@@ -346,6 +355,7 @@ public class UserController extends AbstractController {
 
         @Override
         public synchronized void addUserToBlackList (User user){
+            //добавляет в черный список, isblocked = true
             String sql = "UPDATE Users SET ISBLOCKED = TRUE WHERE id = " + user.getId();
             PreparedStatement preparedStatement = getPrepareStatement(sql);
             try {
@@ -362,15 +372,12 @@ public class UserController extends AbstractController {
 
         @Override
         public synchronized boolean checkBlackList (User user){
+            //проверяет пользователя в базе данных, если isblocked = true значит он заблокированный
             PreparedStatement ps = getPrepareStatement("SELECT * FROM USERS WHERE ID = " + user.getId());
             try {
                 ResultSet resultSet = ps.executeQuery();
                 while (resultSet.next()) {
-                    if (resultSet.getBoolean("ISBLOCKED") == true) {
-                        return true;
-                    } else {
-                        return false;
-                    }
+                    return resultSet.getBoolean("ISBLOCKED");
                 }
             } catch (Exception ex) {
                 System.out.println("Connection failed...");
@@ -384,6 +391,7 @@ public class UserController extends AbstractController {
 
         @Override
         public synchronized void addToBasket (User user,int productID){
+            //добавляет новый товар в таблицу BASKETS
             String sql = "INSERT INTO BASKETS (CUSTOMERID, PRODUCTID) Values (?, ?)";
             PreparedStatement preparedStatement = getPrepareStatement(sql);
             try {
@@ -399,8 +407,9 @@ public class UserController extends AbstractController {
             }
         }
 
-
+        @Override
         public synchronized List<Product> getBasketList (User user){
+            //получает лист корзины. это все что есть в BASKETS но не заказано
             List<Product> list = new ArrayList<>();
             PreparedStatement ps = getPrepareStatement("    SELECT * FROM BASKETS\n" +
                     "    INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid\n" +
@@ -426,7 +435,9 @@ public class UserController extends AbstractController {
             return list;
         }
 
+        @Override
         public synchronized void deleteProductFromBasket (String id){
+            //удаляет из BASKETS товар
             PreparedStatement ps = getPrepareStatement("DELETE FROM BASKETS WHERE Id = " + id);
             try {
                 ps.executeUpdate();

@@ -27,10 +27,10 @@ public class ConnectionPool {
     }
 
     public Connection getConnection(){
-        Context ctx;
+        Context context;
         try {
-            ctx = new InitialContext();
-            DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/fantasticFour");
+            context = new InitialContext();
+            DataSource ds = (DataSource)context.lookup("java:comp/env/jdbc/fantasticFour");
             connection = ds.getConnection();
         } catch (NamingException | SQLException e) {
             e.printStackTrace();

@@ -63,4 +63,6 @@ public abstract class AbstractController {
     public abstract boolean checkBlackList(User user);
     public abstract List<User> getBlackList();
     public abstract void deleteFromBlackList(int id);
+    public abstract void deleteProductFromBasket (String id);
+    public abstract List<Product> getBasketList (User user);
 }
