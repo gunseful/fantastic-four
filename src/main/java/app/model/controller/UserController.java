@@ -19,7 +19,6 @@ public class UserController extends AbstractController {
     DataSource dataSource = getDataSource();
     ConnectionPool connectionPool = getConnectionPool();
 
-    @Override
     public synchronized List<Product> getList() {
 
         List<Product> list = new ArrayList<>();
@@ -48,8 +47,6 @@ public class UserController extends AbstractController {
         return list;
     }
 
-
-    @Override
     public synchronized void deleteProduct(String id) {
         Connection connection = null;
         try {
@@ -71,7 +68,6 @@ public class UserController extends AbstractController {
         }
     }
 
-    @Override
     public synchronized void add(Product product) {
         String sql = "INSERT INTO PRODUCTS (Name, Price) Values (?, ?)";
         Connection connection = null;
@@ -96,7 +92,6 @@ public class UserController extends AbstractController {
         }
     }
 
-    @Override
     public synchronized User getUser(int id) {
         Connection connection=null;
         //получаем юзера из базы данных по его айдишнику
@@ -131,7 +126,6 @@ public class UserController extends AbstractController {
         }
     }
 
-    @Override
     public synchronized User getUserByNickName(String nickname) {
         Connection connection=null;
         //получаем юзера из базы данных по никнейму
@@ -163,7 +157,6 @@ public class UserController extends AbstractController {
         }
     }
 
-    @Override
     public synchronized boolean addNewUser(User user) {
         Connection connection=null;
         String sql = "INSERT INTO Users (Nickname, Password, Name) Values (?, ?, ?)";
@@ -190,7 +183,6 @@ public class UserController extends AbstractController {
         }
     }
 
-    @Override
     public synchronized boolean checkLogginAndPassword(User user) {
         String sql = "SELECT * FROM Users WHERE Nickname = ? AND PASSWORD = ?";
         Connection connection = null;
@@ -221,7 +213,6 @@ public class UserController extends AbstractController {
         }
     }
 
-    @Override
     public synchronized void makeOrder(User user) {
         //в базе данных BASKETS хранятся товары(продукты) которые мы добавили в корзину, они не заказаны еще
         //здесь мы делаем ISORDERED = TRUE и так как это один заказ присваиваем всем этим строкам один айдишник, чтобы можно было
@@ -275,7 +266,6 @@ public class UserController extends AbstractController {
         }
     }
 
-    @Override
     public synchronized void payOrder(int orderID) {
         Connection connection=null;
         //ищем в таблице BASKETS среди тех кто уже заказан и устанавливаем ispaid = true
@@ -302,7 +292,6 @@ public class UserController extends AbstractController {
         }
     }
 
-    @Override
     public synchronized List<Order> getOrders(User user) {
         Connection connection = null;
         //здесь получаем список заказов, если юзер простой клиент он получает только свои заказы, если админ - все заказы
@@ -328,8 +317,8 @@ public class UserController extends AbstractController {
                     }
                     order = new Order();
                     currentOrderId = orderId;
-                    LocalDate localDate = resultSet.getObject("CREATEDAT", LocalDate.class);
-                    order.setCreationDate(localDate);
+                    java.sql.Date dbSqlDate = resultSet.getDate("CREATEDAT");
+                    order.setCreationDate(dbSqlDate);
                     order.setProducts(new ArrayList<>());
                     order.setUser(getUser(resultSet.getInt("CUSTOMERID")));
                     boolean ispaid = resultSet.getBoolean(3);
@@ -367,7 +356,6 @@ public class UserController extends AbstractController {
             return list;
         }
 
-        @Override
         public synchronized void deleteOrder ( int id){
             //удаляет заказ
             String sql = "DELETE FROM BASKETS WHERE Id = " + id+" AND ISORDERED = TRUE";
@@ -389,8 +377,6 @@ public class UserController extends AbstractController {
             }
         }
 
-
-        @Override
         public synchronized List<User> getBlackList () {
             Connection connection = null;
             //из списка пользователей получает только тех у кого столбец isblocked = true
@@ -428,8 +414,6 @@ public class UserController extends AbstractController {
             return list;
         }
 
-
-        @Override
         public synchronized void deleteFromBlackList ( int id){
             //удаляет из черного списка, то есть меняет значение isblocked на false
             String sql = "UPDATE Users SET ISBLOCKED = FALSE WHERE id = " + id;
@@ -452,8 +436,6 @@ public class UserController extends AbstractController {
             }
         }
 
-
-        @Override
         public synchronized void addUserToBlackList (User user){
             //добавляет в черный список, isblocked = true
             String sql = "UPDATE Users SET ISBLOCKED = TRUE WHERE id = " + user.getId();
@@ -475,8 +457,6 @@ public class UserController extends AbstractController {
             }
         }
 
-
-        @Override
         public synchronized boolean checkBlackList (User user){
             Connection connection = null;
             //проверяет пользователя в базе данных, если isblocked = true значит он заблокированный
@@ -501,8 +481,6 @@ public class UserController extends AbstractController {
             return false;
         }
 
-
-        @Override
         public synchronized void addToBasket (User user,int productID){
             //добавляет новый товар в таблицу BASKETS
             String sql = "INSERT INTO BASKETS (CUSTOMERID, PRODUCTID) Values (?, ?)";
@@ -527,7 +505,6 @@ public class UserController extends AbstractController {
             }
         }
 
-        @Override
         public synchronized List<Product> getBasketList (User user){
             //получает лист корзины. это все что есть в BASKETS но не заказано
             Connection connection = null;
@@ -562,7 +539,6 @@ public class UserController extends AbstractController {
             return list;
         }
 
-        @Override
         public synchronized void deleteProductFromBasket (String id){
             //удаляет из BASKETS товар
             Connection connection = null;

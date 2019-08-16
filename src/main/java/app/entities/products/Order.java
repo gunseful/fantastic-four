@@ -2,12 +2,12 @@ package app.entities.products;
 
 import app.entities.user.User;
 
-import java.time.LocalDate;
+import java.sql.Date;
 import java.util.List;
 
 public class Order {
     private int id;
-    private LocalDate creationDate;
+    private Date creationDate;
     private List<Product> products;
     private boolean isPaid=false;
     private int customerID;
@@ -16,13 +16,13 @@ public class Order {
     public Order() {
     }
 
-    public Order(int id, LocalDate creationDate, List<Product> products) {
+    public Order(int id, Date creationDate, List<Product> products) {
         this.id = id;
         this.creationDate = creationDate;
         this.products = products;
     }
 
-    public Order(LocalDate creationDate, List<Product> products) {
+    public Order(Date creationDate, List<Product> products) {
         this.creationDate = creationDate;
         this.products = products;
     }
@@ -51,11 +51,11 @@ public class Order {
         this.customerID = customerID;
     }
 
-    public LocalDate getCreationDate() {
+    public Date getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(LocalDate creationDate) {
+    public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
 
