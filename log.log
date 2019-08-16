@@ -893,3 +893,47 @@
 2019-08-15 10:33:50,865 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
 2019-08-15 10:33:54,060 INFO a.m.c.UserController [http-nio-8081-exec-4] basket was ordered 
 2019-08-15 10:33:54,060 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2 makes order 
+2019-08-16 11:27:25,838 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-16 11:27:27,134 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-16 11:27:48,924 INFO a.s.p.LangServlet [http-nio-8081-exec-10] selected russian language 
+2019-08-16 11:27:49,001 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-16 11:27:49,192 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-16 11:27:49,958 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-16 11:27:50,080 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-10] Unauthorized access request 
+2019-08-16 11:27:50,710 INFO a.s.p.LangServlet [http-nio-8081-exec-2] selected russian language 
+2019-08-16 11:27:50,776 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-16 11:27:50,937 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-16 11:27:51,172 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-16 11:27:51,435 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-08-16 11:27:56,276 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-08-16 11:27:57,514 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] User=gunseful has been log in 
+2019-08-16 11:27:57,535 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-6] User=GUNSEFULrequests product list 
+2019-08-16 11:28:35,698 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-5] User=GUNSEFULrequests product list 
+2019-08-16 11:28:47,893 INFO a.m.c.UserController [http-nio-8081-exec-10] product  722  has been deleted from product list 
+2019-08-16 11:28:47,893 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-10] User=GUNSEFUL has been deleted  722  
+2019-08-16 11:28:47,894 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-10] User=GUNSEFULrequests product list 
+2019-08-16 11:29:03,055 INFO a.s.s.a.BlackListServlet [http-nio-8081-exec-5] Administrator is trying to delete user from blacklist 
+2019-08-16 11:29:03,061 INFO a.m.c.UserController [http-nio-8081-exec-5] user 1387 has been deleted from black list 
+2019-08-16 11:32:17,571 INFO a.s.p.LangServlet [http-nio-8081-exec-3] selected russian language 
+2019-08-16 11:32:20,999 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-08-16 11:32:21,652 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-08-16 11:32:21,663 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-16 11:32:30,373 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-16 11:32:34,210 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-16 11:32:36,886 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-16 11:32:40,070 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has added product to his basket 
+2019-08-16 11:32:40,080 INFO a.m.c.UserController [http-nio-8081-exec-9] User=2 added 754 product to his basket 
+2019-08-16 11:32:40,084 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-16 11:32:44,080 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-16 11:32:45,284 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-08-16 11:32:46,188 INFO a.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= 13A09D6A9FE7722D3CBFC1F22B6ABD36 
+2019-08-16 11:32:46,188 INFO a.s.p.LogoutServlet [http-nio-8081-exec-3] User=2 has out 
+2019-08-16 11:32:47,044 INFO a.s.p.LangServlet [http-nio-8081-exec-7] selected russian language 
+2019-08-16 11:32:51,988 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-08-16 11:32:51,995 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] User=gunseful has been log in 
+2019-08-16 11:32:52,003 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-2] User=GUNSEFULrequests product list 
+2019-08-16 11:32:57,310 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-1] User=GUNSEFULrequests product list 
+2019-08-16 11:35:20,408 INFO a.s.p.LangServlet [http-nio-8081-exec-9] selected russian language 
+2019-08-16 11:35:23,214 INFO a.s.p.LogginServlet [http-nio-8081-exec-6] Trying to log in 
+2019-08-16 11:35:24,072 INFO a.s.p.LogginServlet [http-nio-8081-exec-6] User=2 has been log in 
+2019-08-16 11:35:24,093 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 

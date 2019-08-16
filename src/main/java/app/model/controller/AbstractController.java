@@ -5,46 +5,46 @@ import app.entities.products.Product;
 import app.entities.user.User;
 import app.model.pool.ConnectionPool;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import javax.sql.DataSource;
 import java.util.List;
 
 public abstract class AbstractController {
-    private Connection connection;
     private ConnectionPool connectionPool;
+    private DataSource dataSource;
 
     public AbstractController() {
-        connectionPool = ConnectionPool.getInstance();
-        connection = connectionPool.getConnection();
+        connectionPool = new ConnectionPool();
+        dataSource = ConnectionPool.getDataSource();
     }
 
-    // Возвращения конекшена в пул
-    public void returnConnectionInPool() {
-        connectionPool.returnConnection(connection);
+    public ConnectionPool getConnectionPool() {
+        return connectionPool;
     }
 
-    // Получение экземпляра PrepareStatement
-    public PreparedStatement getPrepareStatement(String sql) {
-        PreparedStatement ps = null;
-        try {
-            ps = connection.prepareStatement(sql);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return ps;
+    public DataSource getDataSource() {
+        return dataSource;
     }
-
-    // Закрытие PrepareStatement
-    public void closePrepareStatement(PreparedStatement ps) {
-        if (ps != null) {
-            try {
-                ps.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
+    //    // Получение экземпляра PrepareStatement
+//    public PreparedStatement getPrepareStatement(String sql) {
+//        PreparedStatement ps = null;
+//        try {
+//            ps = connection.prepareStatement(sql);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return ps;
+//    }
+//
+//    // Закрытие PrepareStatement
+//    public void closePrepareStatement(PreparedStatement ps) {
+//        if (ps != null) {
+//            try {
+//                ps.close();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 
 
     public abstract void deleteProduct(String id);

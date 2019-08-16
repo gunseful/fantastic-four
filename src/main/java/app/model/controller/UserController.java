@@ -4,9 +4,11 @@ import app.entities.products.Order;
 import app.entities.products.Product;
 import app.entities.user.User;
 import app.model.encrypt.Encrypt;
+import app.model.pool.ConnectionPool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -14,12 +16,18 @@ import java.util.List;
 
 public class UserController extends AbstractController {
     public static Logger logger = LogManager.getLogger();
+    DataSource dataSource = getDataSource();
+    ConnectionPool connectionPool = getConnectionPool();
 
     @Override
     public synchronized List<Product> getList() {
+
         List<Product> list = new ArrayList<>();
-        PreparedStatement ps = getPrepareStatement("SELECT * FROM PRODUCTS");
+        Connection connection=null;
         try {
+            connectionPool.printDbStatus();
+            connection = dataSource.getConnection();
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM PRODUCTS");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("ID");
@@ -30,7 +38,12 @@ public class UserController extends AbstractController {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            closePrepareStatement(ps);
+            try {
+                connectionPool.printDbStatus();
+                connection.close();
+            } catch (SQLException e) {
+                logger.error(e);
+            }
         }
         return list;
     }
@@ -38,23 +51,34 @@ public class UserController extends AbstractController {
 
     @Override
     public synchronized void deleteProduct(String id) {
-        PreparedStatement ps = getPrepareStatement("DELETE FROM PRODUCTS WHERE Id = " + id);
+        Connection connection = null;
         try {
+            connectionPool.printDbStatus();
+            connection = dataSource.getConnection();
+            PreparedStatement ps = connection.prepareStatement("DELETE FROM PRODUCTS WHERE Id = " + id);
             ps.executeUpdate();
             logger.info("product " + id + " has been deleted from product list");
         } catch (SQLException e) {
             logger.info("Fail connect to database");
             e.printStackTrace();
         } finally {
-            closePrepareStatement(ps);
+            connectionPool.printDbStatus();
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     @Override
     public synchronized void add(Product product) {
         String sql = "INSERT INTO PRODUCTS (Name, Price) Values (?, ?)";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
+        Connection connection = null;
         try {
+            connectionPool.printDbStatus();
+            connection = dataSource.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, product.getName());
             preparedStatement.setInt(2, product.getPrice());
             preparedStatement.executeUpdate();
@@ -63,16 +87,24 @@ public class UserController extends AbstractController {
             logger.info("Fail connect to database");
             ex.printStackTrace();
         } finally {
-            closePrepareStatement(preparedStatement);
+            try {
+                connectionPool.printDbStatus();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     @Override
     public synchronized User getUser(int id) {
+        Connection connection=null;
         //получаем юзера из базы данных по его айдишнику
         String sql = "SELECT * FROM Users WHERE Id = ?";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
+
         try {
+            connection = dataSource.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             //создаем объект юзер и добавляем в него данные из базыданных
@@ -91,16 +123,22 @@ public class UserController extends AbstractController {
             ex.printStackTrace();
             return null;
         } finally {
-            closePrepareStatement(preparedStatement);
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                logger.error(e);
+            }
         }
     }
 
     @Override
     public synchronized User getUserByNickName(String nickname) {
+        Connection connection=null;
         //получаем юзера из базы данных по никнейму
         String sql = "SELECT * FROM Users WHERE nickname = ?";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
         try {
+            connection = dataSource.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, nickname.toUpperCase());
             ResultSet resultSet = preparedStatement.executeQuery();
             User user = new User();
@@ -117,15 +155,21 @@ public class UserController extends AbstractController {
             ex.printStackTrace();
             return null;
         } finally {
-            closePrepareStatement(preparedStatement);
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     @Override
     public synchronized boolean addNewUser(User user) {
+        Connection connection=null;
         String sql = "INSERT INTO Users (Nickname, Password, Name) Values (?, ?, ?)";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
         try {
+            connection = dataSource.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, user.getNickname());
             String password = Encrypt.encrypt(user.getPassword(), "secret key");
             preparedStatement.setString(2, password);
@@ -138,15 +182,21 @@ public class UserController extends AbstractController {
             ex.printStackTrace();
             return false;
         } finally {
-            closePrepareStatement(preparedStatement);
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     @Override
     public synchronized boolean checkLogginAndPassword(User user) {
         String sql = "SELECT * FROM Users WHERE Nickname = ? AND PASSWORD = ?";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
+        Connection connection = null;
         try {
+            connection = dataSource.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             //ищем в базе данных ник и пароль совпадения если есть хоть одно (а больше и не может быть) то кидаем тру, если не нашли то фелс
             String password = Encrypt.encrypt(user.getPassword(), "secret key");
             preparedStatement.setString(1, user.getNickname().toUpperCase());
@@ -163,7 +213,11 @@ public class UserController extends AbstractController {
             ex.printStackTrace();
             return false;
         } finally {
-            closePrepareStatement(preparedStatement);
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -172,10 +226,12 @@ public class UserController extends AbstractController {
         //в базе данных BASKETS хранятся товары(продукты) которые мы добавили в корзину, они не заказаны еще
         //здесь мы делаем ISORDERED = TRUE и так как это один заказ присваиваем всем этим строкам один айдишник, чтобы можно было
         //искать по заказу
+        Connection connection = null;
         int orderId = 0;
         String sql1 = "SELECT * FROM BASKETS where customerid = ? AND isordered = false";
-        PreparedStatement preparedStatement1 = getPrepareStatement(sql1);
         try {
+            connection = dataSource.getConnection();
+            PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
             preparedStatement1.setInt(1, user.getId());
             ResultSet rs = preparedStatement1.executeQuery();
             rs.next();
@@ -183,7 +239,11 @@ public class UserController extends AbstractController {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            closePrepareStatement(preparedStatement1);
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         String sql2 = "UPDATE BASKETS \n" +
                 "SET CREATEDAT=?," +
@@ -192,8 +252,10 @@ public class UserController extends AbstractController {
                 "WHERE \n" +
                 "\n" +
                 "CUSTOMERID = ?  AND ISORDERED = FALSE";
-        PreparedStatement preparedStatement2 = getPrepareStatement(sql2);
+
         try {
+            connection = dataSource.getConnection();
+            PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);
             //Insert String of order, User ID and Date when order was created to Table of Orders in db
             LocalDate creationDate = LocalDate.now();
             preparedStatement2.setObject(1, creationDate);
@@ -205,20 +267,26 @@ public class UserController extends AbstractController {
             logger.info("Fail connect to database");
             ex.printStackTrace();
         } finally {
-            closePrepareStatement(preparedStatement2);
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     @Override
     public synchronized void payOrder(int orderID) {
+        Connection connection=null;
         //ищем в таблице BASKETS среди тех кто уже заказан и устанавливаем ispaid = true
         String sql = "UPDATE BASKETS \n" +
                 "SET ISPAID= TRUE\n" +
                 "WHERE \n" +
                 "\n" +
                 "ID = ?  AND ISORDERED = TRUE";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
         try {
+            connection = dataSource.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, orderID);
             preparedStatement.executeUpdate();
             logger.info("order was payed");
@@ -226,19 +294,26 @@ public class UserController extends AbstractController {
             logger.info("Fail connect to database");
             ex.printStackTrace();
         } finally {
-            closePrepareStatement(preparedStatement);
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     @Override
     public synchronized List<Order> getOrders(User user) {
+        Connection connection = null;
         //здесь получаем список заказов, если юзер простой клиент он получает только свои заказы, если админ - все заказы
         String sql="";
         sql = (!user.isAdministrator()) ? "SELECT * FROM BASKETS INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid INNER JOIN USERS ON USERS.ID = baskets.customerid where USERS.id = ? AND ISORDERED = TRUE" :
                 "SELECT * FROM BASKETS INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid INNER JOIN USERS ON USERS.ID = baskets.customerid where ISORDERED = TRUE";
-        PreparedStatement preparedStatement = getPrepareStatement(sql);
+
         List<Order> list = new ArrayList<>();
         try {
+            connection = dataSource.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             if(!user.isAdministrator()) {
                 preparedStatement.setInt(1, user.getId());
             }
@@ -283,34 +358,48 @@ public class UserController extends AbstractController {
                 logger.info("Fail connect to database");
                 e.printStackTrace();
             } finally{
-                closePrepareStatement(preparedStatement);
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
+        }
             return list;
         }
 
         @Override
         public synchronized void deleteOrder ( int id){
             //удаляет заказ
-            PreparedStatement ps = getPrepareStatement("DELETE FROM BASKETS WHERE Id = " + id+" AND ISORDERED = TRUE");
+            String sql = "DELETE FROM BASKETS WHERE Id = " + id+" AND ISORDERED = TRUE";
+            Connection connection=null;
             try {
-                ps.executeUpdate();
+                connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.executeUpdate();
                 logger.info("Order= " + id + " was deleted from database");
             } catch (SQLException e) {
                 logger.info("Fail connect to database");
                 e.printStackTrace();
             } finally {
-                closePrepareStatement(ps);
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         }
 
 
         @Override
         public synchronized List<User> getBlackList () {
+            Connection connection = null;
             //из списка пользователей получает только тех у кого столбец isblocked = true
             List<User> list = new ArrayList<>();
-            PreparedStatement ps = getPrepareStatement("SELECT * FROM USERS WHERE ISBLOCKED = TRUE");
+            String sql = "SELECT * FROM USERS WHERE ISBLOCKED = TRUE";
             try {
-                ResultSet resultSet = ps.executeQuery();
+                connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                ResultSet resultSet = preparedStatement.executeQuery();
                 User user;
                 while (resultSet.next()) {
                     user = new User();
@@ -330,7 +419,11 @@ public class UserController extends AbstractController {
                 System.out.println("Connection failed...");
                 System.out.println(ex);
             } finally {
-                closePrepareStatement(ps);
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    logger.error(e);
+                }
             }
             return list;
         }
@@ -339,16 +432,23 @@ public class UserController extends AbstractController {
         @Override
         public synchronized void deleteFromBlackList ( int id){
             //удаляет из черного списка, то есть меняет значение isblocked на false
-            PreparedStatement ps = getPrepareStatement("UPDATE Users SET ISBLOCKED = FALSE WHERE id = " + id);
+            String sql = "UPDATE Users SET ISBLOCKED = FALSE WHERE id = " + id;
+            Connection connection = null;
             try {
-                ps.executeUpdate();
+                connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.executeUpdate();
                 logger.info("user " + id + " has been deleted from black list");
             } catch (SQLException e) {
                 logger.info("Fail connect to database");
                 System.out.println("Connection failed...");
                 e.printStackTrace();
             } finally {
-                closePrepareStatement(ps);
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    logger.error(e);
+                }
             }
         }
 
@@ -357,25 +457,34 @@ public class UserController extends AbstractController {
         public synchronized void addUserToBlackList (User user){
             //добавляет в черный список, isblocked = true
             String sql = "UPDATE Users SET ISBLOCKED = TRUE WHERE id = " + user.getId();
-            PreparedStatement preparedStatement = getPrepareStatement(sql);
+            Connection connection = null;
             try {
+                connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.executeUpdate();
                 logger.info("User= " + user.getNickname() + " was added to blacklist");
             } catch (Exception ex) {
                 logger.info("Fail connect to database");
                 ex.printStackTrace();
             } finally {
-                closePrepareStatement(preparedStatement);
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    logger.error(e);
+                }
             }
         }
 
 
         @Override
         public synchronized boolean checkBlackList (User user){
+            Connection connection = null;
             //проверяет пользователя в базе данных, если isblocked = true значит он заблокированный
-            PreparedStatement ps = getPrepareStatement("SELECT * FROM USERS WHERE ID = " + user.getId());
+            String sql = "SELECT * FROM USERS WHERE ID = " + user.getId();
             try {
-                ResultSet resultSet = ps.executeQuery();
+                connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                ResultSet resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
                     return resultSet.getBoolean("ISBLOCKED");
                 }
@@ -383,7 +492,11 @@ public class UserController extends AbstractController {
                 System.out.println("Connection failed...");
                 ex.printStackTrace();
             } finally {
-                closePrepareStatement(ps);
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    logger.error(e);
+                }
             }
             return false;
         }
@@ -393,8 +506,11 @@ public class UserController extends AbstractController {
         public synchronized void addToBasket (User user,int productID){
             //добавляет новый товар в таблицу BASKETS
             String sql = "INSERT INTO BASKETS (CUSTOMERID, PRODUCTID) Values (?, ?)";
-            PreparedStatement preparedStatement = getPrepareStatement(sql);
+            Connection connection = null;
             try {
+                connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
                 preparedStatement.setInt(1, user.getId());
                 preparedStatement.setInt(2, productID);
                 preparedStatement.executeUpdate();
@@ -403,22 +519,29 @@ public class UserController extends AbstractController {
                 logger.info("Fail connect to database");
                 ex.printStackTrace();
             } finally {
-                closePrepareStatement(preparedStatement);
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         }
 
         @Override
         public synchronized List<Product> getBasketList (User user){
             //получает лист корзины. это все что есть в BASKETS но не заказано
+            Connection connection = null;
             List<Product> list = new ArrayList<>();
-            PreparedStatement ps = getPrepareStatement("    SELECT * FROM BASKETS\n" +
+            String sql = "    SELECT * FROM BASKETS\n" +
                     "    INNER JOIN PRODUCTS ON PRODUCTS.ID = baskets.productid\n" +
                     "    INNER JOIN USERS ON USERS.ID = baskets.customerid\n" +
                     "\n" +
-                    "    where USERS.id = ? AND ISORDERED = false");
+                    "    where USERS.id = ? AND ISORDERED = false";
             try {
-                ps.setInt(1, user.getId());
-                ResultSet rs = ps.executeQuery();
+                connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setInt(1, user.getId());
+                ResultSet rs = preparedStatement.executeQuery();
                 while (rs.next()) {
                     int id = rs.getInt("PRODUCTID");
                     String name = rs.getString("NAME");
@@ -430,7 +553,11 @@ public class UserController extends AbstractController {
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
-                closePrepareStatement(ps);
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
             return list;
         }
@@ -438,15 +565,22 @@ public class UserController extends AbstractController {
         @Override
         public synchronized void deleteProductFromBasket (String id){
             //удаляет из BASKETS товар
-            PreparedStatement ps = getPrepareStatement("DELETE FROM BASKETS WHERE Id = " + id);
+            Connection connection = null;
+            String sql = "DELETE FROM BASKETS WHERE Id = " + id;
             try {
-                ps.executeUpdate();
+                connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.executeUpdate();
                 logger.info("product " + id + " has been deleted from basket list");
             } catch (SQLException e) {
                 logger.info("Fail connect to database");
                 e.printStackTrace();
             } finally {
-                closePrepareStatement(ps);
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    logger.error(e);
+                }
             }
         }
     }
