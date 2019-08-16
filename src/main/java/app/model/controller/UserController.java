@@ -16,8 +16,8 @@ import java.util.List;
 
 public class UserController extends AbstractController {
     public static Logger logger = LogManager.getLogger();
-    DataSource dataSource = getDataSource();
-    ConnectionPool connectionPool = getConnectionPool();
+    private DataSource dataSource = getDataSource();
+    private ConnectionPool connectionPool = getConnectionPool();
 
     public synchronized List<Product> getList() {
 
@@ -39,7 +39,9 @@ public class UserController extends AbstractController {
         } finally {
             try {
                 connectionPool.printDbStatus();
-                connection.close();
+                if (connection != null) {
+                    connection.close();
+                }
             } catch (SQLException e) {
                 logger.error(e);
             }
@@ -61,9 +63,11 @@ public class UserController extends AbstractController {
         } finally {
             connectionPool.printDbStatus();
             try {
-                connection.close();
+                if (connection != null) {
+                    connection.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);
             }
         }
     }
@@ -85,9 +89,11 @@ public class UserController extends AbstractController {
         } finally {
             try {
                 connectionPool.printDbStatus();
-                connection.close();
+                if (connection != null) {
+                    connection.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);
             }
         }
     }
@@ -119,7 +125,9 @@ public class UserController extends AbstractController {
             return null;
         } finally {
             try {
-                connection.close();
+                if (connection != null) {
+                    connection.close();
+                }
             } catch (SQLException e) {
                 logger.error(e);
             }
@@ -150,9 +158,11 @@ public class UserController extends AbstractController {
             return null;
         } finally {
             try {
-                connection.close();
+                if (connection != null) {
+                    connection.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);
             }
         }
     }
@@ -176,9 +186,11 @@ public class UserController extends AbstractController {
             return false;
         } finally {
             try {
-                connection.close();
+                if (connection != null) {
+                    connection.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);
             }
         }
     }
@@ -206,9 +218,11 @@ public class UserController extends AbstractController {
             return false;
         } finally {
             try {
-                connection.close();
+                if (connection != null) {
+                    connection.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);;
             }
         }
     }
@@ -231,9 +245,11 @@ public class UserController extends AbstractController {
             e.printStackTrace();
         } finally {
             try {
-                connection.close();
+                if (connection != null) {
+                    connection.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);
             }
         }
         String sql2 = "UPDATE BASKETS \n" +
@@ -261,7 +277,7 @@ public class UserController extends AbstractController {
             try {
                 connection.close();
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);
             }
         }
     }
@@ -285,9 +301,11 @@ public class UserController extends AbstractController {
             ex.printStackTrace();
         } finally {
             try {
-                connection.close();
+                if (connection != null) {
+                    connection.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);
             }
         }
     }
@@ -348,9 +366,11 @@ public class UserController extends AbstractController {
                 e.printStackTrace();
             } finally{
             try {
-                connection.close();
+                if (connection != null) {
+                    connection.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error(e);
             }
         }
             return list;
@@ -370,9 +390,11 @@ public class UserController extends AbstractController {
                 e.printStackTrace();
             } finally {
                 try {
-                    connection.close();
+                    if (connection != null) {
+                        connection.close();
+                    }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    logger.error(e);
                 }
             }
         }
@@ -406,7 +428,9 @@ public class UserController extends AbstractController {
                 System.out.println(ex);
             } finally {
                 try {
-                    connection.close();
+                    if (connection != null) {
+                        connection.close();
+                    }
                 } catch (SQLException e) {
                     logger.error(e);
                 }
@@ -429,7 +453,9 @@ public class UserController extends AbstractController {
                 e.printStackTrace();
             } finally {
                 try {
-                    connection.close();
+                    if (connection != null) {
+                        connection.close();
+                    }
                 } catch (SQLException e) {
                     logger.error(e);
                 }
@@ -450,7 +476,9 @@ public class UserController extends AbstractController {
                 ex.printStackTrace();
             } finally {
                 try {
-                    connection.close();
+                    if (connection != null) {
+                        connection.close();
+                    }
                 } catch (SQLException e) {
                     logger.error(e);
                 }
@@ -473,7 +501,9 @@ public class UserController extends AbstractController {
                 ex.printStackTrace();
             } finally {
                 try {
-                    connection.close();
+                    if (connection != null) {
+                        connection.close();
+                    }
                 } catch (SQLException e) {
                     logger.error(e);
                 }
@@ -498,9 +528,11 @@ public class UserController extends AbstractController {
                 ex.printStackTrace();
             } finally {
                 try {
-                    connection.close();
+                    if (connection != null) {
+                        connection.close();
+                    }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    logger.error(e);
                 }
             }
         }
@@ -531,9 +563,11 @@ public class UserController extends AbstractController {
                 e.printStackTrace();
             } finally {
                 try {
-                    connection.close();
+                    if (connection != null) {
+                        connection.close();
+                    }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    logger.error(e);
                 }
             }
             return list;
@@ -553,7 +587,9 @@ public class UserController extends AbstractController {
                 e.printStackTrace();
             } finally {
                 try {
-                    connection.close();
+                    if (connection != null) {
+                        connection.close();
+                    }
                 } catch (SQLException e) {
                     logger.error(e);
                 }
