@@ -2,8 +2,7 @@ package app.servlets.storeservlets.client;
 
 import app.entities.products.Product;
 import app.entities.user.User;
-import app.model.controller.AbstractController;
-import app.model.controller.UserController;
+import app.model.controller.Repository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,7 +20,7 @@ public class ListClientServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //получаем юзера
         User user = (User) req.getSession().getAttribute("user");
-        AbstractController controller = (UserController) req.getSession().getAttribute("controller");
+        Repository controller = (Repository) req.getSession().getAttribute("controller");
         //получаем лист товаров
         req.setAttribute("products", controller.getList());
         //проверяем, если админ сюда зайдет его кинет на страницу админа, если обычный клиент, открывает вьюшку
@@ -40,7 +39,7 @@ public class ListClientServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UserController controller = (UserController) req.getSession().getAttribute("controller");
+        Repository controller = (Repository) req.getSession().getAttribute("controller");
         User user = (User) req.getSession().getAttribute("user");
         //выбираем в списке чо хотим купить, то есть добавить в корзину и кликаем - > Летит в корзину
         try {
@@ -53,7 +52,7 @@ public class ListClientServlet extends HttpServlet {
                         if (String.valueOf(product.getId()).equals(productID.trim())) {
                             logger.info("User=" + user.getNickname() + " has added product to his basket");
 //                            //если есть добавляет в базу данных
-                            controller.addToBasket(user, product.getId());
+                            controller.addToBasket(user, product.getId(),true);
                         }
                     }
                 }

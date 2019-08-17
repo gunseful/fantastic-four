@@ -1,7 +1,7 @@
 package app.servlets.storeservlets.client;
 
 import app.entities.user.User;
-import app.model.controller.UserController;
+import app.model.controller.Repository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,8 +19,8 @@ public class BasketServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //getting this session user to work with
         User user = (User) req.getSession().getAttribute("user");
-        UserController controller = (UserController) req.getSession().getAttribute("controller");
-        req.setAttribute("basket", controller.getBasketList(user));
+        Repository controller = (Repository) req.getSession().getAttribute("controller");
+        req.setAttribute("basket", controller.getBasket(user));
         //если юзер не админ кидает на на вьюшку корзина
         try {
             if (!user.isAdministrator()) {
@@ -40,7 +40,29 @@ public class BasketServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //getting this session user to work with
         User user = (User) req.getSession().getAttribute("user");
-        UserController controller = new UserController();
+        Repository controller = new Repository();
+
+        try {
+            if (req.getParameter("plus") != null) {
+                int i = Integer.parseInt(req.getParameter("plus"));
+                controller.addToBasket(user, i, true);
+                doGet(req, resp);
+            }
+        } catch (Exception e) {
+            logger.error(e);
+        }
+
+        try {
+            if (req.getParameter("minus") != null) {
+                int i = Integer.parseInt(req.getParameter("minus"));
+                controller.addToBasket(user, i, false);
+                doGet(req, resp);
+            }
+        } catch (Exception e) {
+            logger.error(e);
+        }
+
+
         //when we click on bottom "Заказа" we give parameter getOrder and then making some order by special methid in Model.class and redirect to -> orders
         try {
             if (req.getParameter("getOrder") != null) {
@@ -48,7 +70,8 @@ public class BasketServlet extends HttpServlet {
                 logger.info("User=" + user.getNickname() + " makes order");
                 resp.sendRedirect("/orders");
             }
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            logger.error(e);
         }
 
         //we get some product for delete from the basket, taking products, checks is there in the db those product -> removing
@@ -57,8 +80,9 @@ public class BasketServlet extends HttpServlet {
             if (req.getParameterValues("productForDelete") != null) {
                 String[] productsID = req.getParameterValues("productForDelete");
                 for (String productID : productsID) {
+                    System.out.println(productID);
                     logger.info("User=" + user.getNickname() + " delete product from his basket");
-                    controller.deleteProductFromBasket(productID.trim());
+                    controller.deleteFromBasket(user, Integer.parseInt(productID.trim()));
                     doGet(req, resp);
                 }
             }

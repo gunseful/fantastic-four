@@ -1,8 +1,7 @@
 package app.servlets.prestoreservlets;
 
 import app.entities.user.User;
-import app.model.controller.AbstractController;
-import app.model.controller.UserController;
+import app.model.controller.Repository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -39,8 +38,8 @@ public class LogginServlet extends HttpServlet {
             //вот здесь
             User user = new User(nickname, password);
             HttpSession session = req.getSession();
-            session.setAttribute("controller", new UserController());
-            AbstractController controller = (UserController)req.getSession().getAttribute("controller");
+            session.setAttribute("controller", new Repository());
+            Repository controller = (Repository)req.getSession().getAttribute("controller");
             //опять таки нужна нам наша модель, для работы с базой данной только ее и будет юзать
             //ну и проверяем логин и пароль, ничего не хэшируется, тупо строкой пароль идет - небезопасно офк, ну а как еще
             if(controller.checkLogginAndPassword(user)){

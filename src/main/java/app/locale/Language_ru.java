@@ -66,6 +66,7 @@ public class Language_ru extends ListResourceBundle {
             { "orders.paid", "Оплачено"},
             { "orders.notpaid", "Не оплачено"},
             { "orders.total.price", "Итоговая сумма - "},
+            { "count", "Количество: "},
 
 
 

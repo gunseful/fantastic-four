@@ -1,7 +1,7 @@
 package app.servlets.storeservlets;
 
 import app.entities.user.User;
-import app.model.controller.UserController;
+import app.model.controller.Repository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,7 +27,7 @@ public class OrdersServlet extends HttpServlet {
         User user = (User) req.getSession().getAttribute("user");
 
 
-        UserController controller = (UserController) req.getSession().getAttribute("controller");
+        Repository controller = (Repository) req.getSession().getAttribute("controller");
         req.setAttribute("isInBlackList", controller.checkBlackList(user));
         req.setAttribute("orders", controller.getOrders(user));
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/common/orders.jsp");
@@ -37,7 +37,7 @@ public class OrdersServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = (User)req.getSession().getAttribute("user");
-        UserController controller = (UserController)req.getSession().getAttribute("controller");
+        Repository controller = (Repository)req.getSession().getAttribute("controller");
         //если нажимается кнопка Pay и был выбран хоть один Заказ, то оплачивается
         try {
             if (req.getParameter("Pay") != null && req.getParameterValues("orders") != null) {

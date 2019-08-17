@@ -34,7 +34,8 @@
 <div>
     <div>
         <button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
-                onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">${bundle.getObject("orders")}
+                onclick="location.href='/orders'" name="Orders" type="submit"
+                value="Orders">${bundle.getObject("orders")}
         </button>
     </div>
 </div>
@@ -59,15 +60,28 @@
             <c:if test="${!basket.isEmpty()}">
                 <p>${bundle.getObject("basket.title")}</p>
                 <c:forEach var="product" items="${basket}">
-                    <input type="checkbox" name="productForDelete" value=${product.getBasketID()}>${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}<br>
+                    <input type="checkbox" name="productForDelete"
+                           value=${product.getId()}>${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")} ${bundle.getObject("count")}
+
+                    <button class="w3-button w3-circle w3-deep-orange w3-hover-opacity-off btn-block"
+                            name="minus" type="submit" value=${product.getId()}>-
+                    </button>
+                    ${product.getCount()}
+                    <button class="w3-button w3-circle w3-light-green w3-hover-opacity-off btn-block"
+                            name="plus" type="submit" value=${product.getId()}>+
+                    </button>
+                    <br>
+
+
                 </c:forEach>
-                <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit" value=${bundle.getObject("delete")}>
+                <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit"
+                       value=${bundle.getObject("delete")}>
             </c:if>
             <c:if test="${basket.isEmpty()}">
                 <p>${bundle.getObject("basket.empty")}</p>
             </c:if>
         </form>
-<%--        если корзина не пустая то на основее ее делается заказ, нажимается кнопка и он делается--%>
+        <%--        если корзина не пустая то на основее ее делается заказ, нажимается кнопка и он делается--%>
         <form name="input" method="post">
             <c:if test="${!basket.isEmpty()}">
                 <button class="w3-button w3-yellow w3-padding-large w3-large w3-hover-opacity-off btn-block"

@@ -12,6 +12,12 @@ public class ConnectionPool {
 
     private static ConnectionPool instance = null;
 
+    public static ConnectionPool getInstance(){
+        if (instance==null)
+            instance = new ConnectionPool();
+        return instance;
+    }
+
     public static DataSource getDataSource(){
         if (instance==null)
             instance = new ConnectionPool();
@@ -31,7 +37,7 @@ public class ConnectionPool {
 
     private static GenericObjectPool gPool = null;
 
-    public DataSource setUpPool() throws Exception {
+    private DataSource setUpPool() throws Exception {
         Class.forName(JDBC_DRIVER);
 
         // Creates an Instance of GenericObjectPool That Holds Our Pool of Connections Object!

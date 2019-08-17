@@ -64,6 +64,7 @@ public class Language_en extends ListResourceBundle {
             { "orders.paid", "Paid"},
             { "orders.notpaid", "Not paid"},
             { "orders.total.price", "Total price - "},
+            { "count", "Count: "},
 
 
 

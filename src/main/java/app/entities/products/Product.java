@@ -8,6 +8,7 @@ public class Product {
     private int id;
     private String name;
     private int price;
+    private int count;
 
     public Product(int id, String name, int price) {
         this.id = id;
@@ -15,10 +16,25 @@ public class Product {
         this.price = price;
     }
 
+    public Product(int id, String name, int price, int count) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.count = count;
+    }
+
 
     public Product(String name, int price) {
         this.name = name;
         this.price = price;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 
     public int getId() {

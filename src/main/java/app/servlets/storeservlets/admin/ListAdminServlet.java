@@ -2,8 +2,7 @@ package app.servlets.storeservlets.admin;
 
 import app.entities.products.Product;
 import app.entities.user.User;
-import app.model.controller.AbstractController;
-import app.model.controller.UserController;
+import app.model.controller.Repository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,7 +22,7 @@ public class ListAdminServlet extends HttpServlet {
         //как всегда берем юзера из сесси для работы с ним
         User user = (User) req.getSession().getAttribute("user");
         //кидаем все продукты из базы данных аттрибутом
-        UserController uc = new UserController();
+        Repository uc = new Repository();
         req.setAttribute("products", uc.getList());
         //проверяем не залез ли шпион и переводим на страницу клиента если залез все таки
         try {
@@ -47,7 +46,7 @@ public class ListAdminServlet extends HttpServlet {
             if (req.getParameterValues("productForDelete") != null) {
                 String[] productsID = req.getParameterValues("productForDelete");
                 for (String productID : productsID) {
-                    AbstractController controller = (UserController) req.getSession().getAttribute("controller");
+                    Repository controller = (Repository) req.getSession().getAttribute("controller");
                     controller.deleteProduct(productID);
                     logger.info("User=" + user.getNickname() + " has been deleted " + productID);
                 }
@@ -62,7 +61,7 @@ public class ListAdminServlet extends HttpServlet {
                 //создаем продукт
                 Product product = new Product(name, price);
                 //добавляем в базу
-                AbstractController controller = (UserController) req.getSession().getAttribute("controller");
+                Repository controller = (Repository) req.getSession().getAttribute("controller");
                 controller.add(product);
                 doGet(req, resp);
                 logger.info("User=" + user.getNickname() + " has been added new product - " + product.getName());

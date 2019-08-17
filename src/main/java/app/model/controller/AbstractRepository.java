@@ -4,11 +4,11 @@ import app.model.pool.ConnectionPool;
 
 import javax.sql.DataSource;
 
-public abstract class AbstractController {
-    private ConnectionPool connectionPool;
-    private DataSource dataSource;
+public abstract class AbstractRepository {
+    private ConnectionPool connectionPool = new ConnectionPool();
+    private DataSource dataSource = ConnectionPool.getDataSource();
 
-    public AbstractController() {
+    public AbstractRepository() {
         connectionPool = new ConnectionPool();
         dataSource = ConnectionPool.getDataSource();
     }

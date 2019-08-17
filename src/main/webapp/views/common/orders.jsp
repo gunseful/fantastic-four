@@ -95,7 +95,7 @@
                     ${bundle.getObject("orders.order")} ${order.getId()}, ${bundle.getObject("orders.creation")} ${order.getCreationDate()}
                     <br>
                     <c:forEach var="product" items="${order.getProducts()}">
-                        ${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}
+                        ${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}  ${bundle.getObject("count")} ${product.getCount()}
                         <br>
                     </c:forEach><br>
                     ${bundle.getObject("orders.total.price")} ${String.format("%.2f", (order.totalPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}<br>

@@ -10,15 +10,22 @@ public class Order {
     private Date creationDate;
     private List<Product> products;
     private boolean isPaid=false;
-    private int customerID;
+    private int customerId;
     private User user;
 
     public Order() {
     }
 
-    public Order(int id, Date creationDate, List<Product> products) {
+    public Order(int id, Date creationDate, List<Product> products, boolean isPaid, User user) {
         this.id = id;
         this.creationDate = creationDate;
+        this.products = products;
+        this.isPaid = isPaid;
+        this.user=user;
+    }
+
+    public Order(int id, List<Product> products) {
+        this.id = id;
         this.products = products;
     }
 
@@ -43,12 +50,12 @@ public class Order {
         this.id = id;
     }
 
-    public int getCustomerID() {
-        return customerID;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public Date getCreationDate() {
@@ -92,6 +99,8 @@ public class Order {
             s = "Неоплачено";
 
         }
+//        return "Заказ №"+ id +", создан " + " " +
+//                "<br> Товары:" + sb.toString()+"<br><br>Итоговая сумма - "+totalPrice()+" тенге.<br><br>"+s+"<br>";
         return "Заказ №"+ id +", создан " + creationDate.toString() +
                 "<br> Товары:" + sb.toString()+"<br><br>Итоговая сумма - "+totalPrice()+" тенге.<br><br>"+s+"<br>";
     }
@@ -99,7 +108,7 @@ public class Order {
     public int totalPrice(){
         int total = 0;
         for(Product product : this.products){
-            total += product.getPrice();
+            total += product.getPrice()*product.getCount();
         }
         return total;
     }

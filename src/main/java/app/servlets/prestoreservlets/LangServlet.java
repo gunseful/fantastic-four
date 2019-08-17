@@ -26,38 +26,16 @@ public class LangServlet extends HttpServlet {
             session.setAttribute("ses", "session");
             ResourceBundle bundle = null;
             //в зависимости от выбранного языка созадется бандл
-            if (request.getParameter("lang").equals("Russian")) {
-                logger.info("selected russian language");
-                Locale ru_loc = new Locale("ru", "RU");
-                bundle =
-                        ResourceBundle.getBundle("app.locale.Language", ru_loc);
-            }
-            if (request.getParameter("lang").equals("English")) {
-                logger.info("selected english language");
-
-                Locale en_loc = new Locale("en", "EN");
-                bundle =
-                        ResourceBundle.getBundle("app.locale.Language", en_loc);
-            }
-            if (request.getParameter("lang").equals("French")) {
-                logger.info("selected english language");
-
-                Locale fr_loc = new Locale("fr", "FR");
-                bundle =
-                        ResourceBundle.getBundle("app.locale.Language", fr_loc);
-            }
-            //бандл передается аттрибутом в сессию
+            logger.info("selected "+ request.getParameter("lang")+" language");
+            Locale loc = new Locale(request.getParameter("lang"));
+            bundle =
+                    ResourceBundle.getBundle("app.locale.Language", loc);
             request.getSession().putValue("bundle", bundle);
         }
         //если нажимается кнопка выбора языка вьюшка меняется
         if (request.getParameter("Choose Language") != null) {
             request.getSession().setAttribute("ses", null);
-        } else {
         }
-
-
         response.sendRedirect("/");
-
-
     }
 }

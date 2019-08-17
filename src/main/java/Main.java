@@ -1,7 +1,17 @@
-
+import app.entities.products.Order;
+import app.entities.user.User;
+import app.model.controller.Repository;
 
 public class Main {
-//    public static void main(String[] args) {
+    public static void main(String[] args) {
+        Repository ur = new Repository();
+        User user = new User();
+        user.setId(2);
+//        ur.getOrdersNEW(user);
+
+        for(Order order :         ur.getOrders(user)){
+            System.out.println(order);
+        }
 //        ResultSet rsObj = null;
 //        Connection connObj = null;
 //        Connection connObj2 = null;
@@ -53,5 +63,5 @@ public class Main {
 //        }
 //        jdbcObj.printDbStatus();
 //
-//    }
+    }
 }

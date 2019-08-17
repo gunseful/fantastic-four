@@ -1,8 +1,7 @@
 package app.servlets.prestoreservlets;
 
 import app.entities.user.User;
-import app.model.controller.AbstractController;
-import app.model.controller.UserController;
+import app.model.controller.Repository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -42,7 +41,7 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        AbstractController controller = new UserController();
+        Repository controller = new Repository();
         try {
             //Проверяем пришедшие параметры Имени, Ника и Пароль на правильность (или вообще наличие).
             if (!req.getParameter("name").equals("") && req.getParameter("nickname").length()>=3 && req.getParameter("nickname").length()<=15 && req.getParameter("password").length()>=6 && req.getParameter("password").length()<=15) {

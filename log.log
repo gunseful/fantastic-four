@@ -970,3 +970,933 @@
 2019-08-16 11:52:53,139 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2 makes order 
 2019-08-16 11:52:57,350 INFO a.s.s.OrdersServlet [http-nio-8081-exec-9] User=2 has deleted order 453 
 2019-08-16 11:52:57,352 INFO a.m.c.UserController [http-nio-8081-exec-9] Order= 453 was deleted from database 
+2019-08-16 13:37:51,282 INFO a.s.p.LangServlet [http-nio-8081-exec-2] selected russian language 
+2019-08-16 13:37:54,362 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-08-16 13:37:55,279 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-08-16 13:37:55,311 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-16 13:38:12,146 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has added product to his basket 
+2019-08-16 13:38:12,158 INFO a.m.c.UserController [http-nio-8081-exec-5] User=2 added 34 product to his basket 
+2019-08-16 13:38:12,159 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-16 13:38:12,868 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-16 13:38:14,210 INFO a.m.c.UserController [http-nio-8081-exec-8] basket was ordered 
+2019-08-16 13:38:14,210 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2 makes order 
+2019-08-16 13:38:17,839 INFO a.s.s.OrdersServlet [http-nio-8081-exec-10] User=2 has payed order 
+2019-08-16 13:38:17,843 INFO a.m.c.UserController [http-nio-8081-exec-10] order was payed 
+2019-08-16 13:38:20,442 INFO a.s.s.OrdersServlet [http-nio-8081-exec-4] User=2 has deleted order 485 
+2019-08-16 13:38:20,444 INFO a.m.c.UserController [http-nio-8081-exec-4] Order= 485 was deleted from database 
+2019-08-16 13:40:06,584 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected russian language 
+2019-08-16 13:40:09,423 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-16 13:40:10,143 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-16 13:40:10,158 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-16 13:40:12,162 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has added product to his basket 
+2019-08-16 13:40:12,169 INFO a.m.c.UserController [http-nio-8081-exec-1] User=2 added 34 product to his basket 
+2019-08-16 13:40:12,170 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-16 13:41:53,129 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected russian language 
+2019-08-16 13:41:55,519 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-16 13:42:27,264 INFO a.m.c.UserController [http-nio-8081-exec-9] Fail connect to database 
+2019-08-16 13:42:27,267 ERROR a.s.p.LogginServlet [http-nio-8081-exec-9] User= 2 is not found in database 
+2019-08-16 13:43:15,604 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected russian language 
+2019-08-16 13:43:18,232 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-16 13:43:18,923 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-16 13:43:18,938 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-16 13:43:27,901 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has added product to his basket 
+2019-08-16 13:43:27,912 INFO a.m.c.UserController [http-nio-8081-exec-2] User=2 added 34 product to his basket 
+2019-08-16 13:43:27,913 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-16 13:43:30,221 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-16 13:49:32,516 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-16 13:49:35,201 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-16 13:49:35,879 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-08-16 13:49:35,897 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-16 13:49:43,228 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected en language 
+2019-08-16 13:49:44,233 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-16 13:54:33,013 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-16 14:19:02,179 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-16 14:19:08,163 INFO a.s.p.LangServlet [http-nio-8081-exec-9] selected ru language 
+2019-08-16 14:19:08,249 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-16 14:19:08,971 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-16 14:19:10,474 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-16 14:19:11,417 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-08-16 14:23:19,302 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-16 14:23:21,074 INFO a.s.p.LangServlet [http-nio-8081-exec-9] selected ru language 
+2019-08-16 14:23:21,162 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-16 14:23:21,990 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-08-16 14:23:23,512 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-08-16 14:23:24,234 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-08-16 14:23:24,250 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-16 14:25:34,731 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-16 14:25:37,892 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-16 14:25:38,695 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-16 14:25:38,714 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-16 15:24:08,744 INFO a.m.c.UserRepository [main] order was payed 
+2019-08-16 15:35:23,216 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-16 15:35:23,232 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-16 15:35:41,568 INFO a.m.c.UserRepository [main] product 198 has been deleted from basket list 
+2019-08-16 15:36:58,206 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-16 15:36:58,218 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-16 15:37:19,340 INFO a.m.c.UserRepository [main] product 198 has been deleted from basket list 
+2019-08-16 15:43:12,822 INFO a.m.c.UserRepository [main] product 198 has been deleted from basket list 
+2019-08-16 15:44:46,683 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-16 15:44:46,685 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-16 15:44:46,691 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-16 15:44:46,691 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-16 15:45:14,881 INFO a.m.c.UserRepository [main] product 517 has been deleted from basket list 
+2019-08-16 15:46:41,233 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-16 15:46:45,259 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-16 15:46:45,527 INFO a.m.c.UserRepository [http-nio-8081-exec-9] Fail connect to database 
+2019-08-16 15:46:45,529 ERROR a.m.c.UserRepository [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-16 15:46:45,530 ERROR a.s.p.LogginServlet [http-nio-8081-exec-9] User= 2 is not found in database 
+2019-08-16 15:46:50,066 INFO a.s.p.LogginServlet [http-nio-8081-exec-2] Trying to log in 
+2019-08-16 15:46:50,072 INFO a.m.c.UserRepository [http-nio-8081-exec-2] Fail connect to database 
+2019-08-16 15:46:50,073 ERROR a.m.c.UserRepository [http-nio-8081-exec-2] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-16 15:46:50,073 ERROR a.s.p.LogginServlet [http-nio-8081-exec-2] User= 2 is not found in database 
+2019-08-16 15:46:51,810 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] Trying to log in 
+2019-08-16 15:46:52,421 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-08-16 15:46:52,431 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-16 15:46:54,769 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has added product to his basket 
+2019-08-16 15:46:54,781 INFO a.m.c.UserRepository [http-nio-8081-exec-4] User=2 added 659 product to his basket 
+2019-08-16 15:46:54,781 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-16 15:46:56,069 INFO a.m.c.UserRepository [http-nio-8081-exec-6] Fail connect to database 
+2019-08-16 15:46:56,069 ERROR a.m.c.UserRepository [http-nio-8081-exec-6] org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "iPhone XR 128 Gb"
+Data conversion error converting "iPhone XR 128 Gb" [22018-199] 
+2019-08-16 15:46:58,023 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-16 15:46:59,086 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-16 15:47:00,868 INFO a.m.c.UserRepository [http-nio-8081-exec-2] basket was ordered 
+2019-08-16 15:47:00,869 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2 makes order 
+2019-08-16 15:47:00,879 INFO a.m.c.UserRepository [http-nio-8081-exec-3] Fail connect to database 
+2019-08-16 15:47:00,879 ERROR a.m.c.UserRepository [http-nio-8081-exec-3] org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "iPhone XR 128 Gb"
+Data conversion error converting "iPhone XR 128 Gb" [22018-199] 
+2019-08-16 15:47:12,188 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-16 15:47:13,781 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has added product to his basket 
+2019-08-16 15:47:13,784 INFO a.m.c.UserRepository [http-nio-8081-exec-8] User=2 added 34 product to his basket 
+2019-08-16 15:47:13,785 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-16 15:47:14,232 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-16 15:49:17,042 INFO a.s.p.LangServlet [http-nio-8081-exec-2] selected ru language 
+2019-08-16 15:49:19,652 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] Trying to log in 
+2019-08-16 15:49:20,384 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-08-16 15:49:20,404 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-16 15:49:21,621 INFO a.m.c.UserRepository [http-nio-8081-exec-1] Fail connect to database 
+2019-08-16 15:49:21,624 ERROR a.m.c.UserRepository [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "iPhone XR 128 Gb"
+Data conversion error converting "iPhone XR 128 Gb" [22018-199] 
+2019-08-16 15:49:23,417 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-16 15:49:24,300 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-16 15:49:25,603 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-16 15:49:26,283 INFO a.m.c.UserRepository [http-nio-8081-exec-9] Fail connect to database 
+2019-08-16 15:49:26,283 ERROR a.m.c.UserRepository [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "iPhone XR 128 Gb"
+Data conversion error converting "iPhone XR 128 Gb" [22018-199] 
+2019-08-16 15:52:59,965 INFO a.s.p.LangServlet [http-nio-8081-exec-9] selected ru language 
+2019-08-16 15:53:03,542 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-08-16 15:53:04,306 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-08-16 15:53:04,318 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-16 15:53:06,168 INFO a.m.c.UserRepository [http-nio-8081-exec-2] Fail connect to database 
+2019-08-16 15:53:06,170 ERROR a.m.c.UserRepository [http-nio-8081-exec-2] org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "iPhone XR 128 Gb"
+Data conversion error converting "iPhone XR 128 Gb" [22018-199] 
+2019-08-16 15:55:23,151 INFO a.s.p.LangServlet [http-nio-8081-exec-1] selected ru language 
+2019-08-16 15:55:25,534 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] Trying to log in 
+2019-08-16 15:55:26,222 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-08-16 15:55:26,235 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-16 15:55:27,468 INFO a.m.c.UserRepository [http-nio-8081-exec-8] Fail connect to database 
+2019-08-16 15:55:27,469 ERROR a.m.c.UserRepository [http-nio-8081-exec-8] org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "iPhone XR 128 Gb"
+Data conversion error converting "iPhone XR 128 Gb" [22018-199] 
+2019-08-16 15:55:27,471 INFO a.m.c.UserRepository [http-nio-8081-exec-8] Fail connect to database 
+2019-08-16 15:55:27,471 ERROR a.m.c.UserRepository [http-nio-8081-exec-8] org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "iPhone XR 128 Gb"
+Data conversion error converting "iPhone XR 128 Gb" [22018-199] 
+2019-08-16 15:58:20,984 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-16 15:58:23,796 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-16 15:58:24,399 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-16 15:58:24,415 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-16 16:00:21,002 INFO a.s.p.LangServlet [http-nio-8081-exec-5] selected ru language 
+2019-08-16 16:00:24,451 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-16 16:00:25,087 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-08-16 16:00:25,107 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-16 16:02:55,202 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-16 16:02:57,761 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-16 16:02:58,436 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-16 16:02:58,454 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 11:04:51,747 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 11:04:51,778 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎС‚РѕР»Р±РµС† "COUNT" РЅРµ РЅР°Р№РґРµРЅ
+Column "COUNT" not found [42122-199] 
+2019-08-17 11:06:32,773 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 11:06:32,776 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 11:06:40,897 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 11:06:40,899 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLDataException: РќРµРґРѕРїСѓСЃС‚РёРјРѕРµ Р·РЅР°С‡РµРЅРёРµ "1" РґР»СЏ РїР°СЂР°РјРµС‚СЂР° "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-199] 
+2019-08-17 11:08:26,314 INFO a.m.c.UserRepository [main] User=2 added 34 product to his basket 
+2019-08-17 11:08:44,053 INFO a.m.c.UserRepository [main] User=2 added 34 product to his basket 
+2019-08-17 11:09:33,875 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 11:09:33,878 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 11:09:49,591 INFO a.m.c.UserRepository [main] User=2 added 34 product to his basket 
+2019-08-17 11:10:23,415 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 11:10:23,418 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 11:10:39,319 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 11:10:39,321 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎС‚РѕР»Р±РµС† "PRODUCT_ID" РЅРµ РЅР°Р№РґРµРЅ
+Column "PRODUCT_ID" not found; SQL statement:
+INSERT INTO PRODUCTS (PRODUCT_ID, ORDER_ID) Values (?, ?) [42122-199] 
+2019-08-17 11:11:50,487 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 11:11:50,489 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎС‚РѕР»Р±РµС† "PRODUCT_ID" РЅРµ РЅР°Р№РґРµРЅ
+Column "PRODUCT_ID" not found; SQL statement:
+INSERT INTO PRODUCTS (PRODUCT_ID, ORDER_ID) Values (?, ?) [42122-199] 
+2019-08-17 11:12:13,151 INFO a.m.c.UserRepository [main] User=2 added 66 product to his basket 
+2019-08-17 11:12:40,615 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 11:12:40,618 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 11:12:50,001 INFO a.m.c.UserRepository [main] User=2 added 66 product to his basket 
+2019-08-17 11:18:57,807 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 11:18:57,808 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 11:19:06,501 INFO a.m.c.UserRepository [main] User=2 added 66 product to his basket 
+2019-08-17 11:22:31,061 INFO a.m.c.UserRepository [main] User=2 added 66 product to his basket 
+2019-08-17 11:23:13,377 INFO a.m.c.UserRepository [main] User=2 added 626 product to his basket 
+2019-08-17 11:50:05,203 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-17 11:50:05,859 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-17 11:50:06,922 INFO a.s.p.LangServlet [http-nio-8081-exec-9] selected ru language 
+2019-08-17 11:50:06,986 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-08-17 11:50:07,129 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-17 11:50:07,919 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-17 11:50:08,038 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-17 11:50:09,221 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 11:50:10,098 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-08-17 11:50:10,115 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 11:50:12,494 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 11:51:06,012 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 11:51:08,406 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 11:51:09,395 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 11:51:09,415 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 11:51:10,724 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 11:53:13,917 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 11:53:17,037 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 11:53:17,857 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 11:53:17,874 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 11:53:21,627 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-17 11:53:22,240 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 11:53:28,736 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-17 11:53:34,808 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 12:00:45,381 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 12:00:50,609 INFO a.s.p.LogginServlet [http-nio-8081-exec-2] Trying to log in 
+2019-08-17 12:00:51,262 INFO a.s.p.LogginServlet [http-nio-8081-exec-2] User=2 has been log in 
+2019-08-17 12:00:51,273 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 12:00:53,695 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:01:38,047 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 12:01:43,601 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 12:01:44,261 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 12:01:44,272 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 12:01:47,182 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:10:36,612 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 12:10:39,282 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 12:10:39,978 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-08-17 12:10:39,996 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-17 12:10:41,517 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:11:06,581 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected en language 
+2019-08-17 12:11:07,189 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-17 12:11:08,201 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:11:11,845 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 12:13:46,370 INFO a.s.p.LangServlet [http-nio-8081-exec-2] selected ru language 
+2019-08-17 12:13:48,757 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-17 12:13:49,509 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-08-17 12:13:49,524 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-17 12:13:50,617 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:15:21,896 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 12:15:24,418 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 12:15:25,078 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 12:15:25,094 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 12:15:26,776 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:16:33,879 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:16:36,593 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 12:16:37,233 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 12:16:37,248 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 12:16:38,801 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:18:51,655 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:18:54,449 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 12:18:55,074 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 12:18:55,088 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 12:18:57,388 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:21:21,435 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:21:24,137 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 12:21:24,891 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 12:21:24,904 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 12:21:26,318 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:23:03,263 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:23:04,904 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected ru language 
+2019-08-17 12:23:07,126 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] Trying to log in 
+2019-08-17 12:23:07,724 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-08-17 12:23:07,737 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-17 12:23:08,958 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 12:24:42,827 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:24:45,050 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 12:24:45,785 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 12:24:45,800 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 12:24:49,547 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-17 12:24:50,218 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 12:24:57,354 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:26:03,409 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:26:05,925 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 12:26:06,557 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 12:26:06,651 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 12:26:08,695 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:27:57,004 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:27:59,849 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-17 12:28:00,688 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-08-17 12:28:00,714 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-17 12:28:02,230 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:30:15,632 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:30:19,204 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 12:30:19,839 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 12:30:19,850 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 12:30:21,315 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:30:24,102 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:30:29,348 INFO a.m.c.UserRepository [http-nio-8081-exec-6] basket was ordered 
+2019-08-17 12:30:29,348 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2 makes order 
+2019-08-17 12:30:31,240 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-17 12:30:34,446 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 12:30:36,089 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 12:36:38,766 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:36:41,930 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 12:36:42,546 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 12:36:42,562 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 12:36:45,481 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:37:50,940 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:37:53,965 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 12:37:54,656 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 12:37:54,671 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 12:37:56,226 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:37:57,863 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 12:38:00,564 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:38:55,011 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:38:57,691 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 12:38:58,372 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 12:38:58,388 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 12:39:02,035 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-17 12:39:02,768 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 12:39:06,156 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 12:39:07,277 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:39:18,613 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 12:39:18,982 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:39:19,175 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 12:39:20,116 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 12:40:05,019 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:40:07,163 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 12:40:07,853 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 12:40:07,867 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 12:40:09,443 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:40:51,980 INFO a.s.p.LangServlet [http-nio-8081-exec-7] selected ru language 
+2019-08-17 12:40:54,737 INFO a.s.p.LogginServlet [http-nio-8081-exec-2] Trying to log in 
+2019-08-17 12:40:55,568 INFO a.s.p.LogginServlet [http-nio-8081-exec-2] User=2 has been log in 
+2019-08-17 12:40:55,580 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-08-17 12:40:57,169 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:40:58,747 ERROR a.s.s.c.BasketServlet [http-nio-8081-exec-4] java.lang.NumberFormatException: null 
+2019-08-17 12:41:50,271 INFO a.s.p.LangServlet [http-nio-8081-exec-10] selected ru language 
+2019-08-17 12:41:52,767 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-08-17 12:41:53,450 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-08-17 12:41:53,463 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 12:41:55,350 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:41:56,533 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 12:41:57,259 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:43:47,828 INFO a.s.p.LangServlet [http-nio-8081-exec-7] selected ru language 
+2019-08-17 12:43:50,191 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 12:43:50,881 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-08-17 12:43:50,893 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 12:43:52,645 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 12:43:54,026 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 34 product to his basket 
+2019-08-17 12:43:54,027 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:43:55,445 INFO a.m.c.UserRepository [http-nio-8081-exec-4] User=2 added 34 product to his basket 
+2019-08-17 12:43:55,446 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 12:46:15,004 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 12:46:17,587 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 12:46:18,164 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 12:46:18,175 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 12:46:20,091 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:46:21,700 INFO a.m.c.UserRepository [http-nio-8081-exec-2] User=2 added 34 product to his basket 
+2019-08-17 12:46:21,702 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 12:46:22,316 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 34 product to his basket 
+2019-08-17 12:46:22,320 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:46:22,836 INFO a.m.c.UserRepository [http-nio-8081-exec-4] User=2 added 34 product to his basket 
+2019-08-17 12:46:22,838 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 12:46:23,224 INFO a.m.c.UserRepository [http-nio-8081-exec-5] User=2 added 34 product to his basket 
+2019-08-17 12:46:23,226 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 12:46:23,582 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 34 product to his basket 
+2019-08-17 12:46:23,584 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 12:46:23,767 INFO a.m.c.UserRepository [http-nio-8081-exec-8] User=2 added 34 product to his basket 
+2019-08-17 12:46:23,768 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-17 12:46:24,129 INFO a.m.c.UserRepository [http-nio-8081-exec-7] User=2 added 34 product to his basket 
+2019-08-17 12:46:24,130 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-17 12:46:24,435 INFO a.m.c.UserRepository [http-nio-8081-exec-9] User=2 added 34 product to his basket 
+2019-08-17 12:46:24,437 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:46:24,805 INFO a.m.c.UserRepository [http-nio-8081-exec-10] User=2 added 34 product to his basket 
+2019-08-17 12:46:24,807 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 12:46:25,410 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User=2 added 34 product to his basket 
+2019-08-17 12:46:25,411 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:46:25,897 INFO a.m.c.UserRepository [http-nio-8081-exec-2] User=2 added 34 product to his basket 
+2019-08-17 12:46:25,898 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 12:46:26,238 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 34 product to his basket 
+2019-08-17 12:46:26,239 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:46:26,576 INFO a.m.c.UserRepository [http-nio-8081-exec-4] User=2 added 34 product to his basket 
+2019-08-17 12:46:26,577 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 12:46:26,960 INFO a.m.c.UserRepository [http-nio-8081-exec-5] User=2 added 34 product to his basket 
+2019-08-17 12:46:26,961 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 12:46:27,304 INFO a.m.c.UserRepository [http-nio-8081-exec-7] User=2 added 34 product to his basket 
+2019-08-17 12:46:27,306 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-17 12:46:27,699 INFO a.m.c.UserRepository [http-nio-8081-exec-9] User=2 added 34 product to his basket 
+2019-08-17 12:46:27,700 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:46:28,073 INFO a.m.c.UserRepository [http-nio-8081-exec-10] User=2 added 34 product to his basket 
+2019-08-17 12:46:28,075 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 12:46:28,249 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User=2 added 34 product to his basket 
+2019-08-17 12:46:28,250 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:46:28,634 INFO a.m.c.UserRepository [http-nio-8081-exec-2] User=2 added 34 product to his basket 
+2019-08-17 12:46:28,635 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 12:46:28,854 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 34 product to his basket 
+2019-08-17 12:46:28,855 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:46:29,295 INFO a.m.c.UserRepository [http-nio-8081-exec-4] User=2 added 34 product to his basket 
+2019-08-17 12:46:29,296 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 12:46:29,894 INFO a.m.c.UserRepository [http-nio-8081-exec-5] User=2 added 66 product to his basket 
+2019-08-17 12:46:29,895 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 12:46:30,496 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 66 product to his basket 
+2019-08-17 12:46:30,497 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 12:46:30,669 INFO a.m.c.UserRepository [http-nio-8081-exec-8] User=2 added 66 product to his basket 
+2019-08-17 12:46:30,670 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-17 12:46:30,879 INFO a.m.c.UserRepository [http-nio-8081-exec-7] User=2 added 66 product to his basket 
+2019-08-17 12:46:30,881 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-17 12:46:31,425 INFO a.m.c.UserRepository [http-nio-8081-exec-9] User=2 added 626 product to his basket 
+2019-08-17 12:46:31,426 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:46:31,643 INFO a.m.c.UserRepository [http-nio-8081-exec-10] User=2 added 626 product to his basket 
+2019-08-17 12:46:31,645 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 12:46:32,290 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User=2 added 626 product to his basket 
+2019-08-17 12:46:32,291 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:46:32,691 INFO a.m.c.UserRepository [http-nio-8081-exec-2] User=2 added 626 product to his basket 
+2019-08-17 12:46:32,691 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 12:46:33,043 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 626 product to his basket 
+2019-08-17 12:46:33,043 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:46:33,641 INFO a.m.c.UserRepository [http-nio-8081-exec-4] User=2 added 34 product to his basket 
+2019-08-17 12:46:33,645 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 12:46:33,985 INFO a.m.c.UserRepository [http-nio-8081-exec-5] User=2 added 34 product to his basket 
+2019-08-17 12:46:33,988 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 12:50:10,645 INFO a.s.p.LangServlet [http-nio-8081-exec-5] selected ru language 
+2019-08-17 12:50:13,408 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-17 12:50:14,100 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-08-17 12:50:14,118 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 12:50:17,551 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has added product to his basket 
+2019-08-17 12:50:17,564 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User=2 added 34 product to his basket 
+2019-08-17 12:50:17,569 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 12:50:18,545 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:50:21,376 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-17 12:50:22,758 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has added product to his basket 
+2019-08-17 12:50:22,762 INFO a.m.c.UserRepository [http-nio-8081-exec-2] User=2 added 34 product to his basket 
+2019-08-17 12:50:22,763 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-17 12:50:23,604 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 12:50:27,998 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-17 12:50:29,173 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has added product to his basket 
+2019-08-17 12:50:29,175 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User=2 added 34 product to his basket 
+2019-08-17 12:50:29,176 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 12:50:30,101 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:50:31,614 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-17 12:50:33,353 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has added product to his basket 
+2019-08-17 12:50:33,357 INFO a.m.c.UserRepository [http-nio-8081-exec-2] User=2 added 34 product to his basket 
+2019-08-17 12:50:33,358 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-17 12:50:34,486 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 12:50:36,648 INFO a.m.c.UserRepository [http-nio-8081-exec-8] User=2 added 34 product to his basket 
+2019-08-17 12:50:36,649 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-17 12:50:37,007 INFO a.m.c.UserRepository [http-nio-8081-exec-10] User=2 added 34 product to his basket 
+2019-08-17 12:50:37,008 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 12:50:37,360 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User=2 added 34 product to his basket 
+2019-08-17 12:50:37,362 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 12:50:37,595 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 34 product to his basket 
+2019-08-17 12:50:37,596 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:50:38,717 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-17 12:50:40,261 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has added product to his basket 
+2019-08-17 12:50:40,266 INFO a.m.c.UserRepository [http-nio-8081-exec-2] User=2 added 659 product to his basket 
+2019-08-17 12:50:40,266 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-17 12:50:41,611 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 12:50:45,328 INFO a.m.c.UserRepository [http-nio-8081-exec-8] User=2 added 659 product to his basket 
+2019-08-17 12:50:45,329 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-17 12:50:45,915 INFO a.m.c.UserRepository [http-nio-8081-exec-10] User=2 added 659 product to his basket 
+2019-08-17 12:50:45,918 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 12:50:46,606 INFO a.m.c.UserRepository [http-nio-8081-exec-9] User=2 added 659 product to his basket 
+2019-08-17 12:50:46,607 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 12:50:47,730 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 659 product to his basket 
+2019-08-17 12:50:47,731 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 12:55:37,640 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 12:55:37,642 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° РІ РІС‹СЂР°Р¶РµРЅРёРё SQL "DELETE *[*] FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = 34AND ORDER_ID = 0"; РѕР¶РёРґР°Р»РѕСЃСЊ "identifier"
+Syntax error in SQL statement "DELETE *[*] FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = 34AND ORDER_ID = 0"; expected "identifier"; SQL statement:
+DELETE * FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = 34AND ORDER_ID = 0 [42001-199] 
+2019-08-17 12:56:53,299 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 12:56:53,301 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 12:57:05,108 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 12:57:05,110 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: РќР°СЂСѓС€РµРЅРёРµ СЃСЃС‹Р»РѕС‡РЅРѕР№ С†РµР»РѕСЃС‚РЅРѕСЃС‚Рё: "CONSTRAINT_F3B: PUBLIC.PRODUCTS_ORDERS FOREIGN KEY(ORDER_ID) REFERENCES PUBLIC.ORDERS(ORDER_ID) (0)"
+Referential integrity constraint violation: "CONSTRAINT_F3B: PUBLIC.PRODUCTS_ORDERS FOREIGN KEY(ORDER_ID) REFERENCES PUBLIC.ORDERS(ORDER_ID) (0)"; SQL statement:
+INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID) Values (?, ?) [23506-199] 
+2019-08-17 12:57:26,373 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 12:57:26,376 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: РќР°СЂСѓС€РµРЅРёРµ СЃСЃС‹Р»РѕС‡РЅРѕР№ С†РµР»РѕСЃС‚РЅРѕСЃС‚Рё: "CONSTRAINT_F3B: PUBLIC.PRODUCTS_ORDERS FOREIGN KEY(ORDER_ID) REFERENCES PUBLIC.ORDERS(ORDER_ID) (0)"
+Referential integrity constraint violation: "CONSTRAINT_F3B: PUBLIC.PRODUCTS_ORDERS FOREIGN KEY(ORDER_ID) REFERENCES PUBLIC.ORDERS(ORDER_ID) (0)"; SQL statement:
+INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID) Values (?, ?) [23506-199] 
+2019-08-17 12:58:00,421 INFO a.m.c.UserRepository [main] User=null delete 66 from his basket 
+2019-08-17 12:58:53,624 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 12:58:53,627 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 12:59:06,830 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 12:59:06,832 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 12:59:23,594 INFO a.m.c.UserRepository [main] User=null delete 66 from his basket 
+2019-08-17 12:59:44,830 INFO a.m.c.UserRepository [main] User=null delete 66 from his basket 
+2019-08-17 13:00:17,799 INFO a.m.c.UserRepository [main] User=null delete 66 from his basket 
+2019-08-17 13:01:36,877 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 13:01:39,824 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-17 13:01:40,110 INFO a.m.c.UserRepository [http-nio-8081-exec-8] Fail connect to database 
+2019-08-17 13:01:40,112 ERROR a.m.c.UserRepository [http-nio-8081-exec-8] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 13:01:40,113 ERROR a.s.p.LogginServlet [http-nio-8081-exec-8] User= 2 is not found in database 
+2019-08-17 13:01:45,746 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 13:01:46,119 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 13:01:46,130 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 13:01:48,641 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 13:01:50,873 INFO a.m.c.UserRepository [http-nio-8081-exec-5] User=2 added 659 product to his basket 
+2019-08-17 13:01:50,875 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 13:01:51,732 INFO a.m.c.UserRepository [http-nio-8081-exec-9] User=2 added 659 product to his basket 
+2019-08-17 13:01:51,733 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 13:01:52,154 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 626 product to his basket 
+2019-08-17 13:01:52,155 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 13:01:52,720 INFO a.m.c.UserRepository [http-nio-8081-exec-10] User=2 added 626 product to his basket 
+2019-08-17 13:01:52,721 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 13:01:53,185 INFO a.m.c.UserRepository [http-nio-8081-exec-8] User=2 added 626 product to his basket 
+2019-08-17 13:01:53,186 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-17 13:01:55,185 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 13:01:56,457 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has added product to his basket 
+2019-08-17 13:01:56,462 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 658 product to his basket 
+2019-08-17 13:01:56,463 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-17 13:01:57,135 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 13:01:58,534 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-17 13:01:59,864 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 13:02:00,575 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 13:02:02,627 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has added product to his basket 
+2019-08-17 13:02:02,632 INFO a.m.c.UserRepository [http-nio-8081-exec-7] User=2 added 626 product to his basket 
+2019-08-17 13:02:02,633 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has added product to his basket 
+2019-08-17 13:02:02,634 INFO a.m.c.UserRepository [http-nio-8081-exec-7] User=2 added 658 product to his basket 
+2019-08-17 13:02:02,635 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has added product to his basket 
+2019-08-17 13:02:02,636 INFO a.m.c.UserRepository [http-nio-8081-exec-7] User=2 added 659 product to his basket 
+2019-08-17 13:02:02,637 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-17 13:02:03,712 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 13:02:08,372 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-17 13:02:10,955 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has added product to his basket 
+2019-08-17 13:02:10,958 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 658 product to his basket 
+2019-08-17 13:02:10,959 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has added product to his basket 
+2019-08-17 13:02:10,960 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 659 product to his basket 
+2019-08-17 13:02:10,961 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has added product to his basket 
+2019-08-17 13:02:10,962 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 690 product to his basket 
+2019-08-17 13:02:10,962 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has added product to his basket 
+2019-08-17 13:02:10,964 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 754 product to his basket 
+2019-08-17 13:02:10,964 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-08-17 13:02:12,107 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 13:02:20,286 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-17 13:02:24,577 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has added product to his basket 
+2019-08-17 13:02:24,579 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 626 product to his basket 
+2019-08-17 13:02:24,579 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has added product to his basket 
+2019-08-17 13:02:24,580 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 659 product to his basket 
+2019-08-17 13:02:24,581 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-17 13:02:25,303 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 13:02:28,457 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 13:02:30,859 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has added product to his basket 
+2019-08-17 13:02:30,861 INFO a.m.c.UserRepository [http-nio-8081-exec-8] User=2 added 626 product to his basket 
+2019-08-17 13:02:30,862 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has added product to his basket 
+2019-08-17 13:02:30,863 INFO a.m.c.UserRepository [http-nio-8081-exec-8] User=2 added 659 product to his basket 
+2019-08-17 13:02:30,864 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 13:02:32,814 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-17 13:02:35,080 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2 delete product from his basket 
+2019-08-17 13:02:35,083 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User=2 delete 0 from his basket 
+2019-08-17 13:02:35,084 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 13:03:44,691 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 13:03:46,949 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 13:03:47,583 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 13:03:47,607 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-17 13:03:50,515 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 13:03:52,179 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2 delete product from his basket 
+2019-08-17 13:03:52,186 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User=2 delete 0 from his basket 
+2019-08-17 13:03:52,188 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 13:04:44,930 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 13:04:47,208 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 13:04:47,927 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 13:04:47,947 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 13:04:49,571 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 13:04:51,008 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2 delete product from his basket 
+2019-08-17 13:04:51,022 INFO a.m.c.UserRepository [http-nio-8081-exec-2] User=2 delete 754 from his basket 
+2019-08-17 13:04:51,024 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 13:04:52,327 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 690 product to his basket 
+2019-08-17 13:04:52,329 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 13:04:53,288 INFO a.m.c.UserRepository [http-nio-8081-exec-4] User=2 added 690 product to his basket 
+2019-08-17 13:04:53,291 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 13:04:54,632 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-08-17 13:04:55,983 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has added product to his basket 
+2019-08-17 13:04:55,989 INFO a.m.c.UserRepository [http-nio-8081-exec-7] User=2 added 659 product to his basket 
+2019-08-17 13:04:55,990 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-17 13:04:58,727 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 13:04:59,343 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 13:05:01,677 INFO a.m.c.UserRepository [http-nio-8081-exec-3] User=2 added 690 product to his basket 
+2019-08-17 13:05:01,678 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 13:05:02,185 INFO a.m.c.UserRepository [http-nio-8081-exec-4] User=2 added 690 product to his basket 
+2019-08-17 13:05:02,186 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 13:05:02,528 INFO a.m.c.UserRepository [http-nio-8081-exec-5] User=2 added 690 product to his basket 
+2019-08-17 13:05:02,530 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 13:05:02,855 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 690 product to his basket 
+2019-08-17 13:05:02,857 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 13:05:03,033 INFO a.m.c.UserRepository [http-nio-8081-exec-7] User=2 added 690 product to his basket 
+2019-08-17 13:05:03,034 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-17 13:05:03,399 INFO a.m.c.UserRepository [http-nio-8081-exec-9] User=2 added 690 product to his basket 
+2019-08-17 13:05:03,401 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 13:05:05,120 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 13:05:06,321 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has added product to his basket 
+2019-08-17 13:05:06,323 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User=2 added 754 product to his basket 
+2019-08-17 13:05:06,324 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 13:05:07,215 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 13:05:08,621 INFO a.m.c.UserRepository [http-nio-8081-exec-5] User=2 added 754 product to his basket 
+2019-08-17 13:05:08,622 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 13:39:55,854 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 13:39:58,053 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 13:39:58,881 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 13:39:58,897 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 13:40:02,701 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-17 13:40:08,286 INFO a.s.p.LogoutServlet [http-nio-8081-exec-5] JSESSIONID= 87869576E57832FD78DDC5586F68AEE3 
+2019-08-17 13:40:08,286 INFO a.s.p.LogoutServlet [http-nio-8081-exec-5] User=2 has out 
+2019-08-17 13:55:44,221 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 13:55:47,786 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 13:55:48,046 INFO a.m.c.UserRepository [http-nio-8081-exec-9] Fail connect to database 
+2019-08-17 13:55:48,048 ERROR a.m.c.UserRepository [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 13:55:48,049 ERROR a.s.p.LogginServlet [http-nio-8081-exec-9] User= 2 is not found in database 
+2019-08-17 13:55:52,228 INFO a.s.p.LogginServlet [http-nio-8081-exec-2] Trying to log in 
+2019-08-17 13:55:52,636 INFO a.s.p.LogginServlet [http-nio-8081-exec-2] User=2 has been log in 
+2019-08-17 13:55:52,649 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-17 13:55:55,884 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has added product to his basket 
+2019-08-17 13:55:55,894 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 690 product to his basket 
+2019-08-17 13:55:55,895 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-08-17 13:55:56,420 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-17 13:55:57,902 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2 makes order 
+2019-08-17 13:56:04,204 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-17 13:56:04,848 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-17 13:57:08,187 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 13:57:08,194 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 13:57:08,203 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 13:57:08,204 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 13:57:22,588 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 13:57:22,590 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 13:57:22,592 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 13:57:22,593 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 13:57:39,193 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 13:57:39,196 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 13:57:39,198 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 13:57:39,198 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 13:58:21,044 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 13:58:21,046 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 13:58:21,048 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 13:58:21,049 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:00:50,830 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:00:50,832 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:00:50,834 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:00:50,834 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:01:24,135 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:01:24,138 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:01:24,142 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:01:24,142 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:04:54,788 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 14:04:56,973 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 14:04:57,886 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 14:04:57,900 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 14:05:00,921 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 14:05:02,867 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-17 14:05:04,841 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has added product to his basket 
+2019-08-17 14:05:04,847 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 626 product to his basket 
+2019-08-17 14:05:04,848 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has added product to his basket 
+2019-08-17 14:05:04,850 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 658 product to his basket 
+2019-08-17 14:05:04,851 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-08-17 14:05:05,537 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-17 14:05:07,077 INFO a.m.c.UserRepository [http-nio-8081-exec-8] User=2 added 626 product to his basket 
+2019-08-17 14:05:07,078 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-17 14:05:08,621 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2 makes order 
+2019-08-17 14:08:00,672 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 14:08:04,115 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 14:08:04,381 INFO a.m.c.UserRepository [http-nio-8081-exec-9] Fail connect to database 
+2019-08-17 14:08:04,383 ERROR a.m.c.UserRepository [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 14:08:04,384 ERROR a.s.p.LogginServlet [http-nio-8081-exec-9] User= 2 is not found in database 
+2019-08-17 14:08:09,277 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 14:08:09,785 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-08-17 14:08:09,808 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 14:08:11,894 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has added product to his basket 
+2019-08-17 14:08:11,905 INFO a.m.c.UserRepository [http-nio-8081-exec-2] User=2 added 659 product to his basket 
+2019-08-17 14:08:11,907 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-17 14:08:12,374 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 14:08:13,601 INFO a.m.c.UserRepository [http-nio-8081-exec-6] Fail connect to database 
+2019-08-17 14:08:13,601 ERROR a.m.c.UserRepository [http-nio-8081-exec-6] org.h2.jdbc.JdbcSQLDataException: Невозможно преобразование строки "1994" в тип "DATE"
+Cannot parse "DATE" constant "1994"; SQL statement:
+UPDATE ORDERS SET STATE = 'ORDERED' AND CREATEDAT=2019-08-17 WHERE ORDER_ID = 39 [22007-199] 
+2019-08-17 14:08:13,602 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2 makes order 
+2019-08-17 14:08:15,473 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-17 14:08:16,154 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 14:10:51,076 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 14:10:53,798 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 14:10:54,108 INFO a.m.c.UserRepository [http-nio-8081-exec-9] Fail connect to database 
+2019-08-17 14:10:54,111 ERROR a.m.c.UserRepository [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 14:10:54,112 ERROR a.s.p.LogginServlet [http-nio-8081-exec-9] User= 2 is not found in database 
+2019-08-17 14:10:58,283 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 14:10:58,580 INFO a.s.p.LogginServlet [http-nio-8081-exec-2] Trying to log in 
+2019-08-17 14:10:58,697 ERROR a.s.p.LogginServlet [http-nio-8081-exec-10] User= 2 is not found in database 
+2019-08-17 14:10:58,697 ERROR a.s.p.LogginServlet [http-nio-8081-exec-2] User= 2 is not found in database 
+2019-08-17 14:11:00,091 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] Trying to log in 
+2019-08-17 14:11:00,098 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-08-17 14:11:00,110 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-17 14:11:02,594 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 14:11:03,831 INFO a.m.c.UserRepository [http-nio-8081-exec-8] Fail connect to database 
+2019-08-17 14:11:03,831 ERROR a.m.c.UserRepository [http-nio-8081-exec-8] org.h2.jdbc.JdbcSQLDataException: Невозможно преобразование строки "1994" в тип "DATE"
+Cannot parse "DATE" constant "1994"; SQL statement:
+UPDATE ORDERS SET STATE = 'ORDERED', CREATEDAT=2019-08-17 WHERE ORDER_ID = 39 [22007-199] 
+2019-08-17 14:11:03,831 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2 makes order 
+2019-08-17 14:11:05,167 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-17 14:11:05,818 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 14:14:13,527 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected ru language 
+2019-08-17 14:14:16,415 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 14:14:17,053 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 14:14:17,077 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-17 14:14:19,350 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 14:14:20,642 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2 makes order 
+2019-08-17 14:14:23,240 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 14:14:23,951 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-17 14:15:39,400 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:15:39,403 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:15:39,408 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:15:39,408 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:17:10,258 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:17:10,260 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:17:10,263 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:17:10,263 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:19:46,028 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:19:46,033 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 14:19:46,045 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:19:46,045 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 14:22:18,672 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:22:18,675 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:23:58,550 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:23:58,553 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:24:42,848 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:24:42,850 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:25:09,214 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:25:09,217 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:25:29,313 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:25:29,315 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:25:50,617 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:25:50,619 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientException: РќРµС‚ РґР°РЅРЅС‹С…
+No data is available [2000-199] 
+2019-08-17 14:30:40,384 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-17 14:30:43,202 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 14:30:43,891 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-08-17 14:30:43,909 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 14:31:02,426 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-17 14:31:04,622 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has added product to his basket 
+2019-08-17 14:31:04,632 INFO a.m.c.UserRepository [http-nio-8081-exec-8] User=2 added 34 product to his basket 
+2019-08-17 14:31:04,634 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-17 14:31:05,329 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 14:31:07,170 INFO a.m.c.UserRepository [http-nio-8081-exec-10] User=2 added 34 product to his basket 
+2019-08-17 14:31:07,171 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 14:31:07,480 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User=2 added 34 product to his basket 
+2019-08-17 14:31:07,487 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 14:31:08,698 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2 makes order 
+2019-08-17 14:31:12,417 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-17 14:31:13,060 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-17 14:31:35,728 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-17 14:31:37,830 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has added product to his basket 
+2019-08-17 14:31:37,833 INFO a.m.c.UserRepository [http-nio-8081-exec-4] User=2 added 658 product to his basket 
+2019-08-17 14:31:37,834 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-17 14:31:38,980 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 14:31:39,832 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2 makes order 
+2019-08-17 14:31:43,082 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-17 14:31:43,857 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 14:33:10,135 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:33:10,138 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 14:36:03,051 INFO a.m.c.UserRepository [main] Fail connect to database 
+2019-08-17 14:36:03,053 ERROR a.m.c.UserRepository [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎС‚РѕР»Р±РµС† "NAME" РЅРµ РЅР°Р№РґРµРЅ
+Column "NAME" not found [42122-199] 
+2019-08-17 14:38:14,119 INFO a.s.p.LangServlet [http-nio-8081-exec-7] selected ru language 
+2019-08-17 14:38:19,246 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-08-17 14:38:19,974 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-08-17 14:38:19,994 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 14:49:38,766 INFO a.s.p.LangServlet [http-nio-8081-exec-7] selected ru language 
+2019-08-17 14:49:45,793 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 14:49:46,623 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] User=gunseful has been log in 
+2019-08-17 14:49:46,638 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-2] User=GUNSEFULrequests product list 
+2019-08-17 14:56:25,284 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 14:57:09,957 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-17 14:57:10,580 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] User=gunseful has been log in 
+2019-08-17 14:57:10,598 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-2] User=GUNSEFULrequests product list 
+2019-08-17 14:57:18,263 INFO a.s.p.LogoutServlet [http-nio-8081-exec-7] JSESSIONID= F5792999B66F4073EFFF03F5B112E7F7 
+2019-08-17 14:57:18,263 INFO a.s.p.LogoutServlet [http-nio-8081-exec-7] User=GUNSEFUL has out 
+2019-08-17 14:57:19,198 INFO a.s.p.LangServlet [http-nio-8081-exec-9] selected ru language 
+2019-08-17 14:57:21,177 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-08-17 14:57:21,182 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-08-17 14:57:21,194 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-17 14:57:26,434 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID= 8BBB829BCC9F50F44C71107760F0DA6B 
+2019-08-17 14:57:26,435 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] User=2 has out 
+2019-08-17 15:00:37,656 INFO a.s.p.LangServlet [http-nio-8081-exec-7] selected ru language 
+2019-08-17 15:00:40,118 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 15:00:40,748 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-08-17 15:00:40,767 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 15:02:04,792 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 15:02:07,194 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-17 15:02:08,106 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-08-17 15:02:08,135 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-17 15:03:50,533 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 15:03:52,632 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 15:03:53,482 ERROR a.s.p.LogginServlet [http-nio-8081-exec-10] User= 2 is not found in database 
+2019-08-17 15:03:54,924 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] Trying to log in 
+2019-08-17 15:03:54,931 INFO a.s.p.LogginServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-08-17 15:03:54,961 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-17 15:03:59,456 INFO a.s.s.OrdersServlet [http-nio-8081-exec-5] User=2 has payed order 
+2019-08-17 15:03:59,460 INFO a.m.c.UserRepository [http-nio-8081-exec-5] Fail connect to database 
+2019-08-17 15:03:59,463 ERROR a.m.c.UserRepository [http-nio-8081-exec-5] org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ID" не найден
+Column "ID" not found; SQL statement:
+UPDATE ORDERS
+SET STATE = 'PAID'
+WHERE ID = 103 [42122-199] 
+2019-08-17 15:04:02,544 INFO a.s.s.OrdersServlet [http-nio-8081-exec-9] User=2 has payed order 
+2019-08-17 15:04:02,546 INFO a.m.c.UserRepository [http-nio-8081-exec-9] Fail connect to database 
+2019-08-17 15:04:02,546 ERROR a.m.c.UserRepository [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ID" не найден
+Column "ID" not found; SQL statement:
+UPDATE ORDERS
+SET STATE = 'PAID'
+WHERE ID = 103 [42122-199] 
+2019-08-17 15:04:48,443 INFO a.s.p.LangServlet [http-nio-8081-exec-4] selected fr language 
+2019-08-17 15:04:51,297 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 15:04:51,925 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-17 15:04:51,940 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 15:04:53,872 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 15:04:55,128 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-17 15:04:58,483 INFO a.s.s.OrdersServlet [http-nio-8081-exec-5] User=2 has payed order 
+2019-08-17 15:04:58,488 INFO a.m.c.UserRepository [http-nio-8081-exec-5] Fail connect to database 
+2019-08-17 15:04:58,489 ERROR a.m.c.UserRepository [http-nio-8081-exec-5] org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ID" не найден
+Column "ID" not found; SQL statement:
+UPDATE ORDERS
+SET STATE = 'PAID'
+WHERE ID = 103 [42122-199] 
+2019-08-17 15:06:29,760 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 15:06:37,875 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-08-17 15:06:38,637 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-08-17 15:06:38,657 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-17 15:06:43,104 INFO a.s.s.OrdersServlet [http-nio-8081-exec-3] User=2 has payed order 
+2019-08-17 15:06:43,116 INFO a.m.c.UserRepository [http-nio-8081-exec-3] product 103 has been deleted from basket list 
+2019-08-17 15:15:17,081 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 15:15:20,852 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-17 15:15:21,120 INFO a.m.c.UserRepository [http-nio-8081-exec-9] Fail connect to database 
+2019-08-17 15:15:21,122 ERROR a.m.c.UserRepository [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 15:15:21,123 ERROR a.s.p.LogginServlet [http-nio-8081-exec-9] User= 2 is not found in database 
+2019-08-17 15:15:27,002 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-17 15:15:27,389 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] User=2 has been log in 
+2019-08-17 15:15:27,403 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-17 15:15:31,739 INFO a.s.s.OrdersServlet [http-nio-8081-exec-6] User=2 has deleted order 103 
+2019-08-17 15:15:31,748 INFO a.m.c.UserRepository [http-nio-8081-exec-6] product 103 has been deleted from order list 
+2019-08-17 15:15:33,951 INFO a.s.s.OrdersServlet [http-nio-8081-exec-7] User=2 has payed order 
+2019-08-17 15:15:33,957 INFO a.m.c.UserRepository [http-nio-8081-exec-7] product 71 has been deleted from basket list 
+2019-08-17 15:15:35,323 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-17 15:15:36,084 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID= BE3FA30BB9F6B6AD01383B1F6C886D90 
+2019-08-17 15:15:36,085 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] User=2 has out 
+2019-08-17 15:15:37,126 INFO a.s.p.LangServlet [http-nio-8081-exec-2] selected ru language 
+2019-08-17 15:15:41,912 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-17 15:15:41,916 INFO a.s.p.LogginServlet [http-nio-8081-exec-7] User=gunseful has been log in 
+2019-08-17 15:15:41,925 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-8] User=GUNSEFULrequests product list 
+2019-08-17 15:15:47,229 INFO a.s.s.OrdersServlet [http-nio-8081-exec-9] User=GUNSEFUL has deleted order 71 
+2019-08-17 15:15:47,233 INFO a.m.c.UserRepository [http-nio-8081-exec-9] product 71 has been deleted from order list 
+2019-08-17 15:15:51,630 INFO a.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= DDD2C8CA7647C1C38F51DA7F1D9EB514 
+2019-08-17 15:15:51,630 INFO a.s.p.LogoutServlet [http-nio-8081-exec-3] User=GUNSEFUL has out 
+2019-08-17 15:15:52,753 INFO a.s.p.LangServlet [http-nio-8081-exec-5] selected ru language 
+2019-08-17 15:15:57,023 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-17 15:15:57,030 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] User=gunseful has been log in 
+2019-08-17 15:15:57,046 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-10] User=GUNSEFULrequests product list 
+2019-08-17 15:16:01,543 INFO a.s.p.LogoutServlet [http-nio-8081-exec-4] JSESSIONID= 33B4AC258822CE8D7554C7B2568A8CF1 
+2019-08-17 15:16:01,544 INFO a.s.p.LogoutServlet [http-nio-8081-exec-4] User=GUNSEFUL has out 
+2019-08-17 15:16:02,735 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 15:16:07,324 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 15:16:07,330 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] User=gunseful has been log in 
+2019-08-17 15:16:07,339 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-9] User=GUNSEFULrequests product list 
+2019-08-17 15:16:10,687 ERROR a.s.s.OrdersServlet [http-nio-8081-exec-1] User=2 has been banned 
+2019-08-17 15:16:10,689 INFO a.m.c.UserRepository [http-nio-8081-exec-1] User= 2 was added to blacklist 
+2019-08-17 15:16:13,801 INFO a.s.s.a.BlackListServlet [http-nio-8081-exec-6] Administrator is trying to delete user from blacklist 
+2019-08-17 15:16:13,806 INFO a.m.c.UserRepository [http-nio-8081-exec-6] user 2 has been deleted from black list 
+2019-08-17 15:23:43,409 INFO a.s.p.LangServlet [http-nio-8081-exec-5] selected ru language 
+2019-08-17 15:23:45,758 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-17 15:23:46,390 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-08-17 15:23:46,416 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-17 15:23:51,243 INFO a.s.s.OrdersServlet [http-nio-8081-exec-10] User=2 has payed order 
+2019-08-17 15:23:51,253 INFO a.m.c.UserRepository [http-nio-8081-exec-10] product 39 has been deleted from basket list 
+2019-08-17 15:24:35,250 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID= 8B37EF7D352EBA15CB9ADF2F9C26235F 
+2019-08-17 15:24:35,251 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] User=2 has out 
+2019-08-17 15:24:36,514 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected ru language 
+2019-08-17 15:24:38,359 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 15:24:38,361 ERROR a.s.p.LogginServlet [http-nio-8081-exec-10] User= 2 is not found in database 
+2019-08-17 15:24:39,706 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-08-17 15:24:39,709 INFO a.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-08-17 15:24:39,718 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-17 15:24:41,669 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has added product to his basket 
+2019-08-17 15:24:41,672 INFO a.m.c.UserRepository [http-nio-8081-exec-9] User=2 added 34 product to his basket 
+2019-08-17 15:24:41,673 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has added product to his basket 
+2019-08-17 15:24:41,676 INFO a.m.c.UserRepository [http-nio-8081-exec-9] User=2 added 66 product to his basket 
+2019-08-17 15:24:41,677 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-17 15:24:42,252 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-17 15:24:43,736 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2 makes order 
+2019-08-17 15:24:52,278 INFO a.s.s.OrdersServlet [http-nio-8081-exec-10] User=2 has deleted order 39 
+2019-08-17 15:24:52,283 INFO a.m.c.UserRepository [http-nio-8081-exec-10] product 39 has been deleted from order list 
+2019-08-17 15:24:55,687 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-17 15:24:56,336 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-17 15:25:00,757 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-17 15:25:02,590 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has added product to his basket 
+2019-08-17 15:25:02,593 INFO a.m.c.UserRepository [http-nio-8081-exec-6] User=2 added 626 product to his basket 
+2019-08-17 15:25:02,594 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-08-17 15:25:03,483 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-17 15:25:05,254 INFO a.m.c.UserRepository [http-nio-8081-exec-5] User=2 added 626 product to his basket 
+2019-08-17 15:25:05,255 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-17 15:25:06,321 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2 makes order 
+2019-08-17 15:25:09,676 INFO a.s.s.OrdersServlet [http-nio-8081-exec-4] User=2 has payed order 
+2019-08-17 15:25:09,678 INFO a.m.c.UserRepository [http-nio-8081-exec-4] product 135 has been deleted from basket list 
+2019-08-17 15:25:11,991 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-17 15:25:12,841 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-17 15:25:13,912 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-08-17 15:25:16,130 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID= 520C4696042F73B8EBE9D977AFCCAE72 
+2019-08-17 15:25:16,130 INFO a.s.p.LogoutServlet [http-nio-8081-exec-9] User=2 has out 
+2019-08-17 15:25:17,050 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected ru language 
+2019-08-17 15:25:20,738 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-17 15:25:20,756 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] User=gunseful has been log in 
+2019-08-17 15:25:20,773 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-5] User=GUNSEFULrequests product list 
+2019-08-17 15:25:34,334 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-4] User=GUNSEFULrequests product list 
+2019-08-17 16:02:53,201 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-17 16:02:56,982 INFO a.s.p.LogginServlet [http-nio-8081-exec-2] Trying to log in 
+2019-08-17 16:02:57,282 INFO a.m.c.Repository [http-nio-8081-exec-2] Fail connect to database 
+2019-08-17 16:02:57,283 ERROR a.m.c.Repository [http-nio-8081-exec-2] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-17 16:02:57,284 ERROR a.s.p.LogginServlet [http-nio-8081-exec-2] User= 2 is not found in database 
