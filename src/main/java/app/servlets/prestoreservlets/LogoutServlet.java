@@ -5,7 +5,6 @@ import app.entities.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
@@ -19,7 +18,7 @@ public class LogoutServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
 
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         Cookie[] cookies = request.getCookies();
         //ну этот метод вызываем только чтобы обнулить куки и сессию

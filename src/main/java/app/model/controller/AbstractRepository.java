@@ -5,19 +5,19 @@ import app.model.pool.ConnectionPool;
 import javax.sql.DataSource;
 
 public abstract class AbstractRepository {
-    private ConnectionPool connectionPool = new ConnectionPool();
-    private DataSource dataSource = ConnectionPool.getDataSource();
+    private ConnectionPool connectionPool;
+    private DataSource dataSource;
 
     public AbstractRepository() {
         connectionPool = new ConnectionPool();
         dataSource = ConnectionPool.getDataSource();
     }
 
-    public ConnectionPool getConnectionPool() {
+    ConnectionPool getConnectionPool() {
         return connectionPool;
     }
 
-    public DataSource getDataSource() {
+    DataSource getDataSource() {
         return dataSource;
     }
 }

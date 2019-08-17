@@ -6,16 +6,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 public class RegistrationServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         //проверяем есть ли текущий пользователь, если есть то пропускаем регистрацию и переходим на страницу логина
         //так как мы уже залогинены нас бросит на страницу либо админа либо покупателя
         User user = (User)req.getSession().getAttribute("user");
@@ -40,7 +38,7 @@ public class RegistrationServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         Repository controller = new Repository();
         try {
             //Проверяем пришедшие параметры Имени, Ника и Пароль на правильность (или вообще наличие).
@@ -64,7 +62,6 @@ public class RegistrationServlet extends HttpServlet {
             }
         }catch (NullPointerException ignored){
         }
-        controller=null;
         doGet(req, resp);
     }
 }

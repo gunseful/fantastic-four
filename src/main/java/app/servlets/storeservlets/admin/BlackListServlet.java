@@ -6,16 +6,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 public class BlackListServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         //получаем текущего юзера
         User user = (User)req.getSession().getAttribute("user");
         Repository controller = (Repository) req.getSession().getAttribute("controller");
@@ -35,11 +33,11 @@ public class BlackListServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         Repository controller = (Repository)req.getSession().getAttribute("controller");
         //прилетает в виде параметров массив с айди юзеров которых надо удалить и вызываем спец метод из модели и удаляем из базы данных
         try {
-            if (!req.getParameterValues("userForDelete").equals(null)) {
+            if (req.getParameterValues("userForDelete") != null) {
                 String[] usersID = req.getParameterValues("userForDelete");
                 for (String userID : usersID) {
                     logger.info("Administrator is trying to delete user from blacklist");

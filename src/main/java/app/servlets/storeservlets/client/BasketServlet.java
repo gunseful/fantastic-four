@@ -6,17 +6,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 public class BasketServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         //getting this session user to work with
         User user = (User) req.getSession().getAttribute("user");
         Repository controller = (Repository) req.getSession().getAttribute("controller");
@@ -37,7 +35,7 @@ public class BasketServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         //getting this session user to work with
         User user = (User) req.getSession().getAttribute("user");
         Repository controller = new Repository();

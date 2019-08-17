@@ -54,11 +54,6 @@ public class Repository extends AbstractRepository {
     }
 
 
-
-
-
-
-
     public synchronized void payOrder(int id) {
         //меняет статус заказа на Оплачено
         Connection connection = null;
@@ -204,13 +199,7 @@ public class Repository extends AbstractRepository {
                     "where PRODUCTS_ORDERS.ORDER_ID = " + orderId;
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                String name = resultSet.getString("NAME");
-                int price = resultSet.getInt("PRICE");
-                int id = resultSet.getInt("ID");
-                int count = resultSet.getInt("COUNT");
-                list.add(new Product(id, name, price, count));
-            }
+            getProducts(resultSet, list);
             return list;
         } catch (Exception ex) {
             logger.info("Fail connect to database");
@@ -292,13 +281,7 @@ public class Repository extends AbstractRepository {
                 PreparedStatement preparedStatementProducts = connection.prepareStatement(sqlProducts);
                 ResultSet resultSetProducts = preparedStatementProducts.executeQuery();
                 List<Product> products = new ArrayList<>();
-                while (resultSetProducts.next()) {
-                    String name = resultSetProducts.getString("NAME");
-                    int price = resultSetProducts.getInt("PRICE");
-                    int id = resultSetProducts.getInt("ID");
-                    int count = resultSetProducts.getInt("COUNT");
-                    products.add(new Product(id, name, price, count));
-                }
+                getProducts(resultSetProducts, products);
                 list.add(new Order(orderId, dbSqlDate, products, isPaid, getUser(customerId)));
             }
             return list;
@@ -318,18 +301,26 @@ public class Repository extends AbstractRepository {
         return list;
     }
 
+    private void getProducts(ResultSet resultSetProducts, List<Product> products) throws SQLException {
+        while (resultSetProducts.next()) {
+            String name = resultSetProducts.getString("NAME");
+            int price = resultSetProducts.getInt("PRICE");
+            int id = resultSetProducts.getInt("ID");
+            int count = resultSetProducts.getInt("COUNT");
+            products.add(new Product(id, name, price, count));
+        }
+    }
+
     public synchronized void deleteOrder(int id) {
         Connection connection = null;
         String sql = "";
         try {
-            sql = "DELETE FROM PRODUCTS_ORDERS " +
-                    "WHERE ORDER_ID = " + id;
+            sql = "DELETE FROM PRODUCTS_ORDERS  WHERE ORDER_ID = " + id;
             connection = dataSource.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
 
-            sql = "DELETE FROM ORDERS " +
-                    "WHERE ORDER_ID = " + id;
+            sql = "DELETE FROM ORDERS WHERE ORDER_ID = " + id;
             connection = dataSource.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
@@ -393,9 +384,10 @@ public class Repository extends AbstractRepository {
             connection = dataSource.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                return resultSet.getBoolean("ISBLOCKED");
-            }
+
+            resultSet.next();
+            return resultSet.getBoolean("ISBLOCKED");
+
         } catch (Exception ex) {
             logger.error("Connection failed...");
             logger.error(ex);
@@ -592,12 +584,6 @@ public class Repository extends AbstractRepository {
             }
         }
     }
-
-
-
-
-
-
 
 
     public synchronized void deleteProduct(String id) {

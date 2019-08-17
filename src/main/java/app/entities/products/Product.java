@@ -3,8 +3,6 @@ package app.entities.products;
 import java.util.Objects;
 
 public class Product {
-    //переменная которая говорит в какой корзине находится продукт
-    private int basketID;
     private int id;
     private String name;
     private int price;
@@ -39,14 +37,6 @@ public class Product {
 
     public int getId() {
         return id;
-    }
-
-    public int getBasketID() {
-        return basketID;
-    }
-
-    public void setBasketID(int basketID) {
-        this.basketID = basketID;
     }
 
     public void setId(int id) {
