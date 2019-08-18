@@ -8,7 +8,6 @@ import app.model.pool.ConnectionPool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,19 +16,17 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Repository extends AbstractRepository {
+public class Repository {
 
     public static Logger logger = LogManager.getLogger();
-    private DataSource dataSource = getDataSource();
-    private ConnectionPool connectionPool = getConnectionPool();
+    private ConnectionPool connectionPool = ConnectionPool.getInstance();
 
     public synchronized List<Product> getList() {
 
         List<Product> list = new ArrayList<>();
         Connection connection = null;
         try {
-            connectionPool.printDbStatus();
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM PRODUCTS");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -38,15 +35,12 @@ public class Repository extends AbstractRepository {
                 int price = rs.getInt("PRICE");
                 list.add(new Product(id, name, price));
             }
-        } catch (SQLException e) {
+        } catch (SQLException | InterruptedException e) {
             logger.error(e);
         } finally {
             try {
-                connectionPool.printDbStatus();
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -61,19 +55,17 @@ public class Repository extends AbstractRepository {
                 "SET STATE = 'PAID'\n" +
                 "WHERE ORDER_ID = " + id;
         try {
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
             logger.info("product " + id + " has been deleted from basket list");
-        } catch (SQLException e) {
+        } catch (SQLException | InterruptedException e) {
             logger.info("Fail connect to database");
             logger.error(e);
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -87,7 +79,7 @@ public class Repository extends AbstractRepository {
         int count;
         try {
             sql = "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -136,10 +128,8 @@ public class Repository extends AbstractRepository {
             return false;
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -153,7 +143,7 @@ public class Repository extends AbstractRepository {
         int count = 0;
         try {
             sql = "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + " AND STATE = 'NOT_ORDERED'";
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -170,10 +160,8 @@ public class Repository extends AbstractRepository {
             logger.error(ex);
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -187,7 +175,7 @@ public class Repository extends AbstractRepository {
         List<Product> list = new ArrayList<>();
         try {
             sql = "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -207,10 +195,8 @@ public class Repository extends AbstractRepository {
             return null;
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -223,7 +209,7 @@ public class Repository extends AbstractRepository {
         int orderId = 0;
         try {
             sql = "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -231,12 +217,10 @@ public class Repository extends AbstractRepository {
             }
             LocalDate creationDate = LocalDate.now();
             sql = "UPDATE ORDERS SET STATE = 'ORDERED', CREATEDAT=? WHERE ORDER_ID = " + orderId;
-            connection = dataSource.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setObject(1, creationDate);
             preparedStatement.executeUpdate();
             sql = "INSERT INTO ORDERS (CUSTOMERID, STATE) Values (?, 'NOT_ORDERED')";
-            connection = dataSource.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, user.getId());
             preparedStatement.executeUpdate();
@@ -245,10 +229,8 @@ public class Repository extends AbstractRepository {
             logger.error(ex);
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -264,7 +246,7 @@ public class Repository extends AbstractRepository {
         try {
             sql = (!user.isAdministrator()) ? "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + "AND STATE = 'ORDERED' OR STATE = 'PAID'" :
                     "SELECT * FROM ORDERS WHERE STATE = 'ORDERED' OR STATE = 'PAID'";
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -291,10 +273,8 @@ public class Repository extends AbstractRepository {
             logger.error(e);
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -316,24 +296,20 @@ public class Repository extends AbstractRepository {
         String sql = "";
         try {
             sql = "DELETE FROM PRODUCTS_ORDERS  WHERE ORDER_ID = " + id;
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
-
             sql = "DELETE FROM ORDERS WHERE ORDER_ID = " + id;
-            connection = dataSource.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
             logger.info("product " + id + " has been deleted from order list");
-        } catch (SQLException e) {
+        } catch (SQLException | InterruptedException e) {
             logger.info("Fail connect to database");
             logger.error(e);
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -346,7 +322,7 @@ public class Repository extends AbstractRepository {
         String sql = "SELECT * FROM Users WHERE Id = ?";
 
         try {
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -367,10 +343,8 @@ public class Repository extends AbstractRepository {
             return null;
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -381,7 +355,7 @@ public class Repository extends AbstractRepository {
         Connection connection = null;
         String sql = "SELECT * FROM USERS WHERE ID = " + user.getId();
         try {
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -393,10 +367,8 @@ public class Repository extends AbstractRepository {
             logger.error(ex);
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -408,7 +380,7 @@ public class Repository extends AbstractRepository {
         //получаем юзера из базы данных по никнейму
         String sql = "SELECT * FROM Users WHERE nickname = ?";
         try {
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, nickname.toUpperCase());
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -427,10 +399,8 @@ public class Repository extends AbstractRepository {
             return null;
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -440,7 +410,7 @@ public class Repository extends AbstractRepository {
         Connection connection = null;
         String sql = "INSERT INTO Users (Nickname, Password, Name) Values (?, ?, ?)";
         try {
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, user.getNickname());
             String password = Encrypt.encrypt(user.getPassword(), "secret key");
@@ -448,9 +418,7 @@ public class Repository extends AbstractRepository {
             preparedStatement.setString(3, user.getName());
             preparedStatement.executeUpdate();
             logger.info("New User " + user.getNickname() + " has been added to database");
-
             sql = "INSERT INTO ORDERS (CUSTOMERID, STATE) Values (?,'NOT_ORDERED')";
-            connection = dataSource.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, user.getId());
             preparedStatement.executeUpdate();
@@ -461,10 +429,8 @@ public class Repository extends AbstractRepository {
             return false;
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -474,7 +440,7 @@ public class Repository extends AbstractRepository {
         String sql = "SELECT * FROM Users WHERE Nickname = ? AND PASSWORD = ?";
         Connection connection = null;
         try {
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             //ищем в базе данных ник и пароль совпадения если есть хоть одно (а больше и не может быть) то кидаем тру, если не нашли то фелс
             String password = Encrypt.encrypt(user.getPassword(), "secret key");
@@ -488,10 +454,8 @@ public class Repository extends AbstractRepository {
             return false;
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
                 ;
             }
@@ -505,7 +469,7 @@ public class Repository extends AbstractRepository {
         List<User> list = new ArrayList<>();
         String sql = "SELECT * FROM USERS WHERE ISBLOCKED = TRUE";
         try {
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             User user;
@@ -528,10 +492,8 @@ public class Repository extends AbstractRepository {
             logger.error(ex);
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -543,20 +505,18 @@ public class Repository extends AbstractRepository {
         String sql = "UPDATE Users SET ISBLOCKED = FALSE WHERE id = " + id;
         Connection connection = null;
         try {
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
             logger.info("user " + id + " has been deleted from black list");
-        } catch (SQLException e) {
+        } catch (SQLException | InterruptedException e) {
             logger.info("Fail connect to database");
             System.out.println("Connection failed...");
             logger.error(e);
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -567,7 +527,7 @@ public class Repository extends AbstractRepository {
         String sql = "UPDATE Users SET ISBLOCKED = TRUE WHERE id = " + user.getId();
         Connection connection = null;
         try {
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
             logger.info("User= " + user.getNickname() + " was added to blacklist");
@@ -576,10 +536,8 @@ public class Repository extends AbstractRepository {
             logger.error(ex);
         } finally {
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -589,21 +547,17 @@ public class Repository extends AbstractRepository {
     public synchronized void deleteProduct(String id) {
         Connection connection = null;
         try {
-            connectionPool.printDbStatus();
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement ps = connection.prepareStatement("DELETE FROM PRODUCTS WHERE Id = " + id);
             ps.executeUpdate();
             logger.info("product " + id + " has been deleted from product list");
-        } catch (SQLException e) {
+        } catch (SQLException | InterruptedException e) {
             logger.error("Fail connect to database");
             logger.error(e);
         } finally {
-            connectionPool.printDbStatus();
             try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
@@ -613,8 +567,7 @@ public class Repository extends AbstractRepository {
         String sql = "INSERT INTO PRODUCTS (Name, Price) Values (?, ?)";
         Connection connection = null;
         try {
-            connectionPool.printDbStatus();
-            connection = dataSource.getConnection();
+            connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, product.getName());
             preparedStatement.setInt(2, product.getPrice());
@@ -625,11 +578,8 @@ public class Repository extends AbstractRepository {
             logger.error(ex);
         } finally {
             try {
-                connectionPool.printDbStatus();
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
                 logger.error(e);
             }
         }
