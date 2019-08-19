@@ -13,7 +13,7 @@ import java.util.concurrent.BlockingQueue;
 public class ConnectionPool {
 
     public static Logger logger = LogManager.getLogger();
-    private static final int MAX_SIZE = 2;
+    private static final int MAX_SIZE = 1;
     private BlockingQueue<Connection> queue;
     private static ConnectionPool connectionPool = new ConnectionPool();
 
@@ -35,7 +35,6 @@ public class ConnectionPool {
                 logger.error(e);
             }
         }
-
         System.out.println("total size:" + queue.size());
     }
     public static ConnectionPool getInstance()

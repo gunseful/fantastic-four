@@ -1,4 +1,3 @@
-import app.entities.products.Product;
 import app.model.controller.Repository;
 
 //import app.entities.products.Order;
@@ -9,66 +8,71 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         //Тестирую многопоточность
 
-        new Thread(){
+        new Thread() {
             @Override
             public void run() {
-                Repository hello = new Repository();
-                System.out.println(hello.getList());
+                Repository repository = new Repository();
+                System.out.println(repository.getListSemaphore());
+            }
+        }.start();
+
+        new Thread() {
+            @Override
+            public void run() {
+                Repository repository = new Repository();
+                System.out.println(repository.getListSemaphore());
             }
         }.start();
 
 
-        new Thread(){
-            @Override
-            public void run() {
-                Repository hello = new Repository();
-                Product product = new Product("Хрень", 100);
-                hello.add(product);
-            }
-        }.start();
-
-
-        new Thread(){
-            @Override
-            public void run() {
-                Repository hello = new Repository();
-                System.out.println(hello.getList());
-            }
-        }.start();
-
-
-
-
-        new Thread(){
-            @Override
-            public void run() {
-                Repository hello = new Repository();
-                Product product = new Product("Хрень", 100);
-                hello.add(product);
-            }
-        }.start();
-
-
-
-        new Thread(){
-            @Override
-            public void run() {
-                Repository hello = new Repository();
-                Product product = new Product("Хрень", 100);
-                hello.add(product);
-            }
-        }.start();
-
-
-        new Thread(){
-            @Override
-            public void run() {
-                Repository hello = new Repository();
-                System.out.println(hello.getList());
-            }
-        }.start();
-
-
-
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                Repository repository = new Repository();
+//                System.out.println(repository.getList());
+//            }
+//        }.start();
+//
+//
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                Repository repository = new Repository();
+//                repository.add(new Product("Хрень", 100));
+//            }
+//        }.start();
+//
+//
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                Repository repository = new Repository();
+//                System.out.println(repository.getList());
+//            }
+//        }.start();
+//
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                Repository repository = new Repository();
+//                repository.add(new Product("Хрень", 100));
+//            }
+//        }.start();
+//
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                Repository repository = new Repository();
+//                repository.add(new Product("Хрень", 100));
+//            }
+//        }.start();
+//
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                Repository repository = new Repository();
+//                System.out.println(repository.getList());
+//            }
+//        }.start();
     }
 }
