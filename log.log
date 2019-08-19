@@ -1980,3 +1980,24 @@ Database may be already in use: null. Possible solutions: close all other connec
 2019-08-18 16:56:14,205 INFO a.m.c.Repository [Thread-3] product Хрень has been added to product list 
 2019-08-18 16:56:14,220 INFO a.m.c.Repository [Thread-1] product Хрень has been added to product list 
 2019-08-18 16:56:14,220 INFO a.m.c.Repository [Thread-4] product Хрень has been added to product list 
+2019-08-19 08:32:41,111 INFO a.m.c.Repository [Thread-4] product Хрень has been added to product list 
+2019-08-19 08:32:41,124 INFO a.m.c.Repository [Thread-1] product Хрень has been added to product list 
+2019-08-19 08:32:41,126 INFO a.m.c.Repository [Thread-3] product Хрень has been added to product list 
+2019-08-19 08:35:45,411 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-19 08:36:03,657 INFO a.m.c.Repository [Thread-4] product Хрень has been added to product list 
+2019-08-19 08:36:03,660 INFO a.m.c.Repository [Thread-1] product Хрень has been added to product list 
+2019-08-19 08:36:03,662 INFO a.m.c.Repository [Thread-3] product Хрень has been added to product list 
+2019-08-19 08:42:11,207 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-19 08:42:11,216 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-19 08:42:11,223 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-19 08:42:11,231 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-19 08:42:11,237 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-19 08:42:30,035 INFO a.m.c.Repository [Thread-1] product Хрень has been added to product list 
+2019-08-19 08:42:30,038 INFO a.m.c.Repository [Thread-4] product Хрень has been added to product list 
+2019-08-19 08:42:30,038 INFO a.m.c.Repository [Thread-3] product Хрень has been added to product list 
