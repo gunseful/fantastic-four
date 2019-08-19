@@ -25,14 +25,16 @@
 <div>
     <div>
         <button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
-                onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">${bundle.getObject("orders")}
+                onclick="location.href='/orders'" name="Orders" type="submit"
+                value="Orders">${bundle.getObject("orders")}
         </button>
     </div>
 </div>
 <%--просто кнопка "Корзина", которая переносит на страницу корзины--%>
 <div>
     <button class="w3-button w3-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
-            onclick="location.href='/basket'" name="basket" type="submit" value="basket">${bundle.getObject("basket.title")}
+            onclick="location.href='/basket'" name="basket" type="submit"
+            value="basket">${bundle.getObject("basket.title")}
     </button>
 </div>
 <%--кнопка вызывает сервлет выхода и системы, обнуляет сессию и переносим на хоумпейдж--%>
@@ -50,15 +52,23 @@
             <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
-<%--этот блок выводит все товары на экран, и по желанию клиент выбирает и добавляет себе в корзину--%>
+    <%--этот блок выводит все товары на экран, и по желанию клиент выбирает и добавляет себе в корзину--%>
     <div>
         <form name="input" method="post">
             <c:if test="${products != null}">
             <p>${bundle.getObject("list.client.productlist")}</p>
+                <table>
             <c:forEach var="product" items="${products}">
-                <input type="checkbox" name="productForBuy" value="${product.getId()}">${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}<br>
+                <tr>
+                    <td><input type="checkbox" name="productForBuy" value="${product.getId()}"></td>
+                    <td>${product.getName()}</td>
+                    <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))}</td>
+                    <td>${bundle.getObject("currency")}</td>
+                </tr>
             </c:forEach>
-            <input class="w3-button w3-green " onclick="location.href='../../../../../web'" type="submit" value=${bundle.getObject("add.to.the.basket")}>
+                </table>
+            <input class="w3-button w3-green " onclick="location.href='../../../../../web'" type="submit"
+                   value=${bundle.getObject("add.to.the.basket")}>
             </c:if>
             <c:if test="${products == null}">
             <p>${bundle.getObject("admin.list.no.products")}</p>

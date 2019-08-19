@@ -59,21 +59,25 @@
         <form name="input" method="post">
             <c:if test="${!basket.isEmpty()}">
                 <p>${bundle.getObject("basket.title")}</p>
+                <table>
                 <c:forEach var="product" items="${basket}">
-                    <input type="checkbox" name="productForDelete"
-                           value=${product.getId()}>${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")} ${bundle.getObject("count")}
-
-                    <button class="w3-button w3-circle w3-deep-orange w3-hover-opacity-off btn-block"
+                    <td>
+                        <td><input type="checkbox" name="productForDelete" value=${product.getId()}></td>
+                        <td>${product.getName()}</td>
+                        <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))}</td>
+                        <td>${bundle.getObject("currency")}</td>
+                        <td>${bundle.getObject("count")}</td>
+                    <td><button class="w3-button w3-circle w3-deep-orange w3-hover-opacity-off btn-block"
                             name="minus" type="submit" value=${product.getId()}>-
                     </button>
-                    ${product.getCount()}
-                    <button class="w3-button w3-circle w3-light-green w3-hover-opacity-off btn-block"
+                    </td>
+                        <td>${product.getCount()}</td>
+                    <td><button class="w3-button w3-circle w3-light-green w3-hover-opacity-off btn-block"
                             name="plus" type="submit" value=${product.getId()}>+
-                    </button>
-                    <br>
-
-
+                    </button></td>
+                    </tr>
                 </c:forEach>
+                </table>
                 <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit"
                        value=${bundle.getObject("delete")}>
             </c:if>

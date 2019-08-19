@@ -53,9 +53,16 @@
             <form name="input" method="post">
                 <c:if test="${products != null}">
                     <p>${bundle.getObject("admin.list.title")}</p>
+                    <table>
                     <c:forEach var="product" items="${products}">
-                        <input type="checkbox" name="productForDelete" value=" ${product.getId()} ">${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}<br>
+                        <tr>
+                        <td><input type="checkbox" name="productForDelete" value=" ${product.getId()} "></td>
+                        <td>${product.getName()}</td>
+                        <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))}</td>
+                        <td>${bundle.getObject("currency")}</td>
+                        </tr>
                     </c:forEach>
+                    </table>
                     <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit" value=${bundle.getObject("delete")}>
                 </c:if>
                 <c:if test="${products == null}">

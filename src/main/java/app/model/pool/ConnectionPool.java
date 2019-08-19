@@ -24,6 +24,7 @@ public class ConnectionPool {
         queue = new ArrayBlockingQueue<>(MAX_SIZE);
         Properties properties = new Properties();
         try {
+            //пробовал делать путь ./db/connection.properties - томкат в ахуе и не канает, хотя вот у меня в мейне же есть запрос продуктов - все ок
             properties.load(new FileInputStream("C:\\Users\\Ares\\IdeaProjects\\fantasticFour\\db\\connection.properties"));
         } catch (IOException e) {
             logger.error(e);

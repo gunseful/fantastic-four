@@ -93,12 +93,23 @@
                     </c:if>
                     <input type="checkbox" name="orders" value="${order.getId()}">
                     ${bundle.getObject("orders.order")} ${order.getId()}, ${bundle.getObject("orders.creation")} ${order.getCreationDate()}
-                    <br>
+                    <table>
+                        <tr>
+                            <th>${bundle.getObject("name")}</th>
+                            <th>${bundle.getObject("price")}</th>
+                            <th>${bundle.getObject("count")}</th>
+                        </tr>
                     <c:forEach var="product" items="${order.getProducts()}">
-                        ${product.getName()} - ${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}  ${bundle.getObject("count")} ${product.getCount()}
-                        <br>
-                    </c:forEach><br>
-                    ${bundle.getObject("orders.total.price")} ${String.format("%.2f", (order.totalPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}<br>
+                        <tr>
+                            <td>${product.getName()}</td>
+                            <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}</td>
+                            <td align="right">${product.getCount()}</td>
+                        </tr>
+                    </c:forEach>
+                    </table>
+                    <br>
+                    ${bundle.getObject("orders.total.price")} ${String.format("%.2f", (order.totalPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}
+                    <br>
                     <c:if test="${order.isPaid()}">
                         ${bundle.getObject("orders.paid")}
                     </c:if>
