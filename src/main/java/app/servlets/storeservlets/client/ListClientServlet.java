@@ -2,7 +2,7 @@ package app.servlets.storeservlets.client;
 
 import app.entities.products.Product;
 import app.entities.user.User;
-import app.model.controller.Repository;
+import app.model.dao.Repository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

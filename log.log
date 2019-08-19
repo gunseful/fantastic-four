@@ -2001,3 +2001,256 @@ Database may be already in use: null. Possible solutions: close all other connec
 2019-08-19 08:42:30,035 INFO a.m.c.Repository [Thread-1] product РҐСЂРµРЅСЊ has been added to product list 
 2019-08-19 08:42:30,038 INFO a.m.c.Repository [Thread-4] product РҐСЂРµРЅСЊ has been added to product list 
 2019-08-19 08:42:30,038 INFO a.m.c.Repository [Thread-3] product РҐСЂРµРЅСЊ has been added to product list 
+2019-08-19 15:11:32,410 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-19 15:11:33,620 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-19 15:11:35,096 INFO a.s.p.LangServlet [http-nio-8081-exec-9] selected ru language 
+2019-08-19 15:11:35,163 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-19 15:11:35,321 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-19 15:11:36,133 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-19 15:11:36,275 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-19 15:11:37,638 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-19 15:11:37,932 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:11:37,934 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:11:37,934 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:11:37,935 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:11:37,935 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:12:13,438 INFO a.m.c.Repository [http-nio-8081-exec-10] Fail connect to database 
+2019-08-19 15:12:13,438 ERROR a.m.c.Repository [http-nio-8081-exec-10] java.lang.InterruptedException 
+2019-08-19 15:12:13,439 ERROR a.s.p.LogginServlet [http-nio-8081-exec-10] failed log in 
+2019-08-19 15:12:58,321 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 15:12:58,826 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-19 15:35:30,103 INFO a.s.p.LangServlet [http-nio-8081-exec-10] selected ru language 
+2019-08-19 15:35:30,151 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-19 15:35:30,336 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 15:35:30,899 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-19 15:35:31,033 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-19 15:35:32,857 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-19 15:35:32,979 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:35:32,981 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:35:32,982 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:35:32,983 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:35:32,984 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:35:58,832 INFO a.m.c.Repository [http-nio-8081-exec-1] Fail connect to database 
+2019-08-19 15:35:58,833 ERROR a.m.c.Repository [http-nio-8081-exec-1] java.lang.InterruptedException 
+2019-08-19 15:35:58,834 ERROR a.s.p.LogginServlet [http-nio-8081-exec-1] failed log in 
+2019-08-19 15:37:04,086 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 15:37:04,565 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-19 15:37:05,497 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected ru language 
+2019-08-19 15:37:05,562 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-10] Unauthorized access request 
+2019-08-19 15:37:05,727 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-19 15:37:06,277 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-19 15:37:06,413 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-19 15:37:07,479 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-19 15:37:07,593 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/fantasticFour/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/fantasticFour/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:37:07,595 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/fantasticFour/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/fantasticFour/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:37:07,595 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/fantasticFour/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/fantasticFour/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:37:07,596 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/fantasticFour/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/fantasticFour/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:37:07,597 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:/fantasticFour/db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/fantasticFour/db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:37:22,547 INFO a.m.c.Repository [http-nio-8081-exec-9] Fail connect to database 
+2019-08-19 15:37:22,547 ERROR a.m.c.Repository [http-nio-8081-exec-9] java.lang.InterruptedException 
+2019-08-19 15:37:22,547 ERROR a.s.p.LogginServlet [http-nio-8081-exec-9] failed log in 
+2019-08-19 15:38:22,974 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 15:38:23,460 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-19 15:38:24,055 INFO a.s.p.LangServlet [http-nio-8081-exec-9] selected ru language 
+2019-08-19 15:38:24,208 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-19 15:38:24,443 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-19 15:38:25,025 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-19 15:38:25,165 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-19 15:38:26,353 INFO a.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-19 15:38:26,481 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:38:26,482 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:38:26,483 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:38:26,484 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:38:26,484 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:db/fantasticFour". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:db/fantasticFour". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:41:27,272 INFO a.m.c.Repository [http-nio-8081-exec-10] Fail connect to database 
+2019-08-19 15:41:27,273 ERROR a.m.c.Repository [http-nio-8081-exec-10] java.lang.InterruptedException 
+2019-08-19 15:41:27,273 ERROR a.s.p.LogginServlet [http-nio-8081-exec-10] failed log in 
+2019-08-19 15:43:46,324 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 15:43:47,063 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-19 15:43:47,901 INFO a.s.p.LangServlet [http-nio-8081-exec-8] selected ru language 
+2019-08-19 15:43:48,006 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-10] Unauthorized access request 
+2019-08-19 15:43:48,186 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-19 15:43:48,689 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-19 15:43:48,827 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-19 15:43:50,110 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-19 15:43:50,234 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:file:db/fantasticFour.mv.db". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:db/fantasticFour.mv.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:43:50,235 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:file:db/fantasticFour.mv.db". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:db/fantasticFour.mv.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:43:50,237 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:file:db/fantasticFour.mv.db". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:db/fantasticFour.mv.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:43:50,238 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:file:db/fantasticFour.mv.db". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:db/fantasticFour.mv.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:43:50,239 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Путь неявно является относительным для текущего рабочего каталога и не допустим в URL базы данных "jdbc:h2:file:db/fantasticFour.mv.db". Используйте абсолютный путь, ~/name, ./name, или настройку baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:file:db/fantasticFour.mv.db". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-199] 
+2019-08-19 15:44:01,391 INFO a.m.c.Repository [http-nio-8081-exec-1] Fail connect to database 
+2019-08-19 15:44:01,391 ERROR a.m.c.Repository [http-nio-8081-exec-1] java.lang.InterruptedException 
+2019-08-19 15:44:01,392 ERROR a.s.p.LogginServlet [http-nio-8081-exec-1] failed log in 
+2019-08-19 15:47:06,205 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-19 15:47:07,110 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-19 15:47:07,969 INFO a.s.p.LangServlet [http-nio-8081-exec-10] selected ru language 
+2019-08-19 15:47:08,150 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-19 15:47:08,324 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-19 15:47:08,768 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 15:47:08,891 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-19 15:47:10,189 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-19 15:47:13,610 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 15:47:16,170 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 15:47:18,721 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 15:47:21,265 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 15:47:23,872 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 15:49:38,262 INFO a.m.c.Repository [http-nio-8081-exec-1] Fail connect to database 
+2019-08-19 15:49:38,262 ERROR a.m.c.Repository [http-nio-8081-exec-1] java.lang.InterruptedException 
+2019-08-19 15:49:38,263 ERROR a.s.p.LogginServlet [http-nio-8081-exec-1] failed log in 
+2019-08-19 15:51:34,519 ERROR a.m.c.Repository [Thread-0] org.h2.jdbc.JdbcSQLSyntaxErrorException: РўР°Р±Р»РёС†Р° "PRODUCTS" РЅРµ РЅР°Р№РґРµРЅР°
+Table "PRODUCTS" not found; SQL statement:
+SELECT * FROM PRODUCTS [42102-199] 
+2019-08-19 20:30:31,369 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:30:31,416 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:30:31,416 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:30:31,417 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:30:31,417 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:33:50,462 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:33:50,464 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:33:50,464 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:33:50,464 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:33:50,464 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:34:35,041 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:34:35,042 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:34:35,043 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:34:35,043 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:34:35,043 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:34:42,864 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:34:42,866 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:34:42,866 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:34:42,866 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:34:42,866 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:35:32,246 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:35:32,249 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:35:32,250 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:35:32,250 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:35:32,250 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:36:12,941 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:36:12,943 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:36:12,944 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:36:12,944 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:36:12,944 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:36:30,185 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:36:30,188 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:36:30,188 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:36:30,188 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:36:30,189 ERROR a.m.p.ConnectionPool [Thread-0] java.sql.SQLException: The url cannot be null 
+2019-08-19 20:48:30,367 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-19 20:48:33,263 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-19 20:48:34,214 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-19 20:48:34,270 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 20:48:34,508 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-19 20:48:35,070 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-19 20:48:35,431 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-10] Unauthorized access request 
+2019-08-19 20:48:37,092 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-19 20:48:37,099 INFO a.m.p.ConnectionPool [http-nio-8081-exec-1] inside ConnectionPool constructor 
+2019-08-19 20:48:37,130 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] java.io.FileNotFoundException: .\db\connection.properties (Системе не удается найти указанный путь) 
+2019-08-19 20:48:37,555 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 20:50:18,894 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-19 20:50:19,313 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-19 20:50:20,874 INFO a.s.p.LangServlet [http-nio-8081-exec-10] selected ru language 
+2019-08-19 20:50:20,951 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-19 20:50:21,109 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-19 20:50:21,909 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-19 20:50:22,126 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-19 20:50:22,964 INFO a.s.p.LogginServlet [http-nio-8081-exec-2] Trying to log in 
+2019-08-19 20:50:22,970 INFO a.m.p.ConnectionPool [http-nio-8081-exec-2] inside ConnectionPool constructor 
+2019-08-19 20:50:22,975 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-2] java.io.FileNotFoundException: .\db\connection.properties (Системе не удается найти указанный путь) 
+2019-08-19 20:50:23,268 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-19 20:50:45,451 INFO a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-19 20:50:48,095 INFO a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-19 20:50:48,096 INFO a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-19 20:50:48,097 INFO a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-19 20:50:48,098 INFO a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-19 20:50:48,098 INFO a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-19 20:50:48,098 INFO a.m.p.ConnectionPool [Thread-0] total size of connection: 5 
+2019-08-19 20:50:48,099 INFO a.m.p.ConnectionPool [Thread-0] size before getting connection5 
+2019-08-19 20:50:48,099 INFO a.m.p.ConnectionPool [Thread-0] size after getting connection4 
+2019-08-19 20:50:48,178 INFO a.m.p.ConnectionPool [Thread-0] size before releasing connection4 
+2019-08-19 20:50:48,178 INFO a.m.p.ConnectionPool [Thread-0] size after releasing connection5 
+2019-08-19 20:51:15,085 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-19 20:51:15,493 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-19 20:51:17,462 INFO a.s.p.LangServlet [http-nio-8081-exec-10] selected ru language 
+2019-08-19 20:51:17,516 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-19 20:51:17,672 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 20:51:18,373 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-19 20:51:18,510 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-19 20:51:20,407 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-19 20:51:20,413 INFO a.m.p.ConnectionPool [http-nio-8081-exec-1] inside ConnectionPool constructor 
+2019-08-19 20:51:20,419 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] java.io.FileNotFoundException: .\db\connection.properties (Системе не удается найти указанный путь) 
+2019-08-19 20:51:20,706 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-19 20:52:48,772 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-19 20:52:49,317 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-19 20:52:57,984 INFO a.s.p.LangServlet [http-nio-8081-exec-10] selected ru language 
+2019-08-19 20:52:58,041 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-19 20:52:58,200 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-19 20:52:58,757 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 20:52:58,890 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-19 20:53:00,492 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-19 20:53:00,498 INFO a.m.p.ConnectionPool [http-nio-8081-exec-1] inside ConnectionPool constructor 
+2019-08-19 20:53:03,325 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 20:53:05,886 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 20:53:08,451 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 20:53:11,007 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 20:53:13,565 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 20:53:13,565 INFO a.m.p.ConnectionPool [http-nio-8081-exec-1] total size of connection: 0 
+2019-08-19 20:53:13,565 INFO a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection0 
+2019-08-19 20:53:35,761 INFO a.m.d.Repository [http-nio-8081-exec-1] Fail connect to database 
+2019-08-19 20:53:35,761 ERROR a.m.d.Repository [http-nio-8081-exec-1] java.lang.InterruptedException 
+2019-08-19 20:53:35,761 INFO a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection0 
+2019-08-19 20:53:35,761 ERROR a.s.p.LogginServlet [http-nio-8081-exec-1] failed log in 
+2019-08-19 20:57:18,597 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 20:57:19,094 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-08-19 20:57:26,327 INFO a.s.p.LangServlet [http-nio-8081-exec-10] selected ru language 
+2019-08-19 20:57:26,378 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-19 20:57:26,533 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-19 20:57:27,232 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-19 20:57:27,376 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-19 20:57:28,436 INFO a.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-19 20:57:28,442 INFO a.m.p.ConnectionPool [http-nio-8081-exec-1] inside ConnectionPool constructor 
+2019-08-19 20:57:31,230 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 20:57:33,844 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 20:57:36,410 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 20:57:38,917 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: Ошибка при создании файла "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db"
+Error while creating file "C:/Program Files/Apache Software Foundation/Tomcat 9.0/bin/db" [90062-199] 
+2019-08-19 20:57:38,918 ERROR a.m.p.ConnectionPool [http-nio-8081-exec-1] java.sql.SQLException: No suitable driver found for jdbc:h2:file:./db/fantasticFour 
+2019-08-19 20:57:38,918 INFO a.m.p.ConnectionPool [http-nio-8081-exec-1] total size of connection: 0 
+2019-08-19 20:57:38,919 ERROR a.s.p.LogginServlet [http-nio-8081-exec-1] failed log in 

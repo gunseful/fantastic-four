@@ -3,6 +3,8 @@ package app.model.pool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -17,48 +19,51 @@ public class ConnectionPool {
     private BlockingQueue<Connection> queue;
     private static ConnectionPool connectionPool = new ConnectionPool();
 
-    private ConnectionPool(){
-        System.out.println("inside constructor");
+    private ConnectionPool() {
+        logger.info("inside ConnectionPool constructor");
         queue = new ArrayBlockingQueue<>(MAX_SIZE);
-        Properties connectionProps = new Properties();
-        connectionProps.put("user", "");
-        connectionProps.put("password", "");
+        Properties properties = new Properties();
         try {
-            Class.forName("org.h2.Driver");
+            properties.load(new FileInputStream("C:\\Users\\Ares\\IdeaProjects\\fantasticFour\\db\\connection.properties"));
+        } catch (IOException e) {
+            logger.error(e);
+        }
+        try {
+            Class.forName(properties.getProperty("driver"));
         } catch (ClassNotFoundException e) {
             logger.error(e);
         }
         for (int i = 0; i < MAX_SIZE; i++) {
             try {
-                queue.put(makeConnection(connectionProps));
+                queue.put(makeConnection(properties));
             } catch (InterruptedException | SQLException e) {
                 logger.error(e);
             }
         }
-        System.out.println("total size:" + queue.size());
+        logger.info("total size of connection: " + queue.size());
     }
-    public static ConnectionPool getInstance()
-    {
+
+    public static ConnectionPool getInstance() {
         return connectionPool;
     }
 
-    public  Connection getConnection() throws InterruptedException {
-        System.out.println("size before getting connection" + queue.size());
-        Connection con = queue.take();
-        System.out.println("size after getting connection" + queue.size());
-        return (con);
+    public Connection getConnection() throws InterruptedException {
+        logger.info("size before getting connection" + queue.size());
+        Connection connection = queue.take();
+        logger.info("size after getting connection" + queue.size());
+        return (connection);
     }
 
-    public  void releaseConnection(Connection con) throws InterruptedException {
-        System.out.println("size before releasing connection" + queue.size());
+    public void releaseConnection(Connection con) throws InterruptedException {
+        logger.info("size before releasing connection" + queue.size());
         queue.put(con);
-        System.out.println("size after releasing connection" + queue.size());
+        logger.info("size after releasing connection" + queue.size());
     }
 
-    private  Connection makeConnection(Properties connectionProps) throws SQLException {
+    private Connection makeConnection(Properties properties) throws SQLException {
         Connection connection;
-        connection = DriverManager.getConnection("jdbc:h2:/c:/Users/Ares/IdeaProjects/fantasticFour/db/fantasticFour", connectionProps);
-        System.out.println("Connected to database");
+        connection = DriverManager.getConnection(properties.getProperty("URL"), properties);
+        logger.info("Connected to database");
         return connection;
     }
 }

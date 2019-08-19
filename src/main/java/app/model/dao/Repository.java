@@ -1,11 +1,10 @@
-package app.model.controller;
+package app.model.dao;
 
 import app.entities.products.Order;
 import app.entities.products.Product;
 import app.entities.user.User;
 import app.model.encrypt.Encrypt;
 import app.model.pool.ConnectionPool;
-import app.model.pool.SemaphoreConnectionPool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,7 +20,6 @@ public class Repository {
 
     public static Logger logger = LogManager.getLogger();
     private ConnectionPool connectionPool = ConnectionPool.getInstance();
-    private SemaphoreConnectionPool semaphoreConnectionPool = SemaphoreConnectionPool.getInstance();
 
     public synchronized List<Product> getList() {
 
@@ -43,33 +41,6 @@ public class Repository {
             try {
                 connectionPool.releaseConnection(connection);
             } catch (InterruptedException e) {
-                logger.error(e);
-            }
-        }
-        return list;
-    }
-
-
-    public synchronized List<Product> getListSemaphore() {
-
-        List<Product> list = new ArrayList<>();
-        Connection connection = null;
-        try {
-            connection = semaphoreConnectionPool.getConnection();
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM PRODUCTS");
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                int id = rs.getInt("ID");
-                String name = rs.getString("NAME");
-                int price = rs.getInt("PRICE");
-                list.add(new Product(id, name, price));
-            }
-        } catch (SQLException | InterruptedException e) {
-            logger.error(e);
-        } finally {
-            try {
-                semaphoreConnectionPool.releaseConnection(connection);
-            } catch (SQLException e) {
                 logger.error(e);
             }
         }
@@ -168,7 +139,6 @@ public class Repository {
         Connection connection = null;
         String sql = "";
         int orderId = 0;
-        int count = 0;
         try {
             sql = "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + " AND STATE = 'NOT_ORDERED'";
             connection = connectionPool.getConnection();
