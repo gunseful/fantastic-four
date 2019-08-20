@@ -1,3 +1,4 @@
+import app.entities.user.User;
 import app.model.repository.Repository;
 
 //import app.entities.products.Order;
@@ -12,8 +13,11 @@ public class Main {
         new Thread(){
             @Override
             public void run() {
+                User user = new User();
+                user.setId(2);
                 Repository repository = new Repository();
-                System.out.println(repository.getList());
+                System.out.println(repository.updateBasket(user, 34,true));
+
             }
         }.start();
     }

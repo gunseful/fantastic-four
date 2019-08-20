@@ -50,7 +50,9 @@ public class ListClientServlet extends HttpServlet {
                         if (String.valueOf(product.getId()).equals(productID.trim())) {
                             logger.info("User=" + user.getNickname() + " has added product to his basket");
 //                            //если есть добавляет в базу данных
-                            controller.addToBasket(user, product.getId(),true);
+                            if(!controller.updateBasket(user, product.getId(),true)){
+                                controller.addToBasket(user,product.getId());
+                            }
                         }
                     }
                 }

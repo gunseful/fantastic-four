@@ -68,57 +68,108 @@ public class Repository {
         }
     }
 
-    public synchronized boolean addToBasket(User user, int productID, boolean add) {
-        //добавляет новый товар в кросс таблицу ORDERS_PRODUCTS
+    public synchronized int getBasketId(User user){
         Connection connection = null;
         String sql;
-        int orderId = 0;
-        int count;
         try {
-            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
             connection = connectionPool.getConnection();
+            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID = ? and STATE = 'NOT_ORDERED'";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, user.getId());
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                orderId = resultSet.getInt("ID");
+            resultSet.next();
+            return resultSet.getInt("ID");
+        }catch (Exception e){
+            logger.error(e);
+            return 0;
+        }finally {
+            try {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
+                logger.error(e);
             }
-            sql = "SELECT * FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = " + productID + "AND ORDER_ID = " + orderId;
-            preparedStatement = connection.prepareStatement(sql);
-            resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                count = resultSet.getInt("COUNT");
-                if (add) {
-                    if (count < 10) {
-                        count++;
-                    }
-                } else {
-                    if (count > 1) {
-                        count--;
-                    }
-                }
-                sql = "UPDATE PRODUCTS_ORDERS SET COUNT = " + count + " WHERE PRODUCT_ID = " + productID + "AND ORDER_ID = " + orderId;
-                preparedStatement = connection.prepareStatement(sql);
+        }
+    }
+
+    public synchronized boolean addToBasket(User user, int productID){
+        //добавляет товар в корзину
+        Connection connection = null;
+        String sql;
+        try {
+            int orderID = getBasketId(user);
+            connection = connectionPool.getConnection();
+            sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID) Values (?, ?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, productID);
+            preparedStatement.setInt(2, orderID);
+            preparedStatement.executeUpdate();
+            return true;
+        }catch (Exception e){
+            logger.error(e);
+            return false;
+        }finally {
+            try {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
+                logger.error(e);
+            }
+        }
+    }
+
+    public synchronized boolean checkCount(User user, int productId){
+        Connection connection = null;
+        String sql;
+        try {
+            connection = connectionPool.getConnection();
+            sql = "SELECT * FROM PRODUCTS_ORDERS inner join orders on PRODUCTS_ORDERS.ORDER_ID = ORDERS.ID where PRODUCTS_ORDERS.PRODUCT_ID = ? and  ORDERS.CUSTOMER_ID = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, productId);
+            preparedStatement.setInt(2, user.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(!resultSet.next()){
+                return false;
+            }
+            int count = resultSet.getInt("COUNT");
+            System.out.println(count);
+            return count != 0;
+        }catch (Exception e){
+            logger.error(e);
+            return false;
+        }finally {
+            try {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
+                logger.error(e);
+            }
+        }
+    }
+
+    public synchronized boolean updateBasket(User user, int productId, boolean add) {
+        //если товар уже есть в корзине увеличивает или уменьшает количество на 1
+        Connection connection = null;
+        String sql;
+        try {
+            connection = connectionPool.getConnection();
+            if(add) {
+                sql = "update PRODUCTS_ORDERS PR\n" +
+                        "set PR.COUNT = PR.COUNT+1\n" +
+                        "where exists\n" +
+                        "(select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?)";
+            }else {
+                sql = "update PRODUCTS_ORDERS PR\n" +
+                        "set PR.COUNT = PR.COUNT-1\n" +
+                        "where exists\n" +
+                        "(select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?)";
+            }
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setInt(1,user.getId());
+                preparedStatement.setInt(2, productId);
                 preparedStatement.executeUpdate();
-            } else {
-                sql = "SELECT * FROM PRODUCTS_ORDERS WHERE ORDER_ID = " + orderId;
-                preparedStatement = connection.prepareStatement(sql);
-                resultSet = preparedStatement.executeQuery();
-                int size = 0;
-                if (resultSet != null) {
-                    resultSet.last();
-                    size = resultSet.getRow();
-                }
-                if (size >= 10) {
+                if(!checkCount(user,productId)){
+                    deleteFromBasket(user,productId);
                     return false;
                 }
-                sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID) Values (?, ?)";
-                preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.setInt(1, productID);
-                preparedStatement.setInt(2, orderId);
-                preparedStatement.executeUpdate();
-            }
-            logger.info("User=" + user.getNickname() + " added " + productID + " product to his basket");
-            return true;
+                return true;
         } catch (Exception ex) {
             logger.info("Fail connect to database");
             logger.error(ex);
@@ -136,19 +187,12 @@ public class Repository {
         //добавляет новый товар в кросс таблицу ORDERS_PRODUCTS
         Connection connection = null;
         String sql;
-        int orderId = 0;
+        int orderId;
         try {
-            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + " AND STATE = 'NOT_ORDERED'";
+            orderId = getBasketId(user);
+            sql = "DELETE FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = " + productID + " AND ORDER_ID = " + orderId;
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                orderId = resultSet.getInt("ID");
-                System.out.println(orderId);
-            }
-            System.out.println(productID);
-            sql = "DELETE FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = " + productID + " AND ORDER_ID = " + orderId;
-            preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
             logger.info("User=" + user.getNickname() + " delete " + productID + " from his basket");
         } catch (Exception ex) {
@@ -170,19 +214,14 @@ public class Repository {
         int orderId = 0;
         List<Product> list = new ArrayList<>();
         try {
-            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
+            orderId = getBasketId(user);
             connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                orderId = resultSet.getInt("ID");
-            }
             sql = "SELECT * FROM PRODUCTS_ORDERS\n" +
                     "INNER JOIN PRODUCTS ON PRODUCTS.ID = PRODUCTS_ORDERS.PRODUCT_ID\n" +
                     "INNER JOIN ORDERS ON ORDERS.ID = PRODUCTS_ORDERS.ORDER_ID\n" +
                     "where PRODUCTS_ORDERS.ORDER_ID = " + orderId;
-            preparedStatement = connection.prepareStatement(sql);
-            resultSet = preparedStatement.executeQuery();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet resultSet = preparedStatement.executeQuery();
             getProducts(resultSet, list);
             return list;
         } catch (Exception ex) {
@@ -202,18 +241,13 @@ public class Repository {
         //меняет статус корзины на статус заказа и создает новую пустую корзину
         Connection connection = null;
         String sql;
-        int orderId = 0;
+        int orderId;
         try {
-            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
+            orderId = getBasketId(user);
             connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                orderId = resultSet.getInt("ID");
-            }
             LocalDate creationDate = LocalDate.now();
             sql = "UPDATE ORDERS SET STATE = 'ORDERED', CREATEDAT=? WHERE ID = " + orderId;
-            preparedStatement = connection.prepareStatement(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setObject(1, creationDate);
             preparedStatement.executeUpdate();
             sql = "INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?, 'NOT_ORDERED')";

@@ -43,7 +43,7 @@ public class BasketServlet extends HttpServlet {
         try {
             if (req.getParameter("plus") != null) {
                 int i = Integer.parseInt(req.getParameter("plus"));
-                controller.addToBasket(user, i, true);
+                controller.updateBasket(user, i, true);
                 doGet(req, resp);
             }
         } catch (Exception e) {
@@ -53,7 +53,7 @@ public class BasketServlet extends HttpServlet {
         try {
             if (req.getParameter("minus") != null) {
                 int i = Integer.parseInt(req.getParameter("minus"));
-                controller.addToBasket(user, i, false);
+                controller.updateBasket(user, i, false);
                 doGet(req, resp);
             }
         } catch (Exception e) {

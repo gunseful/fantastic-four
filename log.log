@@ -5930,3 +5930,1448 @@ DELETE FROM PRODUCTS WHERE Id =  626  [23503-199]
 2019-08-20 09:37:14,830 INFO a.s.s.a.ListAdminServlet [http-nio-8081-exec-7] User=GUNSEFULrequests product list 
 2019-08-20 09:37:15,445 INFO a.s.p.LogoutServlet [http-nio-8081-exec-10] JSESSIONID= 417B27CA633F7A77EDB0BE5238B2CF59 
 2019-08-20 09:37:15,445 INFO a.s.p.LogoutServlet [http-nio-8081-exec-10] User=GUNSEFUL has out 
+2019-08-20 18:49:46,800 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 18:49:48,797 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 18:49:48,804 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 18:49:48,812 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 18:49:48,818 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 18:49:48,824 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 18:49:48,824 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 0 
+2019-08-20 18:49:48,825 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection0 
+2019-08-20 18:50:12,717 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 18:50:13,419 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:50:13,420 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:50:13,422 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:50:13,423 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:50:13,424 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:50:13,425 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 5 
+2019-08-20 18:50:13,425 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection5 
+2019-08-20 18:50:13,425 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection4 
+2019-08-20 18:50:13,469 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection4 
+2019-08-20 18:50:13,469 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection5 
+2019-08-20 18:51:53,562 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-08-20 18:51:54,163 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-20 18:51:55,121 INFO a.s.p.LangServlet [http-nio-8081-exec-10] selected ru language 
+2019-08-20 18:51:55,186 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-20 18:51:55,369 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-08-20 18:51:55,821 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-20 18:51:55,949 ERROR a.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-20 18:51:57,436 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-08-20 18:51:57,443 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] inside ConnectionPool constructor 
+2019-08-20 18:51:57,921 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-08-20 18:51:57,922 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-08-20 18:51:57,923 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-08-20 18:51:57,925 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-08-20 18:51:57,926 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-08-20 18:51:57,926 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] total size of connection: 5 
+2019-08-20 18:51:57,926 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 18:51:57,927 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 18:51:58,280 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 18:51:58,280 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 18:51:58,280 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 18:51:58,280 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 18:51:58,281 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 18:51:58,281 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 18:51:58,281 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 18:51:58,281 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 18:51:58,282 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 18:51:58,282 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 18:51:58,283 INFO a.s.p.LogginServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-08-20 18:51:58,300 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 18:51:58,300 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 18:51:58,302 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 18:51:58,302 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 18:51:58,303 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-20 18:52:00,325 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 18:52:00,325 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 18:52:00,326 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 18:52:00,326 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 18:52:00,327 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has added product to his basket 
+2019-08-20 18:52:00,327 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 18:52:00,327 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 18:52:00,335 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 18:52:00,335 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 18:52:00,339 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 18:52:00,340 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 18:52:00,340 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 18:52:00,340 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 18:52:00,340 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 18:52:00,340 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 18:52:00,341 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 18:52:00,341 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 18:52:00,341 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-20 18:52:01,099 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 18:52:01,099 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 18:52:01,101 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 18:52:01,101 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 18:52:01,101 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-20 18:52:15,047 INFO a.s.p.LogoutServlet [http-nio-8081-exec-1] JSESSIONID= 10E5A02F567BC2D483868E2085124AEC 
+2019-08-20 18:52:15,047 INFO a.s.p.LogoutServlet [http-nio-8081-exec-1] User=2 has out 
+2019-08-20 18:54:09,025 INFO a.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-20 18:54:11,185 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-20 18:54:11,191 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-08-20 18:54:11,745 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 18:54:11,746 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 18:54:11,747 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 18:54:11,748 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 18:54:11,750 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 18:54:11,750 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-08-20 18:54:11,750 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 18:54:11,751 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 18:54:11,851 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 18:54:11,851 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 18:54:11,851 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 18:54:11,851 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 18:54:11,852 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 18:54:11,853 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 18:54:11,853 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 18:54:11,853 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 18:54:11,854 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 18:54:11,854 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 18:54:11,855 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-20 18:54:11,864 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 18:54:11,864 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 18:54:11,866 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 18:54:11,867 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 18:54:11,867 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-20 18:54:13,804 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 18:54:13,804 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 18:54:13,805 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 18:54:13,806 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 18:54:13,806 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has added product to his basket 
+2019-08-20 18:54:13,806 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 18:54:13,806 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 18:54:13,816 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 18:54:13,816 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 18:54:13,821 ERROR a.m.r.Repository [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLNonTransientException: ��� ������
+No data is available [2000-199] 
+2019-08-20 18:54:13,822 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 18:54:13,822 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 18:54:13,822 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 18:54:13,822 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 18:54:13,823 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 18:54:13,824 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 18:54:13,824 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 18:54:13,824 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 18:54:13,824 INFO a.m.r.Repository [http-nio-8081-exec-1] User=2 delete 34 from his basket 
+2019-08-20 18:54:13,825 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 18:54:13,825 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 18:54:13,825 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 18:54:13,825 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 18:54:13,825 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 18:54:13,825 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 18:54:13,826 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 18:54:13,826 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 18:54:13,826 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-20 18:54:17,468 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 18:54:17,468 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 18:54:17,471 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 18:54:17,471 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 18:54:17,471 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-20 18:54:20,279 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 18:54:20,279 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 18:54:20,279 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 18:54:20,280 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 18:54:20,280 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 18:54:20,280 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 18:54:20,286 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection4 
+2019-08-20 18:54:20,286 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection3 
+2019-08-20 18:54:20,287 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection3 
+2019-08-20 18:54:20,287 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection4 
+2019-08-20 18:54:20,288 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection4 
+2019-08-20 18:54:20,288 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection3 
+2019-08-20 18:54:20,289 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection3 
+2019-08-20 18:54:20,289 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection4 
+2019-08-20 18:54:20,289 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 18:54:20,289 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 18:54:22,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-20 18:54:22,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-20 18:54:22,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-20 18:54:22,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-20 18:54:22,336 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 18:54:22,336 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 18:54:22,337 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 18:54:22,337 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 18:54:22,337 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-20 18:56:03,922 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 18:56:04,454 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:56:04,455 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:56:04,457 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:56:04,458 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:56:04,459 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:56:04,460 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 5 
+2019-08-20 18:56:04,460 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection5 
+2019-08-20 18:56:04,460 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection4 
+2019-08-20 18:56:04,521 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:56:04,522 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:56:04,536 ERROR a.m.r.Repository [Thread-0] org.h2.jdbc.JdbcSQLNonTransientException: Нет данных
+No data is available [2000-199] 
+2019-08-20 18:56:04,536 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:56:04,536 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:56:04,537 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:56:04,537 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:56:04,539 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:56:04,539 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:56:04,539 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:56:04,539 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:56:04,541 INFO a.m.r.Repository [Thread-0] User=null delete 34 from his basket 
+2019-08-20 18:56:04,541 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:56:04,541 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:56:04,541 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection4 
+2019-08-20 18:56:04,541 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection5 
+2019-08-20 18:57:38,502 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 18:57:38,782 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 18:57:38,792 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 18:57:38,801 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 18:57:38,809 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 18:57:38,817 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 18:57:38,822 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 0 
+2019-08-20 18:57:38,822 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection0 
+2019-08-20 18:57:54,653 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 18:57:55,098 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:57:55,099 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:57:55,101 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:57:55,102 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:57:55,104 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:57:55,104 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 5 
+2019-08-20 18:57:55,104 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection5 
+2019-08-20 18:57:55,105 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection4 
+2019-08-20 18:57:55,148 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:57:55,149 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:57:55,161 ERROR a.m.r.Repository [Thread-0] org.h2.jdbc.JdbcSQLNonTransientException: Нет данных
+No data is available [2000-199] 
+2019-08-20 18:57:55,162 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:57:55,162 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:57:55,162 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:57:55,162 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:57:55,164 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:57:55,164 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:57:55,165 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:57:55,165 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:57:55,166 INFO a.m.r.Repository [Thread-0] User=null delete 34 from his basket 
+2019-08-20 18:57:55,167 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:57:55,167 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:57:55,167 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection4 
+2019-08-20 18:57:55,167 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection5 
+2019-08-20 18:58:13,957 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 18:58:14,394 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:58:14,396 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:58:14,397 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:58:14,398 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:58:14,400 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:58:14,400 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 5 
+2019-08-20 18:58:14,400 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection5 
+2019-08-20 18:58:14,400 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection4 
+2019-08-20 18:58:14,427 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:58:14,427 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:58:14,438 ERROR a.m.r.Repository [Thread-0] org.h2.jdbc.JdbcSQLNonTransientException: Нет данных
+No data is available [2000-199] 
+2019-08-20 18:58:14,438 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:58:14,438 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:58:14,439 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:58:14,439 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:58:14,440 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:58:14,441 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:58:14,441 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:58:14,441 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:58:14,442 INFO a.m.r.Repository [Thread-0] User=null delete 34 from his basket 
+2019-08-20 18:58:14,442 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:58:14,442 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:58:14,443 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection4 
+2019-08-20 18:58:14,443 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection5 
+2019-08-20 18:59:52,860 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 18:59:53,292 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:59:53,293 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:59:53,294 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:59:53,294 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:59:53,296 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 18:59:53,296 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 5 
+2019-08-20 18:59:53,296 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection5 
+2019-08-20 18:59:53,296 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection4 
+2019-08-20 18:59:53,328 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:59:53,328 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:59:53,346 ERROR a.m.r.Repository [Thread-0] org.h2.jdbc.JdbcSQLNonTransientException: Нет данных
+No data is available [2000-199] 
+2019-08-20 18:59:53,346 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:59:53,346 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:59:53,347 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:59:53,347 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:59:53,348 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:59:53,349 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:59:53,349 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 18:59:53,349 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 18:59:53,350 INFO a.m.r.Repository [Thread-0] User=null delete 34 from his basket 
+2019-08-20 18:59:53,351 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 18:59:53,351 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 18:59:53,351 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection4 
+2019-08-20 18:59:53,351 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection5 
+2019-08-20 19:00:47,464 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 19:00:47,881 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:00:47,883 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:00:47,884 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:00:47,886 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:00:47,887 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:00:47,887 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 5 
+2019-08-20 19:00:47,888 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection5 
+2019-08-20 19:00:47,888 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection4 
+2019-08-20 19:00:47,910 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 19:00:47,910 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 19:00:47,918 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 19:00:47,918 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 19:00:47,919 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection4 
+2019-08-20 19:00:47,919 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection5 
+2019-08-20 19:03:28,323 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 19:03:28,761 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:03:28,763 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:03:28,764 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:03:28,765 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:03:28,767 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:03:28,767 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 5 
+2019-08-20 19:03:28,767 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection5 
+2019-08-20 19:03:28,767 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection4 
+2019-08-20 19:03:28,797 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 19:03:28,798 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 19:03:28,810 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 19:03:28,810 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 19:03:28,811 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 19:03:28,811 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 19:03:28,812 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 19:03:28,813 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 19:03:28,813 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 19:03:28,813 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 19:03:28,814 INFO a.m.r.Repository [Thread-0] User=null delete 34 from his basket 
+2019-08-20 19:03:28,815 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 19:03:28,815 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 19:03:28,815 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection4 
+2019-08-20 19:03:28,815 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection5 
+2019-08-20 19:04:10,158 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 19:04:10,407 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 19:04:10,417 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 19:04:10,426 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 19:04:10,434 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 19:04:10,453 ERROR a.m.p.ConnectionPool [Thread-0] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-20 19:04:10,454 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 0 
+2019-08-20 19:04:10,454 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection0 
+2019-08-20 19:04:26,074 DEBUG a.m.p.ConnectionPool [Thread-0] inside ConnectionPool constructor 
+2019-08-20 19:04:26,521 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:04:26,523 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:04:26,525 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:04:26,526 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:04:26,528 DEBUG a.m.p.ConnectionPool [Thread-0] Connected to database 
+2019-08-20 19:04:26,528 DEBUG a.m.p.ConnectionPool [Thread-0] total size of connection: 5 
+2019-08-20 19:04:26,528 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection5 
+2019-08-20 19:04:26,528 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection4 
+2019-08-20 19:04:26,560 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 19:04:26,560 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 19:04:26,571 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 19:04:26,571 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 19:04:26,572 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 19:04:26,572 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 19:04:26,574 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 19:04:26,574 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 19:04:26,574 DEBUG a.m.p.ConnectionPool [Thread-0] size before getting connection4 
+2019-08-20 19:04:26,574 DEBUG a.m.p.ConnectionPool [Thread-0] size after getting connection3 
+2019-08-20 19:04:26,576 INFO a.m.r.Repository [Thread-0] User=null delete 34 from his basket 
+2019-08-20 19:04:26,576 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection3 
+2019-08-20 19:04:26,576 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection4 
+2019-08-20 19:04:26,576 DEBUG a.m.p.ConnectionPool [Thread-0] size before releasing connection4 
+2019-08-20 19:04:26,576 DEBUG a.m.p.ConnectionPool [Thread-0] size after releasing connection5 
+2019-08-20 19:05:01,597 INFO a.s.p.LangServlet [http-nio-8081-exec-5] selected ru language 
+2019-08-20 19:05:04,077 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-20 19:05:04,084 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-08-20 19:05:04,590 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 19:05:04,591 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 19:05:04,592 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 19:05:04,593 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 19:05:04,594 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 19:05:04,594 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-08-20 19:05:04,595 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:05:04,595 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:05:04,819 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:05:04,822 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:05:04,822 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:05:04,822 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:05:04,823 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:05:04,824 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:05:04,824 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:05:04,824 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:05:04,825 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:05:04,825 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:05:04,826 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-20 19:05:04,841 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:05:04,842 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:05:04,847 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:05:04,847 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:05:04,847 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-20 19:05:07,248 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:07,248 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:07,249 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:07,249 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:07,249 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has added product to his basket 
+2019-08-20 19:05:07,249 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:07,249 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:07,257 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 19:05:07,258 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 19:05:07,261 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 19:05:07,261 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 19:05:07,261 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 19:05:07,261 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 19:05:07,263 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 19:05:07,263 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 19:05:07,263 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 19:05:07,264 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 19:05:07,266 INFO a.m.r.Repository [http-nio-8081-exec-1] User=2 delete 66 from his basket 
+2019-08-20 19:05:07,267 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 19:05:07,267 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 19:05:07,267 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:07,267 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:07,267 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:07,268 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:07,269 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:07,269 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:07,269 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:07,269 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:07,278 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:07,278 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:07,278 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:07,278 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:07,279 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:07,279 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:07,280 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-20 19:05:07,813 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:05:07,813 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:05:07,815 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:05:07,815 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:05:07,815 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-20 19:05:10,391 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:05:10,391 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:05:10,393 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection4 
+2019-08-20 19:05:10,394 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection3 
+2019-08-20 19:05:10,395 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection3 
+2019-08-20 19:05:10,395 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection4 
+2019-08-20 19:05:10,395 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:05:10,395 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:05:10,395 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:05:10,395 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:05:10,397 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:05:10,397 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:05:10,397 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-20 19:05:11,404 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:05:11,404 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:05:11,408 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection4 
+2019-08-20 19:05:11,408 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection3 
+2019-08-20 19:05:11,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection3 
+2019-08-20 19:05:11,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection4 
+2019-08-20 19:05:11,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:05:11,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:05:11,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:05:11,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:05:11,412 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:05:11,412 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:05:11,412 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-20 19:05:12,107 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:05:12,108 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:05:12,109 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection4 
+2019-08-20 19:05:12,109 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection3 
+2019-08-20 19:05:12,110 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection3 
+2019-08-20 19:05:12,110 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection4 
+2019-08-20 19:05:12,110 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:05:12,110 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:05:12,110 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:05:12,110 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:05:12,112 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:05:12,112 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:05:12,112 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-20 19:05:12,551 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:12,551 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:12,553 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:05:12,553 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:05:12,555 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:05:12,555 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:05:12,555 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:12,556 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:12,556 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:12,556 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:12,559 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:12,559 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:12,559 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-20 19:05:13,028 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:05:13,029 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:05:13,030 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection4 
+2019-08-20 19:05:13,030 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection3 
+2019-08-20 19:05:13,031 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection3 
+2019-08-20 19:05:13,031 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection4 
+2019-08-20 19:05:13,031 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:05:13,031 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:05:13,031 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:05:13,031 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:05:13,035 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:05:13,035 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:05:13,035 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-20 19:05:13,513 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:05:13,513 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:05:13,515 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:05:13,516 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:05:13,517 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:05:13,517 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:05:13,517 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:05:13,517 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:05:13,517 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:05:13,517 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:05:13,519 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:05:13,519 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:05:13,519 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-20 19:05:13,809 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:13,809 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:13,811 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 19:05:13,811 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 19:05:13,812 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 19:05:13,813 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 19:05:13,813 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:13,813 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:13,813 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:13,813 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:13,815 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:13,815 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:13,815 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-20 19:05:14,524 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:05:14,524 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:05:14,526 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection4 
+2019-08-20 19:05:14,526 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection3 
+2019-08-20 19:05:14,527 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection3 
+2019-08-20 19:05:14,527 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection4 
+2019-08-20 19:05:14,527 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:05:14,527 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:05:14,527 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:05:14,527 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:05:14,528 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:05:14,528 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:05:14,528 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-20 19:05:14,825 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:05:14,825 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:05:14,827 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection4 
+2019-08-20 19:05:14,827 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection3 
+2019-08-20 19:05:14,828 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection3 
+2019-08-20 19:05:14,828 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection4 
+2019-08-20 19:05:14,828 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:05:14,828 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:05:14,828 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:05:14,828 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:05:14,830 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:05:14,830 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:05:14,830 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-20 19:05:15,131 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:05:15,131 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:05:15,133 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection4 
+2019-08-20 19:05:15,133 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection3 
+2019-08-20 19:05:15,134 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection3 
+2019-08-20 19:05:15,134 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection4 
+2019-08-20 19:05:15,134 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:05:15,134 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:05:15,134 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:05:15,134 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:05:15,135 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:05:15,136 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:05:15,136 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-20 19:05:15,402 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:05:15,402 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:05:15,405 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection4 
+2019-08-20 19:05:15,405 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection3 
+2019-08-20 19:05:15,406 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection3 
+2019-08-20 19:05:15,406 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection4 
+2019-08-20 19:05:15,406 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:05:15,406 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:05:15,406 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:05:15,407 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:05:15,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:05:15,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:05:15,410 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-20 19:05:15,764 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 19:05:15,764 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 19:05:15,766 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection4 
+2019-08-20 19:05:15,766 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection3 
+2019-08-20 19:05:15,767 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection3 
+2019-08-20 19:05:15,767 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection4 
+2019-08-20 19:05:15,767 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 19:05:15,767 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 19:05:15,767 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 19:05:15,767 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 19:05:15,769 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 19:05:15,769 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 19:05:15,769 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-20 19:05:16,326 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-20 19:05:16,327 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-20 19:05:16,328 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection4 
+2019-08-20 19:05:16,328 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection3 
+2019-08-20 19:05:16,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection3 
+2019-08-20 19:05:16,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection4 
+2019-08-20 19:05:16,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection4 
+2019-08-20 19:05:16,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection3 
+2019-08-20 19:05:16,332 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection3 
+2019-08-20 19:05:16,332 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection4 
+2019-08-20 19:05:16,332 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection4 
+2019-08-20 19:05:16,332 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection3 
+2019-08-20 19:05:16,333 INFO a.m.r.Repository [http-nio-8081-exec-6] User=2 delete 66 from his basket 
+2019-08-20 19:05:16,333 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection3 
+2019-08-20 19:05:16,333 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection4 
+2019-08-20 19:05:16,333 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-20 19:05:16,333 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-20 19:05:16,333 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-20 19:05:16,333 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-20 19:05:16,335 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-20 19:05:16,336 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-20 19:05:16,336 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-20 19:05:17,583 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:17,583 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:17,584 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:17,584 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:17,584 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:17,584 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:17,591 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:05:17,591 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:05:17,592 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:05:17,592 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:05:17,593 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:05:17,593 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:05:17,593 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:05:17,593 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:05:17,593 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:17,593 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:18,363 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:05:18,363 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:05:18,365 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:05:18,365 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:05:18,379 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:05:18,379 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:05:18,379 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:05:18,379 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:05:18,379 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-20 19:05:19,726 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:19,727 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:19,727 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:19,727 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:19,727 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has added product to his basket 
+2019-08-20 19:05:19,727 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:19,728 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:19,728 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 19:05:19,728 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 19:05:19,729 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 19:05:19,729 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 19:05:19,729 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 19:05:19,729 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 19:05:19,730 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 19:05:19,730 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 19:05:19,730 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 19:05:19,730 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 19:05:19,730 INFO a.m.r.Repository [http-nio-8081-exec-1] User=2 delete 66 from his basket 
+2019-08-20 19:05:19,730 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 19:05:19,730 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 19:05:19,730 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:19,730 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:19,730 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:19,730 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:19,731 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:19,731 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:19,731 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:19,731 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:19,732 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:19,732 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:19,732 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:19,732 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:19,732 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:19,732 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:19,732 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-20 19:05:20,428 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:05:20,429 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:05:20,431 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:05:20,431 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:05:20,431 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-20 19:05:22,198 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2 delete product from his basket 
+2019-08-20 19:05:22,199 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:05:22,199 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:05:22,200 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:05:22,200 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:05:22,200 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:05:22,200 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:05:22,201 INFO a.m.r.Repository [http-nio-8081-exec-3] User=2 delete 66 from his basket 
+2019-08-20 19:05:22,201 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:05:22,201 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:05:22,201 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:05:22,201 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:05:22,205 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:05:22,205 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:05:22,205 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-20 19:05:23,277 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 19:05:23,277 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 19:05:23,278 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 19:05:23,278 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 19:05:23,285 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-20 19:05:23,285 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-20 19:05:23,286 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-20 19:05:23,286 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-20 19:05:23,286 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-08-20 19:05:25,686 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:25,686 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:25,687 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:25,687 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:25,687 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has added product to his basket 
+2019-08-20 19:05:25,687 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:25,687 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:25,688 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:05:25,688 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:05:25,691 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:05:25,692 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:05:25,692 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:05:25,692 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:05:25,693 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:05:25,693 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:05:25,693 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:05:25,693 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:05:25,693 INFO a.m.r.Repository [http-nio-8081-exec-8] User=2 delete 34 from his basket 
+2019-08-20 19:05:25,693 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:05:25,693 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:05:25,693 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:25,694 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:25,694 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:25,694 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:25,694 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:25,694 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:25,694 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:25,694 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:25,695 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:25,695 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:25,695 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:25,695 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:25,696 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:25,696 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:25,696 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has added product to his basket 
+2019-08-20 19:05:25,696 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:25,696 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:25,697 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:05:25,697 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:05:25,698 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:05:25,698 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:05:25,698 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:05:25,698 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:05:25,699 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:05:25,699 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:05:25,699 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:05:25,699 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:05:25,699 INFO a.m.r.Repository [http-nio-8081-exec-8] User=2 delete 66 from his basket 
+2019-08-20 19:05:25,699 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:05:25,699 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:05:25,699 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:25,700 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:25,700 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:25,700 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:25,700 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:25,700 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:25,700 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:25,700 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:25,702 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:25,702 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:25,702 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:25,702 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:25,703 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:25,703 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:25,703 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-08-20 19:05:26,339 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:05:26,340 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:05:26,341 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:05:26,341 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:05:26,341 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-20 19:05:27,573 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:05:27,573 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:05:27,575 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:05:27,575 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:05:27,582 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:05:27,582 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:05:27,582 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:05:27,582 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:05:27,582 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:05:27,582 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:05:27,584 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:05:27,584 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:05:27,585 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-20 19:05:27,902 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:27,902 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:27,905 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 19:05:27,905 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 19:05:27,906 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 19:05:27,906 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 19:05:27,906 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:27,907 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:27,908 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:05:27,908 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:05:27,917 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:05:27,917 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:05:27,917 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-20 19:05:28,242 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:05:28,242 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:05:28,244 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection4 
+2019-08-20 19:05:28,244 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection3 
+2019-08-20 19:05:28,245 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection3 
+2019-08-20 19:05:28,245 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection4 
+2019-08-20 19:05:28,245 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:05:28,245 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:05:28,245 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:05:28,245 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:05:28,246 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:05:28,246 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:05:28,246 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-20 19:05:28,585 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:05:28,585 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:05:28,588 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection4 
+2019-08-20 19:05:28,588 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection3 
+2019-08-20 19:05:28,589 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection3 
+2019-08-20 19:05:28,589 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection4 
+2019-08-20 19:05:28,589 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:05:28,589 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:05:28,590 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:05:28,590 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:05:28,597 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:05:28,597 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:05:28,597 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-20 19:05:28,953 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:05:28,953 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:05:28,955 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection4 
+2019-08-20 19:05:28,955 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection3 
+2019-08-20 19:05:28,956 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection3 
+2019-08-20 19:05:28,956 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection4 
+2019-08-20 19:05:28,956 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:05:28,956 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:05:28,956 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:05:28,956 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:05:28,959 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:05:28,959 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:05:28,959 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-20 19:05:29,331 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:05:29,331 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:05:29,336 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection4 
+2019-08-20 19:05:29,337 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection3 
+2019-08-20 19:05:29,337 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection3 
+2019-08-20 19:05:29,337 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection4 
+2019-08-20 19:05:29,337 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:05:29,337 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:05:29,338 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:05:29,338 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:05:29,340 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:05:29,340 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:05:29,340 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-20 19:05:29,705 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 19:05:29,705 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 19:05:29,708 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection4 
+2019-08-20 19:05:29,708 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection3 
+2019-08-20 19:05:29,709 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection3 
+2019-08-20 19:05:29,709 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection4 
+2019-08-20 19:05:29,710 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 19:05:29,710 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 19:05:29,710 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 19:05:29,710 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 19:05:29,711 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 19:05:29,711 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 19:05:29,711 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-20 19:05:29,914 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-20 19:05:29,914 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-20 19:05:29,916 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection4 
+2019-08-20 19:05:29,916 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection3 
+2019-08-20 19:05:29,917 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection3 
+2019-08-20 19:05:29,917 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection4 
+2019-08-20 19:05:29,917 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-20 19:05:29,918 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-20 19:05:29,918 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-20 19:05:29,918 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-20 19:05:29,920 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-20 19:05:29,920 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-20 19:05:29,920 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-20 19:05:30,292 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:30,292 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:30,293 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:05:30,293 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:05:30,294 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:05:30,294 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:05:30,294 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:30,295 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:30,295 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:05:30,295 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:05:30,296 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:05:30,297 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:05:30,297 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-20 19:05:30,700 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:05:30,700 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:05:30,701 INFO a.m.r.Repository [http-nio-8081-exec-9] Fail connect to database 
+2019-08-20 19:05:30,704 ERROR a.m.r.Repository [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: ��������� �����������: "((COUNT >= 0)
+    AND (COUNT <= 10))"
+Check constraint violation: "((COUNT >= 0)
+    AND (COUNT <= 10))"; SQL statement:
+update PRODUCTS_ORDERS PR
+set PR.COUNT = PR.COUNT+1
+where exists
+(select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?) [23513-199] 
+2019-08-20 19:05:30,704 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:05:30,704 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:05:30,704 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:05:30,705 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:05:30,710 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:05:30,710 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:05:30,710 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-20 19:05:31,120 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:05:31,120 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:05:31,124 INFO a.m.r.Repository [http-nio-8081-exec-10] Fail connect to database 
+2019-08-20 19:05:31,124 ERROR a.m.r.Repository [http-nio-8081-exec-10] org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: ��������� �����������: "((COUNT >= 0)
+    AND (COUNT <= 10))"
+Check constraint violation: "((COUNT >= 0)
+    AND (COUNT <= 10))"; SQL statement:
+update PRODUCTS_ORDERS PR
+set PR.COUNT = PR.COUNT+1
+where exists
+(select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?) [23513-199] 
+2019-08-20 19:05:31,125 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:05:31,125 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:05:31,125 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:05:31,125 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:05:31,128 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:05:31,128 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:05:31,129 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-20 19:06:07,568 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:06:07,568 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:06:07,571 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection4 
+2019-08-20 19:06:07,571 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection3 
+2019-08-20 19:06:07,572 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection3 
+2019-08-20 19:06:07,572 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection4 
+2019-08-20 19:06:07,572 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:06:07,572 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:06:07,572 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:06:07,572 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:06:07,573 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:06:07,573 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:06:07,573 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-20 19:06:08,099 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:06:08,100 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:06:08,101 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection4 
+2019-08-20 19:06:08,102 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection3 
+2019-08-20 19:06:08,102 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection3 
+2019-08-20 19:06:08,102 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection4 
+2019-08-20 19:06:08,102 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:06:08,102 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:06:08,102 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:06:08,102 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:06:08,103 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:06:08,103 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:06:08,103 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-20 19:07:52,560 INFO a.s.p.LangServlet [http-nio-8081-exec-5] selected ru language 
+2019-08-20 19:07:54,667 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-20 19:07:54,675 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-08-20 19:07:55,160 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 19:07:55,162 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 19:07:55,163 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 19:07:55,164 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 19:07:55,166 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-20 19:07:55,166 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-08-20 19:07:55,166 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:07:55,166 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:07:55,286 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:07:55,287 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:07:55,287 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:07:55,287 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:07:55,288 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:07:55,288 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:07:55,288 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:07:55,288 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:07:55,289 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:07:55,290 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:07:55,291 INFO a.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-20 19:07:55,301 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:07:55,302 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:07:55,305 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:07:55,305 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:07:55,305 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-20 19:07:57,975 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:07:57,975 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:07:57,976 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:07:57,976 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:07:57,976 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has added product to his basket 
+2019-08-20 19:07:57,977 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:07:57,977 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:07:57,989 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 19:07:57,989 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 19:07:57,993 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 19:07:57,993 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 19:07:57,993 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:07:57,993 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:07:57,994 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:07:57,994 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:07:57,995 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:07:57,995 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:07:57,995 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-08-20 19:07:58,667 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:07:58,667 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:07:58,669 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:07:58,669 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:07:58,670 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:07:58,670 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:07:58,672 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:07:58,672 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:07:58,672 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-20 19:08:00,924 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:08:00,925 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:08:00,927 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection4 
+2019-08-20 19:08:00,927 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection3 
+2019-08-20 19:08:00,928 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection3 
+2019-08-20 19:08:00,928 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection4 
+2019-08-20 19:08:00,928 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection4 
+2019-08-20 19:08:00,928 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection3 
+2019-08-20 19:08:00,929 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection3 
+2019-08-20 19:08:00,929 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection4 
+2019-08-20 19:08:00,929 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection4 
+2019-08-20 19:08:00,929 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection3 
+2019-08-20 19:08:00,931 INFO a.m.r.Repository [http-nio-8081-exec-3] User=2 delete 66 from his basket 
+2019-08-20 19:08:00,931 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection3 
+2019-08-20 19:08:00,931 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection4 
+2019-08-20 19:08:00,931 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:08:00,931 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:08:00,931 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:08:00,931 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:08:00,932 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:08:00,932 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:08:00,932 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:08:00,932 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:08:00,933 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:08:00,933 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:08:00,933 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-20 19:08:02,285 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:08:02,286 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:08:02,288 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection4 
+2019-08-20 19:08:02,288 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection3 
+2019-08-20 19:08:02,289 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection3 
+2019-08-20 19:08:02,290 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection4 
+2019-08-20 19:08:02,290 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:08:02,290 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:08:02,290 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:08:02,290 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:08:02,291 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:08:02,291 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:08:02,291 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:08:02,291 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:08:02,292 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:08:02,293 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:08:02,293 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-20 19:08:03,348 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 19:08:03,348 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 19:08:03,351 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection4 
+2019-08-20 19:08:03,351 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection3 
+2019-08-20 19:08:03,352 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection3 
+2019-08-20 19:08:03,352 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection4 
+2019-08-20 19:08:03,352 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 19:08:03,352 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 19:08:03,352 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 19:08:03,352 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 19:08:03,353 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 19:08:03,353 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 19:08:03,353 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 19:08:03,353 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 19:08:03,356 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 19:08:03,356 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 19:08:03,356 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-7] User=2requests his basket list 
+2019-08-20 19:08:03,797 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:08:03,797 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:08:03,799 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection4 
+2019-08-20 19:08:03,800 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection3 
+2019-08-20 19:08:03,801 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection3 
+2019-08-20 19:08:03,801 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection4 
+2019-08-20 19:08:03,801 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:08:03,801 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:08:03,802 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:08:03,802 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:08:03,802 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:08:03,802 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:08:03,802 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:08:03,803 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:08:03,804 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:08:03,804 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:08:03,804 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-20 19:08:03,960 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:08:03,960 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:08:03,961 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection4 
+2019-08-20 19:08:03,962 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection3 
+2019-08-20 19:08:03,962 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection3 
+2019-08-20 19:08:03,962 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection4 
+2019-08-20 19:08:03,963 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:08:03,963 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:08:03,963 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:08:03,963 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:08:03,963 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:08:03,963 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:08:03,963 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:08:03,963 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:08:03,965 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:08:03,965 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:08:03,966 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-08-20 19:08:04,324 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:04,324 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:04,325 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:08:04,326 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:08:04,326 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:08:04,327 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:08:04,329 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:04,329 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:04,329 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:04,329 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:04,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:04,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:04,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:04,330 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:04,331 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:04,332 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:04,332 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-20 19:08:04,659 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:08:04,659 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:08:04,661 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection4 
+2019-08-20 19:08:04,661 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection3 
+2019-08-20 19:08:04,662 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection3 
+2019-08-20 19:08:04,662 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection4 
+2019-08-20 19:08:04,662 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:08:04,662 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:08:04,662 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:08:04,662 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:08:04,663 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:08:04,663 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:08:04,663 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:08:04,663 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:08:04,664 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:08:04,664 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:08:04,664 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-20 19:08:05,034 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:08:05,034 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:08:05,037 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection4 
+2019-08-20 19:08:05,037 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection3 
+2019-08-20 19:08:05,038 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection3 
+2019-08-20 19:08:05,038 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection4 
+2019-08-20 19:08:05,038 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:08:05,038 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:08:05,038 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:08:05,038 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:08:05,039 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:08:05,039 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:08:05,039 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:08:05,039 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:08:05,040 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:08:05,040 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:08:05,040 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-2] User=2requests his basket list 
+2019-08-20 19:08:05,405 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:08:05,405 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:08:05,409 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection4 
+2019-08-20 19:08:05,409 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection3 
+2019-08-20 19:08:05,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection3 
+2019-08-20 19:08:05,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection4 
+2019-08-20 19:08:05,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:08:05,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:08:05,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:08:05,410 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:08:05,411 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:08:05,411 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:08:05,411 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:08:05,412 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:08:05,413 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:08:05,413 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:08:05,413 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-20 19:08:05,805 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:08:05,805 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:08:05,806 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection4 
+2019-08-20 19:08:05,807 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection3 
+2019-08-20 19:08:05,807 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection3 
+2019-08-20 19:08:05,807 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection4 
+2019-08-20 19:08:05,807 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:08:05,807 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:08:05,807 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:08:05,808 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:08:05,808 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:08:05,808 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:08:05,808 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:08:05,808 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:08:05,809 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:08:05,809 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:08:05,809 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-20 19:08:06,790 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-20 19:08:06,790 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-20 19:08:06,792 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection4 
+2019-08-20 19:08:06,792 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection3 
+2019-08-20 19:08:06,792 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection3 
+2019-08-20 19:08:06,792 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection4 
+2019-08-20 19:08:06,793 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-20 19:08:06,793 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-20 19:08:06,793 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-20 19:08:06,793 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-20 19:08:06,793 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-20 19:08:06,793 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-20 19:08:06,793 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-20 19:08:06,793 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-20 19:08:06,796 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-20 19:08:06,796 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-20 19:08:06,797 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-20 19:08:07,354 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:08:07,354 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:08:07,356 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection4 
+2019-08-20 19:08:07,356 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection3 
+2019-08-20 19:08:07,357 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection3 
+2019-08-20 19:08:07,357 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection4 
+2019-08-20 19:08:07,357 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection4 
+2019-08-20 19:08:07,357 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection3 
+2019-08-20 19:08:07,358 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection3 
+2019-08-20 19:08:07,358 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection4 
+2019-08-20 19:08:07,358 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection4 
+2019-08-20 19:08:07,358 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection3 
+2019-08-20 19:08:07,359 INFO a.m.r.Repository [http-nio-8081-exec-5] User=2 delete 34 from his basket 
+2019-08-20 19:08:07,359 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection3 
+2019-08-20 19:08:07,359 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection4 
+2019-08-20 19:08:07,359 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:08:07,359 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:08:07,359 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:08:07,359 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:08:07,360 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:08:07,360 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:08:07,360 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:08:07,360 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:08:07,360 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:08:07,360 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:08:07,361 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-20 19:08:08,308 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 19:08:08,308 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 19:08:08,308 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 19:08:08,308 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 19:08:08,309 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-20 19:08:08,309 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-20 19:08:08,316 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection4 
+2019-08-20 19:08:08,316 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection3 
+2019-08-20 19:08:08,317 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection3 
+2019-08-20 19:08:08,317 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection4 
+2019-08-20 19:08:08,318 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection4 
+2019-08-20 19:08:08,318 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection3 
+2019-08-20 19:08:08,318 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection3 
+2019-08-20 19:08:08,318 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection4 
+2019-08-20 19:08:08,318 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-20 19:08:08,318 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-20 19:08:09,057 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:08:09,057 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:08:09,058 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:08:09,058 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:08:09,065 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-20 19:08:09,065 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-20 19:08:09,065 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-20 19:08:09,066 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-20 19:08:09,066 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-20 19:08:11,109 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,109 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,110 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,110 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,110 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has added product to his basket 
+2019-08-20 19:08:11,110 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,110 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,111 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:08:11,111 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:08:11,111 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:08:11,112 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:08:11,112 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:08:11,112 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:08:11,112 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:08:11,112 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:08:11,112 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:08:11,112 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:08:11,113 INFO a.m.r.Repository [http-nio-8081-exec-10] User=2 delete 34 from his basket 
+2019-08-20 19:08:11,113 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:08:11,113 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:08:11,113 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,113 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,113 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,113 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,113 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,114 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,114 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,114 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,115 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,116 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,116 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,116 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,116 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,116 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,116 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has added product to his basket 
+2019-08-20 19:08:11,116 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,116 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,117 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:08:11,117 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:08:11,117 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:08:11,117 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:08:11,118 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:08:11,118 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:08:11,118 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:08:11,118 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:08:11,118 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:08:11,118 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:08:11,118 INFO a.m.r.Repository [http-nio-8081-exec-10] User=2 delete 66 from his basket 
+2019-08-20 19:08:11,119 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:08:11,119 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:08:11,119 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,119 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,119 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,119 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,119 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,119 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,119 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,119 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,120 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,120 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,120 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,120 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,121 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,121 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,121 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has added product to his basket 
+2019-08-20 19:08:11,121 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,121 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,122 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:08:11,122 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:08:11,122 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:08:11,122 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:08:11,122 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:08:11,122 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:08:11,123 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:08:11,123 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:08:11,123 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection4 
+2019-08-20 19:08:11,123 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection3 
+2019-08-20 19:08:11,123 INFO a.m.r.Repository [http-nio-8081-exec-10] User=2 delete 626 from his basket 
+2019-08-20 19:08:11,123 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection3 
+2019-08-20 19:08:11,123 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection4 
+2019-08-20 19:08:11,123 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,123 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,123 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,123 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,124 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,124 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,124 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,124 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,125 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,125 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,125 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-20 19:08:11,125 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-20 19:08:11,125 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-20 19:08:11,125 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-20 19:08:11,125 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-20 19:08:11,721 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:08:11,722 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:08:11,725 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:08:11,725 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:08:11,725 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:08:11,725 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:08:11,726 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:08:11,726 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:08:11,726 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-20 19:09:46,705 INFO a.s.p.LangServlet [http-nio-8081-exec-5] selected ru language 
+2019-08-20 19:09:49,451 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-08-20 19:09:49,459 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] inside ConnectionPool constructor 
+2019-08-20 19:09:50,004 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] Connected to database 
+2019-08-20 19:09:50,006 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] Connected to database 
+2019-08-20 19:09:50,007 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] Connected to database 
+2019-08-20 19:09:50,008 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] Connected to database 
+2019-08-20 19:09:50,010 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] Connected to database 
+2019-08-20 19:09:50,010 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] total size of connection: 5 
+2019-08-20 19:09:50,010 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:09:50,010 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:09:50,137 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:09:50,137 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:09:50,137 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:09:50,137 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:09:50,138 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:09:50,138 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:09:50,139 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-20 19:09:50,139 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-20 19:09:50,139 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-20 19:09:50,139 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-20 19:09:50,140 INFO a.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-08-20 19:09:50,149 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-20 19:09:50,149 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-20 19:09:50,152 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-20 19:09:50,152 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-20 19:09:50,152 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-20 19:09:53,030 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:09:53,030 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:09:53,031 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:09:53,031 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:09:53,031 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has added product to his basket 
+2019-08-20 19:09:53,031 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:09:53,031 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:09:53,042 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection4 
+2019-08-20 19:09:53,042 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection3 
+2019-08-20 19:09:53,047 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection3 
+2019-08-20 19:09:53,047 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection4 
+2019-08-20 19:09:53,047 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:09:53,047 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:09:53,048 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:09:53,048 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:09:53,049 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:09:53,049 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:09:53,049 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has added product to his basket 
+2019-08-20 19:09:53,050 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:09:53,050 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:09:53,056 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection4 
+2019-08-20 19:09:53,056 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection3 
+2019-08-20 19:09:53,057 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection3 
+2019-08-20 19:09:53,057 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection4 
+2019-08-20 19:09:53,057 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:09:53,057 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:09:53,058 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-20 19:09:53,058 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-20 19:09:53,058 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-20 19:09:53,058 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-20 19:09:53,058 INFO a.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-20 19:09:53,501 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:09:53,501 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:09:53,502 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:09:53,502 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:09:53,502 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-20 19:09:53,502 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-20 19:09:53,504 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-20 19:09:53,504 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-20 19:09:53,504 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-20 19:09:54,812 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:09:54,812 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:09:54,814 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:09:54,815 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:09:54,815 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-20 19:09:54,815 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-20 19:09:54,900 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-20 19:09:54,900 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-20 19:09:54,900 INFO a.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2 makes order 
+2019-08-20 19:09:54,907 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:09:54,908 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:09:54,908 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:09:54,908 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-20 19:09:54,908 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-20 19:09:54,908 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-20 19:09:54,913 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection4 
+2019-08-20 19:09:54,913 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection3 
+2019-08-20 19:09:54,914 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection3 
+2019-08-20 19:09:54,914 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection4 
+2019-08-20 19:09:54,915 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection4 
+2019-08-20 19:09:54,915 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection3 
+2019-08-20 19:09:54,915 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection3 
+2019-08-20 19:09:54,915 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection4 
+2019-08-20 19:09:54,917 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection4 
+2019-08-20 19:09:54,917 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection3 
+2019-08-20 19:09:54,917 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection3 
+2019-08-20 19:09:54,917 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection4 
+2019-08-20 19:09:54,917 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-20 19:09:54,918 DEBUG a.m.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
