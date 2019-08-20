@@ -1,4 +1,4 @@
-package app.model.dao;
+package app.model.repository;
 
 import app.entities.products.Order;
 import app.entities.products.Product;
@@ -50,9 +50,7 @@ public class Repository {
     public synchronized void payOrder(int id) {
         //меняет статус заказа на Оплачено
         Connection connection = null;
-        String sql = "UPDATE ORDERS\n" +
-                "SET STATE = 'PAID'\n" +
-                "WHERE ORDER_ID = " + id;
+        String sql = "UPDATE ORDERS SET STATE = 'PAID' WHERE ID = " + id;
         try {
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -77,12 +75,12 @@ public class Repository {
         int orderId = 0;
         int count;
         try {
-            sql = "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
+            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                orderId = resultSet.getInt("ORDER_ID");
+                orderId = resultSet.getInt("ID");
             }
             sql = "SELECT * FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = " + productID + "AND ORDER_ID = " + orderId;
             preparedStatement = connection.prepareStatement(sql);
@@ -137,15 +135,15 @@ public class Repository {
     public synchronized void deleteFromBasket(User user, int productID) {
         //добавляет новый товар в кросс таблицу ORDERS_PRODUCTS
         Connection connection = null;
-        String sql = "";
+        String sql;
         int orderId = 0;
         try {
-            sql = "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + " AND STATE = 'NOT_ORDERED'";
+            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + " AND STATE = 'NOT_ORDERED'";
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                orderId = resultSet.getInt("ORDER_ID");
+                orderId = resultSet.getInt("ID");
                 System.out.println(orderId);
             }
             System.out.println(productID);
@@ -168,20 +166,20 @@ public class Repository {
     public synchronized List<Product> getBasket(User user) {
         //возвращает лист с продуктами пользователя который запросил
         Connection connection = null;
-        String sql = "";
+        String sql;
         int orderId = 0;
         List<Product> list = new ArrayList<>();
         try {
-            sql = "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
+            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                orderId = resultSet.getInt("ORDER_ID");
+                orderId = resultSet.getInt("ID");
             }
             sql = "SELECT * FROM PRODUCTS_ORDERS\n" +
                     "INNER JOIN PRODUCTS ON PRODUCTS.ID = PRODUCTS_ORDERS.PRODUCT_ID\n" +
-                    "INNER JOIN ORDERS ON ORDERS.ORDER_ID = PRODUCTS_ORDERS.ORDER_ID\n" +
+                    "INNER JOIN ORDERS ON ORDERS.ID = PRODUCTS_ORDERS.ORDER_ID\n" +
                     "where PRODUCTS_ORDERS.ORDER_ID = " + orderId;
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
@@ -203,22 +201,22 @@ public class Repository {
     public synchronized void makeOrder(User user) {
         //меняет статус корзины на статус заказа и создает новую пустую корзину
         Connection connection = null;
-        String sql = "";
+        String sql;
         int orderId = 0;
         try {
-            sql = "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
+            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                orderId = resultSet.getInt("ORDER_ID");
+                orderId = resultSet.getInt("ID");
             }
             LocalDate creationDate = LocalDate.now();
-            sql = "UPDATE ORDERS SET STATE = 'ORDERED', CREATEDAT=? WHERE ORDER_ID = " + orderId;
+            sql = "UPDATE ORDERS SET STATE = 'ORDERED', CREATEDAT=? WHERE ID = " + orderId;
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setObject(1, creationDate);
             preparedStatement.executeUpdate();
-            sql = "INSERT INTO ORDERS (CUSTOMERID, STATE) Values (?, 'NOT_ORDERED')";
+            sql = "INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?, 'NOT_ORDERED')";
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, user.getId());
             preparedStatement.executeUpdate();
@@ -237,26 +235,24 @@ public class Repository {
     public synchronized List<Order> getOrders(User user) {
         //здесь получаем список заказов, если юзер простой клиент он получает только свои заказы, если админ - все заказы
         Connection connection = null;
-        String sql = "";
-        int orderId = 0;
-        boolean isPaid = false;
+        String sql;
+        int orderId;
+        boolean isPaid;
         List<Order> list = new ArrayList<>();
         try {
-            sql = (!user.isAdministrator()) ? "SELECT * FROM ORDERS WHERE CUSTOMERID =" + user.getId() + "AND STATE = 'ORDERED' OR STATE = 'PAID'" :
+            sql = (!user.isAdministrator()) ? "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + "AND STATE = 'ORDERED' OR STATE = 'PAID'" :
                     "SELECT * FROM ORDERS WHERE STATE = 'ORDERED' OR STATE = 'PAID'";
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                orderId = resultSet.getInt("ORDER_ID");
+                orderId = resultSet.getInt("ID");
                 java.sql.Date dbSqlDate = resultSet.getDate("CREATEDAT");
-                int customerId = resultSet.getInt("CUSTOMERID");
-                if (resultSet.getString("STATE").equals("PAID")) {
-                    isPaid = true;
-                }
+                int customerId = resultSet.getInt("CUSTOMER_ID");
+                isPaid = resultSet.getString("STATE").equals("PAID");
                 String sqlProducts = "SELECT * FROM PRODUCTS_ORDERS\n" +
                         "INNER JOIN PRODUCTS ON PRODUCTS.ID = PRODUCTS_ORDERS.PRODUCT_ID\n" +
-                        "INNER JOIN ORDERS ON ORDERS.ORDER_ID = PRODUCTS_ORDERS.ORDER_ID\n" +
+                        "INNER JOIN ORDERS ON ORDERS.ID = PRODUCTS_ORDERS.ORDER_ID\n" +
                         "where PRODUCTS_ORDERS.ORDER_ID = " + orderId;
                 PreparedStatement preparedStatementProducts = connection.prepareStatement(sqlProducts);
                 ResultSet resultSetProducts = preparedStatementProducts.executeQuery();
@@ -291,13 +287,13 @@ public class Repository {
 
     public synchronized void deleteOrder(int id) {
         Connection connection = null;
-        String sql = "";
+        String sql;
         try {
             sql = "DELETE FROM PRODUCTS_ORDERS  WHERE ORDER_ID = " + id;
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
-            sql = "DELETE FROM ORDERS WHERE ORDER_ID = " + id;
+            sql = "DELETE FROM ORDERS WHERE ID = " + id;
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
             logger.info("product " + id + " has been deleted from order list");
@@ -317,8 +313,7 @@ public class Repository {
     public synchronized User getUser(int id) {
         Connection connection = null;
         //получаем юзера из базы данных по его айдишнику
-        String sql = "SELECT * FROM Users WHERE Id = ?";
-
+        String sql = "SELECT * FROM Users WHERE ID = ?";
         try {
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -331,8 +326,8 @@ public class Repository {
                 user.setNickname(resultSet.getString("NICKNAME"));
                 user.setPassword(resultSet.getString("PASSWORD"));
                 user.setName(resultSet.getString("NAME"));
-                user.setAdministrator(resultSet.getBoolean("ISADMIN"));
-                user.setInBlackList(resultSet.getBoolean("ISBLOCKED"));
+                user.setAdministrator(resultSet.getBoolean("IS_ADMIN"));
+                user.setInBlackList(resultSet.getBoolean("IS_BLOCKED"));
             }
             return user;
         } catch (Exception ex) {
@@ -356,9 +351,8 @@ public class Repository {
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
-
             resultSet.next();
-            return resultSet.getBoolean("ISBLOCKED");
+            return resultSet.getBoolean("IS_BLOCKED");
 
         } catch (Exception ex) {
             logger.error("Connection failed...");
@@ -388,7 +382,7 @@ public class Repository {
                 user.setNickname(resultSet.getString("NICKNAME"));
                 user.setPassword(resultSet.getString("PASSWORD"));
                 user.setName(resultSet.getString("NAME"));
-                user.setAdministrator(resultSet.getBoolean("ISADMIN"));
+                user.setAdministrator(resultSet.getBoolean("IS_ADMIN"));
             }
             return user;
         } catch (Exception ex) {
@@ -416,7 +410,7 @@ public class Repository {
             preparedStatement.setString(3, user.getName());
             preparedStatement.executeUpdate();
             logger.info("New User " + user.getNickname() + " has been added to database");
-            sql = "INSERT INTO ORDERS (CUSTOMERID, STATE) Values (?,'NOT_ORDERED')";
+            sql = "INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?,'NOT_ORDERED')";
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, user.getId());
             preparedStatement.executeUpdate();
@@ -464,7 +458,7 @@ public class Repository {
         //из списка пользователей получает только тех у кого столбец isblocked = true
         Connection connection = null;
         List<User> list = new ArrayList<>();
-        String sql = "SELECT * FROM USERS WHERE ISBLOCKED = TRUE";
+        String sql = "SELECT * FROM USERS WHERE IS_BLOCKED = TRUE";
         try {
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -480,7 +474,7 @@ public class Repository {
                 user.setPassword(password);
                 String name = resultSet.getString("NAME");
                 user.setName(name);
-                boolean isAdmin = resultSet.getBoolean("ISADMIN");
+                boolean isAdmin = resultSet.getBoolean("IS_ADMIN");
                 user.setAdministrator(isAdmin);
                 list.add(user);
             }
@@ -499,7 +493,7 @@ public class Repository {
 
     public synchronized void deleteFromBlackList(int id) {
         //удаляет из черного списка, то есть меняет значение isblocked на false
-        String sql = "UPDATE Users SET ISBLOCKED = FALSE WHERE id = " + id;
+        String sql = "UPDATE Users SET IS_BLOCKED = FALSE WHERE id = " + id;
         Connection connection = null;
         try {
             connection = connectionPool.getConnection();
@@ -520,8 +514,8 @@ public class Repository {
     }
 
     public synchronized void addUserToBlackList(User user) {
-        //добавляет в черный список, isblocked = true
-        String sql = "UPDATE Users SET ISBLOCKED = TRUE WHERE id = " + user.getId();
+        //добавляет в черный список, is_blocked = true
+        String sql = "UPDATE Users SET IS_BLOCKED = TRUE WHERE id = " + user.getId();
         Connection connection = null;
         try {
             connection = connectionPool.getConnection();

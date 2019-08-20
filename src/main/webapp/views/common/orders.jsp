@@ -2,7 +2,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" language="java" %>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="views/css/style.css" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/views/css/style.css"/>" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -95,17 +95,17 @@
                     ${bundle.getObject("orders.order")} ${order.getId()}, ${bundle.getObject("orders.creation")} ${order.getCreationDate()}
                     <table>
                         <tr>
-                            <th>${bundle.getObject("name")}</th>
-                            <th>${bundle.getObject("price")}</th>
-                            <th>${bundle.getObject("count")}</th>
+                            <td>${bundle.getObject("name")}</td>
+                            <td>${bundle.getObject("price")}</td>
+                            <td>${bundle.getObject("count")}</td>
                         </tr>
-                    <c:forEach var="product" items="${order.getProducts()}">
-                        <tr>
-                            <td>${product.getName()}</td>
-                            <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}</td>
-                            <td align="right">${product.getCount()}</td>
-                        </tr>
-                    </c:forEach>
+                        <c:forEach var="product" items="${order.getProducts()}">
+                            <tr>
+                                <td>${product.getName()}</td>
+                                <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}</td>
+                                <td align="right">${product.getCount()}</td>
+                            </tr>
+                        </c:forEach>
                     </table>
                     <br>
                     ${bundle.getObject("orders.total.price")} ${String.format("%.2f", (order.totalPrice()*bundle.getObject("exchange.rates")))} ${bundle.getObject("currency")}

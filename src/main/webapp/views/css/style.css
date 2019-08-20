@@ -25,12 +25,12 @@ div.ex2 {
 }
 i.normal {
     font-style: normal;
-    font-family: "Lucida Console";
+    font-family: "Lucida Console", serif;
     font-size: 20px;
 }
 i.normals {
     font-style: normal;
-    font-family: "Lucida Console";
+    font-family: "Lucida Console", serif;
     font-size: 30px;
 }
 .content {

@@ -1,4 +1,4 @@
-import app.model.dao.Repository;
+import app.model.repository.Repository;
 
 //import app.entities.products.Order;
 //import app.entities.user.User;

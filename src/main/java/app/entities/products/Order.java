@@ -90,7 +90,7 @@ public class Order {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for(Product product : products){
-            sb.append("<br>"+product.toString());
+            sb.append("<br>").append(product.toString());
         }
         String s ="";
         if(isPaid){
@@ -99,8 +99,6 @@ public class Order {
             s = "Неоплачено";
 
         }
-//        return "Заказ №"+ id +", создан " + " " +
-//                "<br> Товары:" + sb.toString()+"<br><br>Итоговая сумма - "+totalPrice()+" тенге.<br><br>"+s+"<br>";
         return "Заказ №"+ id +", создан " + creationDate.toString() +
                 "<br> Товары:" + sb.toString()+"<br><br>Итоговая сумма - "+totalPrice()+" тенге.<br><br>"+s+"<br>";
     }

@@ -2,7 +2,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" language="java" %>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="views/css/style.css" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/views/css/style.css"/>" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -57,16 +57,21 @@
         <form name="input" method="post">
             <c:if test="${products != null}">
             <p>${bundle.getObject("list.client.productlist")}</p>
-                <table>
-            <c:forEach var="product" items="${products}">
+            <table>
                 <tr>
-                    <td><input type="checkbox" name="productForBuy" value="${product.getId()}"></td>
-                    <td>${product.getName()}</td>
-                    <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))}</td>
-                    <td>${bundle.getObject("currency")}</td>
+                    <td></td>
+                    <td>${bundle.getObject("name")}</td>
+                    <td>${bundle.getObject("price")}</td>
                 </tr>
-            </c:forEach>
-                </table>
+                <c:forEach var="product" items="${products}">
+                    <tr>
+                        <td><input type="checkbox" name="productForBuy" value="${product.getId()}"></td>
+                        <td>${product.getName()}</td>
+                        <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))}</td>
+                        <td>${bundle.getObject("currency")}</td>
+                    </tr>
+                </c:forEach>
+            </table>
             <input class="w3-button w3-green " onclick="location.href='../../../../../web'" type="submit"
                    value=${bundle.getObject("add.to.the.basket")}>
             </c:if>
@@ -75,7 +80,4 @@
             </c:if>
     </div>
 </div>
-</div>
-</div>
-</body>
 </html>

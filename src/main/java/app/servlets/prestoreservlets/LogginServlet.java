@@ -1,7 +1,7 @@
 package app.servlets.prestoreservlets;
 
 import app.entities.user.User;
-import app.model.dao.Repository;
+import app.model.repository.Repository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

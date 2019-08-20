@@ -3,7 +3,7 @@
 <html lang="ru">
 <%--в хеде ничего интересного--%>
 <head>
-    <link rel="stylesheet" href="views/css/style.css" type="text/css">
+    <link rel="stylesheet" href="<c:url value="/views/css/style.css"/>" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -60,23 +60,33 @@
             <c:if test="${!basket.isEmpty()}">
                 <p>${bundle.getObject("basket.title")}</p>
                 <table>
-                <c:forEach var="product" items="${basket}">
-                    <td>
-                        <td><input type="checkbox" name="productForDelete" value=${product.getId()}></td>
-                        <td>${product.getName()}</td>
-                        <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))}</td>
-                        <td>${bundle.getObject("currency")}</td>
+                    <tr>
+                        <td></td>
+                        <td>${bundle.getObject("name")}</td>
+                        <td>${bundle.getObject("price")}</td>
+                        <td></td>
+                        <td></td>
                         <td>${bundle.getObject("count")}</td>
-                    <td><button class="w3-button w3-circle w3-deep-orange w3-hover-opacity-off btn-block"
-                            name="minus" type="submit" value=${product.getId()}>-
-                    </button>
-                    </td>
-                        <td>${product.getCount()}</td>
-                    <td><button class="w3-button w3-circle w3-light-green w3-hover-opacity-off btn-block"
-                            name="plus" type="submit" value=${product.getId()}>+
-                    </button></td>
                     </tr>
-                </c:forEach>
+                    <c:forEach var="product" items="${basket}">
+                        <tr>
+                            <td><input type="checkbox" name="productForDelete" value=${product.getId()}></td>
+                            <td>${product.getName()}</td>
+                            <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))}</td>
+                            <td>${bundle.getObject("currency")}</td>
+                            <td>
+                                <button class="w3-button w3-circle w3-deep-orange w3-hover-opacity-off btn-block"
+                                        name="minus" type="submit" value=${product.getId()}>-
+                                </button>
+                            </td>
+                            <td align="center">${product.getCount()}</td>
+                            <td>
+                                <button class="w3-button w3-circle w3-light-green w3-hover-opacity-off btn-block"
+                                        name="plus" type="submit" value=${product.getId()}>+
+                                </button>
+                            </td>
+                        </tr>
+                    </c:forEach>
                 </table>
                 <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit"
                        value=${bundle.getObject("delete")}>
@@ -95,8 +105,4 @@
         </form>
     </div>
 </div>
-</div>
-</div>
-</div>
-</body>
 </html>

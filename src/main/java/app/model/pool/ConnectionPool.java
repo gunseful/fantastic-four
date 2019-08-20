@@ -20,7 +20,7 @@ public class ConnectionPool {
     private static ConnectionPool connectionPool = new ConnectionPool();
 
     private ConnectionPool() {
-        logger.info("inside ConnectionPool constructor");
+        logger.debug("inside ConnectionPool constructor");
         queue = new ArrayBlockingQueue<>(MAX_SIZE);
         Properties properties = new Properties();
         try {
@@ -41,7 +41,7 @@ public class ConnectionPool {
                 logger.error(e);
             }
         }
-        logger.info("total size of connection: " + queue.size());
+        logger.debug("total size of connection: " + queue.size());
     }
 
     public static ConnectionPool getInstance() {
@@ -49,22 +49,22 @@ public class ConnectionPool {
     }
 
     public Connection getConnection() throws InterruptedException {
-        logger.info("size before getting connection" + queue.size());
+        logger.debug("size before getting connection" + queue.size());
         Connection connection = queue.take();
-        logger.info("size after getting connection" + queue.size());
+        logger.debug("size after getting connection" + queue.size());
         return (connection);
     }
 
     public void releaseConnection(Connection con) throws InterruptedException {
-        logger.info("size before releasing connection" + queue.size());
+        logger.debug("size before releasing connection" + queue.size());
         queue.put(con);
-        logger.info("size after releasing connection" + queue.size());
+        logger.debug("size after releasing connection" + queue.size());
     }
 
     private Connection makeConnection(Properties properties) throws SQLException {
         Connection connection;
         connection = DriverManager.getConnection(properties.getProperty("URL"), properties);
-        logger.info("Connected to database");
+        logger.debug("Connected to database");
         return connection;
     }
 }
