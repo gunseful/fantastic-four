@@ -1,19 +1,9 @@
 My Four step to be a Java Developer
 
-what's new in version 4.0
+what's new in version 5.0
 
-1. Добавил <packaging>war</packaging>
-2. Добавил логгер.  log4j2.xml в resources. Файлы логов в корне директории (fantasticFour)
-3. css вынес в отдельный файл  пакет - views.css
-4. Добавил локализацию. В пакете app.locale классы с локализацией. Реализация в app.servlets. prestoreservlets.LangServlet.
-5. Удалил класс Model, вместо него добавил model.pool.ConnectionPool и model.controller (где находится AbstractController и UserController)
-    в AbstractController'е происходит получение Connection'а из пула и создание PreparedStatement.
-    В UserController'е уже происходит реализация методов по работе с базой данных.
-6. Чуть изменено шифрование паролей по рекомендации AlexTuli
-7. Добавлены скрипты базы данных main/resourses/dbScripts.sql
-8. Изменена баланда со строкой из продуктов. Переработана база данных (теперь всего 3 таблицы)
-9. Проверка правильности логина и пароля упрощена
-10. И прочие мелкие изменения
+soon...
+
 
 
 Построить веб-систему, поддерживающую заданную функциональность:
