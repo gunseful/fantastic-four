@@ -68,7 +68,7 @@ public class Repository {
         }
     }
 
-    public synchronized int getBasketId(User user){
+    public synchronized int getBasketId(User user) {
         Connection connection = null;
         String sql;
         try {
@@ -79,10 +79,10 @@ public class Repository {
             ResultSet resultSet = preparedStatement.executeQuery();
             resultSet.next();
             return resultSet.getInt("ID");
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.error(e);
             return 0;
-        }finally {
+        } finally {
             try {
                 connectionPool.releaseConnection(connection);
             } catch (InterruptedException e) {
@@ -91,7 +91,7 @@ public class Repository {
         }
     }
 
-    public synchronized boolean addToBasket(User user, int productID){
+    public synchronized boolean addToBasket(User user, int productID) {
         //добавляет товар в корзину
         Connection connection = null;
         String sql;
@@ -104,10 +104,10 @@ public class Repository {
             preparedStatement.setInt(2, orderID);
             preparedStatement.executeUpdate();
             return true;
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.error(e);
             return false;
-        }finally {
+        } finally {
             try {
                 connectionPool.releaseConnection(connection);
             } catch (InterruptedException e) {
@@ -116,7 +116,7 @@ public class Repository {
         }
     }
 
-    public synchronized boolean checkCount(User user, int productId){
+    public synchronized boolean checkCount(User user, int productId) {
         Connection connection = null;
         String sql;
         try {
@@ -126,16 +126,16 @@ public class Repository {
             preparedStatement.setInt(1, productId);
             preparedStatement.setInt(2, user.getId());
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(!resultSet.next()){
+            if (!resultSet.next()) {
                 return false;
             }
             int count = resultSet.getInt("COUNT");
             System.out.println(count);
             return count != 0;
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.error(e);
             return false;
-        }finally {
+        } finally {
             try {
                 connectionPool.releaseConnection(connection);
             } catch (InterruptedException e) {
@@ -150,26 +150,26 @@ public class Repository {
         String sql;
         try {
             connection = connectionPool.getConnection();
-            if(add) {
+            if (add) {
                 sql = "update PRODUCTS_ORDERS PR\n" +
                         "set PR.COUNT = PR.COUNT+1\n" +
                         "where exists\n" +
                         "(select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?)";
-            }else {
+            } else {
                 sql = "update PRODUCTS_ORDERS PR\n" +
                         "set PR.COUNT = PR.COUNT-1\n" +
                         "where exists\n" +
                         "(select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?)";
             }
-                PreparedStatement preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.setInt(1,user.getId());
-                preparedStatement.setInt(2, productId);
-                preparedStatement.executeUpdate();
-                if(!checkCount(user,productId)){
-                    deleteFromBasket(user,productId);
-                    return false;
-                }
-                return true;
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, user.getId());
+            preparedStatement.setInt(2, productId);
+            preparedStatement.executeUpdate();
+            if (!checkCount(user, productId)) {
+                deleteFromBasket(user, productId);
+                return false;
+            }
+            return true;
         } catch (Exception ex) {
             logger.info("Fail connect to database");
             logger.error(ex);
@@ -270,29 +270,30 @@ public class Repository {
         //здесь получаем список заказов, если юзер простой клиент он получает только свои заказы, если админ - все заказы
         Connection connection = null;
         String sql;
-        int orderId;
+        int orderId = 0;
         boolean isPaid;
         List<Order> list = new ArrayList<>();
         try {
-            sql = (!user.isAdministrator()) ? "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + "AND STATE = 'ORDERED' OR STATE = 'PAID'" :
-                    "SELECT * FROM ORDERS WHERE STATE = 'ORDERED' OR STATE = 'PAID'";
+            sql = (!user.isAdministrator()) ? "SELECT * FROM PRODUCTS_ORDERS INNER JOIN PRODUCTS ON PRODUCTS.ID = PRODUCTS_ORDERS.PRODUCT_ID INNER JOIN ORDERS ON ORDERS.ID = PRODUCTS_ORDERS.ORDER_ID where ORDERS.CUSTOMER_ID=2 AND ORDERS.STATE = 'ORDERED' OR STATE ='PAID' " :
+                    "SELECT * FROM PRODUCTS_ORDERS INNER JOIN PRODUCTS ON PRODUCTS.ID = PRODUCTS_ORDERS.PRODUCT_ID INNER JOIN ORDERS ON ORDERS.ID = PRODUCTS_ORDERS.ORDER_ID where ORDERS.STATE = 'ORDERED' OR STATE ='PAID'";
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                orderId = resultSet.getInt("ID");
-                java.sql.Date dbSqlDate = resultSet.getDate("CREATEDAT");
-                int customerId = resultSet.getInt("CUSTOMER_ID");
-                isPaid = resultSet.getString("STATE").equals("PAID");
-                String sqlProducts = "SELECT * FROM PRODUCTS_ORDERS\n" +
-                        "INNER JOIN PRODUCTS ON PRODUCTS.ID = PRODUCTS_ORDERS.PRODUCT_ID\n" +
-                        "INNER JOIN ORDERS ON ORDERS.ID = PRODUCTS_ORDERS.ORDER_ID\n" +
-                        "where PRODUCTS_ORDERS.ORDER_ID = " + orderId;
-                PreparedStatement preparedStatementProducts = connection.prepareStatement(sqlProducts);
-                ResultSet resultSetProducts = preparedStatementProducts.executeQuery();
-                List<Product> products = new ArrayList<>();
-                getProducts(resultSetProducts, products);
-                list.add(new Order(orderId, dbSqlDate, products, isPaid, getUser(customerId)));
+                if (!containsOrder(list, resultSet.getInt("ORDER_ID"))) {
+                    System.out.println(resultSet.getInt("ORDER_ID"));
+                    orderId = resultSet.getInt("ORDER_ID");
+                    java.sql.Date dbSqlDate = resultSet.getDate("CREATEDAT");
+                    int customerId = resultSet.getInt("CUSTOMER_ID");
+                    isPaid = resultSet.getString("STATE").equals("PAID");
+                    List<Product> products = new ArrayList<>();
+                    list.add(new Order(orderId, dbSqlDate, products, isPaid, getUser(customerId)));
+                }
+                for (Order order : list) {
+                    if (resultSet.getInt("ORDER_ID") == orderId) {
+                        order.addProduct(new Product(resultSet.getInt("PRODUCT_ID"), resultSet.getString("NAME"), resultSet.getInt("PRICE"), resultSet.getInt("COUNT")));
+                    }
+                }
             }
             return list;
         } catch (Exception e) {
@@ -323,12 +324,11 @@ public class Repository {
         Connection connection = null;
         String sql;
         try {
-            sql = "DELETE FROM PRODUCTS_ORDERS  WHERE ORDER_ID = " + id;
+            sql = "SET REFERENTIAL_INTEGRITY FALSE; BEGIN TRANSACTION; DELETE FROM PRODUCTS_ORDERS  WHERE ORDER_ID = ?; DELETE FROM ORDERS WHERE ID = ?; COMMIT; SET REFERENTIAL_INTEGRITY TRUE;";
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.executeUpdate();
-            sql = "DELETE FROM ORDERS WHERE ID = " + id;
-            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,id);
+            preparedStatement.setInt(2,id);
             preparedStatement.executeUpdate();
             logger.info("product " + id + " has been deleted from order list");
         } catch (SQLException | InterruptedException e) {
@@ -608,5 +608,9 @@ public class Repository {
                 logger.error(e);
             }
         }
+    }
+
+    private synchronized boolean containsOrder(final List<Order> list, final int id) {
+        return list.stream().anyMatch(o -> o.getId() == id);
     }
 }
