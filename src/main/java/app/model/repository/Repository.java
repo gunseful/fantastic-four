@@ -68,55 +68,23 @@ public class Repository {
         }
     }
 
+    //todo handle creation of new item in the basket
     public synchronized boolean addToBasket(User user, int productID, boolean add) {
         //добавляет новый товар в кросс таблицу ORDERS_PRODUCTS
         Connection connection = null;
-        String sql;
-        int orderId = 0;
-        int count;
         try {
-            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID =" + user.getId() + "AND STATE = 'NOT_ORDERED'";
             connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                orderId = resultSet.getInt("ID");
-            }
-            sql = "SELECT * FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = " + productID + "AND ORDER_ID = " + orderId;
-            preparedStatement = connection.prepareStatement(sql);
-            resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                count = resultSet.getInt("COUNT");
-                if (add) {
-                    if (count < 10) {
-                        count++;
-                    }
-                } else {
-                    if (count > 1) {
-                        count--;
-                    }
-                }
-                sql = "UPDATE PRODUCTS_ORDERS SET COUNT = " + count + " WHERE PRODUCT_ID = " + productID + "AND ORDER_ID = " + orderId;
-                preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.executeUpdate();
+            String rightSql2;
+            if (add) {
+                rightSql2 = "UPDATE PRODUCTS_ORDERS pr SET pr.COUNT = pr.COUNT + 1 INNER JOIN ORDERS o ON pr.ORDER_ID = o.ID WHERE o.CUSTOMER_ID = ? AND pr.PRODUCT_ID = ?";
             } else {
-                sql = "SELECT * FROM PRODUCTS_ORDERS WHERE ORDER_ID = " + orderId;
-                preparedStatement = connection.prepareStatement(sql);
-                resultSet = preparedStatement.executeQuery();
-                int size = 0;
-                if (resultSet != null) {
-                    resultSet.last();
-                    size = resultSet.getRow();
-                }
-                if (size >= 10) {
-                    return false;
-                }
-                sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID) Values (?, ?)";
-                preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.setInt(1, productID);
-                preparedStatement.setInt(2, orderId);
-                preparedStatement.executeUpdate();
+                rightSql2 = "UPDATE PRODUCTS_ORDERS pr SET pr.COUNT = pr.COUNT - 1 INNER JOIN ORDERS o ON pr.ORDER_ID = o.ID WHERE o.CUSTOMER_ID = ? AND pr.PRODUCT_ID = ?";
             }
+            final PreparedStatement prepareStatement = connection.prepareStatement(rightSql2);
+            prepareStatement.setInt(1, user.getId());
+            prepareStatement.setInt(2, productID);
+            prepareStatement.executeUpdate();
+
             logger.info("User=" + user.getNickname() + " added " + productID + " product to his basket");
             return true;
         } catch (Exception ex) {
