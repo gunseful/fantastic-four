@@ -74,8 +74,17 @@ public class Repository {
         String sql;
         try {
             connection = connectionPool.getConnection();
-            sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID , ORDER_ID ) VALUES(?, (SELECT ID FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE = 'NOT_ORDERED'))";
+            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID = " + user.getId() + " AND STATE = 'NOT_ORDERED'";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (!resultSet.next()) {
+                sql = "INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?, 'NOT_ORDERED')";
+                preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setInt(1, user.getId());
+                preparedStatement.executeUpdate();
+            }
+            sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID , ORDER_ID ) VALUES(?, (SELECT ID FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE = 'NOT_ORDERED'))";
+            preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, productID);
             preparedStatement.setInt(2, user.getId());
             preparedStatement.executeUpdate();
@@ -166,8 +175,8 @@ public class Repository {
             sql = "DELETE FROM PRODUCTS_ORDERS WHERE PRODUCTS_ORDERS.ORDER_ID IN (SELECT ORDERS.ID FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE='NOT_ORDERED') AND PRODUCT_ID = ?";
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,user.getId());
-            preparedStatement.setInt(2,productID);
+            preparedStatement.setInt(1, user.getId());
+            preparedStatement.setInt(2, productID);
             preparedStatement.executeUpdate();
             logger.info("User=" + user.getNickname() + " delete " + productID + " from his basket");
         } catch (Exception ex) {
@@ -189,7 +198,7 @@ public class Repository {
         List<Product> list = new ArrayList<>();
         try {
             connection = connectionPool.getConnection();
-            sql = "SELECT * FROM PRODUCTS_ORDERS INNER JOIN PRODUCTS ON PRODUCTS.ID = PRODUCTS_ORDERS.PRODUCT_ID INNER JOIN ORDERS ON ORDERS.ID = PRODUCTS_ORDERS.ORDER_ID where ORDERS.STATE  = 'NOT_ORDERED' AND  ORDERS .CUSTOMER_ID ="+user.getId();
+            sql = "SELECT * FROM PRODUCTS_ORDERS INNER JOIN PRODUCTS ON PRODUCTS.ID = PRODUCTS_ORDERS.PRODUCT_ID INNER JOIN ORDERS ON ORDERS.ID = PRODUCTS_ORDERS.ORDER_ID where ORDERS.STATE  = 'NOT_ORDERED' AND  ORDERS .CUSTOMER_ID =" + user.getId();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -224,10 +233,6 @@ public class Repository {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setObject(1, creationDate);
             preparedStatement.setObject(2, user.getId());
-            preparedStatement.executeUpdate();
-            sql = "INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?, 'NOT_ORDERED')";
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, user.getId());
             preparedStatement.executeUpdate();
         } catch (Exception ex) {
             logger.info("Fail connect to database");
@@ -286,14 +291,21 @@ public class Repository {
 
     public synchronized void deleteOrder(int id) {
         Connection connection = null;
-        String sql;
+        String sqlOrders;
+        String sqlProductOrders;
         try {
-            sql = "SET REFERENTIAL_INTEGRITY FALSE; BEGIN TRANSACTION; DELETE FROM PRODUCTS_ORDERS  WHERE ORDER_ID = ?; DELETE FROM ORDERS WHERE ID = ?; COMMIT; SET REFERENTIAL_INTEGRITY TRUE;";
             connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,id);
-            preparedStatement.setInt(2,id);
-            preparedStatement.executeUpdate();
+            connection.setAutoCommit(false);
+            sqlProductOrders = "DELETE FROM PRODUCTS_ORDERS  WHERE ORDER_ID = ?";
+            PreparedStatement preparedStatementPr = connection.prepareStatement(sqlProductOrders);
+            preparedStatementPr.setInt(1, id);
+            preparedStatementPr.executeUpdate();
+            sqlOrders =  "DELETE FROM ORDERS WHERE ID = ?";
+            PreparedStatement preparedStatementO = connection.prepareStatement(sqlOrders);
+            preparedStatementO.setInt(1, id);
+            preparedStatementO.executeUpdate();
+            connection.commit();
+            connection.setAutoCommit(true);
             logger.info("product " + id + " has been deleted from order list");
         } catch (SQLException | InterruptedException e) {
             logger.info("Fail connect to database");
@@ -408,12 +420,9 @@ public class Repository {
             preparedStatement.setString(3, user.getName());
             preparedStatement.executeUpdate();
             logger.info("New User " + user.getNickname() + " has been added to database");
-            sql = "INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?,'NOT_ORDERED')";
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, user.getId());
-            preparedStatement.executeUpdate();
             return true;
         } catch (Exception ex) {
+            System.out.println("registred fail");
             logger.info("Fail connect to database");
             logger.error(ex);
             return false;
@@ -536,8 +545,8 @@ public class Repository {
         Connection connection = null;
         try {
             connection = connectionPool.getConnection();
-            PreparedStatement ps = connection.prepareStatement("DELETE FROM PRODUCTS WHERE Id = " + id);
-            ps.executeUpdate();
+            PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM PRODUCTS WHERE Id = " + id);
+            preparedStatement.executeUpdate();
             logger.info("product " + id + " has been deleted from product list");
         } catch (SQLException | InterruptedException e) {
             logger.error("Fail connect to database");
