@@ -68,40 +68,16 @@ public class Repository {
         }
     }
 
-    public synchronized int getBasketId(User user) {
-        Connection connection = null;
-        String sql;
-        try {
-            connection = connectionPool.getConnection();
-            sql = "SELECT * FROM ORDERS WHERE CUSTOMER_ID = ? and STATE = 'NOT_ORDERED'";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, user.getId());
-            ResultSet resultSet = preparedStatement.executeQuery();
-            resultSet.next();
-            return resultSet.getInt("ID");
-        } catch (Exception e) {
-            logger.error(e);
-            return 0;
-        } finally {
-            try {
-                connectionPool.releaseConnection(connection);
-            } catch (InterruptedException e) {
-                logger.error(e);
-            }
-        }
-    }
-
     public synchronized boolean addToBasket(User user, int productID) {
         //добавляет товар в корзину
         Connection connection = null;
         String sql;
         try {
-            int orderID = getBasketId(user);
             connection = connectionPool.getConnection();
-            sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID) Values (?, ?)";
+            sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID , ORDER_ID ) VALUES(?, (SELECT ID FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE = 'NOT_ORDERED'))";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, productID);
-            preparedStatement.setInt(2, orderID);
+            preparedStatement.setInt(2, user.getId());
             preparedStatement.executeUpdate();
             return true;
         } catch (Exception e) {
@@ -116,12 +92,12 @@ public class Repository {
         }
     }
 
-    public synchronized boolean checkCount(User user, int productId) {
-        Connection connection = null;
+    private synchronized boolean checkCount(User user, int productId) {
         String sql;
+        Connection connection = null;
         try {
             connection = connectionPool.getConnection();
-            sql = "SELECT * FROM PRODUCTS_ORDERS inner join orders on PRODUCTS_ORDERS.ORDER_ID = ORDERS.ID where PRODUCTS_ORDERS.PRODUCT_ID = ? and  ORDERS.CUSTOMER_ID = ?";
+            sql = "SELECT * FROM PRODUCTS_ORDERS inner join orders on PRODUCTS_ORDERS.ORDER_ID = ORDERS.ID where PRODUCTS_ORDERS.PRODUCT_ID = ? AND ORDERS.CUSTOMER_ID = ? AND ORDERS.STATE = 'NOT_ORDERED'";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, productId);
             preparedStatement.setInt(2, user.getId());
@@ -130,7 +106,6 @@ public class Repository {
                 return false;
             }
             int count = resultSet.getInt("COUNT");
-            System.out.println(count);
             return count != 0;
         } catch (Exception e) {
             logger.error(e);
@@ -187,12 +162,12 @@ public class Repository {
         //добавляет новый товар в кросс таблицу ORDERS_PRODUCTS
         Connection connection = null;
         String sql;
-        int orderId;
         try {
-            orderId = getBasketId(user);
-            sql = "DELETE FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = " + productID + " AND ORDER_ID = " + orderId;
+            sql = "DELETE FROM PRODUCTS_ORDERS WHERE PRODUCTS_ORDERS.ORDER_ID IN (SELECT ORDERS.ID FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE='NOT_ORDERED') AND PRODUCT_ID = ?";
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,user.getId());
+            preparedStatement.setInt(2,productID);
             preparedStatement.executeUpdate();
             logger.info("User=" + user.getNickname() + " delete " + productID + " from his basket");
         } catch (Exception ex) {
@@ -211,18 +186,19 @@ public class Repository {
         //возвращает лист с продуктами пользователя который запросил
         Connection connection = null;
         String sql;
-        int orderId = 0;
         List<Product> list = new ArrayList<>();
         try {
-            orderId = getBasketId(user);
             connection = connectionPool.getConnection();
-            sql = "SELECT * FROM PRODUCTS_ORDERS\n" +
-                    "INNER JOIN PRODUCTS ON PRODUCTS.ID = PRODUCTS_ORDERS.PRODUCT_ID\n" +
-                    "INNER JOIN ORDERS ON ORDERS.ID = PRODUCTS_ORDERS.ORDER_ID\n" +
-                    "where PRODUCTS_ORDERS.ORDER_ID = " + orderId;
+            sql = "SELECT * FROM PRODUCTS_ORDERS INNER JOIN PRODUCTS ON PRODUCTS.ID = PRODUCTS_ORDERS.PRODUCT_ID INNER JOIN ORDERS ON ORDERS.ID = PRODUCTS_ORDERS.ORDER_ID where ORDERS.STATE  = 'NOT_ORDERED' AND  ORDERS .CUSTOMER_ID ="+user.getId();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
-            getProducts(resultSet, list);
+            while (resultSet.next()) {
+                String name = resultSet.getString("NAME");
+                int price = resultSet.getInt("PRICE");
+                int id = resultSet.getInt("ID");
+                int count = resultSet.getInt("COUNT");
+                list.add(new Product(id, name, price, count));
+            }
             return list;
         } catch (Exception ex) {
             logger.info("Fail connect to database");
@@ -241,14 +217,13 @@ public class Repository {
         //меняет статус корзины на статус заказа и создает новую пустую корзину
         Connection connection = null;
         String sql;
-        int orderId;
         try {
-            orderId = getBasketId(user);
             connection = connectionPool.getConnection();
             LocalDate creationDate = LocalDate.now();
-            sql = "UPDATE ORDERS SET STATE = 'ORDERED', CREATEDAT=? WHERE ID = " + orderId;
+            sql = "UPDATE ORDERS SET STATE = 'ORDERED', CREATEDAT=? WHERE CUSTOMER_ID = ? AND STATE = 'NOT_ORDERED'";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setObject(1, creationDate);
+            preparedStatement.setObject(2, user.getId());
             preparedStatement.executeUpdate();
             sql = "INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?, 'NOT_ORDERED')";
             preparedStatement = connection.prepareStatement(sql);
@@ -281,7 +256,6 @@ public class Repository {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 if (!containsOrder(list, resultSet.getInt("ORDER_ID"))) {
-                    System.out.println(resultSet.getInt("ORDER_ID"));
                     orderId = resultSet.getInt("ORDER_ID");
                     java.sql.Date dbSqlDate = resultSet.getDate("CREATEDAT");
                     int customerId = resultSet.getInt("CUSTOMER_ID");
@@ -308,16 +282,6 @@ public class Repository {
             }
         }
         return list;
-    }
-
-    private void getProducts(ResultSet resultSetProducts, List<Product> products) throws SQLException {
-        while (resultSetProducts.next()) {
-            String name = resultSetProducts.getString("NAME");
-            int price = resultSetProducts.getInt("PRICE");
-            int id = resultSetProducts.getInt("ID");
-            int count = resultSetProducts.getInt("COUNT");
-            products.add(new Product(id, name, price, count));
-        }
     }
 
     public synchronized void deleteOrder(int id) {
@@ -536,7 +500,6 @@ public class Repository {
             logger.info("user " + id + " has been deleted from black list");
         } catch (SQLException | InterruptedException e) {
             logger.info("Fail connect to database");
-            System.out.println("Connection failed...");
             logger.error(e);
         } finally {
             try {
