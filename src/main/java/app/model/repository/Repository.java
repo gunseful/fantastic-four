@@ -128,24 +128,17 @@ public class Repository {
         }
     }
 
+    private String addOrDelete(boolean add){
+        return (add) ?  "update PRODUCTS_ORDERS PR set PR.COUNT = PR.COUNT+1 where exists (select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?)"
+                : "update PRODUCTS_ORDERS PR set PR.COUNT = PR.COUNT-1 where exists (select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?)";
+    }
+
     public synchronized boolean updateBasket(User user, int productId, boolean add) {
         //если товар уже есть в корзине увеличивает или уменьшает количество на 1
         Connection connection = null;
-        String sql;
         try {
             connection = connectionPool.getConnection();
-            if (add) {
-                sql = "update PRODUCTS_ORDERS PR\n" +
-                        "set PR.COUNT = PR.COUNT+1\n" +
-                        "where exists\n" +
-                        "(select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?)";
-            } else {
-                sql = "update PRODUCTS_ORDERS PR\n" +
-                        "set PR.COUNT = PR.COUNT-1\n" +
-                        "where exists\n" +
-                        "(select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?)";
-            }
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(addOrDelete(add));
             preparedStatement.setInt(1, user.getId());
             preparedStatement.setInt(2, productId);
             preparedStatement.executeUpdate();
