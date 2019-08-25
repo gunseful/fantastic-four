@@ -78,7 +78,6 @@ public class BasketServlet extends HttpServlet {
             if (req.getParameterValues("productForDelete") != null) {
                 String[] productsID = req.getParameterValues("productForDelete");
                 for (String productID : productsID) {
-                    System.out.println(productID);
                     logger.info("User=" + user.getNickname() + " delete product from his basket");
                     controller.deleteFromBasket(user, Integer.parseInt(productID.trim()));
                     doGet(req, resp);

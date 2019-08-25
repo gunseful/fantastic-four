@@ -21,6 +21,87 @@ public class Repository {
     public static Logger logger = LogManager.getLogger();
     private ConnectionPool connectionPool = ConnectionPool.getInstance();
 
+
+    private synchronized void updateSql(String sql) {
+        Connection connection = null;
+        try {
+            connection = connectionPool.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.executeUpdate();
+        } catch (SQLException | InterruptedException e) {
+            logger.info("Fail connect to database");
+            logger.error(e);
+        } finally {
+            try {
+                connectionPool.releaseConnection(connection);
+            } catch (InterruptedException e) {
+                logger.error(e);
+            }
+        }
+    }
+
+    public synchronized void add(Product product) {
+        updateSql("INSERT INTO PRODUCTS (Name, Price) Values ('" + product.getName() + "', '" + product.getPrice() + "')");
+        logger.info("product " + product.getName() + " has been added to product list");
+    }
+
+    public synchronized void deleteProduct(String id) {
+        updateSql("DELETE FROM PRODUCTS WHERE Id = " + id);
+        logger.info("product " + id + " has been deleted from product list");
+    }
+
+    public synchronized void addUserToBlackList(User user) {
+        //добавляет в черный список, is_blocked = true
+        updateSql("UPDATE Users SET IS_BLOCKED = TRUE WHERE id = " + user.getId());
+        logger.info("User= " + user.getNickname() + " was added to blacklist");
+    }
+
+    public synchronized void deleteFromBlackList(int id) {
+        //удаляет из черного списка, то есть меняет значение isblocked на false
+        updateSql("UPDATE Users SET IS_BLOCKED = FALSE WHERE id = " + id);
+        logger.info("user " + id + " has been deleted from black list");
+    }
+
+    public synchronized void payOrder(int id) {
+        //меняет статус заказа на Оплачено
+        updateSql("UPDATE ORDERS SET STATE = 'PAID' WHERE ID = " + id);
+        logger.info("product " + id + " has been deleted from basket list");
+    }
+
+    public synchronized void deleteFromBasket(User user, int productID) {
+        //добавляет новый товар в кросс таблицу ORDERS_PRODUCTS
+        updateSql("DELETE FROM PRODUCTS_ORDERS WHERE PRODUCTS_ORDERS.ORDER_ID IN (SELECT ORDERS.ID FROM ORDERS WHERE CUSTOMER_ID = " + user.getId() + " AND STATE='NOT_ORDERED') AND PRODUCT_ID = " + productID + "");
+        logger.info("User=" + user.getNickname() + " delete " + productID + " from his basket");
+    }
+
+    private synchronized String addOrDelete(boolean add, int userId, int produtctId) {
+        return (add) ? "update PRODUCTS_ORDERS PR set PR.COUNT = PR.COUNT+1 where exists (select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = " + userId + " AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=" + produtctId + ")"
+                : "update PRODUCTS_ORDERS PR set PR.COUNT = PR.COUNT-1 where exists (select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = " + userId + " AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=" + produtctId + ")";
+    }
+
+    public synchronized boolean updateBasket(User user, int productId, boolean add) {
+        //если товар уже есть в корзине увеличивает или уменьшает количество на 1
+        updateSql((addOrDelete(add, user.getId(), productId)));
+        if (!checkCount(user, productId)) {
+            deleteFromBasket(user, productId);
+            return false;
+        }
+        return true;
+    }
+
+    public synchronized boolean addNewUser(User user) {
+        String password = Encrypt.encrypt(user.getPassword(), "secret key");
+        updateSql("INSERT INTO Users (Nickname, Password, Name) Values ('" + user.getNickname() + "', '" + password + "', '" + user.getName() + "')");
+        logger.info("New User " + user.getNickname() + " has been added to database");
+        return true;
+    }
+
+
+
+
+
+
+
     public synchronized List<Product> getList() {
 
         List<Product> list = new ArrayList<>();
@@ -47,26 +128,7 @@ public class Repository {
         return list;
     }
 
-    public synchronized void payOrder(int id) {
-        //меняет статус заказа на Оплачено
-        Connection connection = null;
-        String sql = "UPDATE ORDERS SET STATE = 'PAID' WHERE ID = " + id;
-        try {
-            connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.executeUpdate();
-            logger.info("product " + id + " has been deleted from basket list");
-        } catch (SQLException | InterruptedException e) {
-            logger.info("Fail connect to database");
-            logger.error(e);
-        } finally {
-            try {
-                connectionPool.releaseConnection(connection);
-            } catch (InterruptedException e) {
-                logger.error(e);
-            }
-        }
-    }
+
 
     public synchronized boolean addToBasket(User user, int productID) {
         //добавляет товар в корзину
@@ -83,10 +145,8 @@ public class Repository {
                 preparedStatement.setInt(1, user.getId());
                 preparedStatement.executeUpdate();
             }
-            sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID , ORDER_ID ) VALUES(?, (SELECT ID FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE = 'NOT_ORDERED'))";
+            sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID , ORDER_ID ) VALUES(" + productID + ", (SELECT ID FROM ORDERS WHERE CUSTOMER_ID = " + user.getId() + " AND STATE = 'NOT_ORDERED'))";
             preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, productID);
-            preparedStatement.setInt(2, user.getId());
             preparedStatement.executeUpdate();
             return true;
         } catch (Exception e) {
@@ -128,61 +188,9 @@ public class Repository {
         }
     }
 
-    private String addOrDelete(boolean add){
-        return (add) ?  "update PRODUCTS_ORDERS PR set PR.COUNT = PR.COUNT+1 where exists (select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?)"
-                : "update PRODUCTS_ORDERS PR set PR.COUNT = PR.COUNT-1 where exists (select * from ORDERS O where PR.ORDER_ID  = O.ID AND O.CUSTOMER_ID = ? AND O.STATE='NOT_ORDERED' AND PR.PRODUCT_ID=?)";
-    }
 
-    public synchronized boolean updateBasket(User user, int productId, boolean add) {
-        //если товар уже есть в корзине увеличивает или уменьшает количество на 1
-        Connection connection = null;
-        try {
-            connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(addOrDelete(add));
-            preparedStatement.setInt(1, user.getId());
-            preparedStatement.setInt(2, productId);
-            preparedStatement.executeUpdate();
-            if (!checkCount(user, productId)) {
-                deleteFromBasket(user, productId);
-                return false;
-            }
-            return true;
-        } catch (Exception ex) {
-            logger.info("Fail connect to database");
-            logger.error(ex);
-            return false;
-        } finally {
-            try {
-                connectionPool.releaseConnection(connection);
-            } catch (InterruptedException e) {
-                logger.error(e);
-            }
-        }
-    }
 
-    public synchronized void deleteFromBasket(User user, int productID) {
-        //добавляет новый товар в кросс таблицу ORDERS_PRODUCTS
-        Connection connection = null;
-        String sql;
-        try {
-            sql = "DELETE FROM PRODUCTS_ORDERS WHERE PRODUCTS_ORDERS.ORDER_ID IN (SELECT ORDERS.ID FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE='NOT_ORDERED') AND PRODUCT_ID = ?";
-            connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, user.getId());
-            preparedStatement.setInt(2, productID);
-            preparedStatement.executeUpdate();
-            logger.info("User=" + user.getNickname() + " delete " + productID + " from his basket");
-        } catch (Exception ex) {
-            logger.info("Fail connect to database");
-            logger.error(ex);
-        } finally {
-            try {
-                connectionPool.releaseConnection(connection);
-            } catch (InterruptedException e) {
-                logger.error(e);
-            }
-        }
-    }
+
 
     public synchronized List<Product> getBasket(User user) {
         //возвращает лист с продуктами пользователя который запросил
@@ -222,10 +230,9 @@ public class Repository {
         try {
             connection = connectionPool.getConnection();
             LocalDate creationDate = LocalDate.now();
-            sql = "UPDATE ORDERS SET STATE = 'ORDERED', CREATEDAT=? WHERE CUSTOMER_ID = ? AND STATE = 'NOT_ORDERED'";
+            sql = "UPDATE ORDERS SET STATE = 'ORDERED', CREATEDAT=? WHERE CUSTOMER_ID = " + user.getId() + " AND STATE = 'NOT_ORDERED'";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setObject(1, creationDate);
-            preparedStatement.setObject(2, user.getId());
             preparedStatement.executeUpdate();
         } catch (Exception ex) {
             logger.info("Fail connect to database");
@@ -284,18 +291,14 @@ public class Repository {
 
     public synchronized void deleteOrder(int id) {
         Connection connection = null;
-        String sqlOrders;
-        String sqlProductOrders;
         try {
             connection = connectionPool.getConnection();
             connection.setAutoCommit(false);
-            sqlProductOrders = "DELETE FROM PRODUCTS_ORDERS  WHERE ORDER_ID = ?";
+            String sqlProductOrders = "DELETE FROM PRODUCTS_ORDERS  WHERE ORDER_ID = " + id;
             PreparedStatement preparedStatementPr = connection.prepareStatement(sqlProductOrders);
-            preparedStatementPr.setInt(1, id);
             preparedStatementPr.executeUpdate();
-            sqlOrders =  "DELETE FROM ORDERS WHERE ID = ?";
+            String sqlOrders = "DELETE FROM ORDERS WHERE ID = " + id;
             PreparedStatement preparedStatementO = connection.prepareStatement(sqlOrders);
-            preparedStatementO.setInt(1, id);
             preparedStatementO.executeUpdate();
             connection.commit();
             connection.setAutoCommit(true);
@@ -356,7 +359,6 @@ public class Repository {
             ResultSet resultSet = preparedStatement.executeQuery();
             resultSet.next();
             return resultSet.getBoolean("IS_BLOCKED");
-
         } catch (Exception ex) {
             logger.error("Connection failed...");
             logger.error(ex);
@@ -401,32 +403,7 @@ public class Repository {
         }
     }
 
-    public synchronized boolean addNewUser(User user) {
-        Connection connection = null;
-        String sql = "INSERT INTO Users (Nickname, Password, Name) Values (?, ?, ?)";
-        try {
-            connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, user.getNickname());
-            String password = Encrypt.encrypt(user.getPassword(), "secret key");
-            preparedStatement.setString(2, password);
-            preparedStatement.setString(3, user.getName());
-            preparedStatement.executeUpdate();
-            logger.info("New User " + user.getNickname() + " has been added to database");
-            return true;
-        } catch (Exception ex) {
-            System.out.println("registred fail");
-            logger.info("Fail connect to database");
-            logger.error(ex);
-            return false;
-        } finally {
-            try {
-                connectionPool.releaseConnection(connection);
-            } catch (InterruptedException e) {
-                logger.error(e);
-            }
-        }
-    }
+
 
     public synchronized boolean checkLogginAndPassword(User user) {
         String sql = "SELECT * FROM Users WHERE Nickname = ? AND PASSWORD = ?";
@@ -491,89 +468,7 @@ public class Repository {
         return list;
     }
 
-    public synchronized void deleteFromBlackList(int id) {
-        //удаляет из черного списка, то есть меняет значение isblocked на false
-        String sql = "UPDATE Users SET IS_BLOCKED = FALSE WHERE id = " + id;
-        Connection connection = null;
-        try {
-            connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.executeUpdate();
-            logger.info("user " + id + " has been deleted from black list");
-        } catch (SQLException | InterruptedException e) {
-            logger.info("Fail connect to database");
-            logger.error(e);
-        } finally {
-            try {
-                connectionPool.releaseConnection(connection);
-            } catch (InterruptedException e) {
-                logger.error(e);
-            }
-        }
-    }
 
-    public synchronized void addUserToBlackList(User user) {
-        //добавляет в черный список, is_blocked = true
-        String sql = "UPDATE Users SET IS_BLOCKED = TRUE WHERE id = " + user.getId();
-        Connection connection = null;
-        try {
-            connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.executeUpdate();
-            logger.info("User= " + user.getNickname() + " was added to blacklist");
-        } catch (Exception ex) {
-            logger.info("Fail connect to database");
-            logger.error(ex);
-        } finally {
-            try {
-                connectionPool.releaseConnection(connection);
-            } catch (InterruptedException e) {
-                logger.error(e);
-            }
-        }
-    }
-
-
-    public synchronized void deleteProduct(String id) {
-        Connection connection = null;
-        try {
-            connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM PRODUCTS WHERE Id = " + id);
-            preparedStatement.executeUpdate();
-            logger.info("product " + id + " has been deleted from product list");
-        } catch (SQLException | InterruptedException e) {
-            logger.error("Fail connect to database");
-            logger.error(e);
-        } finally {
-            try {
-                connectionPool.releaseConnection(connection);
-            } catch (InterruptedException e) {
-                logger.error(e);
-            }
-        }
-    }
-
-    public synchronized void add(Product product) {
-        String sql = "INSERT INTO PRODUCTS (Name, Price) Values (?, ?)";
-        Connection connection = null;
-        try {
-            connection = connectionPool.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, product.getName());
-            preparedStatement.setInt(2, product.getPrice());
-            preparedStatement.executeUpdate();
-            logger.info("product " + product.getName() + " has been added to product list");
-        } catch (Exception ex) {
-            logger.info("Fail connect to database");
-            logger.error(ex);
-        } finally {
-            try {
-                connectionPool.releaseConnection(connection);
-            } catch (InterruptedException e) {
-                logger.error(e);
-            }
-        }
-    }
 
     private synchronized boolean containsOrder(final List<Order> list, final int id) {
         return list.stream().anyMatch(o -> o.getId() == id);

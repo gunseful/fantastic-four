@@ -3,8 +3,9 @@ package app.model.pool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -24,8 +25,12 @@ public class ConnectionPool {
         queue = new ArrayBlockingQueue<>(MAX_SIZE);
         Properties properties = new Properties();
         try {
-            //пробовал делать путь ./db/connection.properties - томкат в ахуе и не канает, хотя вот у меня в мейне же есть запрос продуктов - все ок
-            properties.load(new FileInputStream("C:\\Users\\Ares\\IdeaProjects\\fantasticFour\\db\\connection.properties"));
+            InputStream inputStream = getClass().getClassLoader().getResourceAsStream("connection.properties");
+            if (inputStream!=null){
+                properties.load(inputStream);
+            }else{
+                throw new FileNotFoundException("property file not found");
+            }
         } catch (IOException e) {
             logger.error(e);
         }
