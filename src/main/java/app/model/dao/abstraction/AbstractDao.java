@@ -17,7 +17,6 @@ public abstract class AbstractDao {
     public Object start() {
         try {
             connection = connectionPool.getConnection();
-            setSql();
             return preparedStatment();
         } catch (InterruptedException | SQLException e) {
             logger.info("Fail connect to database");
@@ -36,7 +35,4 @@ public abstract class AbstractDao {
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.executeUpdate();
         return null;}
-
-    public  void setSql() throws SQLException{
-    }
 }
