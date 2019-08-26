@@ -1,7 +1,8 @@
 package app.servlets.storeservlets.admin;
 
 import app.entities.user.User;
-import app.model.repository.Repository;
+import app.model.dao.delete.DeleteUserFromBlackList;
+import app.model.dao.get.GetBlackList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,9 +17,10 @@ public class BlackListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         //получаем текущего юзера
         User user = (User)req.getSession().getAttribute("user");
-        Repository controller = (Repository) req.getSession().getAttribute("controller");
+//        Repository controller = (Repository) req.getSession().getAttribute("controller");
         //получаем черный список спец методом класса Модель и передаем его в параметре блеклист
-        req.setAttribute("blacklist", controller.getBlackList());
+//        req.setAttribute("blacklist", controller.getBlackList());
+        req.setAttribute("blacklist", new GetBlackList().start());
 
         try {
             if(!user.isAdministrator()){
@@ -34,14 +36,15 @@ public class BlackListServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        Repository controller = (Repository)req.getSession().getAttribute("controller");
+//        Repository controller = (Repository)req.getSession().getAttribute("controller");
         //прилетает в виде параметров массив с айди юзеров которых надо удалить и вызываем спец метод из модели и удаляем из базы данных
         try {
             if (req.getParameterValues("userForDelete") != null) {
                 String[] usersID = req.getParameterValues("userForDelete");
                 for (String userID : usersID) {
                     logger.info("Administrator is trying to delete user from blacklist");
-                    controller.deleteFromBlackList(Integer.parseInt(userID.trim()));
+                    new DeleteUserFromBlackList(Integer.parseInt(userID.trim())).start();
+//                    controller.deleteFromBlackList(Integer.parseInt(userID.trim()));
                 }
             }
         }catch (NullPointerException ignored) {}

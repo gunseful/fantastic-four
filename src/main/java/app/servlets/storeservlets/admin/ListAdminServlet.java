@@ -2,7 +2,9 @@ package app.servlets.storeservlets.admin;
 
 import app.entities.products.Product;
 import app.entities.user.User;
-import app.model.repository.Repository;
+import app.model.dao.add.AddProduct;
+import app.model.dao.delete.DeleteProduct;
+import app.model.dao.get.GetList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,8 +22,8 @@ public class ListAdminServlet extends HttpServlet {
         //как всегда берем юзера из сесси для работы с ним
         User user = (User) req.getSession().getAttribute("user");
         //кидаем все продукты из базы данных аттрибутом
-        Repository uc = new Repository();
-        req.setAttribute("products", uc.getList());
+//        Repository uc = new Repository();
+        req.setAttribute("products", new GetList().start());
         //проверяем не залез ли шпион и переводим на страницу клиента если залез все таки
         try {
             if (user.isAdministrator()) {
@@ -44,8 +46,9 @@ public class ListAdminServlet extends HttpServlet {
             if (req.getParameterValues("productForDelete") != null) {
                 String[] productsID = req.getParameterValues("productForDelete");
                 for (String productID : productsID) {
-                    Repository controller = (Repository) req.getSession().getAttribute("controller");
-                    controller.deleteProduct(productID);
+//                    Repository controller = (Repository) req.getSession().getAttribute("controller");
+//                    controller.deleteProduct(productID);
+                    new DeleteProduct(productID).start();
                     logger.info("User=" + user.getNickname() + " has been deleted " + productID);
                 }
             } else {
@@ -59,8 +62,9 @@ public class ListAdminServlet extends HttpServlet {
                 //создаем продукт
                 Product product = new Product(name, price);
                 //добавляем в базу
-                Repository controller = (Repository) req.getSession().getAttribute("controller");
-                controller.add(product);
+//                Repository controller = (Repository) req.getSession().getAttribute("controller");
+//                controller.add(product);
+                new AddProduct(product).start();
                 doGet(req, resp);
                 logger.info("User=" + user.getNickname() + " has been added new product - " + product.getName());
 

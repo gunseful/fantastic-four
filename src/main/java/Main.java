@@ -1,8 +1,5 @@
-import app.entities.products.Order;
 import app.entities.user.User;
-import app.model.repository.Repository;
-
-import java.util.List;
+import app.model.dao.check.CheckLogginAndPassword;
 
 //import app.entities.products.Order;
 //import app.entities.user.User;
@@ -11,29 +8,16 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        //Тестирую многопоточность
-        Repository r = new Repository();
-                        User user = new User();
-                user.setId(2);
-        System.out.println(r.getOrders(user).get(0).totalPrice());
+        //Тест
+        User user = new User("Илья","GUNSEFUL","123321");
+        System.out.println(new CheckLogginAndPassword(user).start());
+
+//        AbstractDao getList = new GetList();
+//        System.out.println(getList.start());
 
 
 
 
-            //BlockingQueue
-//        new Thread(){
-//            @Override
-//            public void run() {
-//                User user = new User();
-//                user.setId(2);
-//                Repository repository = new Repository();
-//                System.out.println(repository.updateBasket(user, 34,true));
-//
-//            }
-//        }.start();
     }
 
-    public boolean containsOrder(final List<Order> list, final int id){
-        return list.stream().filter(o -> o.getId()==id).findFirst().isPresent();
-    }
 }

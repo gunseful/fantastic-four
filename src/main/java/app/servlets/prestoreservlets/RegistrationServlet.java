@@ -1,7 +1,7 @@
 package app.servlets.prestoreservlets;
 
 import app.entities.user.User;
-import app.model.repository.Repository;
+import app.model.dao.add.AddNewUser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -39,14 +39,15 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        Repository controller = new Repository();
+//        Repository controller = new Repository();
         try {
             //Проверяем пришедшие параметры Имени, Ника и Пароль на правильность (или вообще наличие).
             if (!req.getParameter("name").equals("") && req.getParameter("nickname").length()>=3 && req.getParameter("nickname").length()<=15 && req.getParameter("password").length()>=6 && req.getParameter("password").length()<=15) {
                 // Они оказались верны. Создаем нового юзера
                 User user = new User(req.getParameter("name"), req.getParameter("nickname").toUpperCase(), req.getParameter("password"));
                 //Проверяем есть ли юзер с таким именем в базе, если есть - ошибка. Если нет - Прыгаем на страницу Логина
-                if(!controller.addNewUser(user)) {
+
+                if(!(boolean) new AddNewUser(user).start()) {
                     logger.info("user"+user.getNickname()+"is already exist");
                     req.setAttribute("fail", "");
                     doGet(req, resp);

@@ -2,7 +2,9 @@ package app.servlets.storeservlets.client;
 
 import app.entities.products.Product;
 import app.entities.user.User;
-import app.model.repository.Repository;
+import app.model.dao.add.AddToBasket;
+import app.model.dao.get.GetList;
+import app.model.dao.update.UpdateBasket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,6 +12,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 public class ListClientServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
@@ -18,9 +21,9 @@ public class ListClientServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         //получаем юзера
         User user = (User) req.getSession().getAttribute("user");
-        Repository controller = (Repository) req.getSession().getAttribute("controller");
+//        Repository controller = (Repository) req.getSession().getAttribute("controller");
         //получаем лист товаров
-        req.setAttribute("products", controller.getList());
+        req.setAttribute("products", new GetList().start());
         //проверяем, если админ сюда зайдет его кинет на страницу админа, если обычный клиент, открывает вьюшку
         try {
             if (!user.isAdministrator()) {
@@ -37,7 +40,7 @@ public class ListClientServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        Repository controller = (Repository) req.getSession().getAttribute("controller");
+//        Repository controller = (Repository) req.getSession().getAttribute("controller");
         User user = (User) req.getSession().getAttribute("user");
         //выбираем в списке чо хотим купить, то есть добавить в корзину и кликаем - > Летит в корзину
         try {
@@ -45,13 +48,14 @@ public class ListClientServlet extends HttpServlet {
                 String[] productsID = req.getParameterValues("productForBuy");
                 //опять юзера из сессии достаем
                 for (String productID : productsID) {
-                    for (Product product : controller.getList()) {
+                    for (Product product : (List<Product>) new GetList().start()) {
                         //проверяем есть ли ваще продукт в базе данных
                         if (String.valueOf(product.getId()).equals(productID.trim())) {
                             logger.info("User=" + user.getNickname() + " has added product to his basket");
 //                            //если есть добавляет в базу данных
-                            if(!controller.updateBasket(user, product.getId(),true)){
-                                controller.addToBasket(user,product.getId());
+                            if(!(boolean) new UpdateBasket(true, user,product.getId()).start()){
+                                new AddToBasket(user,product.getId()).start();
+//                                controller.addToBasket(user,product.getId());
                             }
                         }
                     }
