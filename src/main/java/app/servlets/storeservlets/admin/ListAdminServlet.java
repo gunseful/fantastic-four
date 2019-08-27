@@ -2,9 +2,9 @@ package app.servlets.storeservlets.admin;
 
 import app.entities.products.Product;
 import app.entities.user.User;
-import app.model.dao.add.AddProduct;
-import app.model.dao.delete.DeleteProduct;
-import app.model.dao.get.GetList;
+import app.model.daoFake.add.AddProduct;
+import app.model.daoFake.delete.DeleteProduct;
+import app.model.daoFake.get.GetList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

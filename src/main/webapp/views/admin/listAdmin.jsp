@@ -62,7 +62,7 @@
                         </tr>
                         <c:forEach var="product" items="${products}">
                             <tr>
-                                <td><input type="checkbox" name="productForDelete" value=" ${product.getId()} "></td>
+                                <td><input type="checkbox" name="productForDelete" value=" ${product} "></td>
                                 <td>${product.getName()}</td>
                                 <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))}</td>
                                 <td>${bundle.getObject("currency")}</td>

@@ -2,9 +2,9 @@ package app.servlets.storeservlets.client;
 
 import app.entities.products.Product;
 import app.entities.user.User;
-import app.model.dao.add.AddToBasket;
-import app.model.dao.get.GetList;
-import app.model.dao.update.UpdateBasket;
+import app.model.daoFake.add.AddToBasket;
+import app.model.daoFake.get.GetList;
+import app.model.daoFake.update.UpdateBasket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

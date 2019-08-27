@@ -1,5 +1,7 @@
 import app.entities.user.User;
-import app.model.dao.check.CheckLogginAndPassword;
+import app.model.service.UserServiceImpl;
+
+import java.sql.SQLException;
 
 //import app.entities.products.Order;
 //import app.entities.user.User;
@@ -7,14 +9,15 @@ import app.model.dao.check.CheckLogginAndPassword;
 //
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws SQLException {
         //Тест
-        User user = new User("Илья","GUNSEFUL","123321");
-        System.out.println(new CheckLogginAndPassword(user).start());
 
-//        AbstractDao getList = new GetList();
-//        System.out.println(getList.start());
+        UserServiceImpl us = new UserServiceImpl();
+        us.removeFromBlackList(1548);
 
+        User user = new User();
+        user.setId(1548);
+        System.out.println(us.checkBlackList(user));
 
 
 

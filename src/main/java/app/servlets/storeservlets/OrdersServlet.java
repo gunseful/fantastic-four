@@ -1,12 +1,12 @@
 package app.servlets.storeservlets;
 
 import app.entities.user.User;
-import app.model.dao.add.AddUserToBlackList;
-import app.model.dao.check.CheckBlackList;
-import app.model.dao.delete.DeleteOrder;
-import app.model.dao.get.GetOrders;
-import app.model.dao.get.GetUser;
-import app.model.dao.update.PayOrder;
+import app.model.dao.OrderDao;
+import app.model.daoFake.add.AddUserToBlackList;
+import app.model.daoFake.check.CheckBlackList;
+import app.model.daoFake.get.GetOrders;
+import app.model.daoFake.get.GetUser;
+import app.model.daoFake.update.PayOrder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class OrdersServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
@@ -58,7 +59,10 @@ public class OrdersServlet extends HttpServlet {
                 String[] ordersID = req.getParameterValues("orders");
                 for (String orderID : ordersID) {
                     logger.info("User=" + user.getNickname() + " has deleted order "+orderID);
-                    new DeleteOrder(Integer.parseInt(orderID.trim())).start();
+                    OrderDao dao = new OrderDao();
+
+                    dao.deleteOrder(Integer.parseInt(orderID.trim()));
+//                    new DeleteOrder(Integer.parseInt(orderID.trim())).start();
 //                    controller.deleteOrder();
                 }
             }else{
@@ -74,7 +78,7 @@ public class OrdersServlet extends HttpServlet {
                     doGet(req, resp);
                 }
             }
-        } catch (NullPointerException ignored) {
+        } catch (NullPointerException | SQLException ignored) {
         }
         doGet(req, resp);
     }

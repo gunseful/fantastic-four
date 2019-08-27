@@ -1,10 +1,10 @@
 package app.servlets.storeservlets.client;
 
 import app.entities.user.User;
-import app.model.dao.delete.DeleteProductFromBasket;
-import app.model.dao.get.GetBasket;
-import app.model.dao.update.MakeOrder;
-import app.model.dao.update.UpdateBasket;
+import app.model.daoFake.delete.DeleteProductFromBasket;
+import app.model.daoFake.get.GetBasket;
+import app.model.daoFake.update.MakeOrder;
+import app.model.daoFake.update.UpdateBasket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

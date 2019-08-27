@@ -1,7 +1,7 @@
 package app.servlets.prestoreservlets;
 
 import app.entities.user.User;
-import app.model.dao.add.AddNewUser;
+import app.model.daoFake.add.AddNewUser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -46,7 +46,6 @@ public class RegistrationServlet extends HttpServlet {
                 // Они оказались верны. Создаем нового юзера
                 User user = new User(req.getParameter("name"), req.getParameter("nickname").toUpperCase(), req.getParameter("password"));
                 //Проверяем есть ли юзер с таким именем в базе, если есть - ошибка. Если нет - Прыгаем на страницу Логина
-
                 if(!(boolean) new AddNewUser(user).start()) {
                     logger.info("user"+user.getNickname()+"is already exist");
                     req.setAttribute("fail", "");
