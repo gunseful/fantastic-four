@@ -6,7 +6,7 @@
 
     <filter>
         <filter-name>AuthenticationFilter</filter-name>
-        <filter-class>app.servlets.filters.AuthenticationFilter</filter-class>
+        <filter-class>app.controller.servlets.filters.AuthenticationFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>AuthenticationFilter</filter-name>
@@ -14,7 +14,7 @@
     </filter-mapping>
     <servlet>
         <servlet-name>listAdmin</servlet-name>
-        <servlet-class>app.servlets.storeservlets.admin.ListAdminServlet</servlet-class>
+        <servlet-class>app.controller.servlets.storeservlets.admin.ListAdminServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>listAdmin</servlet-name>
@@ -23,7 +23,7 @@
 
     <servlet>
         <servlet-name>listClient</servlet-name>
-        <servlet-class>app.servlets.storeservlets.client.ListClientServlet</servlet-class>
+        <servlet-class>app.controller.servlets.storeservlets.client.ListClientServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -33,7 +33,7 @@
 
     <servlet>
         <servlet-name>loggin</servlet-name>
-        <servlet-class>app.servlets.prestoreservlets.LogginServlet</servlet-class>
+        <servlet-class>app.controller.servlets.prestoreservlets.LogginServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -44,7 +44,7 @@
 
     <servlet>
         <servlet-name>registration</servlet-name>
-        <servlet-class>app.servlets.prestoreservlets.RegistrationServlet</servlet-class>
+        <servlet-class>app.controller.servlets.prestoreservlets.RegistrationServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -54,7 +54,7 @@
 
     <servlet>
         <servlet-name>basket</servlet-name>
-        <servlet-class>app.servlets.storeservlets.client.BasketServlet</servlet-class>
+        <servlet-class>app.controller.servlets.storeservlets.client.BasketServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -64,7 +64,7 @@
 
     <servlet>
         <servlet-name>orders</servlet-name>
-        <servlet-class>app.servlets.storeservlets.OrdersServlet</servlet-class>
+        <servlet-class>app.controller.servlets.storeservlets.OrdersServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -74,7 +74,7 @@
 
     <servlet>
         <servlet-name>blacklist</servlet-name>
-        <servlet-class>app.servlets.storeservlets.admin.BlackListServlet</servlet-class>
+        <servlet-class>app.controller.servlets.storeservlets.admin.BlackListServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
