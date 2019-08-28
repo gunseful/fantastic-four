@@ -1,7 +1,7 @@
 package app.controller.servlets.prestoreservlets;
 
-import app.model.user.User;
 import app.controller.service.UserServiceImpl;
+import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -44,7 +44,7 @@ public class LogginServlet extends HttpServlet {
             //опять таки нужна нам наша модель, для работы с базой данной только ее и будет юзать
             //ну и проверяем логин и пароль, ничего не хэшируется, тупо строкой пароль идет - небезопасно офк, ну а как еще
             UserServiceImpl userService = new UserServiceImpl();
-            if (userService.checkLogginAndPassword(user)) {
+            if (userService.authorize(nickname, password)) {
                 User currentUser = userService.getUserByNickname(nickname.toUpperCase());
                 //проверяется, а не в черном ли списке чувак
                 if (userService.checkBlackList(currentUser)) {

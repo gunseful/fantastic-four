@@ -8,13 +8,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductOrderDao extends DaoImpl<ProductOrder> {
+import static java.util.Collections.emptyList;
+
+public class ProductOrderDao extends AbstractDao<ProductOrder> {
 
 
     @Override
     public boolean add(ProductOrder productOrder) throws SQLException {
         sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID, COUNT) Values (?, ?, ?)";
-        PreparedStatement ps = start();
+        PreparedStatement ps = getPreparedStatement();
         ps.setInt(1, productOrder.getProductId());
         ps.setInt(2, productOrder.getOrderId());
         ps.setInt(3, productOrder.getCount());
@@ -23,36 +25,14 @@ public class ProductOrderDao extends DaoImpl<ProductOrder> {
     }
 
     @Override
-    public ProductOrder read(int id) throws SQLException {
-        sql = "SELECT * FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = " + id;
-        ResultSet rs = start().executeQuery();
-        rs.next();
-        ProductOrder productOrder = new ProductOrder();
-        productOrder.setProductId(rs.getInt("PRODUCT_ID"));
-        productOrder.setOrderId(rs.getInt("ORDER_ID"));
-        productOrder.setCount(rs.getInt("COUNT"));
-        return productOrder;
-    }
-
-    @Override
-    public List<ProductOrder> getAll() throws SQLException {
-        sql = "SELECT * FROM PRODUCTS_ORDERS";
-        ResultSet rs = start().executeQuery();
-        List<ProductOrder> list = new ArrayList<>();
-        while (rs.next()) {
-            ProductOrder productOrder = new ProductOrder();
-            productOrder.setProductId(rs.getInt("PRODUCT_ID"));
-            productOrder.setOrderId(rs.getInt("ORDER_ID"));
-            productOrder.setCount(rs.getInt("COUNT"));
-            list.add(productOrder);
-        }
-        return list;
+    public List<ProductOrder> getAll() {
+        return getResultList("SELECT * FROM PRODUCTS_ORDERS");
     }
 
     @Override
     public void update(ProductOrder productOrder) throws SQLException {
         sql = "UPDATE PRODUCTS_ORDERS SET COUNT = ? WHERE PRODUCT_ID = ? AND ORDER_ID = ?";
-        PreparedStatement ps = start();
+        PreparedStatement ps = getPreparedStatement();
         ps.setInt(1, productOrder.getCount());
         ps.setInt(2, productOrder.getProductId());
         ps.setInt(3, productOrder.getOrderId());
@@ -62,9 +42,32 @@ public class ProductOrderDao extends DaoImpl<ProductOrder> {
     @Override
     public void delete(ProductOrder productOrder) throws SQLException {
         sql = "DELETE FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = ? AND ORDER_ID = ?";
-        PreparedStatement ps = start();
+        PreparedStatement ps = getPreparedStatement();
         ps.setInt(1,productOrder.getProductId());
         ps.setInt(2,productOrder.getOrderId());
         ps.executeUpdate();
+    }
+
+    @Override
+    protected List<ProductOrder> parseResultSet(ResultSet resultSet) {
+        try {
+            List<ProductOrder> list = new ArrayList<>();
+            while (resultSet.next()) {
+                ProductOrder productOrder = new ProductOrder();
+                productOrder.setProductId(resultSet.getInt("PRODUCT_ID"));
+                productOrder.setOrderId(resultSet.getInt("ORDER_ID"));
+                productOrder.setCount(resultSet.getInt("COUNT"));
+                list.add(productOrder);
+            }
+            return list;
+        } catch (SQLException e) {
+            logger.error(e);
+            return emptyList();
+        }
+    }
+
+    @Override
+    protected String tableName() {
+        return "PRODUCTS_ORDERS";
     }
 }

@@ -10,7 +10,7 @@ public interface UserService {
 
     boolean addNewUser(User user) throws SQLException;
 
-    boolean checkLogginAndPassword(User user) throws SQLException;
+    boolean authorize(String nickname, String password) throws SQLException;
 
     User getUser(int id) throws SQLException;
 

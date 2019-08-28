@@ -53,17 +53,26 @@ public class ConnectionPool {
         return connectionPool;
     }
 
-    public Connection getConnection() throws InterruptedException {
-        logger.debug("size before getting connection" + queue.size());
-        Connection connection = queue.take();
-        logger.debug("size after getting connection" + queue.size());
-        return (connection);
+    public Connection getConnection() {
+        try {
+            logger.debug("size before getting connection" + queue.size());
+            final Connection take = queue.take();
+            logger.debug("size after getting connection" + queue.size());
+            return take;
+        } catch (InterruptedException e) {
+            throw new IllegalStateException(e);
+        }
     }
 
-    public void releaseConnection(Connection con) throws InterruptedException {
-        logger.debug("size before releasing connection" + queue.size());
-        queue.put(con);
-        logger.debug("size after releasing connection" + queue.size());
+    public void releaseConnection(Connection con) {
+        try {
+            logger.debug("size before releasing connection" + queue.size());
+            //todo check if connection still alive
+            queue.put(con);
+            logger.debug("size after releasing connection" + queue.size());
+        } catch (InterruptedException e) {
+            throw new IllegalStateException(e);
+        }
     }
 
     private Connection makeConnection(Properties properties) throws SQLException {

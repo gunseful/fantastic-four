@@ -5,7 +5,9 @@ import java.util.List;
 
 public interface Dao<T> {
     boolean add(T t) throws SQLException;
-    T read(int id) throws SQLException;
+
+    T findById(int id);
+
     List<T> getAll() throws SQLException;
     void update(T t) throws SQLException;
     void delete(T t) throws SQLException;

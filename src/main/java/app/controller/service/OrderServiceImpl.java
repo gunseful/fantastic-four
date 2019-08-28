@@ -1,13 +1,13 @@
 package app.controller.service;
 
-import app.model.products.Order;
-import app.model.products.Product;
-import app.model.products.ProductOrder;
-import app.model.user.User;
 import app.controller.dao.OrderDao;
 import app.controller.dao.ProductDao;
 import app.controller.dao.ProductOrderDao;
 import app.controller.dao.UserDao;
+import app.model.products.Order;
+import app.model.products.Product;
+import app.model.products.ProductOrder;
+import app.model.user.User;
 
 import java.sql.Date;
 import java.sql.SQLException;
@@ -77,10 +77,10 @@ public class OrderServiceImpl implements OrderService {
             order.setProducts(new ArrayList<>());
             for (ProductOrder productOrder : productOrderDao.getAll()) {
                 if (order.getId() == productOrder.getOrderId()) {
-                    Product product = productDao.read(productOrder.getProductId());
+                    Product product = productDao.findById(productOrder.getProductId());
                     product.setCount(productOrder.getCount());
                     order.addProduct(product);
-                    order.setUser(userDao.read(order.getCustomerId()));
+                    order.setUser(userDao.findById(order.getCustomerId()));
                 }
             }
         }
@@ -101,7 +101,7 @@ public class OrderServiceImpl implements OrderService {
         }
         for (ProductOrder productOrder : productOrderDao.getAll()) {
             if (productOrder.getOrderId() == orderId) {
-                Product product = productDao.read(productOrder.getProductId());
+                Product product = productDao.findById(productOrder.getProductId());
                 product.setCount(productOrder.getCount());
                 list.add(product);
             }
@@ -130,7 +130,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     public void deleteOrder(int id) throws SQLException {
-        Order order = orderDao.read(id);
+        Order order = orderDao.findById(id);
         productOrderDao.delete(Objects.requireNonNull(productOrderDao.getAll().stream().filter(p -> p.getOrderId() == id).findFirst().orElse(null)));
         orderDao.delete(order);
     }
