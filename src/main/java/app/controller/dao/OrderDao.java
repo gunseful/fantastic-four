@@ -12,35 +12,42 @@ import static java.util.Collections.emptyList;
 
 public class OrderDao extends AbstractDao<Order> {
 
+    public ProductOrderDao productOrderDao = new ProductOrderDao();
+
     @Override
     public void delete(Order order) throws SQLException {
-        sql = "DELETE FROM ORDERS WHERE ID = " + order.getId();
-        getPreparedStatement().executeUpdate();
+        String sql = "DELETE FROM ORDERS WHERE ID = " + order.getId();
+        getPreparedStatement(sql).executeUpdate();
         logger.info("order " + order.getId() + " has been deleted from order list");
     }
 
     @Override
     public boolean add(Order order) throws SQLException {
-        sql = "INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?, 'NOT_ORDERED')";
-        PreparedStatement ps = getPreparedStatement();
+        String sql = "INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?, 'NOT_ORDERED')";
+        PreparedStatement ps = getPreparedStatement(sql);
         ps.setInt(1, order.getCustomerId());
         ps.executeUpdate();
         return true;
     }
 
     @Override
-    public List<Order> getAll() throws SQLException {
+    public List<Order> getAll() {
         return getResultList("SELECT * FROM ORDERS");
     }
 
     @Override
-    public void update(Order order) throws SQLException {
-        sql = "UPDATE ORDERS SET CUSTOMER_ID = ?, CREATEDAT = ?, STATE = ? WHERE ID =" + order.getId();
-        PreparedStatement ps = getPreparedStatement();
-        ps.setInt(1, order.getCustomerId());
-        ps.setObject(2, order.getCreationDate());
-        ps.setString(3, order.getState());
-        ps.executeUpdate();
+    public void update(Order order) {
+        try {
+            PreparedStatement ps = getPreparedStatement(String.format("UPDATE ORDERS SET CUSTOMER_ID = %d, CREATEDAT = ?, STATE = %s WHERE ID = %d", order.getCustomerId(), order.getState(), order.getId()));
+            ps.setObject(2, order.getCreationDate());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            logger.error(e);
+        }
+    }
+
+    public List<Order> findOrders() {
+        return findBy("STATE='ORDERED' OR STATE ='PAID'");
     }
 
     @Override
@@ -61,6 +68,7 @@ public class OrderDao extends AbstractDao<Order> {
             return emptyList();
         }
     }
+
 
     @Override
     protected String tableName() {

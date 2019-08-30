@@ -27206,3 +27206,1755 @@ Database may be already in use: null. Possible solutions: close all other connec
 2019-08-28 23:16:32,750 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
 2019-08-28 23:16:34,812 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= 366A08926AF7614597A164C56E3584CE 
 2019-08-28 23:16:34,813 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] User=GUNSEFUL has out 
+2019-08-30 12:44:23,913 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 12:44:24,829 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:44:24,830 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:44:24,832 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:44:24,833 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:44:24,835 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:44:24,835 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 12:44:25,106 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 12:44:25,106 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 12:44:25,132 INFO a.c.d.AbstractDao [main] Fail connect to database 
+2019-08-30 12:44:25,133 ERROR a.c.d.AbstractDao [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4, VYXTJPIFVKNSFWEUIDCNRQ[*]==, 4) "
+Syntax error in SQL statement "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4, VYXTJPIFVKNSFWEUIDCNRQ[*]==, 4) "; SQL statement:
+INSERT INTO Users (Nickname, Password, Name) Values (4, vYxtjPIFVknSfWEuidcNRQ==, 4) [42000-199] 
+2019-08-30 12:44:25,133 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 12:44:25,133 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 12:45:41,992 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 12:45:42,399 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:45:42,406 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:45:42,407 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:45:42,409 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:45:42,410 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:45:42,410 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 12:45:42,567 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 12:45:42,567 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 12:45:42,580 INFO a.c.d.AbstractDao [main] Fail connect to database 
+2019-08-30 12:45:42,581 ERROR a.c.d.AbstractDao [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4, VYXTJPIFVKNSFWEUIDCNRQ[*]==, 4) "
+Syntax error in SQL statement "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4, VYXTJPIFVKNSFWEUIDCNRQ[*]==, 4) "; SQL statement:
+INSERT INTO Users (Nickname, Password, Name) Values (4, vYxtjPIFVknSfWEuidcNRQ==, 4) [42000-199] 
+2019-08-30 12:45:42,582 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 12:45:42,582 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 12:46:56,989 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 12:46:58,226 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:46:58,237 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:46:58,239 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:46:58,240 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:46:58,242 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:46:58,242 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 12:46:58,444 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 12:46:58,444 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 12:46:58,461 INFO a.c.d.AbstractDao [main] Fail connect to database 
+2019-08-30 12:46:58,462 ERROR a.c.d.AbstractDao [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4, VYXTJPIFVKNSFWEUIDCNRQ[*]==, 4) "
+Syntax error in SQL statement "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4, VYXTJPIFVKNSFWEUIDCNRQ[*]==, 4) "; SQL statement:
+INSERT INTO Users (Nickname, Password, Name) Values (4, vYxtjPIFVknSfWEuidcNRQ==, 4) [42000-199] 
+2019-08-30 12:46:58,463 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 12:46:58,463 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 12:47:09,855 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 12:47:10,293 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:47:10,295 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:47:10,296 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:47:10,303 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:47:10,305 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:47:10,305 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 12:47:10,453 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 12:47:10,453 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 12:47:10,469 INFO a.c.d.AbstractDao [main] Fail connect to database 
+2019-08-30 12:47:10,470 ERROR a.c.d.AbstractDao [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4, VYXTJPIFVKNSFWEUIDCNRQ[*]==, 4) "
+Syntax error in SQL statement "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4, VYXTJPIFVKNSFWEUIDCNRQ[*]==, 4) "; SQL statement:
+INSERT INTO Users (Nickname, Password, Name) Values (4, vYxtjPIFVknSfWEuidcNRQ==, 4) [42000-199] 
+2019-08-30 12:47:10,471 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 12:47:10,471 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 12:47:50,587 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 12:47:50,841 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 12:47:50,851 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 12:47:50,878 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 12:47:50,908 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 12:47:50,916 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 12:47:50,916 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 12:47:51,064 DEBUG a.c.p.ConnectionPool [main] size before getting connection0 
+2019-08-30 12:48:02,015 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 12:48:02,473 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:48:02,474 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:48:02,476 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:48:02,477 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:48:02,479 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:48:02,479 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 12:48:02,614 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 12:48:02,615 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 12:48:02,633 INFO a.c.d.AbstractDao [main] Fail connect to database 
+2019-08-30 12:48:02,634 ERROR a.c.d.AbstractDao [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4, VYXTJPIFVKNSFWEUIDCNRQ[*]==, 4) "
+Syntax error in SQL statement "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4, VYXTJPIFVKNSFWEUIDCNRQ[*]==, 4) "; SQL statement:
+INSERT INTO Users (Nickname, Password, Name) Values (4, vYxtjPIFVknSfWEuidcNRQ==, 4) [42000-199] 
+2019-08-30 12:48:02,634 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 12:48:02,635 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 12:50:31,257 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 12:50:31,827 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:50:31,834 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:50:31,835 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:50:31,837 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:50:31,839 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:50:31,839 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 12:50:32,009 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 12:50:32,009 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 12:50:32,026 INFO a.c.d.AbstractDao [main] Fail connect to database 
+2019-08-30 12:50:32,027 ERROR a.c.d.AbstractDao [main] org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4
+, VYXTJPIFVKNSFWEUIDCNRQ[*]==
+, 4
+) "
+Syntax error in SQL statement "INSERT INTO USERS (NICKNAME, PASSWORD, NAME) VALUES (4
+, VYXTJPIFVKNSFWEUIDCNRQ[*]==
+, 4
+) "; SQL statement:
+INSERT INTO Users (Nickname, Password, Name) Values (4
+, vYxtjPIFVknSfWEuidcNRQ==
+, 4
+) [42000-199] 
+2019-08-30 12:50:32,028 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 12:50:32,029 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 12:50:51,777 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 12:50:52,254 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:50:52,256 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:50:52,258 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:50:52,259 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:50:52,261 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 12:50:52,261 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 12:50:52,420 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 12:50:52,421 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 12:50:52,436 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 12:50:52,437 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 12:50:52,446 INFO a.c.d.AbstractDao [main] New User 4 has been added to database 
+2019-08-30 13:46:59,910 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 13:47:00,421 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:00,437 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:00,448 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:00,456 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:00,465 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:00,465 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 13:47:25,561 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 13:47:25,841 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:25,850 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:25,859 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:25,868 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:25,876 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:25,877 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 13:47:52,699 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 13:47:52,975 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:52,984 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:52,994 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:53,002 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:53,010 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:47:53,011 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 13:48:21,529 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 13:48:21,775 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:48:21,785 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:48:21,794 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:48:21,802 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:48:21,810 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:48:21,810 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 13:49:17,027 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 13:49:17,257 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:49:17,267 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:49:17,276 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:49:17,293 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:49:17,301 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:49:17,301 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 13:57:31,077 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 13:57:31,364 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:57:31,377 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:57:31,395 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:57:31,413 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:57:31,425 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:57:31,425 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 13:57:44,431 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 13:57:44,699 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:57:44,710 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:57:44,720 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:57:44,728 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:57:44,737 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 13:57:44,738 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 14:07:39,881 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:07:40,128 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:07:40,152 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:07:40,163 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:07:40,172 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:07:40,179 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:07:40,180 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 14:07:40,184 DEBUG a.c.p.ConnectionPool [main] size before getting connection0 
+2019-08-30 14:07:52,394 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:07:53,036 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:07:53,038 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:07:53,039 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:07:53,041 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:07:53,042 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:07:53,043 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:07:53,049 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:07:53,050 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:07:53,076 ERROR a.c.d.AbstractDao [main] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "USERNAME" не найден
+Column "USERNAME" not found; SQL statement:
+SELECT * FROM USERS WHERE username=2 [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:205)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:79)
+	at app.controller.dao.AbstractDao.findBy(AbstractDao.java:51)
+	at app.controller.dao.AbstractDao.singleFindBy(AbstractDao.java:56)
+	at app.controller.service.UserServiceImpl.getUser(UserServiceImpl.java:30)
+	at Main.main(Main.java:20)
+
+2019-08-30 14:07:53,078 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:07:53,078 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:08:17,649 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:08:18,075 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:08:18,077 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:08:18,078 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:08:18,079 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:08:18,081 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:08:18,081 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:08:18,085 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:08:18,086 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:08:18,111 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:08:18,111 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:10:34,226 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:10:34,660 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:10:34,661 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:10:34,663 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:10:34,665 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:10:34,669 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:10:34,669 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:10:34,674 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:10:34,674 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:10:34,692 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:10:34,692 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:11:39,592 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:11:40,061 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:11:40,063 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:11:40,064 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:11:40,066 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:11:40,067 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:11:40,068 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:11:40,073 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:11:40,073 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:11:40,094 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:11:40,094 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:14:01,451 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:14:01,689 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:14:01,699 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:14:01,708 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:14:01,716 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:14:01,724 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:14:01,725 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 14:14:01,730 DEBUG a.c.p.ConnectionPool [main] size before getting connection0 
+2019-08-30 14:14:13,179 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:14:13,633 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:14:13,634 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:14:13,636 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:14:13,637 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:14:13,639 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:14:13,639 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:14:13,643 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:14:13,644 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:14:13,663 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:14:13,664 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:16:07,315 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:16:07,756 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:16:07,758 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:16:07,759 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:16:07,761 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:16:07,762 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:16:07,763 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:16:07,768 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:16:07,768 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:16:07,813 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:16:07,813 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:19:17,317 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:19:17,770 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:19:17,772 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:19:17,774 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:19:17,775 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:19:17,777 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:19:17,777 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:19:17,782 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:19:17,783 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:19:17,878 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:19:17,878 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:19:17,880 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:19:17,880 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:19:17,882 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:19:17,883 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:19:17,884 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:19:17,884 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:19:17,888 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:19:17,889 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:19:17,890 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:19:17,891 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:19:17,893 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:19:17,895 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:19:17,898 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:19:17,898 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:19:17,899 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:19:17,899 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:21:35,753 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:21:36,171 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:21:36,172 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:21:36,174 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:21:36,175 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:21:36,177 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:21:36,177 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:21:36,183 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:21:36,183 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:21:36,206 ERROR a.c.d.AbstractDao [main] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "NOT_ORDERED" не найден
+Column "NOT_ORDERED" not found; SQL statement:
+SELECT * FROM ORDERS WHERE state=not_ordered [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:207)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:79)
+	at app.controller.dao.AbstractDao.findBy(AbstractDao.java:51)
+	at app.controller.service.OrderServiceImpl.getOrders(OrderServiceImpl.java:79)
+	at Main.main(Main.java:23)
+
+2019-08-30 14:21:36,208 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:21:36,208 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:21:59,983 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:22:00,432 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:00,433 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:00,441 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:00,442 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:00,445 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:00,445 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:22:00,450 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:00,450 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:00,482 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:00,483 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:00,483 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:00,483 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:00,488 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:00,488 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:00,490 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:00,490 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:00,492 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:00,492 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:00,492 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:00,492 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:00,495 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:00,496 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:00,497 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:00,497 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:00,499 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:00,499 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:00,501 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:00,502 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:00,503 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:00,503 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:38,159 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:22:38,646 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:38,648 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:38,649 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:38,652 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:38,653 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:38,654 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:22:38,659 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:38,660 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:38,695 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:38,695 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:38,695 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:38,696 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:38,701 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:38,701 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:38,703 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:38,703 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:38,704 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:38,705 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:38,705 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:38,705 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:38,708 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:38,709 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:38,710 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:38,710 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:38,712 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:38,712 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:38,714 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:38,714 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:38,715 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:38,716 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:22:55,450 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:22:55,895 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:55,897 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:55,898 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:55,901 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:55,902 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:22:55,903 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:22:55,908 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:22:55,909 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:22:55,957 ERROR a.c.d.AbstractDao [main] Can't execute getResultList org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "paid"
+Data conversion error converting "paid"; SQL statement:
+SELECT * FROM ORDERS WHERE state='ORDERED' OR 'paid' [22018-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:455)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.value.Value.convertTo(Value.java:829)
+	at org.h2.value.Value.convertTo(Value.java:703)
+	at org.h2.value.Value.getBoolean(Value.java:545)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:239)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:79)
+	at app.controller.dao.AbstractDao.findBy(AbstractDao.java:51)
+	at app.controller.service.OrderServiceImpl.getOrders(OrderServiceImpl.java:79)
+	at Main.main(Main.java:23)
+Caused by: java.lang.NumberFormatException: Character p is neither a decimal digit number, decimal point, nor "e" notation exponential mark.
+	at java.base/java.math.BigDecimal.<init>(BigDecimal.java:518)
+	at java.base/java.math.BigDecimal.<init>(BigDecimal.java:401)
+	at java.base/java.math.BigDecimal.<init>(BigDecimal.java:834)
+	at org.h2.value.Value.convertToBoolean(Value.java:862)
+	at org.h2.value.Value.convertTo(Value.java:758)
+	... 14 more
+
+2019-08-30 14:22:55,959 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:22:55,959 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:23:21,055 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:23:21,510 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:23:21,512 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:23:21,513 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:23:21,515 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:23:21,516 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:23:21,516 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:23:21,522 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:23:21,523 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:23:21,562 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:23:21,562 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:23:55,547 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:23:56,025 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:23:56,027 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:23:56,028 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:23:56,030 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:23:56,031 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:23:56,032 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:23:56,037 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:23:56,038 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:23:56,072 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:23:56,073 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:24:07,973 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:24:08,451 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:24:08,453 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:24:08,455 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:24:08,456 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:24:08,465 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:24:08,465 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:24:08,470 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:24:08,471 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:24:08,503 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:24:08,504 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:24:08,504 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:24:08,504 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:24:08,507 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:24:08,508 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:24:08,508 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:24:08,508 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:24:08,512 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:24:08,512 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:24:08,513 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:24:08,514 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:24:08,516 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:24:08,516 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:24:08,518 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:24:08,519 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:24:08,520 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:24:08,520 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:32:45,907 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:32:46,342 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:32:46,343 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:32:46,345 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:32:46,346 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:32:46,347 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:32:46,348 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:32:46,353 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:32:46,353 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:32:46,386 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:32:46,387 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:32:46,387 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:32:46,387 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:32:46,391 ERROR a.c.d.AbstractDao [main] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "STATE" не найден
+Column "STATE" not found; SQL statement:
+SELECT * FROM PRODUCTS_ORDERS WHERE state='paid' [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:205)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:79)
+	at app.controller.dao.AbstractDao.findBy(AbstractDao.java:51)
+	at app.controller.service.OrderServiceImpl.getOrders(OrderServiceImpl.java:85)
+	at Main.main(Main.java:23)
+
+2019-08-30 14:32:46,393 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:32:46,393 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:33:24,909 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:33:25,326 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:33:25,327 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:33:25,329 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:33:25,331 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:33:25,332 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:33:25,333 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:33:25,339 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:33:25,339 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:33:25,380 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:33:25,381 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:33:25,381 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:33:25,381 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:33:25,384 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:33:25,385 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:33:25,385 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:33:25,385 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:33:25,387 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:33:25,387 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:33:25,389 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:33:25,389 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:33:25,391 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:33:25,391 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:33:25,393 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:33:25,394 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:33:25,395 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:33:25,395 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:35:08,014 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-30 14:35:08,712 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-30 14:35:10,628 INFO a.c.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-30 14:35:10,872 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-30 14:35:11,590 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-30 14:35:13,586 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-30 14:35:13,602 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-08-30 14:35:14,193 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-08-30 14:35:14,194 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-08-30 14:35:14,196 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-08-30 14:35:14,197 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-08-30 14:35:14,198 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-08-30 14:35:14,199 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-08-30 14:35:14,449 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:35:14,449 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:35:14,499 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:35:14,500 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:35:14,502 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:35:14,502 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:35:14,503 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:35:14,503 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:35:14,504 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:35:14,505 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:35:14,505 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:35:14,505 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:35:14,508 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-7] User= 2 is in black list 
+2019-08-30 14:35:14,761 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-30 14:35:19,752 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-30 14:35:19,753 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:35:19,753 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:35:19,760 ERROR a.c.d.AbstractDao [http-nio-8081-exec-10] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: ������� "GUNSEFUL" �� ������
+Column "GUNSEFUL" not found; SQL statement:
+SELECT * FROM USERS WHERE NICKNAME = GUNSEFUL [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:207)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:79)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:65)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:40)
+	at app.controller.service.UserServiceImpl.authorize(UserServiceImpl.java:56)
+	at app.controller.servlets.prestoreservlets.LogginServlet.doPost(LogginServlet.java:47)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-08-30 14:35:19,763 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:35:19,763 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:35:19,763 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-10] failed log in 
+2019-08-30 14:35:19,939 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-08-30 14:35:24,788 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-08-30 14:35:24,789 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:35:24,789 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:35:24,793 ERROR a.c.d.AbstractDao [http-nio-8081-exec-5] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: ������� "GUNSEFUL" �� ������
+Column "GUNSEFUL" not found; SQL statement:
+SELECT * FROM USERS WHERE NICKNAME = GUNSEFUL [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:207)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:79)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:65)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:40)
+	at app.controller.service.UserServiceImpl.authorize(UserServiceImpl.java:56)
+	at app.controller.servlets.prestoreservlets.LogginServlet.doPost(LogginServlet.java:47)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-08-30 14:35:24,795 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:35:24,795 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:35:24,795 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-5] failed log in 
+2019-08-30 14:35:24,979 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-30 14:37:44,046 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-08-30 14:37:49,498 INFO a.c.s.p.LangServlet [http-nio-8081-exec-7] selected ru language 
+2019-08-30 14:37:49,720 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-08-30 14:37:50,401 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-08-30 14:37:52,267 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-08-30 14:37:52,281 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] inside ConnectionPool constructor 
+2019-08-30 14:37:52,748 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-08-30 14:37:52,749 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-08-30 14:37:52,750 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-08-30 14:37:52,751 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-08-30 14:37:52,753 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-08-30 14:37:52,753 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] total size of connection: 5 
+2019-08-30 14:37:52,850 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:37:52,850 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:37:52,885 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:37:52,886 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:37:52,887 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:37:52,888 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:37:52,889 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:37:52,889 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:37:52,890 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:37:52,890 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:37:52,891 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:37:52,891 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:37:52,893 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-4] User= 2 is in black list 
+2019-08-30 14:37:53,060 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-08-30 14:37:56,423 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-30 14:37:56,424 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-30 14:37:56,424 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-30 14:37:56,425 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-30 14:37:56,425 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-30 14:37:56,432 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-30 14:37:56,432 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-30 14:37:56,433 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-30 14:37:56,433 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-30 14:37:56,433 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-30 14:37:56,434 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-30 14:37:56,434 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-30 14:37:56,434 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-30 14:37:56,437 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] User=gunseful has been log in 
+2019-08-30 14:37:56,452 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:37:56,452 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:37:56,454 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:37:56,455 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:37:56,455 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-10] User=GUNSEFULrequests product list 
+2019-08-30 14:37:58,040 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-30 14:37:58,040 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-30 14:37:58,041 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-30 14:37:58,043 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-30 14:37:59,536 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-4] Administrator is trying to delete user from blacklist 
+2019-08-30 14:37:59,536 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:37:59,536 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:37:59,538 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:37:59,538 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:37:59,539 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:37:59,539 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:37:59,542 INFO a.c.d.AbstractDao [http-nio-8081-exec-4] Fail connect to database 
+2019-08-30 14:37:59,546 ERROR a.c.d.AbstractDao [http-nio-8081-exec-4] org.h2.jdbc.JdbcSQLSyntaxErrorException: �������������� ������ � ��������� SQL "UPDATE USERS SET NICKNAME = 2, PASSWORD = ETA4NZNDCCE4TQYBOANQFW[*]==, NAME = 2, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = 2 "
+Syntax error in SQL statement "UPDATE USERS SET NICKNAME = 2, PASSWORD = ETA4NZNDCCE4TQYBOANQFW[*]==, NAME = 2, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = 2 "; SQL statement:
+UPDATE USERS SET NICKNAME = 2, PASSWORD = ETa4NZNDCce4TQYboaNQfw==, NAME = 2, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = 2 [42000-199] 
+2019-08-30 14:37:59,547 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:37:59,547 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:37:59,547 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:37:59,547 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:37:59,547 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:37:59,548 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:38:13,662 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-7] Administrator is trying to delete user from blacklist 
+2019-08-30 14:38:13,662 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:38:13,662 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:38:13,663 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:38:13,664 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:38:13,665 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:38:13,665 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:38:13,669 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] Fail connect to database 
+2019-08-30 14:38:13,669 ERROR a.c.d.AbstractDao [http-nio-8081-exec-7] org.h2.jdbc.JdbcSQLSyntaxErrorException: �������������� ������ � ��������� SQL "UPDATE USERS SET NICKNAME = 2, PASSWORD = ETA4NZNDCCE4TQYBOANQFW[*]==, NAME = 2, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = 2 "
+Syntax error in SQL statement "UPDATE USERS SET NICKNAME = 2, PASSWORD = ETA4NZNDCCE4TQYBOANQFW[*]==, NAME = 2, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = 2 "; SQL statement:
+UPDATE USERS SET NICKNAME = 2, PASSWORD = ETa4NZNDCce4TQYboaNQfw==, NAME = 2, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = 2 [42000-199] 
+2019-08-30 14:38:13,669 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:38:13,669 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:38:13,670 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:38:13,670 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:38:13,670 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:38:13,670 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:39:19,127 INFO a.c.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-30 14:39:22,539 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-08-30 14:39:22,558 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-08-30 14:39:23,125 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-08-30 14:39:23,126 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-08-30 14:39:23,127 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-08-30 14:39:23,128 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-08-30 14:39:23,130 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-08-30 14:39:23,130 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-08-30 14:39:23,265 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:39:23,265 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:39:23,311 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:39:23,311 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:39:23,313 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:39:23,313 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:39:23,314 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:39:23,315 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:39:23,316 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:39:23,316 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:39:23,316 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:39:23,316 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:39:23,319 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-7] User= 2 is in black list 
+2019-08-30 14:39:26,763 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-08-30 14:39:26,767 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:39:26,767 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:39:26,768 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:39:26,768 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:39:26,769 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:39:26,769 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:39:26,770 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:39:26,771 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:39:26,771 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:39:26,771 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:39:26,772 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:39:26,772 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:39:26,774 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] User=gunseful has been log in 
+2019-08-30 14:39:26,789 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:39:26,789 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:39:26,799 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:39:26,799 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:39:26,799 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-1] User=GUNSEFULrequests product list 
+2019-08-30 14:39:28,166 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-30 14:39:28,166 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-30 14:39:28,168 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-30 14:39:28,168 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-30 14:39:29,726 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-3] Administrator is trying to delete user from blacklist 
+2019-08-30 14:39:29,726 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:39:29,726 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:39:29,727 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:39:29,727 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:39:29,728 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:39:29,729 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:39:29,730 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:39:29,730 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:39:29,740 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:39:29,740 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:39:29,742 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:39:29,742 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:39:31,360 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:39:31,361 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:39:31,362 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:39:31,363 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:39:31,365 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:39:31,365 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:39:31,373 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:39:31,373 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:39:31,374 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:39:31,374 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:39:31,376 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:39:31,376 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:39:31,376 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:39:31,376 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:39:31,377 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:39:31,377 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:39:31,377 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:39:31,377 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:39:31,378 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:39:31,378 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:40:31,435 INFO a.c.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-08-30 14:40:35,522 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-30 14:40:35,534 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-08-30 14:40:36,074 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-30 14:40:36,075 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-30 14:40:36,076 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-30 14:40:36,078 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-30 14:40:36,079 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-30 14:40:36,079 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-08-30 14:40:36,156 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-30 14:40:36,156 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-30 14:40:36,199 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-30 14:40:36,199 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-30 14:40:36,201 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-30 14:40:36,202 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-30 14:40:36,203 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-30 14:40:36,203 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-30 14:40:36,204 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-30 14:40:36,205 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-30 14:40:36,205 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-30 14:40:36,205 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-30 14:40:36,208 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] User=gunseful has been log in 
+2019-08-30 14:40:36,224 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:40:36,224 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:40:36,228 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:40:36,228 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:40:36,228 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-10] User=GUNSEFULrequests product list 
+2019-08-30 14:40:39,342 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:40:39,342 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:40:39,344 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:40:39,344 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:40:39,346 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:40:39,346 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:40:39,353 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:40:39,353 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:40:39,354 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:40:39,354 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:40:39,356 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:40:39,356 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:40:39,357 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:40:39,357 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:40:39,358 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:40:39,358 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:40:39,359 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:40:39,359 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:40:39,360 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:40:39,360 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:50:56,201 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:50:56,501 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:50:56,511 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:50:56,521 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:50:56,530 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:50:56,541 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 14:50:56,542 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 14:50:56,548 DEBUG a.c.p.ConnectionPool [main] size before getting connection0 
+2019-08-30 14:51:13,974 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:51:14,549 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:51:14,550 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:51:14,552 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:51:14,553 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:51:14,554 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:51:14,555 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:51:14,560 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:51:14,561 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:51:14,600 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:51:14,600 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:51:14,603 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:51:14,603 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:51:14,608 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:51:14,608 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:51:57,371 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:51:57,851 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:51:57,854 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:51:57,855 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:51:57,857 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:51:57,858 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:51:57,859 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:51:57,866 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:51:57,866 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:51:57,896 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:51:57,897 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:51:57,899 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:51:57,900 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:51:57,905 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:51:57,906 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:52:46,209 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:52:46,970 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:52:46,975 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:52:46,977 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:52:46,979 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:52:46,981 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:52:46,982 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:52:46,992 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:52:46,993 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:52:47,030 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:52:47,030 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:52:47,033 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:52:47,034 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:52:47,039 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:52:47,039 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:53:36,854 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 14:53:37,303 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:53:37,305 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:53:37,306 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:53:37,308 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:53:37,310 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 14:53:37,311 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 14:53:37,319 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:53:37,319 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:53:37,354 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:53:37,355 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:53:37,358 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 14:53:37,358 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 14:53:37,365 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 14:53:37,366 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 14:59:13,202 INFO a.c.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-30 14:59:16,518 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-08-30 14:59:16,534 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] inside ConnectionPool constructor 
+2019-08-30 14:59:17,102 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-08-30 14:59:17,104 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-08-30 14:59:17,105 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-08-30 14:59:17,106 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-08-30 14:59:17,107 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-08-30 14:59:17,108 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] total size of connection: 5 
+2019-08-30 14:59:17,178 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:59:17,179 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:59:17,216 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:59:17,216 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:59:17,218 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:59:17,218 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:59:17,219 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:59:17,219 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:59:17,220 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:59:17,221 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:59:17,221 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:59:17,221 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:59:17,224 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-1] User=2 has been log in 
+2019-08-30 14:59:17,238 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size before getting connection5 
+2019-08-30 14:59:17,238 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size after getting connection4 
+2019-08-30 14:59:17,240 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size before releasing connection4 
+2019-08-30 14:59:17,241 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-2] size after releasing connection5 
+2019-08-30 14:59:17,241 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-08-30 14:59:19,370 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:19,370 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:19,372 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:19,373 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:19,373 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has added product to his basket 
+2019-08-30 14:59:19,373 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:19,373 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:19,380 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:19,380 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:19,381 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:19,381 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:19,384 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:19,385 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:19,387 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:19,387 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:19,389 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:19,389 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:19,389 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:19,389 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:19,391 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:19,391 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:19,399 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:19,400 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:19,400 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:19,400 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:19,402 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 made a mistake 
+2019-08-30 14:59:19,403 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:19,403 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:19,404 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:19,404 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:19,404 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-30 14:59:19,417 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:19,417 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:19,418 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:19,419 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:19,419 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-30 14:59:19,422 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-08-30 14:59:21,019 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 14:59:21,019 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 14:59:21,020 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 14:59:21,021 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 14:59:21,021 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has added product to his basket 
+2019-08-30 14:59:21,021 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 14:59:21,021 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 14:59:21,025 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 14:59:21,026 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 14:59:21,026 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 14:59:21,026 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 14:59:21,026 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 14:59:21,026 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 14:59:21,026 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 14:59:21,027 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 14:59:21,027 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 14:59:21,027 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 14:59:21,027 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 14:59:21,027 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 14:59:21,027 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 14:59:21,027 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 14:59:21,029 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 14:59:21,029 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 14:59:21,030 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 14:59:21,030 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 14:59:21,030 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-08-30 14:59:21,883 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:59:21,883 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:59:21,883 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:59:21,884 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:59:21,886 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:59:21,886 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:59:21,888 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:59:21,888 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:59:23,009 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-30 14:59:23,009 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-30 14:59:23,010 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-30 14:59:23,010 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-30 14:59:23,015 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-30 14:59:23,016 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-30 14:59:23,016 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-30 14:59:23,017 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-30 14:59:23,017 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-08-30 14:59:23,593 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:59:23,593 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:59:23,595 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:59:23,596 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:59:23,596 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:59:23,596 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:59:23,596 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:59:23,596 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:59:23,597 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:59:23,597 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:59:23,597 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:59:23,597 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:59:23,598 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-30 14:59:24,732 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:24,733 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:24,733 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:24,733 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:24,735 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:24,735 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:24,740 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] Fail connect to database 
+2019-08-30 14:59:24,740 ERROR a.c.d.AbstractDao [http-nio-8081-exec-3] org.h2.jdbc.JdbcSQLSyntaxErrorException: ������� "ORDERED" �� ������
+Column "ORDERED" not found; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = 2, CREATEDAT = ?, STATE = ORDERED WHERE ID = 1001 [42122-199] 
+2019-08-30 14:59:24,740 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:24,740 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:24,741 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-3] java.lang.NullPointerException 
+2019-08-30 14:59:24,741 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:24,741 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:24,741 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:24,742 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:24,742 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:24,742 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:24,742 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:24,742 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:24,743 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 14:59:24,743 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 14:59:24,745 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 14:59:24,745 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 14:59:24,745 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-3] User=2requests his basket list 
+2019-08-30 14:59:26,329 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:26,330 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:26,330 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:26,330 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:26,330 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:26,331 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:26,333 INFO a.c.d.AbstractDao [http-nio-8081-exec-4] Fail connect to database 
+2019-08-30 14:59:26,333 ERROR a.c.d.AbstractDao [http-nio-8081-exec-4] org.h2.jdbc.JdbcSQLSyntaxErrorException: ������� "ORDERED" �� ������
+Column "ORDERED" not found; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = 2, CREATEDAT = ?, STATE = ORDERED WHERE ID = 1001 [42122-199] 
+2019-08-30 14:59:26,333 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:26,333 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:26,333 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-4] java.lang.NullPointerException 
+2019-08-30 14:59:26,333 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:26,333 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:26,334 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:26,334 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:26,334 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:26,334 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:26,335 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:26,335 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:26,335 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:26,335 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:26,335 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:26,335 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:26,336 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-30 14:59:27,467 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:27,467 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:27,467 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:27,467 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:27,468 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:27,469 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:27,469 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:27,469 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:28,694 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 14:59:28,694 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 14:59:28,695 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 14:59:28,695 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 14:59:28,707 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 14:59:28,707 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 14:59:28,707 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 14:59:28,707 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 14:59:28,707 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-08-30 14:59:30,097 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:59:30,097 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:59:30,098 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:59:30,098 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:59:30,098 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:59:30,098 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:59:30,099 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:59:30,099 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:59:30,099 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 14:59:30,099 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 14:59:30,100 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 14:59:30,100 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 14:59:30,100 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2requests his basket list 
+2019-08-30 14:59:30,777 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:59:30,777 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:59:30,778 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:59:30,778 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:59:30,778 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:59:30,778 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:59:30,781 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Fail connect to database 
+2019-08-30 14:59:30,781 ERROR a.c.d.AbstractDao [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLSyntaxErrorException: ������� "ORDERED" �� ������
+Column "ORDERED" not found; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = 2, CREATEDAT = ?, STATE = ORDERED WHERE ID = 1001 [42122-199] 
+2019-08-30 14:59:30,781 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:59:30,781 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:59:30,782 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-1] java.lang.NullPointerException 
+2019-08-30 14:59:30,782 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:59:30,782 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:59:30,783 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:59:30,783 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:59:30,783 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:59:30,783 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:59:30,784 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:59:30,784 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:59:30,784 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 14:59:30,784 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 14:59:30,785 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 14:59:30,785 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 14:59:30,785 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-30 14:59:43,602 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:43,602 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:43,603 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:43,603 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:43,604 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:43,604 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:43,605 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:43,605 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:43,605 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:43,605 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:43,606 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:43,606 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:43,614 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:43,614 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:43,615 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:43,615 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:43,616 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:43,617 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:43,617 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:43,617 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:43,617 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:43,618 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:43,618 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:43,618 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:43,618 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:43,618 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:43,619 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:43,619 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:43,619 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-30 14:59:43,635 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:43,635 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:43,636 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:43,636 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:43,636 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:43,636 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:43,637 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:43,637 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:43,637 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 14:59:43,637 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 14:59:43,638 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 14:59:43,638 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 14:59:43,638 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2requests his basket list 
+2019-08-30 14:59:44,340 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:44,340 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:44,341 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:44,341 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:44,341 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:44,341 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:44,342 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:44,342 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:44,342 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:44,342 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:44,342 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:44,342 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:44,353 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:44,353 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:44,354 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:44,354 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:44,354 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:44,355 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:44,355 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:44,356 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:44,356 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:44,356 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:44,357 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:44,357 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:44,357 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:44,358 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:44,359 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:44,359 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:44,359 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-30 14:59:44,364 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:44,365 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:44,365 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:44,365 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:44,365 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:44,366 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:44,366 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:44,366 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:44,366 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 14:59:44,366 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 14:59:44,367 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 14:59:44,367 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 14:59:44,367 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-30 14:59:45,282 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-30 14:59:45,282 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-30 14:59:45,282 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-30 14:59:45,283 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-30 14:59:45,283 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-30 14:59:45,283 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-30 14:59:45,284 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] Fail connect to database 
+2019-08-30 14:59:45,284 ERROR a.c.d.AbstractDao [http-nio-8081-exec-8] org.h2.jdbc.JdbcSQLSyntaxErrorException: ������� "ORDERED" �� ������
+Column "ORDERED" not found; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = 2, CREATEDAT = ?, STATE = ORDERED WHERE ID = 1001 [42122-199] 
+2019-08-30 14:59:45,284 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-30 14:59:45,284 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-30 14:59:45,285 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-8] java.lang.NullPointerException 
+2019-08-30 14:59:45,285 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-30 14:59:45,285 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-30 14:59:45,285 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-30 14:59:45,285 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-30 14:59:45,285 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-30 14:59:45,285 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-30 14:59:45,286 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-30 14:59:45,286 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-30 14:59:45,286 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before getting connection5 
+2019-08-30 14:59:45,286 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after getting connection4 
+2019-08-30 14:59:45,286 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size before releasing connection4 
+2019-08-30 14:59:45,286 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] size after releasing connection5 
+2019-08-30 14:59:45,287 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-8] User=2requests his basket list 
+2019-08-30 15:00:33,372 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 15:00:33,372 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 15:00:33,373 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 15:00:33,373 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 15:00:33,373 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 15:00:33,374 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 15:00:33,375 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Fail connect to database 
+2019-08-30 15:00:33,375 ERROR a.c.d.AbstractDao [http-nio-8081-exec-1] org.h2.jdbc.JdbcSQLSyntaxErrorException: ������� "ORDERED" �� ������
+Column "ORDERED" not found; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = 2, CREATEDAT = ?, STATE = ORDERED WHERE ID = 1001 [42122-199] 
+2019-08-30 15:00:33,375 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 15:00:33,375 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 15:00:33,375 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-1] java.lang.NullPointerException 
+2019-08-30 15:00:33,375 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 15:00:33,375 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 15:00:33,376 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 15:00:33,376 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 15:00:33,376 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 15:00:33,376 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 15:00:33,376 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 15:00:33,376 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 15:00:33,377 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before getting connection5 
+2019-08-30 15:00:33,377 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after getting connection4 
+2019-08-30 15:00:33,377 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size before releasing connection4 
+2019-08-30 15:00:33,377 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] size after releasing connection5 
+2019-08-30 15:00:33,377 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2requests his basket list 
+2019-08-30 15:02:49,861 INFO a.c.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-30 15:02:53,177 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-30 15:02:53,188 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-08-30 15:02:53,731 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-30 15:02:53,732 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-30 15:02:53,734 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-30 15:02:53,735 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-30 15:02:53,736 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-08-30 15:02:53,736 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-08-30 15:02:53,816 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-30 15:02:53,816 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-30 15:02:53,865 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-30 15:02:53,865 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-30 15:02:53,867 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-30 15:02:53,867 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-30 15:02:53,868 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-30 15:02:53,868 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-30 15:02:53,869 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection5 
+2019-08-30 15:02:53,869 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after getting connection4 
+2019-08-30 15:02:53,870 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before releasing connection4 
+2019-08-30 15:02:53,870 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size after releasing connection5 
+2019-08-30 15:02:53,874 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-08-30 15:02:53,893 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before getting connection5 
+2019-08-30 15:02:53,894 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after getting connection4 
+2019-08-30 15:02:53,896 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size before releasing connection4 
+2019-08-30 15:02:53,896 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] size after releasing connection5 
+2019-08-30 15:02:53,896 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-08-30 15:02:56,606 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 made a mistake 
+2019-08-30 15:02:56,607 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 15:02:56,607 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 15:02:56,608 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 15:02:56,608 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 15:02:56,608 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-30 15:02:56,629 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before getting connection5 
+2019-08-30 15:02:56,630 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after getting connection4 
+2019-08-30 15:02:56,638 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size before releasing connection4 
+2019-08-30 15:02:56,638 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] size after releasing connection5 
+2019-08-30 15:02:56,638 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-08-30 15:02:56,640 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-08-30 15:02:57,567 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 15:02:57,568 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 15:02:57,568 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 15:02:57,569 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 15:02:57,569 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has added product to his basket 
+2019-08-30 15:02:57,569 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 15:02:57,569 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 15:02:57,574 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 15:02:57,575 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 15:02:57,575 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 15:02:57,576 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 15:02:57,577 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 15:02:57,577 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 15:02:57,580 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 15:02:57,580 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 15:02:57,581 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 15:02:57,581 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 15:02:57,588 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 15:02:57,589 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 15:02:57,590 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 15:02:57,590 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 15:02:57,591 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before getting connection5 
+2019-08-30 15:02:57,592 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after getting connection4 
+2019-08-30 15:02:57,592 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size before releasing connection4 
+2019-08-30 15:02:57,592 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] size after releasing connection5 
+2019-08-30 15:02:57,592 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-08-30 15:02:58,383 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 15:02:58,384 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 15:02:58,387 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 15:02:58,387 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 15:02:58,387 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 15:02:58,387 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 15:02:58,388 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 15:02:58,390 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 15:02:58,391 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before getting connection5 
+2019-08-30 15:02:58,391 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after getting connection4 
+2019-08-30 15:02:58,394 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size before releasing connection4 
+2019-08-30 15:02:58,394 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] size after releasing connection5 
+2019-08-30 15:02:58,467 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-5] User=2requests his basket list 
+2019-08-30 15:02:59,880 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 15:02:59,880 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 15:02:59,881 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 15:02:59,883 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 15:02:59,884 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 15:02:59,886 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 15:02:59,886 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 15:02:59,886 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 15:02:59,890 ERROR a.c.d.AbstractDao [http-nio-8081-exec-6] org.h2.jdbc.JdbcSQLDataException: ������������ �������� "2" ��� ��������� "parameterIndex"
+Invalid value "2" for parameter "parameterIndex" [90008-199] 
+2019-08-30 15:02:59,891 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2 makes order 
+2019-08-30 15:02:59,891 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 15:02:59,891 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 15:02:59,892 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 15:02:59,892 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 15:02:59,892 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 15:02:59,892 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 15:02:59,893 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 15:02:59,893 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 15:02:59,893 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before getting connection5 
+2019-08-30 15:02:59,893 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after getting connection4 
+2019-08-30 15:02:59,894 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size before releasing connection4 
+2019-08-30 15:02:59,894 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] size after releasing connection5 
+2019-08-30 15:02:59,894 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2requests his basket list 
+2019-08-30 15:02:59,906 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 15:02:59,906 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 15:02:59,906 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 15:02:59,906 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 15:02:59,908 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before getting connection5 
+2019-08-30 15:02:59,908 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after getting connection4 
+2019-08-30 15:02:59,909 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size before releasing connection4 
+2019-08-30 15:02:59,909 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] size after releasing connection5 
+2019-08-30 15:04:54,850 INFO a.c.s.p.LangServlet [http-nio-8081-exec-6] selected ru language 
+2019-08-30 15:04:57,158 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-08-30 15:04:57,171 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-08-30 15:04:57,410 ERROR a.c.p.ConnectionPool [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: ���� ������ ��� ������������: null. ��������� �������: ������� ��� ������ ����������; ������������ ����� �������
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:04:57,419 ERROR a.c.p.ConnectionPool [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: ���� ������ ��� ������������: null. ��������� �������: ������� ��� ������ ����������; ������������ ����� �������
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:04:57,427 ERROR a.c.p.ConnectionPool [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: ���� ������ ��� ������������: null. ��������� �������: ������� ��� ������ ����������; ������������ ����� �������
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:04:57,435 ERROR a.c.p.ConnectionPool [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: ���� ������ ��� ������������: null. ��������� �������: ������� ��� ������ ����������; ������������ ����� �������
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:04:57,441 ERROR a.c.p.ConnectionPool [http-nio-8081-exec-9] org.h2.jdbc.JdbcSQLNonTransientConnectionException: ���� ������ ��� ������������: null. ��������� �������: ������� ��� ������ ����������; ������������ ����� �������
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:04:57,441 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 0 
+2019-08-30 15:04:57,499 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] size before getting connection0 
+2019-08-30 15:05:09,261 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-9] failed log in 
+2019-08-30 15:05:18,334 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 15:05:18,844 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:05:18,845 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:05:18,846 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:05:18,847 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:05:18,849 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:05:18,849 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 15:05:18,857 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:05:18,858 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:05:18,896 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:05:18,897 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:05:18,900 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:05:18,900 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:05:18,903 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:05:18,903 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:06:58,705 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 15:06:59,001 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:06:59,011 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:06:59,020 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:06:59,028 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:06:59,035 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:06:59,035 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 15:06:59,042 DEBUG a.c.p.ConnectionPool [main] size before getting connection0 
+2019-08-30 15:07:18,040 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 15:07:18,481 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:07:18,482 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:07:18,484 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:07:18,485 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:07:18,487 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:07:18,487 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 15:07:18,497 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:07:18,498 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:07:18,538 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:07:18,538 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:08:39,842 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 15:08:40,118 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:08:40,135 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:08:40,155 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:08:40,164 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:08:40,172 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-08-30 15:08:40,172 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-08-30 15:08:40,179 DEBUG a.c.p.ConnectionPool [main] size before getting connection0 
+2019-08-30 15:08:52,261 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 15:08:52,870 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:08:52,871 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:08:52,873 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:08:52,875 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:08:52,876 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:08:52,877 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 15:08:52,883 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:08:52,883 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:08:52,923 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:08:52,924 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:09:15,830 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 15:09:16,300 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:09:16,302 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:09:16,304 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:09:16,305 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:09:16,306 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:09:16,307 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 15:09:16,313 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:09:16,313 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:09:16,354 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:09:16,355 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:09:16,355 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:09:16,355 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:09:16,359 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:09:16,359 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:09:16,360 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:09:16,360 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:09:16,362 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:09:16,363 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:09:16,365 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:09:16,365 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:09:16,367 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:09:16,367 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:09:16,369 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:09:16,370 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:09:16,371 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:09:16,371 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:12:18,955 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 15:12:19,397 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:12:19,399 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:12:19,400 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:12:19,402 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:12:19,403 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:12:19,404 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 15:12:19,410 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:12:19,410 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:12:19,427 ERROR a.c.d.AbstractDao [main] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM ORDERS WHERE [*]"; ожидалось "NOT, EXISTS, INTERSECTS"
+Syntax error in SQL statement "SELECT * FROM ORDERS WHERE [*]"; expected "NOT, EXISTS, INTERSECTS"; SQL statement:
+SELECT * FROM ORDERS WHERE  [42001-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:991)
+	at org.h2.command.Parser.readTerm(Parser.java:4120)
+	at org.h2.command.Parser.readFactor(Parser.java:3090)
+	at org.h2.command.Parser.readSum(Parser.java:3077)
+	at org.h2.command.Parser.readConcat(Parser.java:3047)
+	at org.h2.command.Parser.readCondition(Parser.java:2900)
+	at org.h2.command.Parser.readAnd(Parser.java:2872)
+	at org.h2.command.Parser.readExpression(Parser.java:2864)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2792)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:764)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:87)
+	at app.controller.dao.AbstractDao.findBy(AbstractDao.java:46)
+	at app.controller.service.OrderServiceImpl.getOrders(OrderServiceImpl.java:76)
+	at Main.main(Main.java:23)
+
+2019-08-30 15:12:19,429 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:12:19,430 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:13:16,216 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 15:13:16,656 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:13:16,658 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:13:16,659 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:13:16,661 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:13:16,662 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:13:16,662 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 15:13:16,671 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:13:16,671 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:13:16,725 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:13:16,726 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:13:16,726 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:13:16,727 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:13:16,733 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:13:16,733 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:13:16,734 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:13:16,734 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:13:16,736 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:13:16,736 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:13:16,738 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:13:16,738 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:13:16,740 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:13:16,740 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:13:16,742 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:13:16,742 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:13:16,744 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:13:16,744 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:45:34,059 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 15:45:34,583 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:45:34,584 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:45:34,586 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:45:34,587 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:45:34,589 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 15:45:34,589 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 15:45:34,594 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:45:34,595 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:45:34,629 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:45:34,629 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:45:34,630 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:45:34,630 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:45:34,633 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:45:34,633 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:45:34,634 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:45:34,634 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:45:34,636 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:45:34,636 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:45:34,637 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:45:34,637 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:45:34,639 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:45:34,639 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 15:45:34,643 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 15:45:34,643 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 15:45:34,644 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 15:45:34,644 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 16:06:49,144 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 16:06:49,568 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:06:49,570 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:06:49,571 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:06:49,572 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:06:49,574 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:06:49,575 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 16:06:49,581 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 16:06:49,581 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 16:06:49,609 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 16:06:49,609 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 16:07:04,982 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 16:07:05,438 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:07:05,439 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:07:05,441 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:07:05,442 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:07:05,443 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:07:05,443 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 16:07:05,448 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 16:07:05,448 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 16:07:05,485 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 16:07:05,485 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 16:07:53,639 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 16:07:54,083 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:07:54,085 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:07:54,086 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:07:54,088 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:07:54,089 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:07:54,089 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 16:07:54,095 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 16:07:54,095 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 16:07:54,130 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 16:07:54,131 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 16:08:23,442 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 16:08:23,911 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:08:23,913 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:08:23,914 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:08:23,915 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:08:23,917 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:08:23,917 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 16:08:23,923 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 16:08:23,924 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 16:08:23,964 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 16:08:23,964 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 
+2019-08-30 16:08:32,786 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-08-30 16:08:33,231 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:08:33,233 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:08:33,235 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:08:33,236 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:08:33,237 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-08-30 16:08:33,238 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-08-30 16:08:33,242 DEBUG a.c.p.ConnectionPool [main] size before getting connection5 
+2019-08-30 16:08:33,242 DEBUG a.c.p.ConnectionPool [main] size after getting connection4 
+2019-08-30 16:08:33,279 DEBUG a.c.p.ConnectionPool [main] size before releasing connection4 
+2019-08-30 16:08:33,279 DEBUG a.c.p.ConnectionPool [main] size after releasing connection5 

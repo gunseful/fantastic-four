@@ -6,7 +6,6 @@ import app.model.user.User;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -17,44 +16,45 @@ public class UserDao extends AbstractDao<User> implements UserDaoI {
 
     @Override
     public boolean add(User user) throws SQLException {
-        String password = Encrypt.encrypt(user.getPassword(), "secret key");
-        sql = "INSERT INTO Users (Nickname, Password, Name) Values ('" + user.getNickname() + "', '" + password + "', '" + user.getName() + "')";
-        getPreparedStatement().executeUpdate();
+        getPreparedStatement(
+                String.format("INSERT INTO Users (Nickname, Password, Name) Values ('%s', '%s', '%s')",
+                        user.getNickname(),
+                        Encrypt.encrypt(user.getPassword(), "secret key"),
+                        user.getName()))
+                .executeUpdate();
         logger.info("New User " + user.getNickname() + " has been added to database");
         return true;
     }
 
+
+
     @Override
     public List<User> getAll() throws SQLException {
-        sql = "SELECT * FROM USERS";
-        ResultSet resultSet = getPreparedStatement().executeQuery();
+        ResultSet resultSet = getPreparedStatement("SELECT * FROM USERS").executeQuery();
         return parseResultSet(resultSet);
     }
 
     @Override
     public Optional<User> findByNickName(String nickname) {
         //todo I would add another method which accepts String sql and collection of parameters to be injected
-        return getSingleResult(String.format("SELECT * FROM USERS WHERE NICKNAME = %s", nickname));
+        return getSingleResult(String.format("SELECT * FROM USERS WHERE NICKNAME = '%s'", nickname));
     }
+
 
     @Override
     public void update(User user) throws SQLException {
-        sql = "UPDATE USERS SET NICKNAME = ?, PASSWORD = ?, NAME = ?, IS_ADMIN=?, IS_BLOCKED=? WHERE ID =" + user.getId();
-        PreparedStatement ps = getPreparedStatement();
-        ps.setString(1, user.getNickname());
-//        String password = Encrypt.encrypt(user.getPassword(), "secret key");
-        ps.setString(2, user.getPassword());
-        ps.setString(3, user.getName());
-        ps.setBoolean(4, user.isAdministrator());
-        ps.setBoolean(5, user.isInBlackList());
+        PreparedStatement ps = getPreparedStatement(String.format("UPDATE USERS SET NICKNAME = '%s', PASSWORD = '%s', NAME = '%s', IS_ADMIN=?, IS_BLOCKED=? WHERE ID = %d",
+                user.getNickname(), user.getPassword(), user.getName(), user.getId()));
+        ps.setBoolean(1, user.isAdministrator());
+        ps.setBoolean(2, user.isInBlackList());
         ps.executeUpdate();
     }
 
     @Override
     public void delete(User user) throws SQLException {
-        sql = "DELETE * FROM USERS WHERE ID = " + user.getId();
-        getPreparedStatement().executeUpdate();
+        getPreparedStatement(String.format("DELETE * FROM %s WHERE ID = %s", tableName(), user.getId())).executeUpdate();
     }
+
 
     @Override
     protected List<User> parseResultSet(ResultSet resultSet) {
@@ -80,9 +80,11 @@ public class UserDao extends AbstractDao<User> implements UserDaoI {
             return result;
         } catch (SQLException e) {
             //todo logger
+            logger.error(e);
             return emptyList();
         }
     }
+
 
     @Override
     protected String tableName() {

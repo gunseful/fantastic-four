@@ -2,7 +2,6 @@ package app.controller.dao;
 
 import app.model.products.Product;
 
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,43 +12,52 @@ import static java.util.Collections.emptyList;
 public class ProductDao extends AbstractDao<Product> {
 
     @Override
-    public boolean add(Product product) throws SQLException {
-        sql="INSERT INTO PRODUCTS (Name, Price) Values ('" + product.getName() + "', '" + product.getPrice() + "')";
-        getPreparedStatement().executeUpdate();
+    public boolean add(Product product) {
+        try {
+            getPreparedStatement(String.format("INSERT INTO PRODUCTS (Name, Price) Values ('%s', %d)", product.getName(), product.getPrice())).executeUpdate();
+        } catch (SQLException e) {
+            logger.error(e);
+        }
         return true;
     }
 
-
-    @Override
-    public void delete(Product product) throws SQLException {
-        sql = "DELETE FROM PRODUCTS WHERE Id = " + product.getId();
-        getPreparedStatement().executeUpdate();
+    public Product getProduct(int id){
+        return findById(id);
     }
 
 
     @Override
-    public List<Product> getAll() throws SQLException {
-        return getResultList("Select * from Products");
+    public void delete(Product product) {
+        try {
+            getPreparedStatement(String.format("DELETE FROM PRODUCTS WHERE Id = %d", product.getId())).executeUpdate();
+        } catch (SQLException e) {
+            logger.error(e);
+        }
+    }
+
+
+    @Override
+    public List<Product> getAll() {
+        return getResultList(String.format("Select * from %s", tableName()));
     }
 
     @Override
-    public void update(Product product) throws SQLException {
-        sql = "UPDATE PRODUCTS SET NAME = ?, PRICE = ? WHERE ID =" + product.getId();
-        PreparedStatement ps = getPreparedStatement();
-        ps.setString(1, product.getName());
-        ps.setInt(2, product.getPrice());
-        ps.executeUpdate();
+    public void update(Product product) {
+        try {
+            getPreparedStatement(String.format("UPDATE PRODUCTS SET NAME = '%s', PRICE = %d WHERE ID = %d", product.getName(), product.getPrice(), product.getId())).executeUpdate();
+        } catch (SQLException e) {
+            logger.error(e);
+        }
     }
 
     @Override
     protected List<Product> parseResultSet(ResultSet resultSet) {
         try {
             List<Product> list = new ArrayList<>();
-            ResultSet rs = getPreparedStatement().executeQuery();
-            while (rs.next()) {
-                int id = rs.getInt("ID");
-                String name = rs.getString("NAME");
-                int price = rs.getInt("PRICE");
+            while (resultSet.next()) {
+                int id = resultSet.getInt("ID");
+                String name = resultSet.getString("NAME");
+                int price = resultSet.getInt("PRICE");
                 list.add(new Product(id, name, price));
             }
             return list;

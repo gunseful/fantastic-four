@@ -9,28 +9,27 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public abstract class AbstractDao<T> implements Dao<T> {
 
     public static Logger logger = LogManager.getLogger(AbstractDao.class);
     private ConnectionPool connectionPool = ConnectionPool.getInstance();
-    public static String sql;
     public static Connection connection = null;
 
-    public PreparedStatement getPreparedStatement() {
+    public PreparedStatement getPreparedStatement(String sql) {
+        PreparedStatement ps = null;
         try {
             connection = connectionPool.getConnection();
-            return connection.prepareStatement(sql);
+            ps = connection.prepareStatement(sql);
         } catch (SQLException e) {
             logger.info("Fail connect to database");
             logger.error(e);
             //todo lol
-            return null;
         } finally {
             connectionPool.releaseConnection(connection);
         }
+        return ps;
     }
 
     //todo make it Optional<T>
@@ -38,6 +37,29 @@ public abstract class AbstractDao<T> implements Dao<T> {
     public T findById(int id) {
         return getSingleResult((String.format("SELECT * FROM %s WHERE ID = %d", tableName(), id))).orElseThrow(IllegalStateException::new);
     }
+
+//    //todo изначальная версия моего findby, в одном случае вместо AND нужно кидать OR поэтому принял решение просто строкой параметров искать
+    //todo может как-то логику можно сделать чтобы коллекцию и он сам хуяк хуяк, пока хз
+//    public List<T> findBy(LinkedList<String> parameters) {
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(String.format("SELECT * FROM %s WHERE ", tableName()));
+//        parameters.stream().filter(o -> !o.equals(parameters.getLast())).forEach(o -> sb.append(o).append(" AND "));
+//        parameters.stream().filter(o -> o.equals(parameters.getLast())).forEach(sb::append);
+//        return getResultList(sb.toString());
+//    }
+
+    @Override
+    public List<T> findBy(String parameters) {
+        String sb = String.format("SELECT * FROM %s WHERE ", tableName()) +
+                parameters;
+        return getResultList(sb);
+    }
+
+    @Override
+    public Optional<T> singleFindBy(String parameters) {
+        return findBy(parameters).stream().findFirst();
+    }
+
 
     /**
      * Returns Optional with result. Or empty if nothing found.
@@ -51,13 +73,14 @@ public abstract class AbstractDao<T> implements Dao<T> {
         return resultList.stream().findFirst();
     }
 
+
     /**
      * You should only return connection when you're finished all the job with it
      */
     protected List<T> getResultList(String sql) {
         final Connection connection = connectionPool.getConnection();
         try {
-            final ResultSet resultSet = connection.prepareStatement(sql).getResultSet();
+            final ResultSet resultSet = connection.prepareStatement(sql).executeQuery();
             //Structural pattern - `Template method`
             return parseResultSet(resultSet);
         } catch (SQLException e) {
@@ -67,6 +90,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
             connectionPool.releaseConnection(connection);
         }
     }
+
 
     protected abstract String tableName();
 

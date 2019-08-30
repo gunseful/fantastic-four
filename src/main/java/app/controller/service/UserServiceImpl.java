@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService {
 
     private UserDao userDao = new UserDao();
 
+    //todo ik все заказы перебирать не очень, за менить на findby
     public List<User> getBlackList() throws SQLException {
         return userDao.getAll().stream().filter(User::isInBlackList).collect(Collectors.toList());
     }
@@ -23,8 +24,8 @@ public class UserServiceImpl implements UserService {
         return true;
     }
 
-    public User getUser(int id) throws SQLException {
-        return userDao.getAll().stream().filter(u -> u.getId() == id).findFirst().orElse(null);
+    public User getUser(int id) {
+        return userDao.singleFindBy("id="+id).orElse(null);
     }
 
     public User getUserByNickname(String nickname) {
@@ -32,6 +33,7 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    //todo ik все заказы перебирать не очень, за менить на findby
     public boolean checkBlackList(User user) throws SQLException {
         return Objects.requireNonNull(userDao.getAll().stream().filter(u -> u.getId() == user.getId()).findFirst().orElse(null)).isInBlackList();
     }

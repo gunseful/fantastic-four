@@ -1,5 +1,6 @@
 package app.controller.dao;
 
+import app.model.products.Product;
 import app.model.products.ProductOrder;
 
 import java.sql.PreparedStatement;
@@ -12,11 +13,13 @@ import static java.util.Collections.emptyList;
 
 public class ProductOrderDao extends AbstractDao<ProductOrder> {
 
+    public ProductDao productDao = new ProductDao();
+
 
     @Override
     public boolean add(ProductOrder productOrder) throws SQLException {
-        sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID, COUNT) Values (?, ?, ?)";
-        PreparedStatement ps = getPreparedStatement();
+        String sql = "INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID, COUNT) Values (?, ?, ?)";
+        PreparedStatement ps = getPreparedStatement(sql);
         ps.setInt(1, productOrder.getProductId());
         ps.setInt(2, productOrder.getOrderId());
         ps.setInt(3, productOrder.getCount());
@@ -31,8 +34,8 @@ public class ProductOrderDao extends AbstractDao<ProductOrder> {
 
     @Override
     public void update(ProductOrder productOrder) throws SQLException {
-        sql = "UPDATE PRODUCTS_ORDERS SET COUNT = ? WHERE PRODUCT_ID = ? AND ORDER_ID = ?";
-        PreparedStatement ps = getPreparedStatement();
+        String sql = "UPDATE PRODUCTS_ORDERS SET COUNT = ? WHERE PRODUCT_ID = ? AND ORDER_ID = ?";
+        PreparedStatement ps = getPreparedStatement(sql);
         ps.setInt(1, productOrder.getCount());
         ps.setInt(2, productOrder.getProductId());
         ps.setInt(3, productOrder.getOrderId());
@@ -41,8 +44,8 @@ public class ProductOrderDao extends AbstractDao<ProductOrder> {
 
     @Override
     public void delete(ProductOrder productOrder) throws SQLException {
-        sql = "DELETE FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = ? AND ORDER_ID = ?";
-        PreparedStatement ps = getPreparedStatement();
+        String sql = "DELETE FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = ? AND ORDER_ID = ?";
+        PreparedStatement ps = getPreparedStatement(sql);
         ps.setInt(1,productOrder.getProductId());
         ps.setInt(2,productOrder.getOrderId());
         ps.executeUpdate();
@@ -65,6 +68,20 @@ public class ProductOrderDao extends AbstractDao<ProductOrder> {
             return emptyList();
         }
     }
+
+    public List<Product> findProductsByOrderId(int orderId){
+        List<Product> products = new ArrayList<>();
+        List<ProductOrder> list = findBy("ORDER_ID="+orderId);
+        for(ProductOrder productOrder : list){
+            Product product = productDao.getProduct(productOrder.getProductId());
+            product.setCount(productOrder.getCount());
+            products.add(product);
+        }
+        return products;
+    }
+
+
+
 
     @Override
     protected String tableName() {
