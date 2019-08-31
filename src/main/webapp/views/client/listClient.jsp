@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" language="java" %>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <html lang="ru">
 <head>
     <link rel="stylesheet" href="<c:url value="/views/css/style.css"/>" type="text/css">
@@ -11,9 +11,18 @@
     <meta charset="UTF-8">
     <title>${bundle.getObject("list.client.productlist")}</title>
 </head>
-<%--прост шапка сайта, везде одинковая--%>
+<%--top if the site--%>
 <div>
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
+        <div class="ex3">
+            <form action="LangServlet" method="post">
+                Ru <input type="radio" name="lang" value="ru">
+                En <input type="radio" name="lang" value="en">
+                Fr <input type="radio" name="lang" value="fr">
+                <input type="hidden" name="jspname" value="/listClient" />
+                <input class="w3-button w3-dark-gray w3-padding-small" type="submit" value="${bundle.getObject("change.language")}">
+            </form>
+        </div>
         <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'"
            style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
             class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>

@@ -55,16 +55,18 @@ public class Language_en extends ListResourceBundle {
             { "order.admin", "Orders"},
             { "order.client", "Your orders"},
             { "orders.pay", "pay"},
-            { "orders.client.title", "Client"},
+            { "orders.client.title", "Customer - "},
             { "orders.client.blocked", "THIS CLIENT WAS BLOCKED"},
-            { "orders.client.block", "Block this client"},
+            { "orders.client.block", "Block"},
             { "orders.empty", "No orders"},
             { "orders.order", "Order №"},
             { "orders.creation", "created at"},
             { "orders.paid", "Paid"},
             { "orders.notpaid", "Not paid"},
             { "orders.total.price", "Total price - "},
-            { "count", "Count: "},
+            { "count", "Count "},
+            { "change.language", "change language"},
+
 
 
 

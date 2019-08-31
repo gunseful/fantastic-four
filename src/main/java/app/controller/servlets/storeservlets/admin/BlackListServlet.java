@@ -1,5 +1,6 @@
 package app.controller.servlets.storeservlets.admin;
 
+import app.controller.service.UserService;
 import app.controller.service.UserServiceImpl;
 import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
@@ -15,13 +16,13 @@ public class BlackListServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        //получаем текущего юзера
+        //getting current user
         User user = (User) req.getSession().getAttribute("user");
-        UserServiceImpl userService = new UserServiceImpl();
-        //получаем черный список спец методом класса Модель и передаем его в параметре блеклист
+        //getting service to work with database
+        UserService userService = new UserServiceImpl();
         try {
+            //getting blacklist with the userService and set request's attribute
             req.setAttribute("blacklist", userService.getBlackList());
-
             if (!user.isAdministrator()) {
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/listClient.jsp");
                 requestDispatcher.forward(req, resp);
@@ -30,21 +31,24 @@ public class BlackListServlet extends HttpServlet {
                 requestDispatcher.forward(req, resp);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        UserServiceImpl userService = new UserServiceImpl();
-        //прилетает в виде параметров массив с айди юзеров которых надо удалить и вызываем спец метод из модели и удаляем из базы данных
+        //getting UserService to work with database
+        UserService userService = new UserServiceImpl();
         try {
+            //getting parameters from "usersForDelete" as an array
             if (req.getParameterValues("userForDelete") != null) {
                 String[] usersID = req.getParameterValues("userForDelete");
                 for (String userID : usersID) {
-                    logger.info("Administrator is trying to delete user from blacklist");
                     userService.removeFromBlackList(Integer.parseInt(userID.trim()));
+                    logger.info("Administrator has deleted user (id="+userID+") from blacklist");
                 }
+            }else{
+                req.setAttribute("nullData", "");
             }
         } catch (NullPointerException ignored) {
         }

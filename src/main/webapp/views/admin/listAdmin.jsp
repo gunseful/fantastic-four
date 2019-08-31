@@ -1,5 +1,7 @@
+<%--@elvariable id="bundle" type="java.util.ResourceBundle"--%>
+<%--@elvariable id="user" type="app.model.user.User"--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" language="java" %>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <html lang="ru">
 <head>
     <link rel="stylesheet" href="<c:url value="/views/css/style.css"/>" type="text/css">
@@ -11,29 +13,38 @@
     <meta charset="UTF-8">
     <title>${bundle.getObject("admin.list.title")}</title>
 </head>
-<%--прост шапка сайта, везде одинковая--%>
-<div>
-    <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
-        <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'"
-           style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
-            class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
+<%--top if the site--%>
+<div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
+    <div class="ex3">
+        <form action="LangServlet" method="post">
+            Ru <input type="radio" name="lang" value="ru">
+            En <input type="radio" name="lang" value="en">
+            Fr <input type="radio" name="lang" value="fr">
+            <input type="hidden" name="jspname" value="/listAdmin" />
+            <input class="w3-button w3-dark-gray w3-padding-small" type="submit" value="${bundle.getObject("change.language")}">
+        </form>
     </div>
+    <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'"
+       style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
+        class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
 </div>
-<%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
+<%--getting user from session and displaing string - you entryed as ${nickname}--%>
 <p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
 <p class="ex1" style="font-size:15px;">${bundle.getObject("admin")} </p>
 <p class="ex1" style="font-size:12px;">${bundle.getObject("admin.list.hint")}</p>
 
-<%--просто кнопка "Заказы", которая переносит на страницу заказов--%>
+<%--button "Orders", which redirecting to order's page--%>
 <button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
         onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">${bundle.getObject("orders")}
 </button>
-<%--просто кнопка "Черный список", которая переносит на страницу черного списка--%>
+
+<%--button "Black List", which redirecting to black list's page--%>
 <button class="w3-button w3-black w3-padding-large w3-large w3-hover-opacity-off btn-block"
         onclick="location.href='/blacklist'" name="blacklist" type="submit"
         value="blacklist">${bundle.getObject("blacklist.title")}
 </button>
-<%--кнопка вызывает сервлет выхода и системы, обнуляет сессию и переносим на хоумпейдж--%>
+
+<%--button, which calls logout servlet and nullifies session -> redirect to index.jsp page--%>
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
@@ -41,59 +52,58 @@
         </button>
     </form>
 </div>
-<%--если админ ошибся, ему подсказка--%>
+
+<%--if nothing is selected, displays string - You chose nothing--%>
 <div class="ex2">
     <div>
+        <%--@elvariable id="nullData" type="String"--%>
         <c:if test="${nullData != null}">
             <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
-    <%--прилетают из сервлета список продуктов, он выводится--%>
-    <div>
+    <%--getting list of products from database and displaying it--%>
+    <form name="input" method="post">
         <form name="input" method="post">
-            <form name="input" method="post">
-                <c:if test="${products != null}">
-                    <p>${bundle.getObject("admin.list.title")}</p>
-                    <table>
+            <%--@elvariable id="products" type="List<Product>"--%>
+            <c:if test="${products != null}">
+                <p>${bundle.getObject("admin.list.title")}</p>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>${bundle.getObject("name")}</td>
+                        <td>${bundle.getObject("price")}</td>
+                    </tr>
+                    <c:forEach var="product" items="${products}"><%--@elvariable id="String" type="java.lang.String"--%>
                         <tr>
-                            <td></td>
-                            <td>${bundle.getObject("name")}</td>
-                            <td>${bundle.getObject("price")}</td>
+                            <td><input type="checkbox" name="productForDelete" value=" ${product.getId()} "></td>
+                            <td>${product.getName()}</td>
+                            <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))}</td>
+                            <td>${bundle.getObject("currency")}</td>
                         </tr>
-                        <c:forEach var="product" items="${products}">
-                            <tr>
-                                <td><input type="checkbox" name="productForDelete" value=" ${product.getId()} "></td>
-                                <td>${product.getName()}</td>
-                                <td>${String.format("%.2f", (product.getPrice()*bundle.getObject("exchange.rates")))}</td>
-                                <td>${bundle.getObject("currency")}</td>
-                            </tr>
-                        </c:forEach>
-                    </table>
-                    <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit"
-                           value=${bundle.getObject("delete")}>
-                </c:if>
-                <c:if test="${products == null}">
-                    <p>${bundle.getObject("admin.list.no.products")}</p>
-                </c:if>
-            </form>
+                    </c:forEach>
+                </table>
+                <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit"
+                       value=${bundle.getObject("delete")}>
+            </c:if>
+            <c:if test="${products == null}">
+                <p>${bundle.getObject("admin.list.no.products")}</p>
+            </c:if>
         </form>
-    </div>
-    <%--    открывающийся блок добавления нового товара--%>
+    </form>
+<%--block of adding new product--%>
     <label class="link" for="hider" id="clickme">${bundle.getObject("admin.list.add.product")}</label>
     <input type="checkbox" id="hider">
     <div class="content">
         <form method="post" accept-charset="ISO-8859-1">
             <label
-            <%--                здесь можно ввести имя и цену--%>
+            <%--entering of name and price--%>
             <p style="font-size:13px;">${bundle.getObject("nomination")}</p> <input type="text" name="name">
             <p style="font-size:13px;">${bundle.getObject("price")}</p> <input type="number" name="price"><br/>
             </label>
             <br/>
-            <%--            кнопка сабмитищая то что ввели сверху, закидывает в базу данных товара--%>
+            <%--submit button--%>
             <button class="w3-button w3-green w3-padding-large" type="submit">${bundle.getObject("add")}</button>
         </form>
     </div>
 </div>
-</div>
-</body>
 </html>

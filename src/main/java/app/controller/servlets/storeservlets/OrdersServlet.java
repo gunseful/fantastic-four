@@ -28,6 +28,7 @@ public class OrdersServlet extends HttpServlet {
             OrderServiceImpl orderService = new OrderServiceImpl();
             req.setAttribute("isInBlackList", userService.checkBlackList(user));
             req.setAttribute("orders", orderService.getOrders(user));
+            orderService.getOrders(user).forEach(System.out::println);
 
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/common/orders.jsp");
             requestDispatcher.forward(req, resp);

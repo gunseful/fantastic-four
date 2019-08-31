@@ -57,16 +57,18 @@ public class Language_ru extends ListResourceBundle {
             { "order.admin", "Orders"},
             { "order.client", "Your orders"},
             { "orders.pay", "Оплатить"},
-            { "orders.client.title", "Клиент"},
+            { "orders.client.title", "Покупатель - "},
             { "orders.client.blocked", "ЭТОТ КЛИЕНТ ЗАБЛОКИРОВАН"},
-            { "orders.client.block", "Заблокировать этого клиента"},
+            { "orders.client.block", "Заблокировать"},
             { "orders.empty", "Заказов нет"},
             { "orders.order", "Заказ №"},
             { "orders.creation", "создан"},
             { "orders.paid", "Оплачено"},
             { "orders.notpaid", "Не оплачено"},
             { "orders.total.price", "Итоговая сумма - "},
-            { "count", "Количество: "},
+            { "count", "Количество "},
+            { "change.language", "изменить язык"},
+
 
 
 

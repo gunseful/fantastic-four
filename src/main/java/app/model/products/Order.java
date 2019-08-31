@@ -96,6 +96,16 @@ public class Order {
         this.state = state;
     }
 
+    public int totalPrice(){
+        if(state.equals("PAID")){
+            isPaid=true;}
+        int total = 0;
+        for(Product product : this.products){
+            total += product.getPrice()*product.getCount();
+        }
+        return total;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -112,13 +122,4 @@ public class Order {
                 "<br> Товары:" + sb.toString()+"<br><br>Итоговая сумма - "+totalPrice()+" тенге.<br><br>"+s+"<br>";
     }
 
-    private int totalPrice(){
-        if(state.equals("PAID")){
-            isPaid=true;}
-        int total = 0;
-        for(Product product : this.products){
-            total += product.getPrice()*product.getCount();
-        }
-        return total;
-    }
 }

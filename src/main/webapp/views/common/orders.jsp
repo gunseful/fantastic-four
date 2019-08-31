@@ -11,9 +11,18 @@
     <meta charset="UTF-8">
     <title>Заказы</title>
 </head>
-<%--станадртная шапка--%>
+<%--top if the site--%>
 <div>
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
+        <div class="ex3">
+            <form action="LangServlet" method="post">
+                Ru <input type="radio" name="lang" value="ru">
+                En <input type="radio" name="lang" value="en">
+                Fr <input type="radio" name="lang" value="fr">
+                <input type="hidden" name="jspname" value="/orders" />
+                <input class="w3-button w3-dark-gray w3-padding-small" type="submit" value="${bundle.getObject("change.language")}">
+            </form>
+        </div>
         <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'"
            style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
             class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
@@ -71,28 +80,22 @@
                     <p>${bundle.getObject("orders.client")}</p>
                 </c:if>
                 <c:forEach var="order" items="${orders}">
+
+                    <input type="checkbox" name="orders" value="${order.getId()}">
+
+
+
+                    ${bundle.getObject("orders.order")} ${order.getId()}, ${bundle.getObject("orders.creation")} ${order.getCreationDate()}
+                    <br>
                     <c:if test="${user.isAdministrator()}">
                         <c:if test="${!order.getUser().isInBlackList()}">
                             <p>
-                            <div style=" border: 6px solid green;  width:max-content;">
-                                <h3>${bundle.getObject("orders.client.title")} - ${order.getUser().getNickname()} </h3>
-                            </div>
-                            <button class="w3-button w3-red btn-block" name="block"
-                                    value="${order.getUser().getId()}">${bundle.getObject("orders.client.block")}</button>
-                            <br>
+                                ${bundle.getObject("orders.client.title")}${order.getUser().getNickname()}  <button class="button" style="vertical-align:middle" name="block" value="${order.getUser().getId()}"><span>${bundle.getObject("orders.client.block")}</span></button>
                         </c:if>
                         <c:if test="${order.getUser().isInBlackList()}">
-                            <p>
-                            <div style=" border: 8px solid green;  width:max-content;">
-                                <h3>${bundle.getObject("orders.client.title")} - ${order.getUser().getNickname()}</h3>
-                            </div>
-                            <p>
-                            <div style="background-color:red; width: max-content;">
-                                <h3>${bundle.getObject("orders.client.blocked")}</h3></div>
+                            ${bundle.getObject("orders.client.title")}${order.getUser().getNickname()}  <span style="background-color:red;">${bundle.getObject("orders.client.blocked")}</span>
                         </c:if>
                     </c:if>
-                    <input type="checkbox" name="orders" value="${order.getId()}">
-                    ${bundle.getObject("orders.order")} ${order.getId()}, ${bundle.getObject("orders.creation")} ${order.getCreationDate()}
                     <table>
                         <tr>
                             <td>${bundle.getObject("name")}</td>

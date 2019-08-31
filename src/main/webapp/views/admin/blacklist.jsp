@@ -1,5 +1,7 @@
+<%--@elvariable id="user" type="app.model.user.User"--%>
+<%--@elvariable id="bundle" type="java.util.ResourceBundle"--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" language="java" %>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <html lang="ru">
 <head>
     <link rel="stylesheet" href="<c:url value="/views/css/style.css"/>" type="text/css">
@@ -11,9 +13,19 @@
     <meta charset="UTF-8">
     <title>${bundle.getObject("blacklist.title")}</title>
 </head>
-<%--прост шапка сайта, везде одинковая--%>
+<%--top if the site--%>
 <div>
+
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
+        <div class="ex3">
+            <form action="LangServlet" method="post">
+                Ru <input type="radio" name="lang" value="ru">
+                En <input type="radio" name="lang" value="en">
+                Fr <input type="radio" name="lang" value="fr">
+                <input type="hidden" name="jspname" value="/blacklist" />
+                <input class="w3-button w3-dark-gray w3-padding-small" type="submit" value="${bundle.getObject("change.language")}">
+            </form>
+        </div>
         <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'"
            style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
             class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
@@ -44,17 +56,21 @@
 <%--если админ ошибся, ему подсказка--%>
 <div class="ex2">
     <div>
+        <%--@elvariable id="nullData" type="String"--%>
         <c:if test="${nullData != null}">
             <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
-    <%--    большой блок где от сервлета приходит черный список, он и выводится--%>
+    <%--    --%>
     <div>
         <form name="input" method="post">
+            <%--@elvariable id="blacklist" type="List<User>"--%>
             <c:if test="${!blacklist.isEmpty()}">
                 <p>${bundle.getObject("blacklist.title")}</p>
                 <c:forEach var="user" items="${blacklist}">
-                    <input type="checkbox" name="userForDelete" value=" ${user.getId()} ">${user.getNickname()}<br>
+                    <label>
+                        <input type="checkbox" name="userForDelete" value=" ${user.getId()} ">
+                    </label>${user.getNickname()}<br>
                 </c:forEach>
                 <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit"
                        value="${bundle.getObject("blacklist.delete")}">
@@ -67,5 +83,4 @@
 </div>
 <div>
 </div>
-</body>
 </html>

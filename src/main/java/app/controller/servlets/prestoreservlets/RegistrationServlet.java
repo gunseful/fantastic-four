@@ -39,7 +39,7 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-//        Repository controller = new Repository();
+
         try {
             //Проверяем пришедшие параметры Имени, Ника и Пароль на правильность (или вообще наличие).
             if (!req.getParameter("name").equals("") && req.getParameter("nickname").length()>=3 && req.getParameter("nickname").length()<=15 && req.getParameter("password").length()>=6 && req.getParameter("password").length()<=15) {
