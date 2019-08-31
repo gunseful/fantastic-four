@@ -18,7 +18,7 @@ public interface OrderService {
 
     List<Order> getOrders(User user) throws SQLException;
 
-    List<Product> getBasket(User user) throws SQLException;
+    List<Product> getBasketProducts(User user) throws SQLException;
 
     void addToBasket(User user, int productId) throws SQLException;
 

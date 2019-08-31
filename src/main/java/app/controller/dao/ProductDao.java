@@ -9,32 +9,19 @@ import java.util.List;
 
 import static java.util.Collections.emptyList;
 
-public class ProductDao extends AbstractDao<Product> {
+public class ProductDao extends AbstractDao<Product> implements ProductDaoInteface{
 
     @Override
     public boolean add(Product product) {
         try {
             getPreparedStatement(String.format("INSERT INTO PRODUCTS (Name, Price) Values ('%s', %d)", product.getName(), product.getPrice())).executeUpdate();
+            logger.info("Product " + product.getId() + " has been added to product list");
+            return true;
         } catch (SQLException e) {
-            logger.error(e);
+            logger.error("adding product fail", e);
         }
-        return true;
+        return false;
     }
-
-    public Product getProduct(int id){
-        return findById(id);
-    }
-
-
-    @Override
-    public void delete(Product product) {
-        try {
-            getPreparedStatement(String.format("DELETE FROM PRODUCTS WHERE Id = %d", product.getId())).executeUpdate();
-        } catch (SQLException e) {
-            logger.error(e);
-        }
-    }
-
 
     @Override
     public List<Product> getAll() {
@@ -45,9 +32,25 @@ public class ProductDao extends AbstractDao<Product> {
     public void update(Product product) {
         try {
             getPreparedStatement(String.format("UPDATE PRODUCTS SET NAME = '%s', PRICE = %d WHERE ID = %d", product.getName(), product.getPrice(), product.getId())).executeUpdate();
+            logger.info("Product " + product.getId() + " has been updated");
         } catch (SQLException e) {
-            logger.error(e);
+            logger.error("updating product fail", e);
         }
+    }
+
+    @Override
+    public void delete(Product product) {
+        try {
+            getPreparedStatement(String.format("DELETE FROM PRODUCTS WHERE Id = %d", product.getId())).executeUpdate();
+            logger.info("Product " + product.getId() + " has been deleted from product list");
+        } catch (SQLException e) {
+            logger.error("removing product fail", e);
+        }
+    }
+
+    @Override
+    public Product getProduct(int id){
+        return findById(id);
     }
 
     @Override
@@ -62,7 +65,7 @@ public class ProductDao extends AbstractDao<Product> {
             }
             return list;
         } catch (SQLException e) {
-            logger.error(e);
+            logger.error("getting list of products fail",e);
             return emptyList();
         }
     }

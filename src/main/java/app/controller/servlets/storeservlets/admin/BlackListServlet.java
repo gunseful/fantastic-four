@@ -1,7 +1,7 @@
 package app.controller.servlets.storeservlets.admin;
 
-import app.model.user.User;
 import app.controller.service.UserServiceImpl;
+import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -9,7 +9,6 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.SQLException;
 
 public class BlackListServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
@@ -47,7 +46,7 @@ public class BlackListServlet extends HttpServlet {
                     userService.removeFromBlackList(Integer.parseInt(userID.trim()));
                 }
             }
-        } catch (NullPointerException | SQLException ignored) {
+        } catch (NullPointerException ignored) {
         }
         doGet(req, resp);
     }

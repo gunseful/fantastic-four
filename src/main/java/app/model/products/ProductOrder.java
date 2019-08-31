@@ -8,8 +8,13 @@ public class ProductOrder {
     public ProductOrder() {
     }
 
-    public ProductOrder(int count, int orderId, int productId) {
-        this.count = count;
+//    public ProductOrder(int count, int orderId, int productId) {
+//        this.count = count;
+//        this.orderId = orderId;
+//        this.productId = productId;
+//    }
+
+    public ProductOrder(int orderId, int productId) {
         this.orderId = orderId;
         this.productId = productId;
     }

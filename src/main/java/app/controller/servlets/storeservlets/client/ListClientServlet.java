@@ -1,9 +1,8 @@
 package app.controller.servlets.storeservlets.client;
 
-import app.model.products.Product;
-import app.model.user.User;
 import app.controller.service.OrderServiceImpl;
 import app.controller.service.ProductServiceImpl;
+import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,7 +10,6 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.SQLException;
 
 public class ListClientServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
@@ -40,32 +38,22 @@ public class ListClientServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         User user = (User) req.getSession().getAttribute("user");
-        ProductServiceImpl productService = new ProductServiceImpl();
         OrderServiceImpl orderService = new OrderServiceImpl();
         //выбираем в списке чо хотим купить, то есть добавить в корзину и кликаем - > Летит в корзину
         try {
             if (req.getParameterValues("productForBuy") != null) {
-                String[] productsID = req.getParameterValues("productForBuy");
-                //опять юзера из сессии достаем
-                for (String productID : productsID) {
-                    for (Product product : productService.getList()) {
-                        //проверяем есть ли ваще продукт в базе данных
-                        if (String.valueOf(product.getId()).equals(productID.trim())) {
-                            logger.info("User=" + user.getNickname() + " has added product to his basket");
-//                            //если есть добавляет в базу данных
-                            if(!orderService.updateBasket(true,user,product.getId())){
-                                orderService.addToBasket(user,product.getId());
-                            }
-                        }
+                for (String productId : req.getParameterValues("productForBuy")) {
+                    if (!orderService.updateBasket(true, user, Integer.parseInt(productId.trim()))) {
+                        orderService.addToBasket(user, Integer.parseInt(productId.trim()));
                     }
                 }
             } else {
-                logger.error("User=" + user.getNickname() + " made a mistake");
+                logger.info("User=" + user.getNickname() + " chose nothing");
                 req.setAttribute("nullData", "");
                 doGet(req, resp);
             }
-        } catch (NullPointerException | SQLException e) {
-            logger.error("User=" + user.getNickname() + " made a mistake");
+        } catch (NullPointerException e) {
+            logger.error("User=" + user.getNickname() + " chose nothing", e);
             req.setAttribute("nullData", "");
             doGet(req, resp);
         }

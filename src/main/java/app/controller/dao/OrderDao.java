@@ -1,6 +1,7 @@
 package app.controller.dao;
 
 import app.model.products.Order;
+import app.model.user.User;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,23 +11,17 @@ import java.util.List;
 
 import static java.util.Collections.emptyList;
 
-public class OrderDao extends AbstractDao<Order> {
-
-    public ProductOrderDao productOrderDao = new ProductOrderDao();
+public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface{
 
     @Override
-    public void delete(Order order) throws SQLException {
-        String sql = "DELETE FROM ORDERS WHERE ID = " + order.getId();
-        getPreparedStatement(sql).executeUpdate();
-        logger.info("order " + order.getId() + " has been deleted from order list");
-    }
-
-    @Override
-    public boolean add(Order order) throws SQLException {
-        String sql = "INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?, 'NOT_ORDERED')";
-        PreparedStatement ps = getPreparedStatement(sql);
-        ps.setInt(1, order.getCustomerId());
-        ps.executeUpdate();
+    public boolean add(Order order) {
+        try {
+            PreparedStatement ps = getPreparedStatement(String.format("INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (%d, 'NOT_ORDERED')", order.getCustomerId()));
+            ps.executeUpdate();
+            logger.info("User " + order.getCustomerId() + " has created new order");
+        } catch (SQLException e) {
+            logger.error("adding new order fail", e);
+        }
         return true;
     }
 
@@ -39,15 +34,36 @@ public class OrderDao extends AbstractDao<Order> {
     public void update(Order order) {
         try {
             PreparedStatement ps = getPreparedStatement(String.format("UPDATE ORDERS SET CUSTOMER_ID = %d, CREATEDAT = ?, STATE = %s WHERE ID = %d", order.getCustomerId(), order.getState(), order.getId()));
-            ps.setObject(2, order.getCreationDate());
+            ps.setObject(1, order.getCreationDate());
             ps.executeUpdate();
+            logger.info("Order " + order.getId() + " has been updated");
         } catch (SQLException e) {
-            logger.error(e);
+            logger.error("updating order fail", e);
         }
     }
 
-    public List<Order> findOrders() {
-        return findBy("STATE='ORDERED' OR STATE ='PAID'");
+    @Override
+    public void delete(Order order) {
+        try {
+            getPreparedStatement(String.format("DELETE FROM ORDERS WHERE ID = %d", order.getId())).executeUpdate();
+            logger.info("order " + order.getId() + " has been deleted from order list");
+        } catch (SQLException e) {
+            logger.error("removing order fail", e);
+        }
+    }
+
+    @Override
+    public List<Order> findOrders(User user) {
+        if(user.isAdministrator()) {
+            return findBy("STATE='ORDERED' OR STATE ='PAID'");
+        }else {
+            return findBy(String.format("STATE='ORDERED' OR STATE ='PAID' AND CUSTOMER_ID=%d",user.getId()));
+        }
+    }
+
+    @Override
+    public Order getUserBasket(User user) {
+        return singleFindBy(String.format("STATE='NOT_ORDERED' AND CUSTOMER_ID=%d", user.getId())).orElse(null);
     }
 
     @Override
@@ -64,11 +80,10 @@ public class OrderDao extends AbstractDao<Order> {
             }
             return result;
         } catch (SQLException e) {
-            logger.error(e);
+            logger.error("getting list of orders fail",e);
             return emptyList();
         }
     }
-
 
     @Override
     protected String tableName() {

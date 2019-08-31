@@ -14,23 +14,13 @@ import java.io.IOException;
 public class AuthenticationFilter implements Filter {
     public static Logger logger = LogManager.getLogger();
 
-//    private ServletContext context;
-
-    public void init(FilterConfig fConfig) {
-//        this.context = fConfig.getServletContext();
-//        this.context.log("AuthenticationFilter initialized");
-    }
-
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
         //сервлеты создаем
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
-        //получаем адрес запроса
         String uri = req.getRequestURI();
-//        this.context.log("Requested Resource::"+uri);
-
         //мутим сессию
         HttpSession session = req.getSession(false);
 
@@ -43,9 +33,9 @@ public class AuthenticationFilter implements Filter {
             logger.error("Unauthorized access request");
 //            this.context.log("Unauthorized access request");
             res.sendRedirect("/loggin");
-        } else {
-            chain.doFilter(request, response);
+            return;
         }
+        chain.doFilter(request, response);
 
 
     }

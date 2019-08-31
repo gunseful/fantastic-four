@@ -76,9 +76,9 @@ public class Order {
         this.products = products;
     }
 
-    public void addProduct(Product product){
-        this.products.add(product);
-    }
+//    public void addProduct(Product product){
+//        this.products.add(product);
+//    }
 
     public User getUser() {
         return user;
@@ -102,7 +102,7 @@ public class Order {
         for(Product product : products){
             sb.append("<br>").append(product.toString());
         }
-        String s ="";
+        String s;
         if(state.equals("PAID")){
             s = "Оплачено";
         }else{
@@ -112,7 +112,7 @@ public class Order {
                 "<br> Товары:" + sb.toString()+"<br><br>Итоговая сумма - "+totalPrice()+" тенге.<br><br>"+s+"<br>";
     }
 
-    public int totalPrice(){
+    private int totalPrice(){
         if(state.equals("PAID")){
             isPaid=true;}
         int total = 0;

@@ -1,8 +1,8 @@
 package app.controller.servlets.storeservlets.admin;
 
+import app.controller.service.ProductServiceImpl;
 import app.model.products.Product;
 import app.model.user.User;
-import app.controller.service.ProductServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,7 +10,6 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class ListAdminServlet extends HttpServlet {
@@ -66,7 +65,7 @@ public class ListAdminServlet extends HttpServlet {
                 logger.info("User=" + user.getNickname() + " has been added new product - " + product.getName());
 
             }
-        } catch (NullPointerException | SQLException e) {
+        } catch (NullPointerException e) {
             logger.error("User=" + user.getNickname() + " was failed");
             //если и ни того ни сего нет, либо забыли цену написать либо чо еще, короче косяк - вылетает нуллдата
             req.setAttribute("nullData", "");

@@ -23,9 +23,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
             connection = connectionPool.getConnection();
             ps = connection.prepareStatement(sql);
         } catch (SQLException e) {
-            logger.info("Fail connect to database");
-            logger.error(e);
-            //todo lol
+            logger.error("Fail connect to database",e);
         } finally {
             connectionPool.releaseConnection(connection);
         }
@@ -38,7 +36,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
         return getSingleResult((String.format("SELECT * FROM %s WHERE ID = %d", tableName(), id))).orElseThrow(IllegalStateException::new);
     }
 
-//    //todo изначальная версия моего findby, в одном случае вместо AND нужно кидать OR поэтому принял решение просто строкой параметров искать
+    //todo изначальная версия моего findBy, в одном случае вместо AND нужно кидать OR поэтому принял решение просто строкой параметров искать
     //todo может как-то логику можно сделать чтобы коллекцию и он сам хуяк хуяк, пока хз
 //    public List<T> findBy(LinkedList<String> parameters) {
 //        StringBuilder sb = new StringBuilder();
@@ -63,7 +61,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
 
     /**
      * Returns Optional with result. Or empty if nothing found.
-     * Throws exception if there are multiple results.
+     * Throws exception if there are multiple r esults.
      */
     protected Optional<T> getSingleResult(String sql) {
         final List<T> resultList = getResultList(sql);
@@ -72,7 +70,6 @@ public abstract class AbstractDao<T> implements Dao<T> {
         }
         return resultList.stream().findFirst();
     }
-
 
     /**
      * You should only return connection when you're finished all the job with it
@@ -90,7 +87,6 @@ public abstract class AbstractDao<T> implements Dao<T> {
             connectionPool.releaseConnection(connection);
         }
     }
-
 
     protected abstract String tableName();
 

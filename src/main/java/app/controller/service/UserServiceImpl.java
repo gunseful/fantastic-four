@@ -4,52 +4,51 @@ import app.controller.dao.UserDao;
 import app.controller.encrypt.Encrypt;
 import app.model.user.User;
 
-import java.sql.SQLException;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class UserServiceImpl implements UserService {
 
     private UserDao userDao = new UserDao();
 
-    //todo ik все заказы перебирать не очень, за менить на findby
-    public List<User> getBlackList() throws SQLException {
-        return userDao.getAll().stream().filter(User::isInBlackList).collect(Collectors.toList());
+    @Override
+    public List<User> getBlackList() {
+        return userDao.getBlackList();
     }
 
-    public boolean addNewUser(User user) throws SQLException {
+    @Override
+    public boolean addNewUser(User user) {
         userDao.add(user);
         return true;
     }
 
-    public User getUser(int id) {
-        return userDao.singleFindBy("id="+id).orElse(null);
-    }
-
+    @Override
     public User getUserByNickname(String nickname) {
         return userDao.findByNickName(nickname.toUpperCase()).orElseThrow(NoSuchElementException::new);
 
     }
 
-    //todo ik все заказы перебирать не очень, за менить на findby
-    public boolean checkBlackList(User user) throws SQLException {
-        return Objects.requireNonNull(userDao.getAll().stream().filter(u -> u.getId() == user.getId()).findFirst().orElse(null)).isInBlackList();
+    @Override
+
+    public boolean checkBlackList(User user) {
+        return userDao.findById(user.getId()).isInBlackList();
     }
 
-    public void addToBlackList(int id) throws SQLException {
+    @Override
+    public void addToBlackList(int id) {
         User user = userDao.findById(id);
         user.setInBlackList(true);
         userDao.update(user);
     }
 
-    public void removeFromBlackList(int id) throws SQLException {
+    @Override
+    public void removeFromBlackList(int id) {
         User user = userDao.findById(id);
         user.setInBlackList(false);
         userDao.update(user);
     }
 
+    @Override
     public boolean authorize(String nickname, String password) {
         String encrypted = Encrypt.encrypt(password, "secret key");
         return userDao.findByNickName(nickname.toUpperCase())

@@ -2,25 +2,22 @@ package app.controller.service;
 
 import app.model.user.User;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public interface UserService {
-    List<User> getBlackList() throws SQLException;
+    List<User> getBlackList();
 
-    boolean addNewUser(User user) throws SQLException;
+    boolean addNewUser(User user);
 
-    boolean authorize(String nickname, String password) throws SQLException;
+    boolean authorize(String nickname, String password);
 
-    User getUser(int id) throws SQLException;
+    User getUserByNickname(String nickname);
 
-    User getUserByNickname(String nickname) throws SQLException;
+    boolean checkBlackList(User user);
 
-    boolean checkBlackList(User user) throws SQLException;
+    void addToBlackList(int id);
 
-    void addToBlackList(int id) throws SQLException;
-
-    void removeFromBlackList(int id) throws SQLException;
+    void removeFromBlackList(int id);
 
 
 }

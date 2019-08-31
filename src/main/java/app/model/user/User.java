@@ -53,8 +53,8 @@ public class User {
         return isAdministrator;
     }
 
-    public void setAdministrator(boolean administrator) {
-        isAdministrator = administrator;
+    public void setAdministrator(boolean isAdministrator) {
+        this.isAdministrator = isAdministrator;
     }
 
     public int getId() {

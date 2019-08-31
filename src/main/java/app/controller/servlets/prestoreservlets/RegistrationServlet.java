@@ -1,7 +1,7 @@
 package app.controller.servlets.prestoreservlets;
 
-import app.model.user.User;
 import app.controller.service.UserServiceImpl;
+import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -9,7 +9,6 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.SQLException;
 
 public class RegistrationServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
@@ -62,7 +61,7 @@ public class RegistrationServlet extends HttpServlet {
                 req.setAttribute("fail", "");
                 doGet(req, resp);
             }
-        }catch (NullPointerException | SQLException ignored){
+        }catch (NullPointerException ignored){
         }
         doGet(req, resp);
     }

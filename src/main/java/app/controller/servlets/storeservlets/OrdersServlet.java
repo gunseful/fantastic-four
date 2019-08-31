@@ -1,24 +1,21 @@
 package app.controller.servlets.storeservlets;
 
-import app.model.user.User;
 import app.controller.service.OrderServiceImpl;
 import app.controller.service.UserServiceImpl;
+import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.sql.SQLException;
 
 public class OrdersServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
 
         try {
             if (req.getAttribute("Orders") != null) {
@@ -43,7 +40,7 @@ public class OrdersServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         User user = (User) req.getSession().getAttribute("user");
         OrderServiceImpl orderService = new OrderServiceImpl();
         UserServiceImpl userService = new UserServiceImpl();
@@ -75,7 +72,7 @@ public class OrdersServlet extends HttpServlet {
                     doGet(req, resp);
                 }
             }
-        } catch (NullPointerException | SQLException ignored) {
+        } catch (NullPointerException ignored) {
         }
         doGet(req, resp);
     }
