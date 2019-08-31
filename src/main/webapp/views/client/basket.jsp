@@ -13,9 +13,8 @@
     <title>${bundle.getObject("basket.title")}</title>
 </head>
 <%--top if the site--%>
-<div>
+
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
-        <div class="ex3">
             <form action="LangServlet" method="post">
                 Ru <input type="radio" name="lang" value="ru">
                 En <input type="radio" name="lang" value="en">
@@ -23,12 +22,10 @@
                 <input type="hidden" name="jspname" value="/basket" />
                 <input class="w3-button w3-dark-gray w3-padding-small" type="submit" value="${bundle.getObject("change.language")}">
             </form>
-        </div>
         <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'"
            style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
             class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
     </div>
-</div>
 <%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
 <p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
 <%--просто кнопка "к магазину", которая переносит на стандартную страницу клиентлиста--%>

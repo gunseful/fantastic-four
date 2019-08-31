@@ -17,20 +17,14 @@ public class LangServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        //создает сессию
-
-        ResourceBundle bundle;
         //в зависимости от выбранного языка созадется бандл
-        if(request.getParameter("lang")!=null) {
+        if (request.getParameter("lang") != null) {
             logger.info("selected " + request.getParameter("lang") + " language");
             Locale loc = new Locale(request.getParameter("lang"));
-            bundle =
+            ResourceBundle bundle =
                     ResourceBundle.getBundle("app.controller.locale.Language", loc);
             request.getSession().setAttribute("bundle", bundle);
         }
-
         response.sendRedirect(request.getParameter("jspname"));
-
-
     }
 }

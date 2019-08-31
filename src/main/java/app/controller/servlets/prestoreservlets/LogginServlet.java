@@ -1,5 +1,6 @@
 package app.controller.servlets.prestoreservlets;
 
+import app.controller.service.UserService;
 import app.controller.service.UserServiceImpl;
 import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
@@ -33,6 +34,8 @@ public class LogginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("Trying to log in");
+        UserService userService = new UserServiceImpl();
+
         //прилетает то что было в полях, логи и пароль, чтобы зайти, создается пользователь промежуточный
         try {
             String nickname = req.getParameter("nickname");
@@ -40,21 +43,19 @@ public class LogginServlet extends HttpServlet {
             //вот здесь
             User user = new User(nickname, password);
             HttpSession session = req.getSession();
-
             //опять таки нужна нам наша модель, для работы с базой данной только ее и будет юзать
             //ну и проверяем логин и пароль, ничего не хэшируется, тупо строкой пароль идет - небезопасно офк, ну а как еще
-            UserServiceImpl userService = new UserServiceImpl();
             if (userService.authorize(nickname, password)) {
                 User currentUser = userService.getUserByNickname(nickname.toUpperCase());
                 //проверяется, а не в черном ли списке чувак
                 if (userService.checkBlackList(currentUser)) {
                     logger.error("User= " + currentUser.getNickname() + " is in black list");
                     //если да то бросает опять на логин с атрибутом inBlackList (вылезит уведомление)
-                    RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
-                    resp.setContentType("text/html;charset=UTF-8");
+//                    RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
+//                    resp.setContentType("text/html;charset=UTF-8");
                     req.setAttribute("inBlackList", currentUser.getNickname());
-                    rd.include(req, resp);
-                    doGet(req, resp);
+//                    rd.include(req, resp);
+//                    doGet(req, resp);
                 } else {
                     //если все ок, и не в черном списке, то добавляем сессию, туда кидает юзера, устанавливаем интервал инактивности
                     //добавляем юзера в куки
@@ -67,28 +68,22 @@ public class LogginServlet extends HttpServlet {
                     //если юзер админ редиректим на лист админа
                     if (currentUser.isAdministrator()) {
                         resp.sendRedirect("/listAdmin");
+                        return;
                     } else {
                         //если обычный клиент, бросаем его на лист Клиента
                         resp.sendRedirect("/listClient");
+                        return;
                     }
                 }
             } else {
                 logger.error("User= " + user.getNickname() + " is not found in database");
-                //если такого юзера в базе нет, кидает опять в логин с ошибкой ноудата
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
-                resp.setContentType("text/html;charset=UTF-8");
                 req.setAttribute("NoData", "NoData");
-                rd.include(req, resp);
             }
-
-        } catch (Exception ignored) {
-            logger.error("failed log in");
-            //если такого юзера в базе нет, кидает опять в логин с ошибкой ноудата
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/views/initialization/loggin.jsp");
-            resp.setContentType("text/html;charset=UTF-8");
-            req.setAttribute("NoData", "NoData");
-            rd.include(req, resp);
+        } catch (Exception e) {
+            logger.error("failed log in", e);
         }
+
+        doGet(req, resp);
 
 
     }

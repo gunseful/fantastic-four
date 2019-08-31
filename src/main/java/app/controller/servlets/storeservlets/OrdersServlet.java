@@ -28,7 +28,6 @@ public class OrdersServlet extends HttpServlet {
             OrderServiceImpl orderService = new OrderServiceImpl();
             req.setAttribute("isInBlackList", userService.checkBlackList(user));
             req.setAttribute("orders", orderService.getOrders(user));
-            orderService.getOrders(user).forEach(System.out::println);
 
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/common/orders.jsp");
             requestDispatcher.forward(req, resp);
@@ -50,7 +49,6 @@ public class OrdersServlet extends HttpServlet {
             if (req.getParameter("Pay") != null && req.getParameterValues("orders") != null) {
                 String[] ordersID = req.getParameterValues("orders");
                 for (String orderID : ordersID) {
-                    System.out.println(orderID);
                     logger.info("User=" + user.getNickname() + " has payed order");
                     orderService.payOrder(Integer.parseInt(orderID));
                 }

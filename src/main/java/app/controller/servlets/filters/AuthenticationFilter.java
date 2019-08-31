@@ -19,18 +19,17 @@ public class AuthenticationFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
 
-        //сервлеты создаем
+        //creating request and responce
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
-
         String uri = req.getRequestURI();
-        //мутим сессию
+        //getting session
         HttpSession session = req.getSession(false);
 
         //если сессии нет либо нет юзера в сессии то фелс, а так тру
         boolean isLoggedIn = (session != null && session.getAttribute("user") != null);
-        if(req.getSession().getAttribute("bundle")==null){
+        if (req.getSession().getAttribute("bundle") == null) {
             Locale loc = new Locale("en");
             ResourceBundle bundle =
                     ResourceBundle.getBundle("app.controller.locale.Language", loc);
@@ -43,8 +42,8 @@ public class AuthenticationFilter implements Filter {
 //            this.context.log("Unauthorized access request");
             res.sendRedirect("/loggin");
             return;
-        }else{
-            if(isLoggedIn && (uri.equals("/"))){
+        } else {
+            if (isLoggedIn && (uri.equals("/"))) {
                 res.sendRedirect("/loggin");
                 return;
             }

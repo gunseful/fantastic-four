@@ -15,19 +15,15 @@
 <body class="w3-light-gray">
 
 
-
-
 <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
 
-    <div>
         <form action="LangServlet" method="post">
             Ru <input type="radio" name="lang" value="ru">
             En <input type="radio" name="lang" value="en">
             Fr <input type="radio" name="lang" value="fr">
-            <input type="hidden" name="jspname" value="/" />
+            <input type="hidden" name="jspname" value="/"/>
             <input class="w3-button w3-dark-gray" type="submit" value="${bundle.getObject("change.language")}">
         </form>
-    </div>
 
     <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'"
        style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
@@ -36,25 +32,19 @@
 </div>
 
 
-
+<div>
     <div>
-        <div>
-            <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
-                    onclick="location.href='/loggin'">${bundle.getObject("log.in")}
-            </button>
-            <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
-                    onclick="location.href='/registration'">${bundle.getObject("registration")}
-            </button>
-        </div>
+        <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
+                onclick="location.href='/loggin'">${bundle.getObject("log.in")}
+        </button>
+        <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
+                onclick="location.href='/registration'">${bundle.getObject("registration")}
+        </button>
     </div>
-    <div class="ex2">
-            ${bundle.getObject("welcome")}
-    </div>
-
-
-
-
-
+</div>
+<div class="ex2">
+    ${bundle.getObject("welcome")}
+</div>
 
 
 </body>

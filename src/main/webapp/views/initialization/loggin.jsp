@@ -15,9 +15,7 @@
 
 <body class="w3-light-grey">
 <%--top if the site--%>
-<div>
     <div class="ex1 w3-container w3-dark-gray w3-opacity w3-center-align">
-        <div class="ex3">
             <form action="LangServlet" method="post">
                 Ru <input type="radio" name="lang" value="ru">
                 En <input type="radio" name="lang" value="en">
@@ -25,12 +23,10 @@
                 <input type="hidden" name="jspname" value="/loggin" />
                 <input class="w3-button w3-dark-gray w3-padding-small" type="submit" value="${bundle.getObject("change.language")}">
             </form>
-        </div>
         <i class="fas fa-dragon w3-jumbo" onclick="location.href='/'"
            style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
             class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
     </div>
-</div>
 <%--если в черном списке юзер введенный, то вылазит вот это--%>
 <div>
     <c:if test="${inBlackList != null}">
