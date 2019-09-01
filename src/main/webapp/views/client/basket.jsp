@@ -26,9 +26,9 @@
            style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
             class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
     </div>
-<%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
+
 <p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
-<%--просто кнопка "к магазину", которая переносит на стандартную страницу клиентлиста--%>
+
 <div>
     <div>
         <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block"
@@ -36,7 +36,7 @@
         </button>
     </div>
 </div>
-<%--просто кнопка "Заказы", которая переносит на стандартную страницу заказов--%>
+
 <div>
     <div>
         <button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
@@ -45,7 +45,7 @@
         </button>
     </div>
 </div>
-<%--кнопка вызывает сервлет выхода и системы, обнуляет сессию и переносим на хоумпейдж--%>
+
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
@@ -53,14 +53,14 @@
         </button>
     </form>
 </div>
-<%--если клиент ошибся, ему подсказка--%>
+
 <div class="ex2">
     <div>
         <c:if test="${nullData != null}">
             <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
-    <%--большой блок где из сервлета прилетают корзина с продуктами, он и выводится--%>
+
     <div>
         <form name="input" method="post">
             <c:if test="${!basket.isEmpty()}">
@@ -101,7 +101,7 @@
                 <p>${bundle.getObject("basket.empty")}</p>
             </c:if>
         </form>
-        <%--        если корзина не пустая то на основее ее делается заказ, нажимается кнопка и он делается--%>
+
         <form name="input" method="post">
             <c:if test="${!basket.isEmpty()}">
                 <button class="w3-button w3-yellow w3-padding-large w3-large w3-hover-opacity-off btn-block"

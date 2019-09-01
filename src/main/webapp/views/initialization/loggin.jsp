@@ -27,20 +27,20 @@
            style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
             class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
     </div>
-<%--если в черном списке юзер введенный, то вылазит вот это--%>
+
 <div>
     <c:if test="${inBlackList != null}">
         <p style="font-size:15px;">
         <p style="font-size:20px;">${bundle.getObject("user")} - ${inBlackList} ${bundle.getObject("inblacklist")}</p>
     </c:if>
 </div>
-<%--если ввели неправильно, то выводит это--%>
+
 <div>
     <c:if test="${NoData != null}">
         <p style="font-size:15px;">${bundle.getObject("nodata")}</p>
     </c:if>
 </div>
-<%--форма ввода ника и пароля, и кнопка сабмит--%>
+
 <div>
     <form method="post" accept-charset="ISO-8859-1">
         <label>

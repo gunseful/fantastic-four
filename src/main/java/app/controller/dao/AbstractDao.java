@@ -61,7 +61,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
 
     /**
      * Returns Optional with result. Or empty if nothing found.
-     * Throws exception if there are multiple r esults.
+     * Throws exception if there are multiple results.
      */
     protected Optional<T> getSingleResult(String sql) {
         final List<T> resultList = getResultList(sql);

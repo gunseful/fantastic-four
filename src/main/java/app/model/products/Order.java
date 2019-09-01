@@ -4,6 +4,7 @@ import app.model.user.User;
 
 import java.sql.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class Order {
     private int id;
@@ -16,24 +17,6 @@ public class Order {
 
 
     public Order() {
-    }
-
-    public Order(int id, Date creationDate, List<Product> products, boolean isPaid, User user) {
-        this.id = id;
-        this.creationDate = creationDate;
-        this.products = products;
-        this.isPaid = isPaid;
-        this.user=user;
-    }
-
-    public Order(int id, List<Product> products) {
-        this.id = id;
-        this.products = products;
-    }
-
-    public Order(Date creationDate, List<Product> products) {
-        this.creationDate = creationDate;
-        this.products = products;
     }
 
     public int getId() {
@@ -76,10 +59,6 @@ public class Order {
         this.products = products;
     }
 
-//    public void addProduct(Product product){
-//        this.products.add(product);
-//    }
-
     public User getUser() {
         return user;
     }
@@ -104,6 +83,25 @@ public class Order {
             total += product.getPrice()*product.getCount();
         }
         return total;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Order order = (Order) o;
+        return id == order.id &&
+                isPaid == order.isPaid &&
+                customerId == order.customerId &&
+                Objects.equals(creationDate, order.creationDate) &&
+                Objects.equals(products, order.products) &&
+                Objects.equals(user, order.user) &&
+                Objects.equals(state, order.state);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, creationDate, products, isPaid, customerId, user, state);
     }
 
     @Override

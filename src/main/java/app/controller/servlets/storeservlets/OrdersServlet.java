@@ -16,14 +16,12 @@ public class OrdersServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        //getting current user and Service to work with database
         User user = (User) req.getSession().getAttribute("user");
         UserServiceImpl userService = new UserServiceImpl();
         OrderServiceImpl orderService = new OrderServiceImpl();
 
         try {
-//            if (req.getAttribute("Orders") != null) {
-//                resp.sendRedirect("/orders");
-//            }
             req.setAttribute("isInBlackList", userService.checkBlackList(user));
             req.setAttribute("orders", orderService.getOrders(user));
 
@@ -42,34 +40,34 @@ public class OrdersServlet extends HttpServlet {
         User user = (User) req.getSession().getAttribute("user");
         OrderServiceImpl orderService = new OrderServiceImpl();
         UserServiceImpl userService = new UserServiceImpl();
-        //если нажимается кнопка Pay и был выбран хоть один Заказ, то оплачивается
+        //first check is there "block" parameter, if yes - block user, if no - next step
         try {
-            if (req.getParameter("Pay") != null && req.getParameterValues("orders") != null) {
+            if (req.getParameter("block") != null) {
+                userService.addToBlackList(Integer.parseInt(req.getParameter("block")));
+                logger.error("User= "+Integer.parseInt(req.getParameter("block"))+" has been banned");
+
+            } else {
+                //second check is there "pay" parameter and orders, if yes - pay order, if no - next step
+                if (req.getParameter("Pay") != null && req.getParameterValues("orders") != null) {
+                    //getting orders ID as an array
                 String[] ordersID = req.getParameterValues("orders");
                 for (String orderID : ordersID) {
-                    logger.info("User=" + user.getNickname() + " has payed order");
                     orderService.payOrder(Integer.parseInt(orderID));
+                    logger.info("User=" + user.getNickname() + " has payed order");
                 }
-            } else if (req.getParameterValues("orders") != null) {
+                    //third check if there is no pay, but parameters "orders" exists - delete orders
+                } else if (req.getParameterValues("orders") != null) {
                 String[] ordersID = req.getParameterValues("orders");
                 for (String orderID : ordersID) {
-                    logger.info("User=" + user.getNickname() + " has deleted order " + orderID);
                     orderService.deleteOrder(Integer.parseInt(orderID.trim()));
+                    logger.info("User=" + user.getNickname() + " has deleted order " + orderID);
                 }
             } else {
-                if (req.getParameter("block") != null) {
-
-
-
-                    userService.addToBlackList(Integer.parseInt(req.getParameter("block")));
-                    logger.error("User= "+Integer.parseInt(req.getParameter("block"))+" has been banned");
-
-                } else {
                     req.setAttribute("nullData", "");
-                    doGet(req, resp);
                 }
             }
-        } catch (NullPointerException ignored) {
+        } catch (NullPointerException e) {
+            logger.error(e);
         }
         doGet(req, resp);
     }

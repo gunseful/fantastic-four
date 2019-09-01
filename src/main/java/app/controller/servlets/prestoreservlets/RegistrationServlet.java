@@ -14,54 +14,36 @@ public class RegistrationServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        //проверяем есть ли текущий пользователь, если есть то пропускаем регистрацию и переходим на страницу логина
-        //так как мы уже залогинены нас бросит на страницу либо админа либо покупателя
-        User user = (User)req.getSession().getAttribute("user");
         try {
-            if (user != null) {
-                logger.info(user.getNickname()+" was redirected to the store");
-                resp.sendRedirect("/loggin");
-            } else {
-                //если текущего пользователя нет, проверим передан ли атрибут "зарегестрирован", если да - то прыгаем на страницу логина
-                //если нет то снова на страницу регистрации
-                if(req.getAttribute("registered") == null) {
-                    logger.info("registration is succesful");
-                    RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/initialization/registration.jsp");
-                    requestDispatcher.forward(req, resp);
-                }else{
-                    resp.sendRedirect("/loggin");
-                }
-            }
-        }catch (Exception ignored) {
-
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/initialization/registration.jsp");
+        requestDispatcher.forward(req, resp);
+        }catch (Exception e) {
+            logger.error(e);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-
+        UserServiceImpl userService = new UserServiceImpl();
         try {
-            //Проверяем пришедшие параметры Имени, Ника и Пароль на правильность (или вообще наличие).
+            //getting parameters "name" "nickname" and "password", if they are correct - trye to add new user, else - set attribute fail
             if (!req.getParameter("name").equals("") && req.getParameter("nickname").length()>=3 && req.getParameter("nickname").length()<=15 && req.getParameter("password").length()>=6 && req.getParameter("password").length()<=15) {
-                // Они оказались верны. Создаем нового юзера
                 User user = new User(req.getParameter("name"), req.getParameter("nickname").toUpperCase(), req.getParameter("password"));
-                //Проверяем есть ли юзер с таким именем в базе, если есть - ошибка. Если нет - Прыгаем на страницу Логина
-                UserServiceImpl userService = new UserServiceImpl();
+                //if db has got user with this nickname - fail
                 if(!userService.addNewUser(user)) {
-                    logger.info("user"+user.getNickname()+"is already exist");
                     req.setAttribute("fail", "");
-                    doGet(req, resp);
+                    logger.info("user"+user.getNickname()+" is already exist");
                 }
+                //if everything is fine redirect to loggin page
                 logger.info("registration new user="+user.getNickname());
-                req.setAttribute("registered", user.getName());
-                doGet(req, resp);
+                resp.sendRedirect("/loggin");
+                return;
             }else{
-                //если пришедшие в параметрах данные не верны выдаем ошибку
                 logger.error("failed registration");
                 req.setAttribute("fail", "");
-                doGet(req, resp);
             }
-        }catch (NullPointerException ignored){
+        }catch (Exception e){
+            logger.error(e);
         }
         doGet(req, resp);
     }

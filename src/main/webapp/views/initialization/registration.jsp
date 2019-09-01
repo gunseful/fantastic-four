@@ -26,7 +26,7 @@
        style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
         class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
 </div>
-<%--ну либо неверные данные, либо юзер уже есть, классическая надпись если что-то пошло не так--%>
+
 <div>
     <div>
         <c:if test="${fail != null}">
@@ -34,7 +34,7 @@
             </c:if>
     </div>
 </div>
-<%--имя, ник, пароль, поля для ввода и кнопка добавляющая юзера в базу данных--%>
+
 <div>
     <form method="post" accept-charset="ISO-8859-1">
         <label>

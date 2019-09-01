@@ -11,14 +11,6 @@ public class User {
     private boolean isAdministrator;
     private boolean isInBlackList;
 
-    public boolean isInBlackList() {
-        return isInBlackList;
-    }
-
-    public void setInBlackList(boolean inBlackList) {
-        isInBlackList = inBlackList;
-    }
-
     public User() {
     }
 
@@ -31,6 +23,14 @@ public class User {
         this.name = name;
         this.nickname = nickname;
         this.password = password;
+    }
+
+    public boolean isInBlackList() {
+        return isInBlackList;
+    }
+
+    public void setInBlackList(boolean inBlackList) {
+        isInBlackList = inBlackList;
     }
 
     public String getNickname() {

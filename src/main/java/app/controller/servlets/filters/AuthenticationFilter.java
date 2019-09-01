@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 public class AuthenticationFilter implements Filter {
     public static Logger logger = LogManager.getLogger();
 
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
         //creating request and response
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
@@ -32,12 +32,14 @@ public class AuthenticationFilter implements Filter {
                     ResourceBundle.getBundle("app.controller.locale.Language", loc);
             req.getSession().setAttribute("bundle", bundle);
         }
-        //if there is no current user, which has logged in person who use webapp have access only to 3 pages - home, loggin and registration
+        try {
+
+            //if there is no current user, which has logged in person who use webapp have access only to 3 pages - home, loggin and registration
         //else - all except as described above
         if (!isLoggedIn && !(uri.equals("/") || uri.endsWith("loggin") || uri.endsWith("registration") || uri.endsWith("LangServlet"))) {
             logger.error("Unauthorized access request");
 //            this.context.log("Unauthorized access request");
-            res.sendRedirect("/loggin");
+                res.sendRedirect("/loggin");
             return;
         } else {
             if (isLoggedIn && (uri.equals("/"))) {
@@ -47,6 +49,10 @@ public class AuthenticationFilter implements Filter {
         }
 
         chain.doFilter(request, response);
+
+        } catch (IOException | ServletException e) {
+            logger.error(e);
+        }
 
 
     }

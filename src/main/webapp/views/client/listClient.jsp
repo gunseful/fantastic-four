@@ -25,9 +25,9 @@
        style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
         class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
 </div>
-<%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
+
 <p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
-<%--просто кнопка "Заказы", которая переносит на страницу заказов--%>
+
 <div>
     <div>
         <button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
@@ -36,14 +36,14 @@
         </button>
     </div>
 </div>
-<%--просто кнопка "Корзина", которая переносит на страницу корзины--%>
+
 <div>
     <button class="w3-button w3-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
             onclick="location.href='/basket'" name="basket" type="submit"
             value="basket">${bundle.getObject("basket.title")}
     </button>
 </div>
-<%--кнопка вызывает сервлет выхода и системы, обнуляет сессию и переносим на хоумпейдж--%>
+
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
@@ -51,14 +51,14 @@
         </button>
     </form>
 </div>
-<%--если клиент ошибся, ему подсказка--%>
+
 <div class="ex2">
     <div>
         <c:if test="${nullData != null}">
             <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
-    <%--этот блок выводит все товары на экран, и по желанию клиент выбирает и добавляет себе в корзину--%>
+
     <div>
         <form name="input" method="post">
             <c:if test="${!products.isEmpty()}">

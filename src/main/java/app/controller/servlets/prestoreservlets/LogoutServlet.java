@@ -14,14 +14,11 @@ import java.io.IOException;
  */
 @WebServlet("/LogoutServlet")
 public class LogoutServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
     public static Logger logger = LogManager.getLogger();
-
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         Cookie[] cookies = request.getCookies();
-        //ну этот метод вызываем только чтобы обнулить куки и сессию
         if(cookies != null){
             for(Cookie cookie : cookies){
                 if(cookie.getName().equals("JSESSIONID")){
@@ -30,7 +27,6 @@ public class LogoutServlet extends HttpServlet {
                 }
             }
         }
-        //ну вот обнуляем кароче и редиректимкся на хоум пейдж
         HttpSession session = request.getSession(false);
         User user = (User)session.getAttribute("user");
         logger.info("User="+user.getNickname()+" has out");

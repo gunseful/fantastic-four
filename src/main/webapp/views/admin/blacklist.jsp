@@ -29,21 +29,21 @@
             class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
     </div>
 </div>
-<%--Здесь мы берем из сессии юзера и выводим строчку - вы пошли как nickname--%>
+
 <p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
 <p class="ex1" style="font-size:15px;">${bundle.getObject("admin")} </p>
 <p class="ex1" style="font-size:12px;">${bundle.getObject("blacklist.hint")}</p>
-<%--просто кнопка "к магазину", которая переносит на стандартную страницу клиентлиста--%>
+
 <div>
     <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block"
             onclick="location.href='/listAdmin'">${bundle.getObject("tothestore")}
     </button>
 </div>
-<%--просто кнопка "Заказы", которая переносит на стандартную страницу заказов--%>
+
 <button class="w3-button w3-light-green w3-padding-large w3-large w3-hover-opacity-off btn-block"
         onclick="location.href='/orders'" name="Orders" type="submit" value="Orders">${bundle.getObject("orders")}
 </button>
-<%--кнопка вызывает сервлет выхода и системы, обнуляет сессию и переносим на хоумпейдж--%>
+
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
@@ -51,7 +51,7 @@
         </button>
     </form>
 </div>
-<%--если админ ошибся, ему подсказка--%>
+
 <div class="ex2">
     <div>
         <%--@elvariable id="nullData" type="String"--%>

@@ -24,7 +24,7 @@
            style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i><i class="normals"> W</i><i
             class="normal">hite </i><i class="normals"> D</i><i class="normal">ragon</i>
     </div>
-<%--Выводит текущего пользователя, если админ еще добавляет кое что--%>
+
 <div>
     <p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
     <form name="input" method="post">
@@ -57,7 +57,7 @@
         </div>
     </div>
 </div>
-<%--ну по классике выход--%>
+
 <div>
     <form action="LogoutServlet" method="post">
         <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off btn-block"
@@ -65,14 +65,14 @@
         </button>
     </form>
 </div>
-<%--подсказка для пользователя если ничего не выбрано--%>
+
 <div class="ex2">
     <div>
         <c:if test="${nullData != null}">
             <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
-    <%--    здесь выводятся заказы, если админ то все заказы, если юзер - только его--%>
+
     <div>
         <form name="input" method="post">
             <c:if test="${!orders.isEmpty()}">

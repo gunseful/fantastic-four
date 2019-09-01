@@ -17,7 +17,7 @@ public class LangServlet extends HttpServlet {
     public static Logger logger = LogManager.getLogger();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        //в зависимости от выбранного языка созадется бандл
+        //depending on language add into session a language
         if (request.getParameter("lang") != null) {
             logger.info("selected " + request.getParameter("lang") + " language");
             Locale loc = new Locale(request.getParameter("lang"));
