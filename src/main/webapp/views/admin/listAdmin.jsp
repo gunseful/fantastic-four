@@ -63,7 +63,7 @@
     <form name="input" method="post">
         <form name="input" method="post">
             <%--@elvariable id="products" type="List<Product>"--%>
-            <c:if test="${products != null}">
+            <c:if test="${!products.isEmpty()}">
                 <p>${bundle.getObject("admin.list.title")}</p>
                 <table>
                     <tr>
@@ -83,7 +83,7 @@
                 <input class="w3-button w3-red " onclick="location.href='../../../../../web'" type="submit"
                        value=${bundle.getObject("delete")}>
             </c:if>
-            <c:if test="${products == null}">
+            <c:if test="${products.isEmpty()}">
                 <p>${bundle.getObject("admin.list.no.products")}</p>
             </c:if>
         </form>
@@ -96,7 +96,7 @@
             <label
             <%--entering of name and price--%>
             <p style="font-size:13px;">${bundle.getObject("nomination")}</p> <input type="text" name="name">
-            <p style="font-size:13px;">${bundle.getObject("price")}</p> <input type="number" name="price"><br/>
+            <p style="font-size:13px;">${bundle.getObject("price")}  ${bundle.getObject("currency")}</p> <input type="number" name="price"><br/>
             </label>
             <br/>
             <%--submit button--%>

@@ -15,8 +15,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void addNewProduct(Product product) {
-        productDao.add(product);
+    public void addNewProduct(String name, int price) {
+        productDao.add(new Product(name, price));
     }
 
     @Override

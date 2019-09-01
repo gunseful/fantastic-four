@@ -46,7 +46,7 @@ public class Language_ru extends ListResourceBundle {
             { "add", "Добавить" },
             { "delete", "Удалить" },
             { "exchange.rates", 1.0 },
-            { "currency", "тг." },
+            { "currency", "RUB" },
             { "basket.title", "Ваша корзина" },
             { "basket.empty", "Товаров в корзине пока нет" },
             { "basket.get.order", "Заказать" },

@@ -61,7 +61,7 @@
     <%--этот блок выводит все товары на экран, и по желанию клиент выбирает и добавляет себе в корзину--%>
     <div>
         <form name="input" method="post">
-            <c:if test="${products != null}">
+            <c:if test="${!products.isEmpty()}">
             <p>${bundle.getObject("list.client.productlist")}</p>
             <table>
                 <tr>
@@ -78,10 +78,10 @@
                     </tr>
                 </c:forEach>
             </table>
-            <input class="w3-button w3-green " onclick="location.href='../../../../../web'" type="submit"
+            <input class="w3-button w3-green " type="submit"
                    value=${bundle.getObject("add.to.the.basket")}>
             </c:if>
-            <c:if test="${products == null}">
+            <c:if test="${products.isEmpty()}">
             <p>${bundle.getObject("admin.list.no.products")}</p>
             </c:if>
     </div>

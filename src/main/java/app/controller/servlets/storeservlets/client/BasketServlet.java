@@ -1,5 +1,6 @@
 package app.controller.servlets.storeservlets.client;
 
+import app.controller.service.OrderService;
 import app.controller.service.OrderServiceImpl;
 import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
@@ -17,26 +18,23 @@ public class BasketServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         //getting this session user to work with
         User user = (User) req.getSession().getAttribute("user");
-        OrderServiceImpl orderService = new OrderServiceImpl();
-        //если юзер не админ кидает на на вьюшку корзина
+        //getting service to work with database
+        OrderService orderService = new OrderServiceImpl();
         try {
+            //adding current user's basket(List<Product>) to request attribute as "basket"
             req.setAttribute("basket", orderService.getBasketProducts(user));
-            if (!user.isAdministrator()) {
-                logger.info("User=" + user.getNickname() + "requests his basket list");
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/basket.jsp");
-                requestDispatcher.forward(req, resp);
-            } else {
-                resp.sendRedirect("/listAdmin");
-            }
+            //forward to baskter page
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/basket.jsp");
+            requestDispatcher.forward(req, resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e);
         }
 
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        //getting this session user to work with
+        //getting this session user and service to work with database
         User user = (User) req.getSession().getAttribute("user");
         OrderServiceImpl orderService = new OrderServiceImpl();
 

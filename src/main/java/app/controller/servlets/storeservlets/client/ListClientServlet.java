@@ -16,20 +16,13 @@ public class ListClientServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        //получаем юзера
-        User user = (User) req.getSession().getAttribute("user");
+        //getting service to work with database
         ProductServiceImpl productService = new ProductServiceImpl();
-        //получаем лист товаров
-        //проверяем, если админ сюда зайдет его кинет на страницу админа, если обычный клиент, открывает вьюшку
         try {
+            //getting product list with the productService and set request's attribute
             req.setAttribute("products", productService.getList());
-            if (!user.isAdministrator()) {
-                logger.info("User=" + user.getNickname() + " has requested product list");
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/listClient.jsp");
-                requestDispatcher.forward(req, resp);
-            } else {
-                resp.sendRedirect("/listAdmin");
-            }
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/listClient.jsp");
+            requestDispatcher.forward(req, resp);
         } catch (Exception e) {
             logger.error(e);
         }
@@ -39,25 +32,23 @@ public class ListClientServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         User user = (User) req.getSession().getAttribute("user");
         OrderServiceImpl orderService = new OrderServiceImpl();
-        //выбираем в списке чо хотим купить, то есть добавить в корзину и кликаем - > Летит в корзину
+        //getting an array with products ID which client chose to buy (add to his basket)
         try {
             if (req.getParameterValues("productForBuy") != null) {
                 for (String productId : req.getParameterValues("productForBuy")) {
+                    //trying to update basket. If product with this id already exists in current user's basket - product just updating (count increment by 1)
                     if (!orderService.updateBasket(true, user, Integer.parseInt(productId.trim()))) {
+                        //if can't update basket, just add new product to basket
                         orderService.addToBasket(user, Integer.parseInt(productId.trim()));
                     }
                 }
             } else {
                 logger.info("User=" + user.getNickname() + " chose nothing");
                 req.setAttribute("nullData", "");
-                doGet(req, resp);
             }
         } catch (NullPointerException e) {
-            logger.error("User=" + user.getNickname() + " chose nothing", e);
-            req.setAttribute("nullData", "");
-            doGet(req, resp);
+            logger.error(e);
         }
-        //ну прост обновляем вьюшку
         doGet(req, resp);
     }
 }

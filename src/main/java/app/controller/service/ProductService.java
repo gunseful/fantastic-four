@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ProductService {
     void deleteProduct(int id) throws SQLException;
-    void addNewProduct(Product product) throws SQLException;
+    void addNewProduct(String name, int price) throws SQLException;
     List<Product> getList() throws SQLException;
 
     }

@@ -16,16 +16,14 @@ public class OrdersServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        User user = (User) req.getSession().getAttribute("user");
+        UserServiceImpl userService = new UserServiceImpl();
+        OrderServiceImpl orderService = new OrderServiceImpl();
 
         try {
-            if (req.getAttribute("Orders") != null) {
-                resp.sendRedirect("/orders");
-            }
-
-            User user = (User) req.getSession().getAttribute("user");
-
-            UserServiceImpl userService = new UserServiceImpl();
-            OrderServiceImpl orderService = new OrderServiceImpl();
+//            if (req.getAttribute("Orders") != null) {
+//                resp.sendRedirect("/orders");
+//            }
             req.setAttribute("isInBlackList", userService.checkBlackList(user));
             req.setAttribute("orders", orderService.getOrders(user));
 

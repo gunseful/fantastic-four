@@ -34,12 +34,19 @@
         </c:if>
     </form>
 </div>
-<%--кнопка к магазину--%>
+<%--button - to the store--%>
 <div>
     <div>
+        <c:if test="${user.isAdministrator()}">
         <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block"
                 onclick="location.href='/listAdmin'">${bundle.getObject("tothestore")}
         </button>
+        </c:if>
+        <c:if test="${!user.isAdministrator()}">
+            <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block"
+                    onclick="location.href='/listClient'">${bundle.getObject("tothestore")}
+            </button>
+        </c:if>
         <div>
             <c:if test="${user.isAdministrator()}">
                 <button class="w3-button w3-black w3-padding-large w3-large w3-hover-opacity-off btn-block"
@@ -69,10 +76,10 @@
     <div>
         <form name="input" method="post">
             <c:if test="${!orders.isEmpty()}">
-                <c:if test="${!user.isAdministrator()}">
+                <c:if test="${user.isAdministrator()}">
                     <p>${bundle.getObject("orders.admin")}</p>
                 </c:if>
-                <c:if test="${user.isAdministrator()}">
+                <c:if test="${!user.isAdministrator()}">
                     <p>${bundle.getObject("orders.client")}</p>
                 </c:if>
                 <c:forEach var="order" items="${orders}">

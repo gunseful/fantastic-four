@@ -2768,3 +2768,460 @@ UPDATE PRODUCTS_ORDERS SET COUNT = ? WHERE PRODUCT_ID = ? AND ORDER_ID = ? [2351
 2019-08-31 17:57:27,001 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-8] Administrator has deleted user (id= 2 ) from blacklist 
 2019-08-31 17:57:28,292 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] JSESSIONID= 32BA479C19E90072731219600DDB9AE5 
 2019-08-31 17:57:28,292 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] User=GUNSEFUL has out 
+2019-09-01 12:03:30,075 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-09-01 12:03:31,086 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-09-01 12:03:36,238 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-09-01 12:03:36,381 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-09-01 12:03:39,419 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-09-01 12:03:40,269 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-09-01 12:03:40,391 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-09-01 12:03:42,057 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-09-01 12:03:42,066 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] inside ConnectionPool constructor 
+2019-09-01 12:03:42,553 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-09-01 12:03:42,554 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-09-01 12:03:42,555 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-09-01 12:03:42,557 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-09-01 12:03:42,558 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-09-01 12:03:42,558 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] total size of connection: 5 
+2019-09-01 12:03:42,823 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-1] User=2 has been log in 
+2019-09-01 12:03:42,854 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-09-01 12:03:46,578 INFO a.c.s.p.LangServlet [http-nio-8081-exec-8] selected en language 
+2019-09-01 12:03:48,688 INFO a.c.s.p.LangServlet [http-nio-8081-exec-10] selected fr language 
+2019-09-01 12:03:49,865 INFO a.c.s.p.LangServlet [http-nio-8081-exec-2] selected ru language 
+2019-09-01 12:16:23,454 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-09-01 12:16:23,463 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-01 12:16:23,960 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:16:23,961 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:16:23,963 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:16:23,964 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:16:23,965 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:16:23,966 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-01 12:16:24,291 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-01 12:17:27,875 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-09-01 12:17:27,890 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-01 12:17:28,383 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:17:28,385 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:17:28,386 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:17:28,386 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:17:28,388 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:17:28,388 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-01 12:17:28,510 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-01 12:18:46,423 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-09-01 12:18:46,435 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-01 12:18:46,934 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:18:46,936 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:18:46,937 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:18:46,938 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:18:46,939 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:18:46,939 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-01 12:18:47,132 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-01 12:18:47,154 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-09-01 12:18:47,156 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-6] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,166 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-09-01 12:18:47,166 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-7] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,179 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-09-01 12:18:47,179 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-8] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,189 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-09-01 12:18:47,189 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-9] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,200 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-09-01 12:18:47,200 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-10] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,214 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-09-01 12:18:47,214 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-1] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,222 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-09-01 12:18:47,223 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-2] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,233 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-09-01 12:18:47,233 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,250 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-09-01 12:18:47,251 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-4] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,259 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-5] User=2 has requested product list 
+2019-09-01 12:18:47,260 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-5] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,267 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-6] User=2 has requested product list 
+2019-09-01 12:18:47,268 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-6] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,276 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-7] User=2 has requested product list 
+2019-09-01 12:18:47,276 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-7] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,288 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-09-01 12:18:47,288 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-8] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,297 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-9] User=2 has requested product list 
+2019-09-01 12:18:47,298 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-9] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,309 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-10] User=2 has requested product list 
+2019-09-01 12:18:47,309 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-10] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,318 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-1] User=2 has requested product list 
+2019-09-01 12:18:47,319 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-1] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,329 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-2] User=2 has requested product list 
+2019-09-01 12:18:47,330 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-2] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,339 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] User=2 has requested product list 
+2019-09-01 12:18:47,339 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-3] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:18:47,347 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-4] User=2 has requested product list 
+2019-09-01 12:18:47,347 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-4] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 12:19:21,887 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] Trying to log in 
+2019-09-01 12:19:21,900 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-01 12:19:22,414 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:19:22,415 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:19:22,417 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:19:22,418 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:19:22,419 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:19:22,420 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-01 12:19:22,610 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=2 has been log in 
+2019-09-01 12:19:22,762 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-09-01 12:19:25,508 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-1] JSESSIONID= 1FFFEF93C25351F007082A334D0FB002 
+2019-09-01 12:19:25,509 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-1] User=2 has out 
+2019-09-01 12:23:58,854 INFO a.c.s.p.RegistrationServlet [http-nio-8081-exec-4] registration is succesful 
+2019-09-01 12:24:02,145 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-09-01 12:24:02,157 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] inside ConnectionPool constructor 
+2019-09-01 12:24:02,659 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] Connected to database 
+2019-09-01 12:24:02,660 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] Connected to database 
+2019-09-01 12:24:02,661 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] Connected to database 
+2019-09-01 12:24:02,662 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] Connected to database 
+2019-09-01 12:24:02,663 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] Connected to database 
+2019-09-01 12:24:02,663 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-8] total size of connection: 5 
+2019-09-01 12:24:02,801 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-09-01 12:25:15,409 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] Trying to log in 
+2019-09-01 12:25:15,424 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-01 12:25:15,952 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:25:15,954 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:25:15,955 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:25:15,956 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:25:15,957 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:25:15,957 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-01 12:25:16,088 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=2 has been log in 
+2019-09-01 12:25:16,109 INFO a.c.s.s.c.ListClientServlet [http-nio-8081-exec-8] User=2 has requested product list 
+2019-09-01 12:25:19,437 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-1] JSESSIONID= 64F785546E72046B5A654561F9CC41DC 
+2019-09-01 12:25:19,437 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-1] User=2 has out 
+2019-09-01 12:25:23,697 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-2] Trying to log in 
+2019-09-01 12:25:23,702 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-2] User=gunseful has been log in 
+2019-09-01 12:25:23,710 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-3] User=GUNSEFULrequests product list 
+2019-09-01 12:27:44,162 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] Trying to log in 
+2019-09-01 12:27:44,176 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-01 12:27:44,632 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:27:44,633 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:27:44,633 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:27:44,634 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:27:44,636 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:27:44,636 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-01 12:27:44,758 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=2 has been log in 
+2019-09-01 12:30:53,215 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 12:30:53,228 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-01 12:30:53,761 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:30:53,762 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:30:53,763 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:30:53,765 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:30:53,766 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:30:53,766 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-01 12:30:53,892 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-01 12:32:56,458 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 12:32:56,474 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-01 12:32:57,070 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:32:57,071 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:32:57,072 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:32:57,073 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:32:57,075 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:32:57,075 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-01 12:32:57,186 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-01 12:34:50,954 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-09-01 12:34:50,964 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-01 12:34:51,431 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:34:51,432 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:34:51,434 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:34:51,435 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:34:51,436 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:34:51,437 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-01 12:34:51,569 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-01 12:36:26,848 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-09-01 12:36:26,859 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-09-01 12:36:27,380 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-01 12:36:27,381 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-01 12:36:27,382 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-01 12:36:27,383 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-01 12:36:27,384 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-01 12:36:27,385 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-09-01 12:36:27,525 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-9] User= 2 is not found in database 
+2019-09-01 12:36:28,910 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-3] Trying to log in 
+2019-09-01 12:36:28,916 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-09-01 12:37:08,534 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-09-01 12:37:08,552 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-01 12:37:09,013 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:37:09,014 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:37:09,016 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:37:09,017 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:37:09,019 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:37:09,020 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-01 12:37:09,177 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-01 12:39:54,421 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 12:39:54,436 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-01 12:39:54,929 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:39:54,931 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:39:54,933 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:39:54,934 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:39:54,935 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:39:54,936 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-01 12:39:55,051 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-01 12:39:56,977 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2requests his basket list 
+2019-09-01 12:40:03,732 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-5] JSESSIONID= 02D07E47EA28C5D32E96B0DE24AD1253 
+2019-09-01 12:40:03,732 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-5] User=2 has out 
+2019-09-01 12:41:15,278 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] Trying to log in 
+2019-09-01 12:41:15,293 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-01 12:41:15,803 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:41:15,804 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:41:15,804 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:41:15,805 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:41:15,807 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 12:41:15,807 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-01 12:41:15,943 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=2 has been log in 
+2019-09-01 12:41:56,390 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 12:41:56,402 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-01 12:41:56,884 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:41:56,885 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:41:56,887 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:41:56,888 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:41:56,889 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:41:56,889 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-01 12:41:57,016 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-01 12:42:52,345 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-09-01 12:42:52,363 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-01 12:42:52,834 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:42:52,836 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:42:52,837 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:42:52,838 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:42:52,839 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 12:42:52,840 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-01 12:42:52,967 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-01 12:44:44,913 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 12:44:44,923 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-01 12:44:45,419 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:44:45,420 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:44:45,422 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:44:45,423 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:44:45,424 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 12:44:45,425 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-01 12:44:45,569 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-01 12:44:56,747 ERROR a.c.s.s.a.BlackListServlet [http-nio-8081-exec-2] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 13:00:45,418 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] Trying to log in 
+2019-09-01 13:00:45,430 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-01 13:00:46,109 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 13:00:46,110 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 13:00:46,116 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 13:00:46,121 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 13:00:46,123 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 13:00:46,123 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-01 13:00:46,287 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=gunseful has been log in 
+2019-09-01 13:00:54,791 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Product 0 has been added to product list 
+2019-09-01 13:00:54,797 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-1] User=GUNSEFUL has been added new product - 123 
+2019-09-01 13:00:56,893 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] Product 1112 has been deleted from product list 
+2019-09-01 13:00:56,894 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-3] User=GUNSEFUL has been deleted  1112  
+2019-09-01 13:01:00,652 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] Product 0 has been added to product list 
+2019-09-01 13:01:00,652 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-9] User=GUNSEFUL has been added new product - 123 
+2019-09-01 13:01:04,100 INFO a.c.s.p.LangServlet [http-nio-8081-exec-7] selected ru language 
+2019-09-01 13:03:28,318 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 13:03:28,329 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-01 13:03:28,923 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:03:28,924 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:03:28,926 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:03:28,927 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:03:28,928 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:03:28,928 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-01 13:03:29,073 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=gunseful has been log in 
+2019-09-01 13:03:36,599 INFO a.c.s.p.LangServlet [http-nio-8081-exec-1] selected ru language 
+2019-09-01 13:03:43,528 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] Product 0 has been added to product list 
+2019-09-01 13:03:43,528 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-3] User=GUNSEFUL has been added new product - 123 
+2019-09-01 13:03:48,756 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-5] JSESSIONID= CFBA43177C32BD807207CD0E18023B1A 
+2019-09-01 13:03:48,756 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-5] User=GUNSEFUL has out 
+2019-09-01 13:17:19,423 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-09-01 13:17:19,438 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-01 13:17:19,956 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 13:17:19,957 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 13:17:19,959 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 13:17:19,960 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 13:17:19,961 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 13:17:19,961 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-01 13:17:20,087 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-01 13:17:25,248 ERROR a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-8] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 13:19:36,399 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] Trying to log in 
+2019-09-01 13:19:36,416 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-01 13:19:36,860 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 13:19:36,861 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 13:19:36,861 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 13:19:36,862 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 13:19:36,863 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-01 13:19:36,863 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-01 13:19:37,002 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-01 13:19:52,863 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-4] User=2 has payed order 
+2019-09-01 13:19:52,880 INFO a.c.d.AbstractDao [http-nio-8081-exec-4] Order 1193 has been updated 
+2019-09-01 13:19:55,945 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-1] User=2 has payed order 
+2019-09-01 13:19:55,949 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Order 1161 has been updated 
+2019-09-01 13:20:34,342 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-9] User=2 has deleted order 1129 
+2019-09-01 13:20:34,346 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] product id=908 has been deleted from order id=1129 
+2019-09-01 13:20:34,353 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] order 1129 has been deleted from order list 
+2019-09-01 13:20:36,337 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-10] User=2 has deleted order 1225 
+2019-09-01 13:20:36,341 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] product id=1081 has been deleted from order id=1225 
+2019-09-01 13:20:36,342 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] order 1225 has been deleted from order list 
+2019-09-01 13:20:39,037 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] User 2 has created new order 
+2019-09-01 13:20:39,038 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] product id=1081has been added to order id=1257 
+2019-09-01 13:20:41,823 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] update product id=1081 count(2) in order id=1257 
+2019-09-01 13:20:42,322 INFO a.c.d.AbstractDao [http-nio-8081-exec-6] Order 1257 has been updated 
+2019-09-01 13:20:42,322 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-6] User=2 makes order 
+2019-09-01 13:20:46,091 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-9] User=2 has payed order 
+2019-09-01 13:20:46,093 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] Order 1257 has been updated 
+2019-09-01 13:20:56,953 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] JSESSIONID= 2070077AF19A92E28A37F4635A908EBB 
+2019-09-01 13:20:56,953 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] User=2 has out 
+2019-09-01 13:21:01,861 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] Trying to log in 
+2019-09-01 13:21:01,867 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=gunseful has been log in 
+2019-09-01 13:21:58,099 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] JSESSIONID= 4B447DFB53C6553DE89B83F4A7205EC5 
+2019-09-01 13:21:58,099 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] User=GUNSEFUL has out 
+2019-09-01 13:22:00,441 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] Trying to log in 
+2019-09-01 13:22:00,444 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=2 has been log in 
+2019-09-01 13:22:29,509 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 13:22:29,522 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-01 13:22:30,014 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:22:30,015 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:22:30,016 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:22:30,017 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:22:30,018 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:22:30,018 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-01 13:22:30,157 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-01 13:22:40,040 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] User 2 has created new order 
+2019-09-01 13:22:40,044 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] product id=1081has been added to order id=1289 
+2019-09-01 13:23:04,316 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-1] JSESSIONID= B98CA6D3E5E6BA893F00BC90F6364BEA 
+2019-09-01 13:23:04,316 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-1] User=2 has out 
+2019-09-01 13:23:06,409 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-09-01 13:23:06,419 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-09-01 13:23:09,417 INFO a.c.d.AbstractDao [http-nio-8081-exec-6] product id=908has been added to order id=1289 
+2019-09-01 13:23:12,241 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] Order 1289 has been updated 
+2019-09-01 13:23:12,242 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-10] User=2 makes order 
+2019-09-01 13:23:15,728 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-2] User=2 has payed order 
+2019-09-01 13:23:15,730 INFO a.c.d.AbstractDao [http-nio-8081-exec-2] Order 1289 has been updated 
+2019-09-01 13:23:21,348 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-5] JSESSIONID= 7748A48A5DD5EE558F1E6CA00788ECF3 
+2019-09-01 13:23:21,348 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-5] User=2 has out 
+2019-09-01 13:23:26,040 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 13:23:26,044 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=gunseful has been log in 
+2019-09-01 13:23:35,700 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-3] User=GUNSEFUL has deleted order 1161 
+2019-09-01 13:23:35,704 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] product id=626 has been deleted from order id=1161 
+2019-09-01 13:23:35,705 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] product id=908 has been deleted from order id=1161 
+2019-09-01 13:23:35,710 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] order 1161 has been deleted from order list 
+2019-09-01 13:23:35,710 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-3] User=GUNSEFUL has deleted order 1193 
+2019-09-01 13:23:35,714 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] product id=1080 has been deleted from order id=1193 
+2019-09-01 13:23:35,715 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] order 1193 has been deleted from order list 
+2019-09-01 13:23:35,715 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-3] User=GUNSEFUL has deleted order 1257 
+2019-09-01 13:23:35,719 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] product id=1081 has been deleted from order id=1257 
+2019-09-01 13:23:35,720 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] order 1257 has been deleted from order list 
+2019-09-01 13:23:35,720 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-3] User=GUNSEFUL has deleted order 1289 
+2019-09-01 13:23:35,726 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] product id=1081 has been deleted from order id=1289 
+2019-09-01 13:23:35,727 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] product id=908 has been deleted from order id=1289 
+2019-09-01 13:23:35,728 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] order 1289 has been deleted from order list 
+2019-09-01 13:23:41,391 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] Product 626 has been deleted from product list 
+2019-09-01 13:23:41,391 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-8] User=GUNSEFUL has been deleted  626  
+2019-09-01 13:23:41,392 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] Product 908 has been deleted from product list 
+2019-09-01 13:23:41,392 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-8] User=GUNSEFUL has been deleted  908  
+2019-09-01 13:23:41,393 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] Product 1080 has been deleted from product list 
+2019-09-01 13:23:41,393 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-8] User=GUNSEFUL has been deleted  1080  
+2019-09-01 13:23:41,394 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] Product 1081 has been deleted from product list 
+2019-09-01 13:23:41,394 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-8] User=GUNSEFUL has been deleted  1081  
+2019-09-01 13:23:41,396 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] Product 1113 has been deleted from product list 
+2019-09-01 13:23:41,396 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-8] User=GUNSEFUL has been deleted  1113  
+2019-09-01 13:23:41,398 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] Product 1144 has been deleted from product list 
+2019-09-01 13:23:41,398 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-8] User=GUNSEFUL has been deleted  1144  
+2019-09-01 13:23:56,211 INFO a.c.d.AbstractDao [http-nio-8081-exec-2] user id=1580 has been updated 
+2019-09-01 13:23:56,211 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-2] Administrator has deleted user (id= 1580 ) from blacklist 
+2019-09-01 13:24:02,691 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-8] JSESSIONID= 6E030EF056EF9A258E03F35BC18DADFD 
+2019-09-01 13:24:02,691 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-8] User=GUNSEFUL has out 
+2019-09-01 13:24:04,623 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] Trying to log in 
+2019-09-01 13:24:04,626 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-09-01 13:25:56,895 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-09-01 13:25:56,905 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-09-01 13:25:57,450 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-01 13:25:57,451 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-01 13:25:57,452 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-01 13:25:57,454 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-01 13:25:57,456 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-01 13:25:57,456 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-09-01 13:25:57,586 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-09-01 13:26:03,940 ERROR a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-3] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 13:26:13,050 ERROR a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-7] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-01 13:27:18,293 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 13:27:18,307 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-01 13:27:18,839 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:27:18,841 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:27:18,842 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:27:18,844 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:27:18,845 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-01 13:27:18,846 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-01 13:27:18,990 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-7] User= 2 is not found in database 
+2019-09-01 13:27:20,809 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-09-01 13:27:20,827 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-09-01 13:27:28,647 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-8] JSESSIONID= 3D78799496F93B09B67481C114E4175C 
+2019-09-01 13:27:28,647 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-8] User=2 has out 
+2019-09-01 13:27:32,319 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-2] Trying to log in 
+2019-09-01 13:27:32,322 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-2] User=gunseful has been log in 
+2019-09-01 13:28:08,181 INFO a.c.d.AbstractDao [http-nio-8081-exec-4] Product 0 has been added to product list 
+2019-09-01 13:28:08,182 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-4] User=GUNSEFUL has been added new product - iPhone X 64Gb 
+2019-09-01 13:28:10,797 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] Product 1176 has been deleted from product list 
+2019-09-01 13:28:10,797 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-5] User=GUNSEFUL has been deleted  1176  
+2019-09-01 13:29:52,486 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-3] Trying to log in 
+2019-09-01 13:29:52,497 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] inside ConnectionPool constructor 
+2019-09-01 13:29:53,046 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] Connected to database 
+2019-09-01 13:29:53,047 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] Connected to database 
+2019-09-01 13:29:53,049 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] Connected to database 
+2019-09-01 13:29:53,051 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] Connected to database 
+2019-09-01 13:29:53,052 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] Connected to database 
+2019-09-01 13:29:53,052 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-3] total size of connection: 5 
+2019-09-01 13:29:53,209 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-09-01 13:29:54,593 INFO a.c.s.p.LangServlet [http-nio-8081-exec-2] selected ru language 
+2019-09-01 13:29:56,220 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-6] JSESSIONID= B23F734A4810ADFCCF586E1182062773 
+2019-09-01 13:29:56,220 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-6] User=2 has out 
+2019-09-01 13:30:00,999 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 13:30:01,007 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=gunseful has been log in 
+2019-09-01 13:30:01,359 ERROR a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-3] org.apache.jasper.JasperException: javax.el.ELException: java.util.MissingResourceException: Can't find resource for bundle app.controller.locale.Language_en, key currencty 
+2019-09-01 13:30:37,837 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] Trying to log in 
+2019-09-01 13:30:37,855 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-01 13:30:38,363 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 13:30:38,364 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 13:30:38,365 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 13:30:38,366 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 13:30:38,367 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-01 13:30:38,367 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-01 13:30:38,478 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=gunseful has been log in 
+2019-09-01 13:30:49,598 INFO a.c.s.p.LangServlet [http-nio-8081-exec-4] selected ru language 
+2019-09-01 13:31:10,565 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] Product 0 has been added to product list 
+2019-09-01 13:31:10,565 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-9] User=GUNSEFUL has been added new product - iPhone X 64Gb 
+2019-09-01 13:31:16,799 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-4] JSESSIONID= C2AB62D13CC8AEE67067AE5703B84594 
+2019-09-01 13:31:16,799 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-4] User=GUNSEFUL has out 
+2019-09-01 13:31:18,716 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-8] Trying to log in 
+2019-09-01 13:31:18,719 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-09-01 13:31:20,539 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] User 2 has created new order 
+2019-09-01 13:31:20,542 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] product id=1208has been added to order id=1321 
+2019-09-01 13:31:26,992 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] update product id=1208 count(2) in order id=1321 
+2019-09-01 13:31:27,861 INFO a.c.d.AbstractDao [http-nio-8081-exec-4] Order 1321 has been updated 
+2019-09-01 13:31:27,861 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2 makes order 
+2019-09-01 13:31:29,997 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-7] User=2 has payed order 
+2019-09-01 13:31:30,002 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] Order 1321 has been updated 
+2019-09-01 13:31:35,256 INFO a.c.s.p.LangServlet [http-nio-8081-exec-10] selected ru language 
+2019-09-01 13:31:40,589 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-4] JSESSIONID= A1C5C93978247E9280FD8E9CE74EA033 
+2019-09-01 13:31:40,589 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-4] User=2 has out 
+2019-09-01 13:31:42,263 INFO a.c.s.p.RegistrationServlet [http-nio-8081-exec-7] registration is succesful 
+2019-09-01 13:31:50,196 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] New User UPDATEPRODUCT has been added to database 
+2019-09-01 13:31:50,196 INFO a.c.s.p.RegistrationServlet [http-nio-8081-exec-10] registration new user=UPDATEPRODUCT 
+2019-09-01 13:31:52,497 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-1] Trying to log in 
+2019-09-01 13:31:52,502 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-1] User=updateproduct has been log in 
+2019-09-01 13:31:54,755 INFO a.c.d.AbstractDao [http-nio-8081-exec-6] User 1616 has created new order 
+2019-09-01 13:31:54,757 INFO a.c.d.AbstractDao [http-nio-8081-exec-6] product id=1208has been added to order id=1322 
+2019-09-01 13:31:56,673 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] product id=1208 has been deleted from order id=1322 
+2019-09-01 13:31:57,883 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID= 47E75325750D30825BE2ADE05377EC59 
+2019-09-01 13:31:57,883 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] User=UPDATEPRODUCT has out 
+2019-09-01 13:33:39,033 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-4] Trying to log in 
+2019-09-01 13:33:39,048 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] inside ConnectionPool constructor 
+2019-09-01 13:33:39,543 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-09-01 13:33:39,544 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-09-01 13:33:39,545 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-09-01 13:33:39,546 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-09-01 13:33:39,548 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] Connected to database 
+2019-09-01 13:33:39,548 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-4] total size of connection: 5 
+2019-09-01 13:33:39,671 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-4] User= blocked is not found in database 
+2019-09-01 13:33:46,705 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] Trying to log in 
+2019-09-01 13:33:46,709 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-7] User= updateproduct is not found in database 
+2019-09-01 13:33:50,779 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-3] Trying to log in 
+2019-09-01 13:33:50,783 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-3] User= blocked is not found in database 
+2019-09-01 13:33:59,854 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] Trying to log in 
+2019-09-01 13:33:59,871 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-09-01 13:34:04,366 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-8] JSESSIONID= FDF849BC8A031DA7FA9AE72D53C0BD60 
+2019-09-01 13:34:04,366 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-8] User=2 has out 
+2019-09-01 13:34:09,950 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-3] Trying to log in 
+2019-09-01 13:34:09,955 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-3] User=gunseful has been log in 

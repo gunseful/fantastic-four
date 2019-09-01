@@ -32,7 +32,7 @@
 <div>
     <div>
         <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block"
-                onclick="location.href='/listAdmin'">${bundle.getObject("tothestore")}
+                onclick="location.href='/listClient'">${bundle.getObject("tothestore")}
         </button>
     </div>
 </div>

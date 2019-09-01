@@ -2,7 +2,6 @@ package app.controller.servlets.storeservlets.admin;
 
 import app.controller.service.UserService;
 import app.controller.service.UserServiceImpl;
-import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,20 +15,14 @@ public class BlackListServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        //getting current user
-        User user = (User) req.getSession().getAttribute("user");
         //getting service to work with database
         UserService userService = new UserServiceImpl();
         try {
             //getting blacklist with the userService and set request's attribute
             req.setAttribute("blacklist", userService.getBlackList());
-            if (!user.isAdministrator()) {
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/listClient.jsp");
-                requestDispatcher.forward(req, resp);
-            } else {
-                RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/admin/blacklist.jsp");
-                requestDispatcher.forward(req, resp);
-            }
+            //forward to blacklist page
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/admin/blacklist.jsp");
+            requestDispatcher.forward(req, resp);
         } catch (Exception e) {
             logger.error(e);
         }
@@ -50,7 +43,8 @@ public class BlackListServlet extends HttpServlet {
             }else{
                 req.setAttribute("nullData", "");
             }
-        } catch (NullPointerException ignored) {
+        } catch (NullPointerException e) {
+            logger.error(e);
         }
         doGet(req, resp);
     }
