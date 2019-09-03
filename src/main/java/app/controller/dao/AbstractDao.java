@@ -9,7 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
 
 public abstract class AbstractDao<T> implements Dao<T> {
 
@@ -46,10 +47,13 @@ public abstract class AbstractDao<T> implements Dao<T> {
 //        return getResultList(sb.toString());
 //    }
 
+    /**
+     * fixme if you would like to pass parameters, the best way to avoid 'String typization'
+     */
     @Override
     public List<T> findBy(String parameters) {
         String sb = String.format("SELECT * FROM %s WHERE ", tableName()) +
-                parameters;
+            parameters;
         return getResultList(sb);
     }
 
@@ -71,13 +75,12 @@ public abstract class AbstractDao<T> implements Dao<T> {
         return resultList.stream().findFirst();
     }
 
-    /**
-     * You should only return connection when you're finished all the job with it
-     */
-    protected List<T> getResultList(String sql) {
+    protected List<T> getResultList(String sql, StatementTransformer<PreparedStatement> transformer) {
         final Connection connection = connectionPool.getConnection();
         try {
-            final ResultSet resultSet = connection.prepareStatement(sql).executeQuery();
+            final PreparedStatement statement = connection.prepareStatement(sql);
+            transformer.transform(statement);
+            final ResultSet resultSet = statement.executeQuery();
             //Structural pattern - `Template method`
             return parseResultSet(resultSet);
         } catch (SQLException e) {
@@ -86,6 +89,15 @@ public abstract class AbstractDao<T> implements Dao<T> {
         } finally {
             connectionPool.releaseConnection(connection);
         }
+    }
+
+    /**
+     * You should only return connection when you're finished all the job with it
+     */
+    protected List<T> getResultList(String sql) {
+        return getResultList(sql, t -> {
+            //empty body
+        });
     }
 
     protected abstract String tableName();

@@ -50,6 +50,8 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
     @Override
     public void update(User user) {
         try {
+            //fixme I would rather use type-safe `statement.setString() | statement.setInt(), than String.format() because it is not type safe`
+            //It seems really stragne that half parameters is set through String.format(), and others are set through statement.setBoolean()
             PreparedStatement ps = getPreparedStatement(String.format("UPDATE USERS SET NICKNAME = '%s', PASSWORD = '%s', NAME = '%s', IS_ADMIN=?, IS_BLOCKED=? WHERE ID = %d",
                     user.getNickname(), user.getPassword(), user.getName(), user.getId()));
             ps.setBoolean(1, user.isAdministrator());
@@ -63,7 +65,7 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
 
     @Override
     public List<User> getBlackList(){
-        return findBy("IS_BLOCKED=TRUE");
+        return getResultList("SELECT * FROM USERS WHERE IS_BLOCKED = ?", preparedStatement -> preparedStatement.setBoolean(1, true));
     }
 
     @Override
