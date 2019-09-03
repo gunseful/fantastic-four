@@ -8,16 +8,12 @@ public interface Dao<T> {
 
     boolean add(T t) throws SQLException;
 
-    T findById(int id);
+    Optional<T> findById(int id);
 
     List<T> getAll();
 
     void update(T t);
 
     void delete(T t);
-
-    List<T> findBy(String parametersForSearch);
-
-    Optional<T> singleFindBy(String parametersForSearch);
 
 }

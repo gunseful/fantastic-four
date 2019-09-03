@@ -25,6 +25,14 @@ public class AccessFilter implements Filter {
         try {
 
         if (req.getSession().getAttribute("user") != null) {
+            if (uri.equals("/loggin") || uri.equals("/registration")) {
+                if(!user.isAdministrator()) {
+                    res.sendRedirect("/listClient");
+                }else{
+                    res.sendRedirect("/listAdmin");
+                }
+
+            }
             if (uri.equals("/listAdmin") && !user.isAdministrator()) {
                     res.sendError(403);
             }

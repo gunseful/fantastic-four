@@ -29,14 +29,14 @@ public class OrderServiceImpl implements OrderService {
     public void makeOrder(User user) {
         Order order = orderDao.getUserBasket(user);
         order.setCreationDate(Date.valueOf(LocalDate.now()));
-        order.setState("'ORDERED'");
+        order.setState("ORDERED");
         orderDao.update(order);
     }
 
     @Override
     public void payOrder(int id) {
-        Order order = orderDao.findById(id);
-        order.setState("'PAID'");
+        Order order = orderDao.findById(id).orElseThrow(IllegalStateException::new);
+        order.setState("PAID");
         orderDao.update(order);
     }
 
@@ -66,7 +66,7 @@ public class OrderServiceImpl implements OrderService {
         List<Order> orders = orderDao.findOrders(user);
         for (Order order : orders) {
             int customerId = order.getCustomerId();
-            order.setUser(userDao.findById(customerId));
+            order.setUser(userDao.findById(customerId).orElseThrow(IllegalStateException::new));
             order.setProducts(productOrderDao.findProductsByOrderId(order.getId()));
         }
         return orders;
@@ -100,7 +100,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void deleteOrder(int id) {
-        Order order = orderDao.findById(id);
+        Order order = orderDao.findById(id).orElseThrow(IllegalStateException::new);
         for (Product product : productOrderDao.findProductsByOrderId(id)) {
             ProductOrder productOrder = new ProductOrder(id, product.getId());
             productOrderDao.delete(productOrder);

@@ -31,19 +31,19 @@ public class UserServiceImpl implements UserService {
     @Override
 
     public boolean checkBlackList(User user) {
-        return userDao.findById(user.getId()).isInBlackList();
+        return userDao.findById(user.getId()).orElseThrow(IllegalStateException::new).isInBlackList();
     }
 
     @Override
     public void addToBlackList(int id) {
-        User user = userDao.findById(id);
+        User user = userDao.findById(id).orElseThrow(IllegalStateException::new);
         user.setInBlackList(true);
         userDao.update(user);
     }
 
     @Override
     public void removeFromBlackList(int id) {
-        User user = userDao.findById(id);
+        User user = userDao.findById(id).orElseThrow(IllegalStateException::new);
         user.setInBlackList(false);
         userDao.update(user);
     }

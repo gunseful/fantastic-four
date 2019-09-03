@@ -9,18 +9,16 @@ import java.util.List;
 
 import static java.util.Collections.emptyList;
 
-public class ProductDao extends AbstractDao<Product> implements ProductDaoInteface{
+public class ProductDao extends AbstractDao<Product> implements ProductDaoInteface {
 
     @Override
     public boolean add(Product product) {
-        try {
-            getPreparedStatement(String.format("INSERT INTO PRODUCTS (Name, Price) Values ('%s', %d)", product.getName(), product.getPrice())).executeUpdate();
-            logger.info("Product " + product.getId() + " has been added to product list");
-            return true;
-        } catch (SQLException e) {
-            logger.error("adding product fail", e);
-        }
-        return false;
+        update("INSERT INTO PRODUCTS (Name, Price) Values (?, ?)", preparedStatement -> {
+            preparedStatement.setString(1, product.getName());
+            preparedStatement.setInt(2, product.getPrice());
+        });
+        logger.info("Product " + product.getId() + " has been added to product list");
+        return true;
     }
 
     @Override
@@ -30,27 +28,24 @@ public class ProductDao extends AbstractDao<Product> implements ProductDaoIntefa
 
     @Override
     public void update(Product product) {
-        try {
-            getPreparedStatement(String.format("UPDATE PRODUCTS SET NAME = '%s', PRICE = %d WHERE ID = %d", product.getName(), product.getPrice(), product.getId())).executeUpdate();
-            logger.info("Product " + product.getId() + " has been updated");
-        } catch (SQLException e) {
-            logger.error("updating product fail", e);
-        }
+        update("UPDATE PRODUCTS SET NAME = ?, PRICE = ? WHERE ID = ?", preparedStatement -> {
+            preparedStatement.setString(1, product.getName());
+            preparedStatement.setInt(2, product.getPrice());
+            preparedStatement.setInt(1, product.getId());
+        });
+        logger.info("Product " + product.getId() + " has been updated");
     }
 
     @Override
     public void delete(Product product) {
-        try {
-            getPreparedStatement(String.format("DELETE FROM PRODUCTS WHERE Id = %d", product.getId())).executeUpdate();
-            logger.info("Product " + product.getId() + " has been deleted from product list");
-        } catch (SQLException e) {
-            logger.error("removing product fail", e);
-        }
+        update("DELETE FROM PRODUCTS WHERE Id = ?", preparedStatement ->
+            preparedStatement.setInt(1, product.getId()));
+        logger.info("Product " + product.getId() + " has been deleted from product list");
     }
 
     @Override
-    public Product getProduct(int id){
-        return findById(id);
+    public Product getProduct(int id) {
+        return findById(id).orElseThrow(IllegalStateException::new);
     }
 
     @Override
@@ -65,7 +60,7 @@ public class ProductDao extends AbstractDao<Product> implements ProductDaoIntefa
             }
             return list;
         } catch (SQLException e) {
-            logger.error("getting list of products fail",e);
+            logger.error("getting list of products fail", e);
             return emptyList();
         }
     }

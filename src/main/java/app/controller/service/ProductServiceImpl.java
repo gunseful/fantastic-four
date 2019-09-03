@@ -10,7 +10,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void deleteProduct(int id) {
-        Product product = productDao.findById(id);
+        Product product = productDao.findById(id).orElseThrow(IllegalAccessError::new);
         productDao.delete(product);
     }
 

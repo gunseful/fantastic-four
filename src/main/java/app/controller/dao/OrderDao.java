@@ -3,7 +3,6 @@ package app.controller.dao;
 import app.model.products.Order;
 import app.model.user.User;
 
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -11,17 +10,14 @@ import java.util.List;
 
 import static java.util.Collections.emptyList;
 
-public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface{
+public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface {
 
     @Override
     public boolean add(Order order) {
-        try {
-            PreparedStatement ps = getPreparedStatement(String.format("INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (%d, 'NOT_ORDERED')", order.getCustomerId()));
-            ps.executeUpdate();
-            logger.info("User " + order.getCustomerId() + " has created new order");
-        } catch (SQLException e) {
-            logger.error("adding new order fail", e);
-        }
+        update("INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?, 'NOT_ORDERED')", preparedStatement ->
+            preparedStatement.setInt(1, order.getCustomerId())
+        );
+        logger.info("User " + order.getCustomerId() + " has created new order");
         return true;
     }
 
@@ -32,38 +28,45 @@ public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface{
 
     @Override
     public void update(Order order) {
-        try {
-            PreparedStatement ps = getPreparedStatement(String.format("UPDATE ORDERS SET CUSTOMER_ID = %d, CREATEDAT = ?, STATE = %s WHERE ID = %d", order.getCustomerId(), order.getState(), order.getId()));
-            ps.setObject(1, order.getCreationDate());
-            ps.executeUpdate();
-            logger.info("Order " + order.getId() + " has been updated");
-        } catch (SQLException e) {
-            logger.error("updating order fail", e);
-        }
+        update("UPDATE ORDERS SET CUSTOMER_ID = ?, CREATEDAT = ?, STATE = ? WHERE ID = ?", preparedStatement -> {
+            preparedStatement.setInt(1, order.getCustomerId());
+            preparedStatement.setObject(2, order.getCreationDate());
+            preparedStatement.setString(3, order.getState());
+            preparedStatement.setInt(4, order.getId());
+        });
+        logger.info("Order " + order.getId() + " has been updated");
     }
+
 
     @Override
     public void delete(Order order) {
-        try {
-            getPreparedStatement(String.format("DELETE FROM ORDERS WHERE ID = %d", order.getId())).executeUpdate();
-            logger.info("order " + order.getId() + " has been deleted from order list");
-        } catch (SQLException e) {
-            logger.error("removing order fail", e);
-        }
+        update("DELETE FROM ORDERS WHERE ID = ?", preparedStatement ->
+                preparedStatement.setInt(1, order.getId()));
+        logger.info("order " + order.getId() + " has been deleted from order list");
     }
 
     @Override
     public List<Order> findOrders(User user) {
-        if(user.isAdministrator()) {
-            return findBy("STATE='ORDERED' OR STATE ='PAID'");
-        }else {
-            return findBy(String.format("STATE='ORDERED' OR STATE ='PAID' AND CUSTOMER_ID=%d",user.getId()));
+        if (user.isAdministrator()) {
+            return getResultList("SELECT * FROM ORDERS WHERE STATE = ? OR STATE = ?", preparedStatement -> {
+                preparedStatement.setString(1, "ORDERED");
+                preparedStatement.setString(2, "PAID");
+            });
+        } else {
+            return getResultList("SELECT * FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE = ? OR STATE = ?", preparedStatement -> {
+                preparedStatement.setString(2, "ORDERED");
+                preparedStatement.setString(3, "PAID");
+                preparedStatement.setInt(1, user.getId());
+            });
         }
     }
 
     @Override
     public Order getUserBasket(User user) {
-        return singleFindBy(String.format("STATE='NOT_ORDERED' AND CUSTOMER_ID=%d", user.getId())).orElse(null);
+        return getSingleResult("SELECT * FROM ORDERS WHERE CUSTOMER_ID= ? AND STATE = ? ", preparedStatement -> {
+            preparedStatement.setInt(1, user.getId());
+            preparedStatement.setString(2, "NOT_ORDERED");
+        }).orElse(null);
     }
 
     @Override
@@ -80,7 +83,7 @@ public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface{
             }
             return result;
         } catch (SQLException e) {
-            logger.error("getting list of orders fail",e);
+            logger.error("getting list of orders fail", e);
             return emptyList();
         }
     }

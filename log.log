@@ -3413,3 +3413,1883 @@ UPDATE PRODUCTS_ORDERS SET COUNT = ? WHERE PRODUCT_ID = ? AND ORDER_ID = ? [2351
 2019-09-01 14:44:53,844 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] User=gunseful has been log in 
 2019-09-01 14:45:13,816 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= 4362E49119C149D588CF758323806963 
 2019-09-01 14:45:13,816 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] User=GUNSEFUL has out 
+2019-09-03 17:16:45,330 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 17:16:45,844 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 17:16:45,844 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 17:16:45,844 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 17:16:45,844 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 17:16:45,844 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 17:16:45,844 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 17:17:43,384 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-09-03 17:17:44,294 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-09-03 17:18:05,268 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-2] Unauthorized access request 
+2019-09-03 17:18:05,600 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-09-03 17:18:08,161 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-03 17:18:08,709 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 17:18:08,710 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 17:18:08,711 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 17:18:08,713 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 17:18:08,714 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 17:18:08,714 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-03 17:18:09,087 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=2 has been log in 
+2019-09-03 17:19:41,634 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= E9DB486627ACC753453469FE82BF23DD 
+2019-09-03 17:19:41,634 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] User=2 has out 
+2019-09-03 17:19:48,011 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-8] User=gunseful has been log in 
+2019-09-03 17:19:52,276 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] user id=2 has been updated 
+2019-09-03 17:19:52,276 ERROR a.c.s.s.OrdersServlet [http-nio-8081-exec-10] User= 2 has been banned 
+2019-09-03 17:19:55,551 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-5] JSESSIONID= 4739C75679D8C16272A6B6AC575E1072 
+2019-09-03 17:19:55,552 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-5] User=GUNSEFUL has out 
+2019-09-03 17:20:46,697 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 17:20:47,407 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 17:20:47,409 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 17:20:47,410 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 17:20:47,411 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 17:20:47,413 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 17:20:47,413 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:20:38,029 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:22:18,028 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:22:18,639 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:22:18,641 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:22:18,645 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:22:18,647 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:22:18,649 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:22:18,649 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:23:08,252 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:23:08,705 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:23:08,706 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:23:08,708 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:23:08,709 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:23:08,710 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:23:08,711 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:23:21,152 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:23:21,576 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:23:21,577 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:23:21,579 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:23:21,580 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:23:21,583 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:23:21,583 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:25:17,554 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:25:17,979 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:25:17,981 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:25:17,982 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:25:17,984 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:25:17,987 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:25:17,988 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:26:12,632 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:26:13,051 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:26:13,056 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:26:13,058 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:26:13,059 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:26:13,061 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:26:13,061 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:30:09,699 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:30:10,135 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:30:10,136 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:30:10,138 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:30:10,139 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:30:10,141 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:30:10,141 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:32:28,483 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:32:28,914 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:32:28,916 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:32:28,917 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:32:28,919 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:32:28,920 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:32:28,920 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:32:28,993 ERROR a.c.d.AbstractDao [main] getting list of products fail org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎС‚РѕР»Р±РµС† "COUNT" РЅРµ РЅР°Р№РґРµРЅ
+Column "COUNT" not found [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3188)
+	at org.h2.jdbc.JdbcResultSet.findColumn(JdbcResultSet.java:189)
+	at app.controller.dao.ProductDao.parseResultSet(ProductDao.java:64)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:86)
+	at app.controller.dao.ProductDao.getAll(ProductDao.java:28)
+	at app.controller.service.ProductServiceImpl.getList(ProductServiceImpl.java:24)
+	at Main.main(Main.java:23)
+
+2019-09-03 18:46:54,387 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:46:54,865 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:46:54,866 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:46:54,867 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:46:54,868 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:46:54,870 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:46:54,870 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:46:54,961 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 18:48:14,216 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:48:14,654 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:48:14,665 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:48:14,668 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:48:14,670 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:48:14,672 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:48:14,672 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:48:14,744 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 18:49:41,477 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:49:41,930 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:49:41,932 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:49:41,933 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:49:41,934 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:49:41,936 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:49:41,936 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:49:55,097 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:49:55,543 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:49:55,544 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:49:55,546 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:49:55,547 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:49:55,549 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:49:55,549 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:49:55,600 INFO a.c.d.AbstractDao [main] Product 1273 has been deleted from product list 
+2019-09-03 18:50:06,950 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:50:07,399 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:07,401 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:07,402 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:07,404 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:07,405 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:07,406 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:50:16,688 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:50:17,116 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:17,117 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:17,119 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:17,120 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:17,122 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:17,122 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 18:50:17,176 INFO a.c.d.AbstractDao [main] Product 1272 has been deleted from product list 
+2019-09-03 18:50:28,424 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 18:50:28,952 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:28,953 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:28,955 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:28,956 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:28,957 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 18:50:28,958 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 20:38:04,445 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-09-03 20:38:05,102 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:38:05,103 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:38:05,105 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:38:05,105 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:38:05,106 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:38:05,106 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-09-03 20:38:05,354 ERROR a.c.d.AbstractDao [http-nio-8081-exec-9] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT FROM USERS WHERE[*] NICKNAME = ?"; ожидалось "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT FROM USERS WHERE[*] NICKNAME = ?"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT FROM USERS WHERE NICKNAME = ? [42001-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:991)
+	at org.h2.command.Parser.read(Parser.java:4549)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2775)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.readTerm(Parser.java:3941)
+	at org.h2.command.Parser.readFactor(Parser.java:3090)
+	at org.h2.command.Parser.readSum(Parser.java:3077)
+	at org.h2.command.Parser.readConcat(Parser.java:3047)
+	at org.h2.command.Parser.readCondition(Parser.java:2900)
+	at org.h2.command.Parser.readAnd(Parser.java:2872)
+	at org.h2.command.Parser.readExpression(Parser.java:2864)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:2731)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2778)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:764)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:97)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:87)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:33)
+	at app.controller.service.UserServiceImpl.authorize(UserServiceImpl.java:54)
+	at app.controller.servlets.prestoreservlets.LogginServlet.doPost(LogginServlet.java:35)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 20:38:05,366 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-9] failed log in java.lang.IllegalStateException: org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT FROM USERS WHERE[*] NICKNAME = ?"; ожидалось "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT FROM USERS WHERE[*] NICKNAME = ?"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT FROM USERS WHERE NICKNAME = ? [42001-199]
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:104)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:87)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:33)
+	at app.controller.service.UserServiceImpl.authorize(UserServiceImpl.java:54)
+	at app.controller.servlets.prestoreservlets.LogginServlet.doPost(LogginServlet.java:35)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT FROM USERS WHERE[*] NICKNAME = ?"; ожидалось "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT FROM USERS WHERE[*] NICKNAME = ?"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT FROM USERS WHERE NICKNAME = ? [42001-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:991)
+	at org.h2.command.Parser.read(Parser.java:4549)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2775)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.readTerm(Parser.java:3941)
+	at org.h2.command.Parser.readFactor(Parser.java:3090)
+	at org.h2.command.Parser.readSum(Parser.java:3077)
+	at org.h2.command.Parser.readConcat(Parser.java:3047)
+	at org.h2.command.Parser.readCondition(Parser.java:2900)
+	at org.h2.command.Parser.readAnd(Parser.java:2872)
+	at org.h2.command.Parser.readExpression(Parser.java:2864)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:2731)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2778)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:764)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:97)
+	... 34 more
+
+2019-09-03 20:40:55,599 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-09-03 20:40:56,063 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:40:56,065 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:40:56,066 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:40:56,067 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:40:56,068 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:40:56,069 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-09-03 20:40:56,313 ERROR a.c.d.AbstractDao [http-nio-8081-exec-9] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT FROM USERS WHERE[*] NICKNAME = ?"; ожидалось "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT FROM USERS WHERE[*] NICKNAME = ?"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT FROM USERS WHERE NICKNAME = ? [42001-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:991)
+	at org.h2.command.Parser.read(Parser.java:4549)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2775)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.readTerm(Parser.java:3941)
+	at org.h2.command.Parser.readFactor(Parser.java:3090)
+	at org.h2.command.Parser.readSum(Parser.java:3077)
+	at org.h2.command.Parser.readConcat(Parser.java:3047)
+	at org.h2.command.Parser.readCondition(Parser.java:2900)
+	at org.h2.command.Parser.readAnd(Parser.java:2872)
+	at org.h2.command.Parser.readExpression(Parser.java:2864)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:2731)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2778)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:764)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:97)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:87)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:33)
+	at app.controller.service.UserServiceImpl.authorize(UserServiceImpl.java:54)
+	at app.controller.servlets.prestoreservlets.LogginServlet.doPost(LogginServlet.java:35)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 20:40:56,327 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-9] failed log in java.lang.IllegalStateException: org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT FROM USERS WHERE[*] NICKNAME = ?"; ожидалось "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT FROM USERS WHERE[*] NICKNAME = ?"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT FROM USERS WHERE NICKNAME = ? [42001-199]
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:104)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:87)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:33)
+	at app.controller.service.UserServiceImpl.authorize(UserServiceImpl.java:54)
+	at app.controller.servlets.prestoreservlets.LogginServlet.doPost(LogginServlet.java:35)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT FROM USERS WHERE[*] NICKNAME = ?"; ожидалось "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT FROM USERS WHERE[*] NICKNAME = ?"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT FROM USERS WHERE NICKNAME = ? [42001-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:991)
+	at org.h2.command.Parser.read(Parser.java:4549)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2775)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.readTerm(Parser.java:3941)
+	at org.h2.command.Parser.readFactor(Parser.java:3090)
+	at org.h2.command.Parser.readSum(Parser.java:3077)
+	at org.h2.command.Parser.readConcat(Parser.java:3047)
+	at org.h2.command.Parser.readCondition(Parser.java:2900)
+	at org.h2.command.Parser.readAnd(Parser.java:2872)
+	at org.h2.command.Parser.readExpression(Parser.java:2864)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:2731)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2778)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:764)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:97)
+	... 34 more
+
+2019-09-03 20:42:33,152 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 20:42:35,103 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:42:35,105 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:42:35,106 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:42:35,107 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:42:35,109 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:42:35,109 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 20:42:35,219 ERROR a.c.d.AbstractDao [main] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° РІ РІС‹СЂР°Р¶РµРЅРёРё SQL "SELECT FROM USERS WHERE[*] NICKNAME = ?"; РѕР¶РёРґР°Р»РѕСЃСЊ "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT FROM USERS WHERE[*] NICKNAME = ?"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT FROM USERS WHERE NICKNAME = ? [42001-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:991)
+	at org.h2.command.Parser.read(Parser.java:4549)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2775)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.readTerm(Parser.java:3941)
+	at org.h2.command.Parser.readFactor(Parser.java:3090)
+	at org.h2.command.Parser.readSum(Parser.java:3077)
+	at org.h2.command.Parser.readConcat(Parser.java:3047)
+	at org.h2.command.Parser.readCondition(Parser.java:2900)
+	at org.h2.command.Parser.readAnd(Parser.java:2872)
+	at org.h2.command.Parser.readExpression(Parser.java:2864)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:2731)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2778)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:764)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:97)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:87)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:33)
+	at app.controller.service.UserServiceImpl.getUserByNickname(UserServiceImpl.java:27)
+	at Main.main(Main.java:24)
+
+2019-09-03 20:46:06,557 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 20:46:06,994 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:46:06,995 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:46:06,997 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:46:06,998 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:46:07,000 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:46:07,000 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 20:46:07,070 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 20:46:07,076 ERROR a.c.d.AbstractDao [main] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° РІ РІС‹СЂР°Р¶РµРЅРёРё SQL "SELECT FROM USERS WHERE[*] NICKNAME = ?"; РѕР¶РёРґР°Р»РѕСЃСЊ "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT FROM USERS WHERE[*] NICKNAME = ?"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT FROM USERS WHERE NICKNAME = ? [42001-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:991)
+	at org.h2.command.Parser.read(Parser.java:4549)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2775)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.readTerm(Parser.java:3941)
+	at org.h2.command.Parser.readFactor(Parser.java:3090)
+	at org.h2.command.Parser.readSum(Parser.java:3077)
+	at org.h2.command.Parser.readConcat(Parser.java:3047)
+	at org.h2.command.Parser.readCondition(Parser.java:2900)
+	at org.h2.command.Parser.readAnd(Parser.java:2872)
+	at org.h2.command.Parser.readExpression(Parser.java:2864)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:2731)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2778)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2636)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2469)
+	at org.h2.command.Parser.parseSelect(Parser.java:2440)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:764)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:97)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:87)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:33)
+	at app.controller.service.UserServiceImpl.getUserByNickname(UserServiceImpl.java:27)
+	at Main.main(Main.java:24)
+
+2019-09-03 20:46:44,403 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 20:46:44,854 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:46:44,856 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:46:44,858 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:46:44,859 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:46:44,861 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 20:46:44,861 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 20:46:44,902 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 20:52:20,485 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-09-03 20:52:20,963 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:52:20,964 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:52:20,965 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:52:20,967 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:52:20,968 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 20:52:20,968 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-09-03 20:52:21,148 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-9] User= 2 is in black list 
+2019-09-03 20:52:26,521 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-2] User=gunseful has been log in 
+2019-09-03 20:52:34,442 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] Product 0 has been added to product list 
+2019-09-03 20:52:34,442 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-10] User=GUNSEFUL has been added new product - 123 
+2019-09-03 20:52:36,127 INFO a.c.d.AbstractDao [http-nio-8081-exec-2] Product 1276 has been deleted from product list 
+2019-09-03 20:52:36,128 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-2] User=GUNSEFUL has been deleted  1276  
+2019-09-03 20:52:38,784 ERROR a.c.d.AbstractDao [http-nio-8081-exec-5] Fail connect to database org.h2.jdbc.JdbcSQLDataException: Параметр "#6" не установлен
+Parameter "#6" is not set; SQL statement:
+UPDATE USERS SET NICKNAME = ?, PASSWORD = ?, NAME = ?, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = ? [90012-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:587)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:94)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:180)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:132)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:41)
+	at app.controller.dao.UserDao.update(UserDao.java:38)
+	at app.controller.service.UserServiceImpl.removeFromBlackList(UserServiceImpl.java:48)
+	at app.controller.servlets.storeservlets.admin.BlackListServlet.doPost(BlackListServlet.java:40)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 20:52:38,786 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] user id=2 has been updated 
+2019-09-03 20:52:38,786 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-5] Administrator has deleted user (id= 2 ) from blacklist 
+2019-09-03 20:52:40,118 ERROR a.c.d.AbstractDao [http-nio-8081-exec-8] Fail connect to database org.h2.jdbc.JdbcSQLDataException: Параметр "#6" не установлен
+Parameter "#6" is not set; SQL statement:
+UPDATE USERS SET NICKNAME = ?, PASSWORD = ?, NAME = ?, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = ? [90012-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:587)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:94)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:180)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:132)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:41)
+	at app.controller.dao.UserDao.update(UserDao.java:38)
+	at app.controller.service.UserServiceImpl.removeFromBlackList(UserServiceImpl.java:48)
+	at app.controller.servlets.storeservlets.admin.BlackListServlet.doPost(BlackListServlet.java:40)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 20:52:40,120 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] user id=2 has been updated 
+2019-09-03 20:52:40,120 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-8] Administrator has deleted user (id= 2 ) from blacklist 
+2019-09-03 21:04:02,959 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-3] User=gunseful has been log in 
+2019-09-03 21:04:06,599 ERROR a.c.d.AbstractDao [http-nio-8081-exec-9] Fail connect to database org.h2.jdbc.JdbcSQLDataException: Параметр "#6" не установлен
+Parameter "#6" is not set; SQL statement:
+UPDATE USERS SET NICKNAME = ?, PASSWORD = ?, NAME = ?, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = ? [90012-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:587)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:94)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:180)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:132)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:41)
+	at app.controller.dao.UserDao.update(UserDao.java:38)
+	at app.controller.service.UserServiceImpl.removeFromBlackList(UserServiceImpl.java:48)
+	at app.controller.servlets.storeservlets.admin.BlackListServlet.doPost(BlackListServlet.java:40)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 21:04:06,600 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] user id=2 has been updated 
+2019-09-03 21:04:06,601 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-9] Administrator has deleted user (id= 2 ) from blacklist 
+2019-09-03 21:05:32,123 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-03 21:05:32,692 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 21:05:32,693 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 21:05:32,695 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 21:05:32,696 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 21:05:32,697 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 21:05:32,697 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-03 21:05:32,905 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=gunseful has been log in 
+2019-09-03 21:05:36,853 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] user id=2 has been updated 
+2019-09-03 21:05:36,854 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-1] Administrator has deleted user (id= 2 ) from blacklist 
+2019-09-03 21:05:42,339 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] user id=2 has been updated 
+2019-09-03 21:05:42,339 ERROR a.c.s.s.OrdersServlet [http-nio-8081-exec-7] User= 2 has been banned 
+2019-09-03 21:05:45,319 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] user id=2 has been updated 
+2019-09-03 21:05:45,319 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-8] Administrator has deleted user (id= 2 ) from blacklist 
+2019-09-03 21:05:49,551 ERROR a.c.d.AbstractDao [http-nio-8081-exec-10] Fail connect to database org.h2.jdbc.JdbcSQLDataException: Параметр "#1" не установлен
+Parameter "#1" is not set; SQL statement:
+DELETE FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = ? AND ORDER_ID = ? [90012-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:587)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:94)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:180)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:132)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:41)
+	at app.controller.dao.ProductOrderDao.delete(ProductOrderDao.java:45)
+	at app.controller.service.OrderServiceImpl.deleteOrder(OrderServiceImpl.java:106)
+	at app.controller.servlets.storeservlets.OrdersServlet.doPost(OrdersServlet.java:62)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 21:05:49,554 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] product id=1449 has been deleted from order id=1449 
+2019-09-03 21:05:49,559 ERROR a.c.d.AbstractDao [http-nio-8081-exec-10] Fail connect to database org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Нарушение ссылочной целостности: "CONSTRAINT_F3B: PUBLIC.PRODUCTS_ORDERS FOREIGN KEY(ORDER_ID) REFERENCES PUBLIC.ORDERS(ID) (1449)"
+Referential integrity constraint violation: "CONSTRAINT_F3B: PUBLIC.PRODUCTS_ORDERS FOREIGN KEY(ORDER_ID) REFERENCES PUBLIC.ORDERS(ID) (1449)"; SQL statement:
+DELETE FROM ORDERS WHERE ID = ? [23503-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:373)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:390)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:265)
+	at org.h2.table.Table.fireConstraints(Table.java:1020)
+	at org.h2.table.Table.fireAfterRow(Table.java:1038)
+	at org.h2.command.dml.Delete.update(Delete.java:129)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:41)
+	at app.controller.dao.OrderDao.delete(OrderDao.java:43)
+	at app.controller.service.OrderServiceImpl.deleteOrder(OrderServiceImpl.java:108)
+	at app.controller.servlets.storeservlets.OrdersServlet.doPost(OrdersServlet.java:62)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 21:05:49,561 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] order 1449 has been deleted from order list 
+2019-09-03 21:05:49,561 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-10] User=GUNSEFUL has deleted order 1449 
+2019-09-03 21:06:59,828 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-4] User=  is not found in database 
+2019-09-03 21:07:03,763 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-2] User=gunseful has been log in 
+2019-09-03 21:10:11,342 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] inside ConnectionPool constructor 
+2019-09-03 21:10:11,823 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-03 21:10:11,824 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-03 21:10:11,824 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-03 21:10:11,825 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-03 21:10:11,826 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-03 21:10:11,826 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] total size of connection: 5 
+2019-09-03 21:10:12,202 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-09-03 21:10:14,016 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-3] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-03 21:10:20,253 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-9] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-03 21:10:23,329 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-10] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-03 21:10:34,110 ERROR a.c.s.p.RegistrationServlet [http-nio-8081-exec-5] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-03 21:10:39,976 ERROR a.c.d.AbstractDao [http-nio-8081-exec-3] Fail connect to database org.h2.jdbc.JdbcSQLDataException: Параметр "#1" не установлен
+Parameter "#1" is not set; SQL statement:
+DELETE FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = ? AND ORDER_ID = ? [90012-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:587)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:94)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:180)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:132)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:41)
+	at app.controller.dao.ProductOrderDao.delete(ProductOrderDao.java:45)
+	at app.controller.service.OrderServiceImpl.deleteOrder(OrderServiceImpl.java:106)
+	at app.controller.servlets.storeservlets.OrdersServlet.doPost(OrdersServlet.java:62)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 21:10:39,980 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] product id=1449 has been deleted from order id=1449 
+2019-09-03 21:10:39,986 ERROR a.c.d.AbstractDao [http-nio-8081-exec-3] Fail connect to database org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Нарушение ссылочной целостности: "CONSTRAINT_F3B: PUBLIC.PRODUCTS_ORDERS FOREIGN KEY(ORDER_ID) REFERENCES PUBLIC.ORDERS(ID) (1449)"
+Referential integrity constraint violation: "CONSTRAINT_F3B: PUBLIC.PRODUCTS_ORDERS FOREIGN KEY(ORDER_ID) REFERENCES PUBLIC.ORDERS(ID) (1449)"; SQL statement:
+DELETE FROM ORDERS WHERE ID = ? [23503-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:373)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:390)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:265)
+	at org.h2.table.Table.fireConstraints(Table.java:1020)
+	at org.h2.table.Table.fireAfterRow(Table.java:1038)
+	at org.h2.command.dml.Delete.update(Delete.java:129)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:41)
+	at app.controller.dao.OrderDao.delete(OrderDao.java:43)
+	at app.controller.service.OrderServiceImpl.deleteOrder(OrderServiceImpl.java:108)
+	at app.controller.servlets.storeservlets.OrdersServlet.doPost(OrdersServlet.java:62)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 21:10:39,988 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] order 1449 has been deleted from order list 
+2019-09-03 21:10:39,989 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-3] User=2 has deleted order 1449 
+2019-09-03 21:12:46,476 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] inside ConnectionPool constructor 
+2019-09-03 21:12:46,984 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-03 21:12:46,985 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-03 21:12:46,986 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-03 21:12:46,987 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-03 21:12:46,988 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-03 21:12:46,989 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] total size of connection: 5 
+2019-09-03 21:12:47,108 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-09-03 21:12:51,514 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] product id=1208 has been deleted from order id=1449 
+2019-09-03 21:12:51,518 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] order 1449 has been deleted from order list 
+2019-09-03 21:12:51,519 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-5] User=2 has deleted order 1449 
+2019-09-03 21:12:53,395 ERROR a.c.d.AbstractDao [http-nio-8081-exec-3] Fail connect to database org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"
+Syntax error in SQL statement "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT = ? STATE = ? WHERE ID = ? [42000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:229)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:989)
+	at org.h2.command.Parser.prepareCommand(Parser.java:686)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:39)
+	at app.controller.dao.OrderDao.update(OrderDao.java:31)
+	at app.controller.service.OrderServiceImpl.payOrder(OrderServiceImpl.java:40)
+	at app.controller.servlets.storeservlets.OrdersServlet.doPost(OrdersServlet.java:55)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 21:12:53,398 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] Order 1417 has been updated 
+2019-09-03 21:12:53,398 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-3] User=2 has payed order 
+2019-09-03 21:16:06,787 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:16:09,260 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:16:09,261 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:16:09,262 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:16:09,263 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:16:09,264 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:16:09,264 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:16:09,302 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:17:10,454 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:17:10,864 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:10,865 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:10,867 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:10,868 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:10,870 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:10,870 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:17:10,904 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:17:13,630 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:17:14,073 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:14,075 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:14,076 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:14,078 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:14,079 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:14,080 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:17:14,125 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:17:56,941 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:17:57,492 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:57,494 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:57,496 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:57,497 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:57,499 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:17:57,499 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:17:57,556 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:18:46,761 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:18:47,265 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:18:47,267 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:18:47,268 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:18:47,270 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:18:47,271 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:18:47,272 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:18:47,318 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:18:47,359 ERROR a.c.d.AbstractDao [main] Fail connect to database org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° РІ РІС‹СЂР°Р¶РµРЅРёРё SQL "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"
+Syntax error in SQL statement "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT = ? STATE = ? WHERE ID = ? [42000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:229)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:989)
+	at org.h2.command.Parser.prepareCommand(Parser.java:686)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:39)
+	at app.controller.dao.OrderDao.update(OrderDao.java:31)
+	at app.controller.service.OrderServiceImpl.payOrder(OrderServiceImpl.java:40)
+	at Main.main(Main.java:37)
+
+2019-09-03 21:18:47,361 INFO a.c.d.AbstractDao [main] Order 1417 has been updated 
+2019-09-03 21:19:16,527 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:19:16,989 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:19:16,990 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:19:16,992 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:19:16,994 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:19:16,995 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:19:16,995 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:19:17,054 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:19:52,905 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:19:53,348 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:19:53,349 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:19:53,351 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:19:53,353 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:19:53,354 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:19:53,355 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:19:53,397 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:19:53,439 ERROR a.c.d.AbstractDao [main] Fail connect to database org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° РІ РІС‹СЂР°Р¶РµРЅРёРё SQL "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"
+Syntax error in SQL statement "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT = ? STATE = ? WHERE ID = ? [42000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:229)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:989)
+	at org.h2.command.Parser.prepareCommand(Parser.java:686)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:39)
+	at app.controller.dao.OrderDao.update(OrderDao.java:31)
+	at app.controller.service.OrderServiceImpl.payOrder(OrderServiceImpl.java:41)
+	at Main.main(Main.java:37)
+
+2019-09-03 21:19:53,441 INFO a.c.d.AbstractDao [main] Order 1417 has been updated 
+2019-09-03 21:20:32,541 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:20:33,130 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:20:33,132 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:20:33,134 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:20:33,135 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:20:33,138 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:20:33,139 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:20:33,181 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:20:33,256 ERROR a.c.d.AbstractDao [main] Fail connect to database org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° РІ РІС‹СЂР°Р¶РµРЅРёРё SQL "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"
+Syntax error in SQL statement "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT = ? STATE = ? WHERE ID = ? [42000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:229)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:989)
+	at org.h2.command.Parser.prepareCommand(Parser.java:686)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:39)
+	at app.controller.dao.OrderDao.update(OrderDao.java:31)
+	at app.controller.service.OrderServiceImpl.payOrder(OrderServiceImpl.java:41)
+	at Main.main(Main.java:37)
+
+2019-09-03 21:20:33,259 INFO a.c.d.AbstractDao [main] Order 1417 has been updated 
+2019-09-03 21:22:00,854 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:22:01,310 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:01,311 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:01,312 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:01,313 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:01,315 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:01,315 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:22:01,360 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:22:01,397 ERROR a.c.d.AbstractDao [main] Fail connect to database org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° РІ РІС‹СЂР°Р¶РµРЅРёРё SQL "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"
+Syntax error in SQL statement "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT = ? STATE = ? WHERE ID = ? [42000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:229)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:989)
+	at org.h2.command.Parser.prepareCommand(Parser.java:686)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:39)
+	at app.controller.dao.OrderDao.update(OrderDao.java:31)
+	at app.controller.service.OrderServiceImpl.payOrder(OrderServiceImpl.java:41)
+	at Main.main(Main.java:37)
+
+2019-09-03 21:22:01,399 INFO a.c.d.AbstractDao [main] Order 1417 has been updated 
+2019-09-03 21:22:39,463 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:22:39,932 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:39,933 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:39,935 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:39,936 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:39,937 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:39,937 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:22:39,986 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:22:40,022 ERROR a.c.d.AbstractDao [main] Fail connect to database org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° РІ РІС‹СЂР°Р¶РµРЅРёРё SQL "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"
+Syntax error in SQL statement "UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT[*] = ? STATE = ? WHERE ID = ?"; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = ? CREATEDAT = ? STATE = ? WHERE ID = ? [42000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:229)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:989)
+	at org.h2.command.Parser.prepareCommand(Parser.java:686)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:39)
+	at app.controller.dao.OrderDao.update(OrderDao.java:31)
+	at app.controller.service.OrderServiceImpl.payOrder(OrderServiceImpl.java:41)
+	at Main.main(Main.java:37)
+
+2019-09-03 21:22:40,023 INFO a.c.d.AbstractDao [main] Order 1417 has been updated 
+2019-09-03 21:22:56,349 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:22:56,810 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:56,813 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:56,814 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:56,816 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:56,818 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:22:56,818 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:22:56,859 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:22:56,905 ERROR a.c.d.AbstractDao [main] Fail connect to database org.h2.jdbc.JdbcSQLSyntaxErrorException: РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° РІ РІС‹СЂР°Р¶РµРЅРёРё SQL "UPDATE ORDERS SET CUSTOMER_ID = ? STATE[*] = ? WHERE ID = ?"
+Syntax error in SQL statement "UPDATE ORDERS SET CUSTOMER_ID = ? STATE[*] = ? WHERE ID = ?"; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = ? STATE = ? WHERE ID = ? [42000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:229)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:989)
+	at org.h2.command.Parser.prepareCommand(Parser.java:686)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:39)
+	at app.controller.dao.OrderDao.update(OrderDao.java:31)
+	at app.controller.service.OrderServiceImpl.payOrder(OrderServiceImpl.java:41)
+	at Main.main(Main.java:37)
+
+2019-09-03 21:22:56,907 INFO a.c.d.AbstractDao [main] Order 1417 has been updated 
+2019-09-03 21:24:20,940 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:24:21,226 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:24:21,240 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:24:21,249 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:24:21,256 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:24:21,264 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:24:21,264 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-09-03 21:24:33,294 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:24:33,745 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:24:33,747 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:24:33,749 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:24:33,750 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:24:33,752 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:24:33,753 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:24:33,795 INFO a.c.d.AbstractDao [main] Product 0 has been added to product list 
+2019-09-03 21:24:33,839 INFO a.c.d.AbstractDao [main] Order 1417 has been updated 
+2019-09-03 21:35:42,880 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] inside ConnectionPool constructor 
+2019-09-03 21:35:43,333 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 21:35:43,334 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 21:35:43,336 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 21:35:43,337 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 21:35:43,338 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] Connected to database 
+2019-09-03 21:35:43,339 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-9] total size of connection: 5 
+2019-09-03 21:35:43,612 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-09-03 21:35:50,118 ERROR a.c.d.AbstractDao [http-nio-8081-exec-3] Can't execute getResultList org.h2.jdbc.JdbcSQLDataException: Параметр "#3" не установлен
+Parameter "#3" is not set; SQL statement:
+SELECT * FROM ORDERS WHERE STATE = ? OR STATE = ? AND CUSTOMER_ID=? [90012-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:587)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:94)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:180)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:144)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:115)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:68)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:51)
+	at app.controller.dao.OrderDao.getUserBasket(OrderDao.java:65)
+	at app.controller.service.OrderServiceImpl.updateBasket(OrderServiceImpl.java:46)
+	at app.controller.servlets.storeservlets.client.ListClientServlet.doPost(ListClientServlet.java:40)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 21:39:35,778 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-03 21:39:36,279 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:39:36,281 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:39:36,282 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:39:36,283 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:39:36,284 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:39:36,285 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-03 21:39:36,466 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-03 21:39:37,804 ERROR a.c.d.AbstractDao [http-nio-8081-exec-10] Can't execute getResultList org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "ORDERED"
+Data conversion error converting "ORDERED"; SQL statement:
+SELECT * FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE = ? OR STATE = ? [22018-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:455)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.value.Value.convertTo(Value.java:829)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.value.Value.compareWithNull(Value.java:1456)
+	at org.h2.engine.Database.compareWithNull(Database.java:439)
+	at org.h2.expression.condition.Comparison.compare(Comparison.java:306)
+	at org.h2.expression.condition.Comparison.getValue(Comparison.java:290)
+	at org.h2.expression.condition.ConditionAndOr.getValue(ConditionAndOr.java:89)
+	at org.h2.expression.condition.ConditionAndOr.getValue(ConditionAndOr.java:112)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:259)
+	at org.h2.command.dml.Select.isConditionMet(Select.java:456)
+	at org.h2.command.dml.Select$LazyResultQueryFlat.fetchNextRow(Select.java:1885)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:101)
+	at org.h2.result.LazyResult.next(LazyResult.java:60)
+	at org.h2.command.dml.Select.queryFlat(Select.java:742)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:884)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:151)
+	at org.h2.command.dml.Query.query(Query.java:435)
+	at org.h2.command.dml.Query.query(Query.java:397)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:145)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:115)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:68)
+	at app.controller.dao.OrderDao.findOrders(OrderDao.java:56)
+	at app.controller.service.OrderServiceImpl.getOrders(OrderServiceImpl.java:67)
+	at app.controller.servlets.storeservlets.OrdersServlet.doGet(OrdersServlet.java:26)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NumberFormatException: For input string: "ORDERED"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at org.h2.value.Value.convertToInt(Value.java:936)
+	at org.h2.value.Value.convertTo(Value.java:764)
+	... 54 more
+
+2019-09-03 21:39:37,812 ERROR a.c.s.s.OrdersServlet [http-nio-8081-exec-10] java.lang.IllegalStateException: org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "ORDERED"
+Data conversion error converting "ORDERED"; SQL statement:
+SELECT * FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE = ? OR STATE = ? [22018-199] 
+2019-09-03 21:40:06,636 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= EC0AFC515B52FE57DF2913CBE4F1FEBC 
+2019-09-03 21:40:06,636 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] User=2 has out 
+2019-09-03 21:40:13,625 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] User=gunseful has been log in 
+2019-09-03 21:40:21,726 INFO a.c.d.AbstractDao [http-nio-8081-exec-4] user id=2 has been updated 
+2019-09-03 21:40:21,726 ERROR a.c.s.s.OrdersServlet [http-nio-8081-exec-4] User= 2 has been banned 
+2019-09-03 21:40:25,729 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] user id=2 has been updated 
+2019-09-03 21:40:25,729 INFO a.c.s.s.a.BlackListServlet [http-nio-8081-exec-7] Administrator has deleted user (id= 2 ) from blacklist 
+2019-09-03 21:40:31,197 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Product 1314 has been deleted from product list 
+2019-09-03 21:40:31,197 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-1] User=GUNSEFUL has been deleted  1314  
+2019-09-03 21:40:31,200 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Product 1315 has been deleted from product list 
+2019-09-03 21:40:31,201 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-1] User=GUNSEFUL has been deleted  1315  
+2019-09-03 21:40:31,203 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Product 1317 has been deleted from product list 
+2019-09-03 21:40:31,203 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-1] User=GUNSEFUL has been deleted  1317  
+2019-09-03 21:40:31,204 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Product 1318 has been deleted from product list 
+2019-09-03 21:40:31,205 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-1] User=GUNSEFUL has been deleted  1318  
+2019-09-03 21:40:31,206 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Product 1319 has been deleted from product list 
+2019-09-03 21:40:31,206 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-1] User=GUNSEFUL has been deleted  1319  
+2019-09-03 21:40:34,503 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] Product 1309 has been deleted from product list 
+2019-09-03 21:40:34,504 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-3] User=GUNSEFUL has been deleted  1309  
+2019-09-03 21:40:34,506 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] Product 1310 has been deleted from product list 
+2019-09-03 21:40:34,506 INFO a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-3] User=GUNSEFUL has been deleted  1310  
+2019-09-03 21:40:36,339 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-4] JSESSIONID= 00F78B8336097966399009DBF6B506B8 
+2019-09-03 21:40:36,340 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-4] User=GUNSEFUL has out 
+2019-09-03 21:41:03,956 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-09-03 21:41:05,076 ERROR a.c.d.AbstractDao [http-nio-8081-exec-2] Can't execute getResultList org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "ORDERED"
+Data conversion error converting "ORDERED"; SQL statement:
+SELECT * FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE = ? OR STATE = ? [22018-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:455)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.value.Value.convertTo(Value.java:829)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.value.Value.compareWithNull(Value.java:1456)
+	at org.h2.engine.Database.compareWithNull(Database.java:439)
+	at org.h2.expression.condition.Comparison.compare(Comparison.java:306)
+	at org.h2.expression.condition.Comparison.getValue(Comparison.java:290)
+	at org.h2.expression.condition.ConditionAndOr.getValue(ConditionAndOr.java:89)
+	at org.h2.expression.condition.ConditionAndOr.getValue(ConditionAndOr.java:112)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:259)
+	at org.h2.command.dml.Select.isConditionMet(Select.java:456)
+	at org.h2.command.dml.Select$LazyResultQueryFlat.fetchNextRow(Select.java:1885)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:101)
+	at org.h2.result.LazyResult.next(LazyResult.java:60)
+	at org.h2.command.dml.Select.queryFlat(Select.java:742)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:884)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:151)
+	at org.h2.command.dml.Query.query(Query.java:435)
+	at org.h2.command.dml.Query.query(Query.java:397)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:145)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:115)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:68)
+	at app.controller.dao.OrderDao.findOrders(OrderDao.java:56)
+	at app.controller.service.OrderServiceImpl.getOrders(OrderServiceImpl.java:67)
+	at app.controller.servlets.storeservlets.OrdersServlet.doGet(OrdersServlet.java:26)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NumberFormatException: For input string: "ORDERED"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at org.h2.value.Value.convertToInt(Value.java:936)
+	at org.h2.value.Value.convertTo(Value.java:764)
+	... 54 more
+
+2019-09-03 21:41:05,078 ERROR a.c.s.s.OrdersServlet [http-nio-8081-exec-2] java.lang.IllegalStateException: org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "ORDERED"
+Data conversion error converting "ORDERED"; SQL statement:
+SELECT * FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE = ? OR STATE = ? [22018-199] 
+2019-09-03 21:44:14,458 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-03 21:44:14,812 ERROR a.c.p.ConnectionPool [http-nio-8081-exec-7] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:44:14,820 ERROR a.c.p.ConnectionPool [http-nio-8081-exec-7] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:44:14,827 ERROR a.c.p.ConnectionPool [http-nio-8081-exec-7] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:44:14,835 ERROR a.c.p.ConnectionPool [http-nio-8081-exec-7] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:44:14,842 ERROR a.c.p.ConnectionPool [http-nio-8081-exec-7] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:44:14,842 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 0 
+2019-09-03 21:44:39,185 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-7] failed log in java.lang.IllegalStateException: java.lang.InterruptedException
+	at app.controller.pool.ConnectionPool.getConnection(ConnectionPool.java:62)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:64)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:51)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:33)
+	at app.controller.service.UserServiceImpl.authorize(UserServiceImpl.java:54)
+	at app.controller.servlets.prestoreservlets.LogginServlet.doPost(LogginServlet.java:35)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2056)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2090)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:417)
+	at app.controller.pool.ConnectionPool.getConnection(ConnectionPool.java:60)
+	... 35 more
+
+2019-09-03 21:44:39,193 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-7] java.lang.NullPointerException 
+2019-09-03 21:44:39,184 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-10] failed log in java.lang.IllegalStateException: java.lang.InterruptedException
+	at app.controller.pool.ConnectionPool.getConnection(ConnectionPool.java:62)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:64)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:51)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:33)
+	at app.controller.service.UserServiceImpl.authorize(UserServiceImpl.java:54)
+	at app.controller.servlets.prestoreservlets.LogginServlet.doPost(LogginServlet.java:35)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2056)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2090)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:417)
+	at app.controller.pool.ConnectionPool.getConnection(ConnectionPool.java:60)
+	... 35 more
+
+2019-09-03 21:44:39,198 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-10] java.lang.NullPointerException 
+2019-09-03 21:44:39,184 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-2] failed log in java.lang.IllegalStateException: java.lang.InterruptedException
+	at app.controller.pool.ConnectionPool.getConnection(ConnectionPool.java:62)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:64)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:51)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:33)
+	at app.controller.service.UserServiceImpl.authorize(UserServiceImpl.java:54)
+	at app.controller.servlets.prestoreservlets.LogginServlet.doPost(LogginServlet.java:35)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2056)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2090)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:417)
+	at app.controller.pool.ConnectionPool.getConnection(ConnectionPool.java:60)
+	... 35 more
+
+2019-09-03 21:44:39,200 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-2] java.lang.NullPointerException 
+2019-09-03 21:44:39,185 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-9] failed log in java.lang.IllegalStateException: java.lang.InterruptedException
+	at app.controller.pool.ConnectionPool.getConnection(ConnectionPool.java:62)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:64)
+	at app.controller.dao.AbstractDao.getSingleResult(AbstractDao.java:51)
+	at app.controller.dao.UserDao.findByNickName(UserDao.java:33)
+	at app.controller.service.UserServiceImpl.authorize(UserServiceImpl.java:54)
+	at app.controller.servlets.prestoreservlets.LogginServlet.doPost(LogginServlet.java:35)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2056)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2090)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:417)
+	at app.controller.pool.ConnectionPool.getConnection(ConnectionPool.java:60)
+	... 35 more
+
+2019-09-03 21:44:39,208 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-9] java.lang.NullPointerException 
+2019-09-03 21:45:25,354 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-03 21:45:25,934 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:45:25,935 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:45:25,936 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:45:25,938 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:45:25,939 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:45:25,940 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-03 21:45:26,071 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-03 21:45:30,759 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-3] java.lang.IllegalStateException 
+2019-09-03 21:48:50,653 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:48:53,008 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:48:53,009 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:48:53,010 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:48:53,010 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:48:53,011 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:48:53,011 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:49:33,652 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:49:34,107 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:49:34,113 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:49:34,115 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:49:34,116 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:49:34,118 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:49:34,118 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:49:43,977 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:49:44,385 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:49:44,387 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:49:44,388 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:49:44,388 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:49:44,390 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:49:44,390 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:51:11,612 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:51:11,891 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:51:11,963 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:51:11,972 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:51:11,981 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:51:11,990 ERROR a.c.p.ConnectionPool [main] org.h2.jdbc.JdbcSQLNonTransientConnectionException: Р‘Р°Р·Р° РґР°РЅРЅС‹С… СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ: null. Р’РѕР·РјРѕР¶РЅС‹Рµ СЂРµС€РµРЅРёСЏ: Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ; РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЂРµР¶РёРј СЃРµСЂРІРµСЂР°
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-03 21:51:11,990 DEBUG a.c.p.ConnectionPool [main] total size of connection: 0 
+2019-09-03 21:51:22,119 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:51:22,575 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:51:22,576 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:51:22,578 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:51:22,579 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:51:22,581 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:51:22,581 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:51:38,923 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:51:39,376 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:51:39,377 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:51:39,378 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:51:39,380 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:51:39,381 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:51:39,382 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:52:23,969 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-03 21:52:24,430 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:52:24,432 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:52:24,434 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:52:24,435 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:52:24,437 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-03 21:52:24,437 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-03 21:53:26,579 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-03 21:53:27,065 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:53:27,066 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:53:27,067 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:53:27,068 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:53:27,070 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-03 21:53:27,070 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-03 21:53:27,180 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-03 21:53:28,788 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-10] java.lang.IllegalStateException 
+2019-09-03 21:54:53,229 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-03 21:54:53,754 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 21:54:53,755 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 21:54:53,756 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 21:54:53,757 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 21:54:53,759 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-03 21:54:53,759 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-03 21:54:53,900 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-6] User=2 has been log in 
+2019-09-03 21:54:56,891 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] User 2 has created new order 
+2019-09-03 21:54:56,896 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] product id=1274has been added to order id=1481 
+2019-09-03 21:55:00,158 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] product id=1274 has been deleted from order id=1481 
+2019-09-03 21:55:07,738 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] product id=1240has been added to order id=1481 
+2019-09-03 21:55:09,330 ERROR a.c.d.AbstractDao [http-nio-8081-exec-1] Fail connect to database org.h2.jdbc.JdbcSQLDataException: Недопустимое значение для столбца "('PAID', 'NOT_ORDERED', 'ORDERED')": "'ORDERED'"
+Value not permitted for column "('PAID', 'NOT_ORDERED', 'ORDERED')": "'ORDERED'"; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = ?, CREATEDAT = ?, STATE = ? WHERE ID = ? [22030-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:455)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.value.ExtTypeInfoEnum.getValue(ExtTypeInfoEnum.java:173)
+	at org.h2.value.Value.convertToEnumInternal(Value.java:1210)
+	at org.h2.value.Value.convertTo(Value.java:792)
+	at org.h2.value.Value.convertTo(Value.java:735)
+	at org.h2.table.Column.convert(Column.java:199)
+	at org.h2.command.dml.Update.update(Update.java:156)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:26)
+	at app.controller.dao.OrderDao.update(OrderDao.java:31)
+	at app.controller.service.OrderServiceImpl.makeOrder(OrderServiceImpl.java:33)
+	at app.controller.servlets.storeservlets.client.BasketServlet.doPost(BasketServlet.java:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 21:55:09,332 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Order 1481 has been updated 
+2019-09-03 21:55:09,332 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-1] User=2 makes order 
+2019-09-03 21:55:21,289 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] product id=1240 has been deleted from order id=1417 
+2019-09-03 21:55:21,296 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] order 1417 has been deleted from order list 
+2019-09-03 21:55:21,296 INFO a.c.s.s.OrdersServlet [http-nio-8081-exec-1] User=2 has deleted order 1417 
+2019-09-03 21:55:25,200 ERROR a.c.d.AbstractDao [http-nio-8081-exec-4] Fail connect to database org.h2.jdbc.JdbcSQLDataException: Недопустимое значение для столбца "('PAID', 'NOT_ORDERED', 'ORDERED')": "'ORDERED'"
+Value not permitted for column "('PAID', 'NOT_ORDERED', 'ORDERED')": "'ORDERED'"; SQL statement:
+UPDATE ORDERS SET CUSTOMER_ID = ?, CREATEDAT = ?, STATE = ? WHERE ID = ? [22030-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:455)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.value.ExtTypeInfoEnum.getValue(ExtTypeInfoEnum.java:173)
+	at org.h2.value.Value.convertToEnumInternal(Value.java:1210)
+	at org.h2.value.Value.convertTo(Value.java:792)
+	at org.h2.value.Value.convertTo(Value.java:735)
+	at org.h2.table.Column.convert(Column.java:199)
+	at org.h2.command.dml.Update.update(Update.java:156)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at app.controller.dao.AbstractDao.update(AbstractDao.java:26)
+	at app.controller.dao.OrderDao.update(OrderDao.java:31)
+	at app.controller.service.OrderServiceImpl.makeOrder(OrderServiceImpl.java:33)
+	at app.controller.servlets.storeservlets.client.BasketServlet.doPost(BasketServlet.java:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-03 21:55:25,201 INFO a.c.d.AbstractDao [http-nio-8081-exec-4] Order 1481 has been updated 
+2019-09-03 21:55:25,202 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-4] User=2 makes order 
+2019-09-03 21:56:39,061 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] inside ConnectionPool constructor 
+2019-09-03 21:56:39,556 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-09-03 21:56:39,557 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-09-03 21:56:39,558 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-09-03 21:56:39,558 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-09-03 21:56:39,559 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] Connected to database 
+2019-09-03 21:56:39,559 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-1] total size of connection: 5 
+2019-09-03 21:56:39,698 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-1] User=2 has been log in 
+2019-09-03 21:56:43,224 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] Order 1481 has been updated 
+2019-09-03 21:56:43,224 INFO a.c.s.s.c.BasketServlet [http-nio-8081-exec-9] User=2 makes order 
+2019-09-03 21:56:49,796 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] JSESSIONID= 7BCD346BFDA050C498F93EFB1E08B85D 
+2019-09-03 21:56:49,796 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] User=2 has out 
+2019-09-03 21:56:52,353 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-3] User= 3 is not found in database 
+2019-09-03 21:56:54,461 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-03 21:56:57,813 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] JSESSIONID= 1CCFCA2A2DF3388BF8907E19D6D85FB4 
+2019-09-03 21:56:57,813 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] User=2 has out 

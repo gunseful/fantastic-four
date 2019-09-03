@@ -1,9 +1,7 @@
 package app.controller.dao;
 
-import app.controller.encrypt.Encrypt;
 import app.model.user.User;
 
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
@@ -16,66 +14,49 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
 
     @Override
     public boolean add(User user) {
-        try {
-            getPreparedStatement(
-                    String.format("INSERT INTO Users (Nickname, Password, Name) Values ('%s', '%s', '%s')",
-                            user.getNickname(),
-                            Encrypt.encrypt(user.getPassword(), "secret key"),
-                            user.getName()))
-                    .executeUpdate();
-            logger.info("New User " + user.getNickname() + " has been added to database");
-            return true;
-        } catch (SQLException e) {
-            logger.error("adding user fail", e);
-            return false;
-        }
+        update("INSERT INTO Users (Nickname, Password, Name) Values (?, ?, ?)", preparedStatement -> {
+            preparedStatement.setString(1, user.getNickname());
+            preparedStatement.setString(2, user.getPassword());
+            preparedStatement.setString(2, user.getName());
+        });
+        logger.info("New User " + user.getNickname() + " has been added to database");
+        return true;
     }
 
     @Override
     public List<User> getAll() {
-        try {
-            ResultSet resultSet = getPreparedStatement("SELECT * FROM USERS").executeQuery();
-            return parseResultSet(resultSet);
-        } catch (SQLException e) {
-            logger.error("selecting users fail", e);
-            return emptyList();
-        }
+        return getResultList("SELECT * FROM USERS");
     }
 
     @Override
     public Optional<User> findByNickName(String nickname) {
-        return singleFindBy(String.format("NICKNAME = '%s'", nickname));
+        return getSingleResult("SELECT * FROM USERS WHERE NICKNAME = ?", preparedStatement -> preparedStatement.setString(1, nickname));
     }
 
     @Override
     public void update(User user) {
-        try {
-            //fixme I would rather use type-safe `statement.setString() | statement.setInt(), than String.format() because it is not type safe`
-            //It seems really stragne that half parameters is set through String.format(), and others are set through statement.setBoolean()
-            PreparedStatement ps = getPreparedStatement(String.format("UPDATE USERS SET NICKNAME = '%s', PASSWORD = '%s', NAME = '%s', IS_ADMIN=?, IS_BLOCKED=? WHERE ID = %d",
-                    user.getNickname(), user.getPassword(), user.getName(), user.getId()));
-            ps.setBoolean(1, user.isAdministrator());
-            ps.setBoolean(2, user.isInBlackList());
-            ps.executeUpdate();
-            logger.info("user id="+user.getId()+" has been updated");
-        } catch (SQLException e) {
-            logger.error("updating user fail");
-        }
+        update("UPDATE USERS SET NICKNAME = ?, PASSWORD = ?, NAME = ?, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = ?", preparedStatement -> {
+            preparedStatement.setString(1, user.getNickname());
+            preparedStatement.setString(2, user.getPassword());
+            preparedStatement.setString(3, user.getName());
+            preparedStatement.setBoolean(4, user.isAdministrator());
+            preparedStatement.setBoolean(5, user.isInBlackList());
+            preparedStatement.setInt(6, user.getId());
+        });
+        logger.info("user id=" + user.getId() + " has been updated");
     }
 
     @Override
-    public List<User> getBlackList(){
-        return getResultList("SELECT * FROM USERS WHERE IS_BLOCKED = ?", preparedStatement -> preparedStatement.setBoolean(1, true));
+    public List<User> getBlackList() {
+        return getResultList("SELECT * FROM USERS WHERE IS_BLOCKED = ?", preparedStatement ->
+                preparedStatement.setBoolean(1, true));
     }
 
     @Override
     public void delete(User user) {
-        try {
-            getPreparedStatement(String.format("DELETE * FROM %s WHERE ID = %s", tableName(), user.getId())).executeUpdate();
-            logger.info("user id="+user.getId()+" has been deleted");
-        } catch (SQLException e) {
-            logger.error("deleting user fail", e);
-        }
+        update(String.format("DELETE * FROM %s WHERE ID = ?", tableName()), preparedStatement ->
+                preparedStatement.setInt(1, user.getId()));
+        logger.info("user id=" + user.getId() + " has been deleted");
     }
 
 
@@ -102,7 +83,7 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
             }
             return result;
         } catch (SQLException e) {
-            logger.error("getting list of users fail",e);
+            logger.error("getting list of users fail", e);
             return emptyList();
         }
     }
