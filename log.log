@@ -5293,3 +5293,17 @@ UPDATE ORDERS SET CUSTOMER_ID = ?, CREATEDAT = ?, STATE = ? WHERE ID = ? [22030-
 2019-09-03 21:56:54,461 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
 2019-09-03 21:56:57,813 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] JSESSIONID= 1CCFCA2A2DF3388BF8907E19D6D85FB4 
 2019-09-03 21:56:57,813 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] User=2 has out 
+2019-09-04 12:31:06,301 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-09-04 12:31:07,597 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-09-04 12:31:22,879 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-09-04 12:31:23,193 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-09-04 12:31:25,010 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-04 12:31:25,628 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-04 12:31:25,630 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-04 12:31:25,631 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-04 12:31:25,632 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-04 12:31:25,633 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-04 12:31:25,633 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-04 12:31:25,967 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-04 12:31:32,486 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-4] java.lang.IllegalStateException 
+2019-09-04 12:31:43,855 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-9] java.lang.IllegalStateException 

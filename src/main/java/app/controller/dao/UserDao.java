@@ -14,10 +14,10 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
 
     @Override
     public boolean add(User user) {
-        update("INSERT INTO Users (Nickname, Password, Name) Values (?, ?, ?)", preparedStatement -> {
+        saveOrUpdate("INSERT INTO Users (Nickname, Password, Name) Values (?, ?, ?)", preparedStatement -> {
             preparedStatement.setString(1, user.getNickname());
             preparedStatement.setString(2, user.getPassword());
-            preparedStatement.setString(2, user.getName());
+            preparedStatement.setString(3, user.getName());
         });
         logger.info("New User " + user.getNickname() + " has been added to database");
         return true;
@@ -35,7 +35,7 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
 
     @Override
     public void update(User user) {
-        update("UPDATE USERS SET NICKNAME = ?, PASSWORD = ?, NAME = ?, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = ?", preparedStatement -> {
+        saveOrUpdate("UPDATE USERS SET NICKNAME = ?, PASSWORD = ?, NAME = ?, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = ?", preparedStatement -> {
             preparedStatement.setString(1, user.getNickname());
             preparedStatement.setString(2, user.getPassword());
             preparedStatement.setString(3, user.getName());
@@ -54,7 +54,7 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
 
     @Override
     public void delete(User user) {
-        update(String.format("DELETE * FROM %s WHERE ID = ?", tableName()), preparedStatement ->
+        saveOrUpdate(String.format("DELETE * FROM %s WHERE ID = ?", tableName()), preparedStatement ->
                 preparedStatement.setInt(1, user.getId()));
         logger.info("user id=" + user.getId() + " has been deleted");
     }

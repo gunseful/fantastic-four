@@ -18,7 +18,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
     private ConnectionPool connectionPool = ConnectionPool.getInstance();
     public static Connection connection = null;
 
-    public void update(String sql, StatementTransformer<PreparedStatement> transformer) {
+    public void saveOrUpdate(String sql, StatementTransformer<PreparedStatement> transformer) {
         try {
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -31,8 +31,8 @@ public abstract class AbstractDao<T> implements Dao<T> {
         }
     }
 
-    public void update(String sql) {
-        update(sql, t -> {});
+    public void saveOrUpdate(String sql) {
+        saveOrUpdate(sql, t -> {});
     }
 
     @Override

@@ -16,7 +16,7 @@ public class ProductOrderDao extends AbstractDao<ProductOrder> implements Produc
 
     @Override
     public boolean add(ProductOrder productOrder) {
-            update("INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID, COUNT) Values (?,?,?)", preparedStatement -> {
+            saveOrUpdate("INSERT INTO PRODUCTS_ORDERS (PRODUCT_ID, ORDER_ID, COUNT) Values (?,?,?)", preparedStatement -> {
                 preparedStatement.setInt(1, productOrder.getProductId());
                 preparedStatement.setInt(2, productOrder.getOrderId());
                 preparedStatement.setInt(3, productOrder.getCount());
@@ -32,7 +32,7 @@ public class ProductOrderDao extends AbstractDao<ProductOrder> implements Produc
 
     @Override
     public void update(ProductOrder productOrder) {
-            update("UPDATE PRODUCTS_ORDERS SET COUNT = ? WHERE PRODUCT_ID = ? AND ORDER_ID = ?", preparedStatement -> {
+            saveOrUpdate("UPDATE PRODUCTS_ORDERS SET COUNT = ? WHERE PRODUCT_ID = ? AND ORDER_ID = ?", preparedStatement -> {
                 preparedStatement.setInt(1, productOrder.getCount());
                 preparedStatement.setInt(2, productOrder.getProductId());
                 preparedStatement.setInt(3, productOrder.getOrderId());
@@ -42,7 +42,7 @@ public class ProductOrderDao extends AbstractDao<ProductOrder> implements Produc
 
     @Override
     public void delete(ProductOrder productOrder) {
-            update("DELETE FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = ? AND ORDER_ID = ?", preparedStatement -> {
+            saveOrUpdate("DELETE FROM PRODUCTS_ORDERS WHERE PRODUCT_ID = ? AND ORDER_ID = ?", preparedStatement -> {
                 preparedStatement.setInt(1, productOrder.getProductId());
                 preparedStatement.setInt(2, productOrder.getOrderId());
 

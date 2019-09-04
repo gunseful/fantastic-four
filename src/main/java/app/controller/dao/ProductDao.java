@@ -13,7 +13,7 @@ public class ProductDao extends AbstractDao<Product> implements ProductDaoIntefa
 
     @Override
     public boolean add(Product product) {
-        update("INSERT INTO PRODUCTS (Name, Price) Values (?, ?)", preparedStatement -> {
+        saveOrUpdate("INSERT INTO PRODUCTS (Name, Price) Values (?, ?)", preparedStatement -> {
             preparedStatement.setString(1, product.getName());
             preparedStatement.setInt(2, product.getPrice());
         });
@@ -28,17 +28,17 @@ public class ProductDao extends AbstractDao<Product> implements ProductDaoIntefa
 
     @Override
     public void update(Product product) {
-        update("UPDATE PRODUCTS SET NAME = ?, PRICE = ? WHERE ID = ?", preparedStatement -> {
+        saveOrUpdate("UPDATE PRODUCTS SET NAME = ?, PRICE = ? WHERE ID = ?", preparedStatement -> {
             preparedStatement.setString(1, product.getName());
             preparedStatement.setInt(2, product.getPrice());
-            preparedStatement.setInt(1, product.getId());
+            preparedStatement.setInt(3, product.getId());
         });
         logger.info("Product " + product.getId() + " has been updated");
     }
 
     @Override
     public void delete(Product product) {
-        update("DELETE FROM PRODUCTS WHERE Id = ?", preparedStatement ->
+        saveOrUpdate("DELETE FROM PRODUCTS WHERE Id = ?", preparedStatement ->
             preparedStatement.setInt(1, product.getId()));
         logger.info("Product " + product.getId() + " has been deleted from product list");
     }
