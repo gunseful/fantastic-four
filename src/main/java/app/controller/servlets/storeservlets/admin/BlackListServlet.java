@@ -2,6 +2,7 @@ package app.controller.servlets.storeservlets.admin;
 
 import app.controller.service.UserService;
 import app.controller.service.UserServiceImpl;
+import app.controller.servlets.AbstractServlet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class BlackListServlet extends HttpServlet {
+public class BlackListServlet extends AbstractServlet {
     public static Logger logger = LogManager.getLogger();
 
     @Override

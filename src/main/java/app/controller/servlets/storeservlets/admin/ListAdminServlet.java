@@ -1,17 +1,17 @@
 package app.controller.servlets.storeservlets.admin;
 
 import app.controller.service.ProductServiceImpl;
+import app.controller.servlets.AbstractServlet;
 import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ResourceBundle;
 
-public class ListAdminServlet extends HttpServlet {
+public class ListAdminServlet extends AbstractServlet {
     public static Logger logger = LogManager.getLogger();
 
     @Override
@@ -31,7 +31,7 @@ public class ListAdminServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        User user = (User) req.getSession().getAttribute("user");
+        User user = user(req);
         ProductServiceImpl productService = new ProductServiceImpl();
         try {
             //getting an array with products ID which admin chose to delete

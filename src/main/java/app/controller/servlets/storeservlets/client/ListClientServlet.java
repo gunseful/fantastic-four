@@ -2,16 +2,16 @@ package app.controller.servlets.storeservlets.client;
 
 import app.controller.service.OrderServiceImpl;
 import app.controller.service.ProductServiceImpl;
+import app.controller.servlets.AbstractServlet;
 import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ListClientServlet extends HttpServlet {
+public class ListClientServlet extends AbstractServlet {
     public static Logger logger = LogManager.getLogger();
 
     @Override
@@ -30,7 +30,7 @@ public class ListClientServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        User user = (User) req.getSession().getAttribute("user");
+        User user = user(req);
         OrderServiceImpl orderService = new OrderServiceImpl();
         //getting an array with products ID which client chose to buy (add to his basket)
         try {

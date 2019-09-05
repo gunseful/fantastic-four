@@ -1,6 +1,7 @@
 package app.controller.servlets.prestoreservlets;
 
 import app.controller.service.UserServiceImpl;
+import app.controller.servlets.AbstractServlet;
 import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class RegistrationServlet extends HttpServlet {
+public class RegistrationServlet extends AbstractServlet {
     public static Logger logger = LogManager.getLogger();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
