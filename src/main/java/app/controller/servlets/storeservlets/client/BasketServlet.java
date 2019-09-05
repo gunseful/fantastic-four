@@ -10,9 +10,16 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.function.BiConsumer;
 
 public class BasketServlet extends HttpServlet {
+
     public static Logger logger = LogManager.getLogger();
+
+    private final OrderServiceImpl orderService = new OrderServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
@@ -35,42 +42,69 @@ public class BasketServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         //getting this session user and service to work with database
-        User user = (User) req.getSession().getAttribute("user");
-        OrderServiceImpl orderService = new OrderServiceImpl();
+        actionsMap.get(ActionType.actionType(req)).accept(req, resp);
+        doGet(req, resp);
+    }
 
-        try {
-            if (req.getParameter("plus") != null) {
-                int i = Integer.parseInt(req.getParameter("plus"));
-                orderService.updateBasket(true, user, i);
-            } else {
-                if (req.getParameter("minus") != null) {
-                    int i = Integer.parseInt(req.getParameter("minus"));
-                    orderService.updateBasket(false, user, i);
-                } else {
-                    if (req.getParameter("getOrder") != null) {
-                        orderService.makeOrder(user);
-                        logger.info("User=" + user.getNickname() + " makes order");
-                        resp.sendRedirect("/orders");
-                        return;
-                    } else {
-                        if (req.getParameterValues("productForDelete") != null) {
-                            String[] productsID = req.getParameterValues("productForDelete");
-                            for (String productID : productsID) {
-                                logger.info("User=" + user.getNickname() + " delete product from his basket");
-                                orderService.deleteProductFromBasket(user, Integer.parseInt(productID.trim()));
-                            }
-                        } else {
-                            logger.info("User=" + user.getNickname() + " chose nothing");
-                            req.setAttribute("nullData", "");
-                        }
-                    }
+    private final Map<ActionType, BiConsumer<HttpServletRequest, HttpServletResponse>> actionsMap = Map.of(
+        ActionType.PLUS, plus(),
+        ActionType.MINUS, minus(),
+        ActionType.GETORDER, getOrder(),
+        ActionType.PRODUCTFORDELETE, deleteProduct()
+    );
+
+    private enum ActionType {
+        PLUS,
+        MINUS,
+        GETORDER,
+        PRODUCTFORDELETE;
+
+        private static ActionType actionType(HttpServletRequest req) {
+            for (ActionType value : values()) {
+                final var parameter = req.getParameter(value.name().toLowerCase());
+                if (parameter != null) {
+                    return value;
                 }
             }
-        } catch (
-                Exception e) {
-            logger.error(e);
+            throw new NoSuchElementException();
         }
-        doGet(req, resp);
+    }
+
+    private BiConsumer<HttpServletRequest, HttpServletResponse> deleteProduct() {
+        return (req, resp) -> {
+            final var user = (User) req.getSession().getAttribute("user");
+            String[] productsID = req.getParameterValues("productForDelete");
+            for (String productID : productsID) {
+                logger.info("User=" + user.getNickname() + " delete product from his basket");
+                orderService.deleteProductFromBasket(user, Integer.parseInt(productID.trim()));
+            }
+        };
+    }
+
+    private BiConsumer<HttpServletRequest, HttpServletResponse> getOrder() {
+        return (req, resp) -> {
+            try {
+                final var user = (User) req.getSession().getAttribute("user");
+                orderService.makeOrder(user);
+                logger.info("User=" + user.getNickname() + " makes order");
+                resp.sendRedirect("/orders");
+            } catch (IOException e) {
+                logger.error(e);
+                throw new RuntimeException(e);
+            }
+        };
+    }
+
+    private BiConsumer<HttpServletRequest, HttpServletResponse> plus() {
+        return (req, resp) -> {
+            orderService.updateBasket(true, (User) req.getSession().getAttribute("user"), Integer.parseInt(req.getParameter("plus")));
+        };
+    }
+
+    private BiConsumer<HttpServletRequest, HttpServletResponse> minus() {
+        return (req, resp) -> {
+            orderService.updateBasket(false, (User) req.getSession().getAttribute("user"), Integer.parseInt(req.getParameter("minus")));
+        };
     }
 }
 

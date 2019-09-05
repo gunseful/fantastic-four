@@ -6,6 +6,7 @@ import app.model.user.User;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 public class UserServiceImpl implements UserService {
 
@@ -49,10 +50,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean authorize(String nickname, String password) {
+    public Optional<User> authorize(String nickname, String password) {
         String encrypted = Encrypt.encrypt(password, "secret key");
         return userDao.findByNickName(nickname.toUpperCase())
-            .filter(user -> user.getPassword().equalsIgnoreCase(encrypted))
-            .isPresent();
+            .filter(user -> user.getPassword().equalsIgnoreCase(encrypted));
     }
 }
