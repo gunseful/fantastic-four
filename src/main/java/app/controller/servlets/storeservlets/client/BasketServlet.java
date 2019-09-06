@@ -71,7 +71,7 @@ public class BasketServlet extends AbstractServlet {
 
         private static ActionType actionType(HttpServletRequest req) {
             for (ActionType value : values()) {
-                final var parameter = req.getParameter(value.name);
+                final var parameter = req.getParameter(value.toString());
                 if (parameter != null) {
                     return value;
                 }

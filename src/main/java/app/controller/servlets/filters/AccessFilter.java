@@ -9,6 +9,8 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
+import java.util.Set;
 
 
 @WebFilter("/*")
@@ -21,31 +23,19 @@ public class AccessFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse res = (HttpServletResponse) servletResponse;
         String uri = req.getRequestURI();
-        User user = (User) req.getSession().getAttribute("user");
         try {
+            if(req.getSession().getAttribute("user")!=null) {
+                User user = (User) req.getSession().getAttribute("user");
 
-        if (req.getSession().getAttribute("user") != null) {
-            if (uri.equals("/loggin") || uri.equals("/registration")) {
-                if(!user.isAdministrator()) {
-                    res.sendRedirect("/listClient");
-                }else{
-                    res.sendRedirect("/listAdmin");
-                }
-
-            }
-            if (uri.equals("/listAdmin") && !user.isAdministrator()) {
+                var map = Map.of(
+                        "ADMIN", Set.of("/basket", "/listClient"),
+                        "USER", Set.of("/listAdmin", "/blacklist")
+                );
+                if (map.get(user.getRole()).contains(uri)) {
                     res.sendError(403);
+
+                }
             }
-            if (uri.equals("/listClient") && user.isAdministrator()) {
-                res.sendError(403);
-            }
-            if (uri.equals("/blacklist") && !user.isAdministrator()) {
-                res.sendError(403);
-            }
-            if (uri.equals("/basket") && user.isAdministrator()) {
-                res.sendError(403);
-            }
-        }
         filterChain.doFilter(servletRequest, servletResponse);
         } catch (IOException | ServletException e) {
             logger.error(e);

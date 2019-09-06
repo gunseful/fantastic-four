@@ -74,7 +74,10 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
                 String password = resultSet.getString("PASSWORD");
                 user.setPassword(password);
                 String name = resultSet.getString("NAME");
+
                 user.setName(name);
+                String role = resultSet.getString("ROLE");
+                user.setRole(role);
                 boolean isAdmin = resultSet.getBoolean("IS_ADMIN");
                 user.setAdministrator(isAdmin);
                 boolean isBlocked = resultSet.getBoolean("IS_BLOCKED");

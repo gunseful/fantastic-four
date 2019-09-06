@@ -10,6 +10,7 @@ public class User {
     private String password;
     private boolean isAdministrator;
     private boolean isInBlackList;
+    private String role;
 
     public User() {
     }
@@ -23,6 +24,14 @@ public class User {
         this.name = name;
         this.nickname = nickname;
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public boolean isInBlackList() {

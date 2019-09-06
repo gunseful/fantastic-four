@@ -40,7 +40,7 @@ public class LogginServlet extends HttpServlet {
     }
 
     private void proceedUser(HttpServletRequest req, HttpServletResponse resp, String nickname, User user) {
-        final var session = req.getSession();
+        HttpSession session = req.getSession();
         if (userService.checkBlackList(user)) {
             logger.error("User={} is in black list", nickname);
             req.setAttribute("inBlackList", nickname);

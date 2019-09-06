@@ -5307,3 +5307,116 @@ UPDATE ORDERS SET CUSTOMER_ID = ?, CREATEDAT = ?, STATE = ? WHERE ID = ? [22030-
 2019-09-04 12:31:25,967 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
 2019-09-04 12:31:32,486 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-4] java.lang.IllegalStateException 
 2019-09-04 12:31:43,855 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-9] java.lang.IllegalStateException 
+2019-09-05 18:20:37,358 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-7] Unauthorized access request 
+2019-09-05 18:20:40,351 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-9] Unauthorized access request 
+2019-09-05 18:22:13,728 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-09-05 18:22:13,985 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-09-05 18:22:15,799 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-05 18:22:16,411 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-05 18:22:16,412 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-05 18:22:16,414 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-05 18:22:16,415 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-05 18:22:16,416 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-05 18:22:16,416 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-05 18:22:16,784 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-05 18:22:18,519 INFO a.c.d.AbstractDao [http-nio-8081-exec-2] User 2 has created new order 
+2019-09-05 18:38:16,838 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-05 18:38:17,495 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-05 18:38:17,496 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-05 18:38:17,498 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-05 18:38:17,499 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-05 18:38:17,500 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-05 18:38:17,501 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-05 18:38:17,809 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-7] User=2 has been log in 
+2019-09-05 18:38:22,635 ERROR a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-2] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-05 18:38:27,839 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= 991F0266875ECA72D489D431DB6A6015 
+2019-09-05 18:38:27,839 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] User=2 has out 
+2019-09-05 18:38:32,671 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-8] User=gunseful has been log in 
+2019-09-05 18:38:37,145 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-10] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-05 18:41:11,385 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-05 18:41:11,848 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-05 18:41:11,849 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-05 18:41:11,850 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-05 18:41:11,850 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-05 18:41:11,851 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-05 18:41:11,851 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-05 18:41:12,010 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-05 18:41:12,031 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-7] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-05 18:51:43,215 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] inside ConnectionPool constructor 
+2019-09-05 18:51:43,743 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-05 18:51:43,744 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-05 18:51:43,746 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-05 18:51:43,748 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-05 18:51:43,749 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] Connected to database 
+2019-09-05 18:51:43,749 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-10] total size of connection: 5 
+2019-09-05 18:51:43,867 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-09-05 18:51:48,474 ERROR a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-3] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-05 18:51:57,070 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] JSESSIONID= BB99B4A058A06B0E54F1D86DF2BB0915 
+2019-09-05 18:51:57,071 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] User=2 has out 
+2019-09-05 18:52:01,555 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-8] User= gunsful is not found in database 
+2019-09-05 18:52:06,568 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-1] User=gunseful has been log in 
+2019-09-05 18:52:09,874 ERROR a.c.s.s.c.ListClientServlet [http-nio-8081-exec-4] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-05 18:52:14,159 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] User 1 has created new order 
+2019-09-05 18:52:14,160 ERROR a.c.s.s.c.BasketServlet [http-nio-8081-exec-5] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-06 18:57:06,963 DEBUG a.c.p.ConnectionPool [main] inside ConnectionPool constructor 
+2019-09-06 18:57:09,591 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-06 18:57:09,592 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-06 18:57:09,593 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-06 18:57:09,594 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-06 18:57:09,595 DEBUG a.c.p.ConnectionPool [main] Connected to database 
+2019-09-06 18:57:09,595 DEBUG a.c.p.ConnectionPool [main] total size of connection: 5 
+2019-09-06 18:58:04,900 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-09-06 18:58:05,261 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-06 18:58:06,334 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-06 18:58:06,335 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-06 18:58:06,335 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-06 18:58:06,336 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-06 18:58:06,337 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-06 18:58:06,337 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-06 18:59:34,138 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-5] Unauthorized access request 
+2019-09-06 18:59:34,157 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] inside ConnectionPool constructor 
+2019-09-06 18:59:34,646 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-06 18:59:34,648 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-06 18:59:34,649 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-06 18:59:34,650 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-06 18:59:34,652 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] Connected to database 
+2019-09-06 18:59:34,653 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-6] total size of connection: 5 
+2019-09-06 19:00:38,706 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-09-06 19:00:38,997 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-06 19:00:39,486 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-06 19:00:39,487 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-06 19:00:39,488 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-06 19:00:39,489 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-06 19:00:39,490 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-06 19:00:39,491 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-06 19:00:40,027 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-09-06 19:02:02,471 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-09-06 19:02:02,565 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] inside ConnectionPool constructor 
+2019-09-06 19:02:03,052 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-06 19:02:03,053 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-06 19:02:03,055 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-06 19:02:03,057 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-06 19:02:03,058 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] Connected to database 
+2019-09-06 19:02:03,059 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-5] total size of connection: 5 
+2019-09-06 19:02:03,435 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-09-06 19:02:21,302 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-09-06 19:02:21,574 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-3] Unauthorized access request 
+2019-09-06 19:02:23,383 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-06 19:02:23,386 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-5] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-06 19:02:33,103 INFO a.c.s.p.LangServlet [http-nio-8081-exec-8] selected en language 
+2019-09-06 19:03:39,460 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-6] Unauthorized access request 
+2019-09-06 19:03:39,531 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] inside ConnectionPool constructor 
+2019-09-06 19:03:40,017 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-06 19:03:40,019 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-06 19:03:40,020 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-06 19:03:40,021 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-06 19:03:40,023 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] Connected to database 
+2019-09-06 19:03:40,024 DEBUG a.c.p.ConnectionPool [http-nio-8081-exec-7] total size of connection: 5 
+2019-09-06 19:03:40,456 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-8] Unauthorized access request 
+2019-09-06 19:03:41,195 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-1] Unauthorized access request 
+2019-09-06 19:03:41,370 ERROR a.c.s.f.AuthenticationFilter [http-nio-8081-exec-4] Unauthorized access request 
+2019-09-06 19:03:42,943 INFO a.c.s.p.LogginServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-06 19:03:42,946 ERROR a.c.s.p.LogginServlet [http-nio-8081-exec-5] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-06 19:03:45,041 INFO a.c.s.p.LangServlet [http-nio-8081-exec-1] selected en language 
+2019-09-06 19:03:46,373 INFO a.c.s.p.LangServlet [http-nio-8081-exec-4] selected fr language 
+2019-09-06 19:03:50,555 ERROR a.c.s.s.a.ListAdminServlet [http-nio-8081-exec-7] java.lang.IllegalStateException: Cannot forward after response has been committed 
