@@ -2,17 +2,14 @@ package app.controller.servlets.storeservlets;
 
 import app.controller.service.OrderServiceImpl;
 import app.controller.service.UserServiceImpl;
+import app.controller.servlets.AbstractServlet;
 import app.model.user.User;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class OrdersServlet extends HttpServlet {
-    public static Logger logger = LogManager.getLogger();
+public class OrdersServlet extends AbstractServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
@@ -37,10 +34,7 @@ public class OrdersServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        User user = (User) req.getSession().getAttribute("user");
-        OrderServiceImpl orderService = new OrderServiceImpl();
-        UserServiceImpl userService = new UserServiceImpl();
-        //first check is there "block" parameter, if yes - block user, if no - next step
+        final var user = user(req);
         try {
             if (req.getParameter("block") != null) {
                 userService.addToBlackList(Integer.parseInt(req.getParameter("block")));

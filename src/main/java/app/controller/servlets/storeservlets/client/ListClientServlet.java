@@ -37,7 +37,7 @@ public class ListClientServlet extends AbstractServlet {
             if (req.getParameterValues("productForBuy") != null) {
                 for (String productId : req.getParameterValues("productForBuy")) {
                     //trying to update basket. If product with this id already exists in current user's basket - product just updating (count increment by 1)
-                    if (!orderService.updateBasket(true, user, Integer.parseInt(productId.trim()))) {
+                    if (!orderService.increaseCount(user, Integer.parseInt(productId.trim()))) {
                         //if can't update basket, just add new product to basket
                         orderService.addToBasket(user, Integer.parseInt(productId.trim()));
                     }

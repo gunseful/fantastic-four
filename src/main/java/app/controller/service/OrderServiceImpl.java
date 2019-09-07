@@ -20,22 +20,23 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void deleteProductFromBasket(User user, int productId) {
-        ProductOrder productOrder = new ProductOrder(orderDao.getUserBasket(user).orElseGet(()->{
+        ProductOrder productOrder = new ProductOrder(orderDao.getUserBasket(user).orElseGet(() -> {
             Order newOrder = new Order();
-                    newOrder.setCustomerId(user.getId());
-                    orderDao.add(newOrder);
-                    return newOrder;
+            newOrder.setCustomerId(user.getId());
+            orderDao.add(newOrder);
+            return newOrder;
         }).getId(), productId);
         productOrderDao.delete(productOrder);
     }
 
     @Override
     public void makeOrder(User user) {
-        Order order = orderDao.getUserBasket(user).orElseGet(()->{
+        Order order = orderDao.getUserBasket(user).orElseGet(() -> {
             Order newOrder = new Order();
             newOrder.setCustomerId(user.getId());
             orderDao.add(newOrder);
-            return newOrder;});
+            return newOrder;
+        });
         order.setCreationDate(Date.valueOf(LocalDate.now()));
         order.setState("ORDERED");
         orderDao.update(order);
@@ -49,7 +50,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public boolean updateBasket(boolean add, User user, int productId) {
+    public boolean increaseCount(User user, int productId) {
         Order order = orderDao.getUserBasket(user).orElseGet(() -> {
                     Order newOrder = new Order();
                     newOrder.setCustomerId(user.getId());
@@ -57,20 +58,28 @@ public class OrderServiceImpl implements OrderService {
                     return newOrder;
                 }
         );
-            ProductOrder productOrder = productOrderDao.getProductOrder(order.getId(), productId);
-            if (productOrder != null) {
-                int count = productOrder.getCount();
-                count = (add) ? count + 1 : count - 1;
-                if (count == 0) {
-                    productOrderDao.delete(productOrder);
-                    return true;
-                } else {
-                    productOrder.setCount(count);
-                    productOrderDao.update(productOrder);
-                    return true;
-                }
-            }
+        ProductOrder productOrder = productOrderDao.getProductOrder(order.getId(), productId);
+        if (productOrder != null) {
+            int count = productOrder.getCount() + 1;
+            productOrder.setCount(count);
+            productOrderDao.update(productOrder);
             return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public void decreaseCount(User user, int productId) {
+        Order order = orderDao.getUserBasket(user).orElseThrow(IllegalStateException::new);
+        var productOrder = productOrderDao.getProductOrder(order.getId(), productId);
+        int count = productOrder.getCount() - 1;
+        if (count == 0) {
+            productOrderDao.delete(productOrder);
+        } else {
+            productOrder.setCount(count);
+            productOrderDao.update(productOrder);
+        }
     }
 
     @Override
@@ -86,18 +95,18 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<Product> getBasketProducts(User user) {
-        Order order = orderDao.getUserBasket(user).orElseGet(()->{
+        Order order = orderDao.getUserBasket(user).orElseGet(() -> {
             Order newOrder = new Order();
             newOrder.setCustomerId(user.getId());
             orderDao.add(newOrder);
             return newOrder;
         });
-            return productOrderDao.findProductsByOrderId(order.getId());
+        return productOrderDao.findProductsByOrderId(order.getId());
     }
 
     @Override
     public void addToBasket(User user, int productId) {
-        Order order = orderDao.getUserBasket(user).orElseGet(()->{
+        Order order = orderDao.getUserBasket(user).orElseGet(() -> {
             Order newOrder = new Order();
             newOrder.setCustomerId(user.getId());
             orderDao.add(newOrder);

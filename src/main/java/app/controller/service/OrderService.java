@@ -4,24 +4,27 @@ import app.model.products.Order;
 import app.model.products.Product;
 import app.model.user.User;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public interface OrderService {
-    void deleteProductFromBasket(User user, int productId) throws SQLException;
+    void deleteProductFromBasket(User user, int productId);
 
-    void makeOrder(User user) throws SQLException;
+    void makeOrder(User user);
 
-    void payOrder(int id) throws SQLException;
+    void payOrder(int id);
 
-    boolean updateBasket(boolean add, User user, int productId) throws SQLException;
 
-    List<Order> getOrders(User user) throws SQLException;
+    boolean increaseCount(User user, int productId);
 
-    List<Product> getBasketProducts(User user) throws SQLException;
+    void decreaseCount(User user, int productId);
 
-    void addToBasket(User user, int productId) throws SQLException;
 
-    void deleteOrder(int id) throws SQLException;
+    List<Order> getOrders(User user);
+
+    List<Product> getBasketProducts(User user);
+
+    void addToBasket(User user, int productId);
+
+    void deleteOrder(int id);
 
 }

@@ -1,11 +1,7 @@
 package app.controller.servlets.storeservlets.client;
 
-import app.controller.service.OrderService;
-import app.controller.service.OrderServiceImpl;
 import app.controller.servlets.AbstractServlet;
 import app.model.user.User;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
@@ -17,62 +13,20 @@ import java.util.function.BiConsumer;
 
 public class BasketServlet extends AbstractServlet {
 
-    public static final String PRODUCT_FOR_DELETE = "productForDelete";
-    public static final String PLUS = "plus";
-    public static final String MINUS = "minus";
-    public static final String GET_ORDER = "getOrder";
-    public static Logger logger = LogManager.getLogger();
-
-    private final OrderServiceImpl orderService = new OrderServiceImpl();
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        //getting this session user to work with
-        User user = user(req);
-        //getting service to work with database
-        OrderService orderService = new OrderServiceImpl();
-        try {
-            //adding current user's basket(List<Product>) to request attribute as "basket"
-            req.setAttribute("basket", orderService.getBasketProducts(user));
-            //forward to baskter page
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/basket.jsp");
-            requestDispatcher.forward(req, resp);
-        } catch (Exception e) {
-            logger.error(e);
-        }
-
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        //getting this session user and service to work with database
-        actionsMap.get(ActionType.actionType(req)).accept(req, resp);
-        doGet(req, resp);
-    }
-
-    private final Map<ActionType, BiConsumer<HttpServletRequest, HttpServletResponse>> actionsMap = Map.of(
-        ActionType.PLUS, plus(),
-        ActionType.MINUS, minus(),
-        ActionType.GET_ORDER, getOrder(),
-        ActionType.DELETE_PRODUCT, deleteProduct()
-    );
-
     private enum ActionType {
-        PLUS(BasketServlet.PLUS),
-        MINUS(BasketServlet.MINUS),
-        GET_ORDER(BasketServlet.GET_ORDER),
-        DELETE_PRODUCT(PRODUCT_FOR_DELETE);
+        PLUS("plus"),
+        MINUS("minus"),
+        GET_ORDER("getOrder"),
+        DELETE_PRODUCT("productForDelete");
 
-        private final String name;
-
-        ActionType(String getOrder) {
-            name = getOrder;
+        private String value;
+        ActionType(String actionType) {
+            value = actionType;
         }
 
         private static ActionType actionType(HttpServletRequest req) {
             for (ActionType value : values()) {
-                final var parameter = req.getParameter(value.toString());
-                if (parameter != null) {
+                if (req.getParameter(value.value) != null) {
                     return value;
                 }
             }
@@ -80,13 +34,42 @@ public class BasketServlet extends AbstractServlet {
         }
     }
 
+    private final Map<ActionType, BiConsumer<HttpServletRequest, HttpServletResponse>> actionsMap = Map.of(
+            ActionType.PLUS, plus(),
+            ActionType.MINUS, minus(),
+            ActionType.GET_ORDER, getOrder(),
+            ActionType.DELETE_PRODUCT, deleteProduct()
+    );
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        //getting this session user to work with
+        User user = user(req);
+        //getting service to work with database
+        try {
+            //adding current user's basket(List<Product>) to request attribute as "basket"
+            req.setAttribute("basket", orderService.getBasketProducts(user));
+            //forward to basket page
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/client/basket.jsp");
+            requestDispatcher.forward(req, resp);
+        } catch (Exception e) {
+            logger.error(e);
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+        actionsMap.get(ActionType.actionType(req)).accept(req, resp);
+        doGet(req, resp);
+    }
+
     private BiConsumer<HttpServletRequest, HttpServletResponse> deleteProduct() {
         return (req, resp) -> {
             final var user = user(req);
-            String[] productsID = req.getParameterValues(PRODUCT_FOR_DELETE);
-            for (String productID : productsID) {
+            String[] productsId = req.getParameterValues(ActionType.DELETE_PRODUCT.value);
+            for (String productId : productsId) {
+                orderService.deleteProductFromBasket(user, Integer.parseInt(productId.trim()));
                 logger.info("User=" + user.getNickname() + " delete product from his basket");
-                orderService.deleteProductFromBasket(user, Integer.parseInt(productID.trim()));
             }
         };
     }
@@ -106,15 +89,13 @@ public class BasketServlet extends AbstractServlet {
     }
 
     private BiConsumer<HttpServletRequest, HttpServletResponse> plus() {
-        return (req, resp) -> {
-            orderService.updateBasket(true, user(req), Integer.parseInt(req.getParameter(PLUS)));
-        };
+        return (req, resp) ->
+                orderService.increaseCount(user(req), Integer.parseInt(req.getParameter(ActionType.PLUS.value)));
     }
 
     private BiConsumer<HttpServletRequest, HttpServletResponse> minus() {
-        return (req, resp) -> {
-            orderService.updateBasket(false, user(req), Integer.parseInt(req.getParameter(MINUS)));
-        };
+        return (req, resp) ->
+                orderService.decreaseCount(user(req), Integer.parseInt(req.getParameter(ActionType.MINUS.value)));
     }
 }
 

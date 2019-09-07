@@ -1,5 +1,7 @@
 package app.controller.servlets.filters;
 
+import app.controller.servlets.AbstractServlet;
+import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,8 +15,9 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 @WebFilter("/AuthenticationFilter")
-public class AuthenticationFilter implements Filter {
+public class AuthenticationFilter extends AbstractServlet implements Filter {
     public static Logger logger = LogManager.getLogger();
+
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
         //creating request and response
@@ -33,23 +36,18 @@ public class AuthenticationFilter implements Filter {
             req.getSession().setAttribute("bundle", bundle);
         }
         try {
-
             //if there is no current user, which has logged in person who use webapp have access only to 3 pages - home, loggin and registration
-        //else - all except as described above
-        if (!isLoggedIn && !(uri.equals("/") || uri.endsWith("loggin") || uri.endsWith("registration") || uri.endsWith("LangServlet"))) {
-            logger.error("Unauthorized access request");
-//            this.context.log("Unauthorized access request");
-                res.sendRedirect("/loggin");
-            return;
-        } else {
-            if (isLoggedIn && (uri.equals("/"))) {
-                res.sendRedirect("/loggin");
-                return;
+            //else - all except as described above
+            if (!isLoggedIn) {
+                if (!availablePagesPagesBeforeLogin.contains(uri)) {
+                    res.sendRedirect("/loggin");
+                }
+            } else if (availablePagesPagesBeforeLogin.contains(uri) && !uri.equals("/LangServlet")) {
+                    var user = (User) session.getAttribute("user");
+                    res.sendRedirect(homePagesByRoles.get(user.getRole()));
+                    return;
             }
-        }
-
-        chain.doFilter(request, response);
-
+            chain.doFilter(request, response);
         } catch (IOException | ServletException e) {
             logger.error(e);
         }

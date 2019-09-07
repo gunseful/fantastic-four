@@ -1,19 +1,15 @@
 package app.controller.servlets.prestoreservlets;
 
-import app.controller.service.UserService;
-import app.controller.service.UserServiceImpl;
+import app.controller.servlets.AbstractServlet;
 import app.model.user.User;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.http.*;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-public class LogginServlet extends HttpServlet {
-
-    public static Logger logger = LogManager.getLogger();
-
-    private final UserService userService = new UserServiceImpl();
+public class LogginServlet extends AbstractServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
@@ -29,13 +25,12 @@ public class LogginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         String nickname = req.getParameter("nickname");
         String password = req.getParameter("password");
-        userService.authorize(nickname, password).ifPresentOrElse(user -> {
-            proceedUser(req, resp, nickname, user);
-        }, () -> {
+        userService.authorize(nickname, password).ifPresentOrElse(user ->
+            proceedUser(req, resp, nickname, user)
+        , () -> {
             logger.error("User= {} is not found in database", nickname);
             req.setAttribute("NoData", "NoData");
         });
-
         doGet(req, resp);
     }
 
@@ -52,11 +47,7 @@ public class LogginServlet extends HttpServlet {
             resp.addCookie(userName);
             logger.info("User=" + nickname + " has been log in");
             try {
-                if (user.isAdministrator()) {
-                    resp.sendRedirect("/listAdmin");
-                } else {
-                    resp.sendRedirect("/listClient");
-                }
+                resp.sendRedirect(homePagesByRoles.get(user.getRole()));
             } catch (Exception e) {
                 logger.error("failed log in", e);
             }

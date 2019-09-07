@@ -7,7 +7,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -27,7 +26,7 @@ public class RegistrationServlet extends AbstractServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         UserServiceImpl userService = new UserServiceImpl();
         try {
-            //getting parameters "name" "nickname" and "password", if they are correct - trye to add new user, else - set attribute fail
+            //getting parameters "name" "nickname" and "password", if they are correct - true to add new user, else - set attribute fail
             if (!req.getParameter("name").equals("") && req.getParameter("nickname").length()>=3 && req.getParameter("nickname").length()<=15 && req.getParameter("password").length()>=6 && req.getParameter("password").length()<=15) {
                 User user = new User(req.getParameter("name"), req.getParameter("nickname").toUpperCase(), req.getParameter("password"));
                 //if db has got user with this nickname - fail

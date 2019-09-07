@@ -1,6 +1,5 @@
 package app.controller.servlets.storeservlets.admin;
 
-import app.controller.service.ProductServiceImpl;
 import app.controller.servlets.AbstractServlet;
 import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
@@ -16,8 +15,6 @@ public class ListAdminServlet extends AbstractServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        //getting service to work with database
-        ProductServiceImpl productService = new ProductServiceImpl();
         try {
             //getting product list with the productService and set request's attribute
             req.setAttribute("products", productService.getList());
@@ -32,7 +29,6 @@ public class ListAdminServlet extends AbstractServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         User user = user(req);
-        ProductServiceImpl productService = new ProductServiceImpl();
         try {
             //getting an array with products ID which admin chose to delete
             if (req.getParameterValues("productForDelete") != null) {
@@ -44,20 +40,20 @@ public class ListAdminServlet extends AbstractServlet {
             } else if (req.getParameter("name") != null && req.getParameter("price") != null) {
 
                 //if admin trying to add new product - getting name and price
-                    String name = req.getParameter("name");
-                    //getting bundle with the exchange rates to convert dollars or euros to rubles
-                    ResourceBundle bundle = (ResourceBundle) req.getSession().getAttribute("bundle");
-                    Double d = (Double) bundle.getObject("exchange.rates");
-                    int price = (int) (Integer.parseInt(req.getParameter("price")) / d);
-                    //add product to database
-                    productService.addNewProduct(name, price);
-                    logger.info("User=" + user.getNickname() + " has been added new product - " + name);
-                } else {
-                    req.setAttribute("nullData", "");
-                }
-            } catch(NullPointerException e){
-                logger.error(e);
+                String name = req.getParameter("name");
+                //getting bundle with the exchange rates to convert dollars or euros to rubles
+                ResourceBundle bundle = (ResourceBundle) req.getSession().getAttribute("bundle");
+                Double d = (Double) bundle.getObject("exchange.rates");
+                int price = (int) (Integer.parseInt(req.getParameter("price")) / d);
+                //add product to database
+                productService.addNewProduct(name, price);
+                logger.info("User=" + user.getNickname() + " has been added new product - " + name);
+            } else {
+                req.setAttribute("nullData", "");
             }
-            doGet(req, resp);
+        } catch (NullPointerException e) {
+            logger.error(e);
         }
+        doGet(req, resp);
     }
+}
