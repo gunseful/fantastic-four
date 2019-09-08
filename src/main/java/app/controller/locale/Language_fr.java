@@ -24,6 +24,7 @@ public class Language_fr extends ListResourceBundle {
             { "nickname", "Surnom" },
             { "name", "Prénom" },
             { "registration.fail", "Les données entrées sont incorrectes ou l'utilisateur avec ce pseudonyme existe déjà <br> Données correctes - mot de passe de 6 à 15 symboles <br> Nom et pseudo de 3 à 15 symboles "},
+            { "registration.already.exist", " - L'utilisateur avec ce pseudo existe déjà" },
             { "nodata", "Les données saisies sont incorrectes" },
             { "blacklist.title", "Liste noire" },
             { "entry", "Vous êtes connecté en tant que" },

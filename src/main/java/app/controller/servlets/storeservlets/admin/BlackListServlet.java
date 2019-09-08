@@ -7,9 +7,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 
 public class BlackListServlet extends AbstractServlet {
     public static Logger logger = LogManager.getLogger();
@@ -35,12 +35,10 @@ public class BlackListServlet extends AbstractServlet {
         UserService userService = new UserServiceImpl();
         try {
             //getting parameters from "usersForDelete" as an array
-            if (req.getParameterValues("userForDelete") != null) {
-                String[] usersID = req.getParameterValues("userForDelete");
-                for (String userID : usersID) {
-                    userService.removeFromBlackList(Integer.parseInt(userID.trim()));
-                    logger.info("Administrator has deleted user (id="+userID+") from blacklist");
-                }
+            var users = req.getParameterValues("userForDelete");
+            if (users != null) {
+                Arrays.stream(users)
+                        .forEach(u ->  userService.removeFromBlackList(Integer.parseInt(u.trim())));
             }else{
                 req.setAttribute("nullData", "");
             }

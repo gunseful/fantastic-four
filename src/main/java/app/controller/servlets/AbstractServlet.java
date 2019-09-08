@@ -27,7 +27,7 @@ public abstract class AbstractServlet extends HttpServlet {
 
     protected static final Set<String> availablePagesPagesBeforeLogin = Set.of("/loggin", "/registration", "/LangServlet", "/");
 
-    protected static final Map<String, Set<String>> map = Map.of(
+    protected static final Map<String, Set<String>> availablePagesByRoles = Map.of(
             "ADMIN", Set.of("/listAdmin", "/blacklist", "/orders", "/LangServlet", "/LogoutServlet", "/loggin"),
             "USER", Set.of("/listClient", "/basket", "/orders", "/LangServlet", "/LogoutServlet", "/loggin"));
 

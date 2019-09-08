@@ -1,5 +1,6 @@
 package app.controller.dao;
 
+import app.controller.encrypt.Encrypt;
 import app.model.user.User;
 
 import java.sql.ResultSet;
@@ -14,9 +15,10 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
 
     @Override
     public boolean add(User user) {
+        if(findByNickName(user.getNickname().toUpperCase()).isPresent()){return false;}
         saveOrUpdate("INSERT INTO Users (Nickname, Password, Name) Values (?, ?, ?)", preparedStatement -> {
             preparedStatement.setString(1, user.getNickname());
-            preparedStatement.setString(2, user.getPassword());
+            preparedStatement.setString(2, Encrypt.encrypt(user.getPassword(), "secret key"));
             preparedStatement.setString(3, user.getName());
         });
         logger.info("New User " + user.getNickname() + " has been added to database");

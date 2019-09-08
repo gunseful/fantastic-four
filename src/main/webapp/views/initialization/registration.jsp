@@ -36,6 +36,14 @@
 </div>
 
 <div>
+    <div>
+        <c:if test="${alreadyExist != null}">
+        <p style="font-size:15px;">${alreadyExist}${bundle.getObject("registration.already.exist")}
+            </c:if>
+    </div>
+</div>
+
+<div>
     <form method="post" accept-charset="ISO-8859-1">
         <label>
             <p style="font-size:15px;">${bundle.getObject("name")}</p> <input type="text" name="name" value=""><br/>

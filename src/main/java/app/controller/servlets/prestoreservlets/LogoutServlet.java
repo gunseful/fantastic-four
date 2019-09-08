@@ -2,7 +2,6 @@
 package app.controller.servlets.prestoreservlets;
 
 import app.controller.servlets.AbstractServlet;
-import app.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,8 +31,8 @@ public class LogoutServlet extends AbstractServlet {
             }
         }
         HttpSession session = request.getSession(false);
-        User user = user(request);
-        logger.info("User="+user.getNickname()+" has out");
+        var user = user(request);
+        logger.info("User={} has out", user.getNickname());
         session.invalidate();
         response.sendRedirect("/");
     }

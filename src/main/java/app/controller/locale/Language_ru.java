@@ -19,6 +19,7 @@ public class Language_ru extends ListResourceBundle {
             { "list.client.productlist", "Это товары нашего магазина" },
             { "log.in", "Войти" },
             { "registration", "Регистрация" },
+
             { "user", "Пользователь" },
             { "inblacklist", "заблокирован, так как делал заказы и не оплачивал" },
             { "loggin", "Логин" },
@@ -27,6 +28,7 @@ public class Language_ru extends ListResourceBundle {
             { "name", "Имя" },
             { "nodata", "Введенные данные неверны" },
             { "registration.fail", "Введенные данные не верны, либо пользователь с таким ником уже существует <br> Правильно введеные данные - пароль от 6 до 15 символов<br> Имя и Никнейм от 3 до 15 символов" },
+            { "registration.already.exist", " - Пользователь с таким ником уже существует" },
             { "blacklist.title", "Черный список" },
             { "entry", "Вы вошли как " },
             { "admin", "Вы Администратор" },

@@ -17,7 +17,7 @@ public class ProductDao extends AbstractDao<Product> implements ProductDaoIntefa
             preparedStatement.setString(1, product.getName());
             preparedStatement.setInt(2, product.getPrice());
         });
-        logger.info("Product " + product.getId() + " has been added to product list");
+        logger.info("Product " + product.getName() + " has been added to product list");
         return true;
     }
 

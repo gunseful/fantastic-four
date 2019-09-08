@@ -14,6 +14,7 @@ public class RegistrationServlet extends AbstractServlet {
     public static Logger logger = LogManager.getLogger();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+
         try {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/initialization/registration.jsp");
         requestDispatcher.forward(req, resp);
@@ -25,19 +26,21 @@ public class RegistrationServlet extends AbstractServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         UserServiceImpl userService = new UserServiceImpl();
+        var nick = req.getParameter("name");
+        var pass = req.getParameter("password");
         try {
             //getting parameters "name" "nickname" and "password", if they are correct - true to add new user, else - set attribute fail
-            if (!req.getParameter("name").equals("") && req.getParameter("nickname").length()>=3 && req.getParameter("nickname").length()<=15 && req.getParameter("password").length()>=6 && req.getParameter("password").length()<=15) {
-                User user = new User(req.getParameter("name"), req.getParameter("nickname").toUpperCase(), req.getParameter("password"));
-                //if db has got user with this nickname - fail
-                if(!userService.addNewUser(user)) {
-                    req.setAttribute("fail", "");
-                    logger.info("user"+user.getNickname()+" is already exist");
+            if (!nick.isEmpty() && nick.length()>=3 && nick.length()<=15 &&
+                    pass.length()>=6 && pass.length()<=15) {
+                var user = new User(req.getParameter("name"), nick.toUpperCase(), pass);
+                if(userService.addNewUser(user)) {
+                    logger.info("registration new user = {}", user.getNickname());
+                    resp.sendRedirect("/loggin");
+                    return;
                 }
-                //if everything is fine redirect to loggin page
-                logger.info("registration new user="+user.getNickname());
-                resp.sendRedirect("/loggin");
-                return;
+                //if db has got user with this nickname - fail
+                req.setAttribute("alreadyExist", user.getNickname());
+                logger.info("user = {} is already exist", user.getNickname());
             }else{
                 logger.error("failed registration");
                 req.setAttribute("fail", "");

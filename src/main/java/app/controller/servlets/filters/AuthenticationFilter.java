@@ -23,7 +23,6 @@ public class AuthenticationFilter extends AbstractServlet implements Filter {
         //creating request and response
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
-
         String uri = req.getRequestURI();
         //getting session
         HttpSession session = req.getSession(false);

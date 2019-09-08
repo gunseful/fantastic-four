@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
-import java.util.NoSuchElementException;
 import java.util.function.BiConsumer;
 
 public class BasketServlet extends AbstractServlet {
@@ -20,6 +19,7 @@ public class BasketServlet extends AbstractServlet {
         DELETE_PRODUCT("productForDelete");
 
         private String value;
+
         ActionType(String actionType) {
             value = actionType;
         }
@@ -30,7 +30,8 @@ public class BasketServlet extends AbstractServlet {
                     return value;
                 }
             }
-            throw new NoSuchElementException();
+            req.setAttribute("nullData", "nullData");
+            return null;
         }
     }
 
@@ -59,14 +60,17 @@ public class BasketServlet extends AbstractServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        actionsMap.get(ActionType.actionType(req)).accept(req, resp);
+        var act = ActionType.actionType(req);
+        if(act != null){
+        var map = actionsMap.get(act);
+        map.accept(req, resp);}
         doGet(req, resp);
     }
 
     private BiConsumer<HttpServletRequest, HttpServletResponse> deleteProduct() {
         return (req, resp) -> {
             final var user = user(req);
-            String[] productsId = req.getParameterValues(ActionType.DELETE_PRODUCT.value);
+            var productsId = req.getParameterValues(ActionType.DELETE_PRODUCT.value);
             for (String productId : productsId) {
                 orderService.deleteProductFromBasket(user, Integer.parseInt(productId.trim()));
                 logger.info("User=" + user.getNickname() + " delete product from his basket");

@@ -1,11 +1,9 @@
 
 package app.controller.servlets.prestoreservlets;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import app.controller.servlets.AbstractServlet;
 
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -13,8 +11,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 @WebServlet("/LangServlet")
-public class LangServlet extends HttpServlet {
-    public static Logger logger = LogManager.getLogger();
+public class LangServlet extends AbstractServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //depending on language add into session a language

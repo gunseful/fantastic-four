@@ -23,15 +23,15 @@ public class LogginServlet extends AbstractServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        String nickname = req.getParameter("nickname");
-        String password = req.getParameter("password");
+        var nickname = req.getParameter("nickname");
+        var password = req.getParameter("password");
         userService.authorize(nickname, password).ifPresentOrElse(user ->
-            proceedUser(req, resp, nickname, user)
-        , () -> {
-            logger.error("User= {} is not found in database", nickname);
-            req.setAttribute("NoData", "NoData");
-        });
-        doGet(req, resp);
+                        proceedUser(req, resp, nickname, user)
+                , () -> {
+                    logger.error("User= {} is not found in database", nickname);
+                    req.setAttribute("NoData", "NoData");
+                    doGet(req, resp);
+                });
     }
 
     private void proceedUser(HttpServletRequest req, HttpServletResponse resp, String nickname, User user) {
@@ -39,6 +39,7 @@ public class LogginServlet extends AbstractServlet {
         if (userService.checkBlackList(user)) {
             logger.error("User={} is in black list", nickname);
             req.setAttribute("inBlackList", nickname);
+            doGet(req, resp);
         } else {
             session.setAttribute("user", user);
             session.setMaxInactiveInterval(30 * 60);

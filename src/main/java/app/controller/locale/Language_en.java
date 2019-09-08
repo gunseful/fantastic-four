@@ -24,6 +24,7 @@ public class Language_en extends ListResourceBundle {
             { "nickname", "Nickname" },
             { "name", "Name" },
             { "registration.fail", "The entered data is incorrect or user with this nickname is already exist<br> Correct data - password from 6 to 15 symbols<br> Name and Nickname from 3 to 15 symbols" },
+            { "registration.already.exist", " - User with this nickname is already exists" },
             { "nodata", "The entered data is incorrect" },
             { "blacklist.title", "Black List" },
             { "entry", "You are logged in as" },
