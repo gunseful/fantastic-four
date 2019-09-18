@@ -19,7 +19,7 @@ public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface {
         saveOrUpdate("INSERT INTO ORDERS (CUSTOMER_ID, STATE) Values (?, 'NOT_ORDERED')", preparedStatement ->
             preparedStatement.setInt(1, order.getCustomerId())
         );
-        logger.info("User " + order.getCustomerId() + " has created new order");
+        logger.info("User {} has created new order", order.getCustomerId());
         return true;
     }
 
@@ -36,7 +36,7 @@ public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface {
             preparedStatement.setString(3, order.getState());
             preparedStatement.setInt(4, order.getId());
         });
-        logger.info("Order " + order.getId() + " has been updated");
+        logger.info("Order {} has been updated", order.getId());
     }
 
 
@@ -44,7 +44,7 @@ public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface {
     public void delete(Order order) {
         saveOrUpdate("DELETE FROM ORDERS WHERE ID = ?", preparedStatement ->
                 preparedStatement.setInt(1, order.getId()));
-        logger.info("order " + order.getId() + " has been deleted from order list");
+        logger.info("order {} has been deleted from order list", order.getId());
     }
 
     @Override

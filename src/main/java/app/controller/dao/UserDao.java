@@ -44,7 +44,7 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
             preparedStatement.setString(4, user.getRole());
             preparedStatement.setInt(5, user.getId());
         });
-        logger.info("user id=" + user.getId() + " has been updated");
+        logger.info("user id={} has been updated", user.getId());
     }
 
     @Override
@@ -57,7 +57,7 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
     public void delete(User user) {
         saveOrUpdate(String.format("DELETE * FROM %s WHERE ID = ?", tableName()), preparedStatement ->
                 preparedStatement.setInt(1, user.getId()));
-        logger.info("user id=" + user.getId() + " has been deleted");
+        logger.info("user id={} has been deleted", user.getId());
     }
 
 
@@ -79,10 +79,6 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
                 user.setName(name);
                 String role = resultSet.getString("ROLE");
                 user.setRole(role);
-//                boolean isAdmin = resultSet.getBoolean("IS_ADMIN");
-//                user.setAdministrator(isAdmin);
-//                boolean isBlocked = resultSet.getBoolean("IS_BLOCKED");
-//                user.setInBlackList(isBlocked);
                 result.add(user);
             }
             return result;

@@ -73,7 +73,7 @@ public class BasketServlet extends AbstractServlet {
             var productsId = req.getParameterValues(ActionType.DELETE_PRODUCT.value);
             for (String productId : productsId) {
                 orderService.deleteProductFromBasket(user, Integer.parseInt(productId.trim()));
-                logger.info("User=" + user.getNickname() + " delete product from his basket");
+                logger.info("User={} delete product from his basket", user.getNickname());
             }
         };
     }
@@ -83,7 +83,7 @@ public class BasketServlet extends AbstractServlet {
             try {
                 final var user = user(req);
                 orderService.makeOrder(user);
-                logger.info("User=" + user.getNickname() + " makes order");
+                logger.info("User={} makes order", user.getNickname());
                 resp.sendRedirect("/orders");
             } catch (IOException e) {
                 logger.error(e);

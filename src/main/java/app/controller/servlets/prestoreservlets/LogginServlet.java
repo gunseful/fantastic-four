@@ -29,7 +29,7 @@ public class LogginServlet extends AbstractServlet {
         userService.authorize(nickname, password).ifPresentOrElse(user ->
                         proceedUser(req, resp, nickname, user)
                 , () -> {
-                    logger.error("User= {} is not found in database", nickname);
+                    logger.error("User={} is not found in database", nickname);
                     req.setAttribute("NoData", "NoData");
                     doGet(req, resp);
                 });
@@ -48,7 +48,7 @@ public class LogginServlet extends AbstractServlet {
             Cookie userName = new Cookie("user", nickname);
             userName.setMaxAge(30 * 60);
             resp.addCookie(userName);
-            logger.info("User=" + nickname + " has been log in");
+            logger.info("User={} has been log in", nickname);
             try {
                 resp.sendRedirect(homePagesByRoles.get(user.getRole()));
             } catch (Exception e) {

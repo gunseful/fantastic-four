@@ -25,7 +25,7 @@ public class LogoutServlet extends AbstractServlet {
         if(cookies != null){
             for(Cookie cookie : cookies){
                 if(cookie.getName().equals("JSESSIONID")){
-                    logger.info("JSESSIONID= "+cookie.getValue());
+                    logger.info("JSESSIONID={}",cookie.getValue());
                     break;
                 }
             }

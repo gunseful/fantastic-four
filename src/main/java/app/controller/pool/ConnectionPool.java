@@ -50,7 +50,7 @@ public class ConnectionPool {
                 logger.error(e);
             }
         }
-        logger.debug("total size of connection: " + queue.size());
+        logger.debug("total size of connection: {}", queue.size());
     }
 
     public static ConnectionPool getInstance() {

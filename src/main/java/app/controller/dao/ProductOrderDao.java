@@ -21,7 +21,7 @@ public class ProductOrderDao extends AbstractDao<ProductOrder> implements Produc
                 preparedStatement.setInt(2, productOrder.getOrderId());
                 preparedStatement.setInt(3, productOrder.getCount());
             });
-            logger.info("product id=" + productOrder.getProductId() + "has been added to order id=" + productOrder.getOrderId());
+            logger.info("product id={} has been added to order id={}", productOrder.getProductId(), productOrder.getOrderId());
             return true;
     }
 
@@ -37,7 +37,7 @@ public class ProductOrderDao extends AbstractDao<ProductOrder> implements Produc
                 preparedStatement.setInt(2, productOrder.getProductId());
                 preparedStatement.setInt(3, productOrder.getOrderId());
             });
-            logger.info("update product id=" + productOrder.getProductId() + " count(" + productOrder.getCount() + ") in order id=" + productOrder.getOrderId());
+            logger.info("update product id={} count({}) in order id={}", productOrder.getProductId(), productOrder.getCount(), productOrder.getOrderId());
     }
 
     @Override
@@ -47,7 +47,7 @@ public class ProductOrderDao extends AbstractDao<ProductOrder> implements Produc
                 preparedStatement.setInt(2, productOrder.getOrderId());
 
             });
-            logger.info("product id=" + productOrder.getProductId() + " has been deleted from order id=" + productOrder.getOrderId());
+            logger.info("product id={} has been deleted from order id={}", productOrder.getProductId(),  productOrder.getOrderId());
         }
 
     @Override

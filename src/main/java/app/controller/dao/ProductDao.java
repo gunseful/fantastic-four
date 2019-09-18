@@ -17,7 +17,7 @@ public class ProductDao extends AbstractDao<Product> implements ProductDaoIntefa
             preparedStatement.setString(1, product.getName());
             preparedStatement.setInt(2, product.getPrice());
         });
-        logger.info("Product " + product.getName() + " has been added to product list");
+        logger.info("Product {} has been added to product list", product.getName());
         return true;
     }
 
@@ -33,14 +33,14 @@ public class ProductDao extends AbstractDao<Product> implements ProductDaoIntefa
             preparedStatement.setInt(2, product.getPrice());
             preparedStatement.setInt(3, product.getId());
         });
-        logger.info("Product " + product.getId() + " has been updated");
+        logger.info("Product id={} has been updated", product.getId());
     }
 
     @Override
     public void delete(Product product) {
         saveOrUpdate("DELETE FROM PRODUCTS WHERE Id = ?", preparedStatement ->
             preparedStatement.setInt(1, product.getId()));
-        logger.info("Product " + product.getId() + " has been deleted from product list");
+        logger.info("Product {} has been deleted from product list", product.getId());
     }
 
     @Override

@@ -31,10 +31,8 @@ public class Encrypt {
             cipher.init(Cipher.ENCRYPT_MODE, setKey(secret));
             return Base64.getEncoder().encodeToString(cipher.doFinal(stringToEncrypt.getBytes(StandardCharsets.UTF_8)));
         }
-        catch (Exception e)
-        {
-            System.out.println("Error arised while encrypting: " + e.toString());
-        }
+        catch (Exception ignored)
+        {}
         return null;
     }
 }

@@ -16,7 +16,7 @@ public class LangServlet extends AbstractServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //depending on language add into session a language
         if (request.getParameter("lang") != null) {
-            logger.info("selected " + request.getParameter("lang") + " language");
+            logger.info("selected {} language", request.getParameter("lang"));
             Locale loc = new Locale(request.getParameter("lang"));
             ResourceBundle bundle =
                     ResourceBundle.getBundle("app.controller.locale.Language", loc);

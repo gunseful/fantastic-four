@@ -472,3 +472,13 @@ Database may be already in use: null. Possible solutions: close all other connec
 2019-09-18 18:53:22,327 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
 2019-09-18 18:53:22,328 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
 2019-09-18 18:53:22,328 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:55:09,937 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 18:55:10,569 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:55:10,570 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:55:10,572 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:55:10,573 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:55:10,574 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:55:10,575 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:55:19,353 INFO a.c.s.AbstractServlet [http-nio-8081-exec-9] User=2 has been log in 
+2019-09-18 18:55:20,851 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= 0FA5058832E9872448433183FB75C298 
+2019-09-18 18:55:20,853 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] User=2 has out 
