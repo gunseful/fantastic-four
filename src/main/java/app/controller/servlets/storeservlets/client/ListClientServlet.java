@@ -34,9 +34,10 @@ public class ListClientServlet extends AbstractServlet {
                 //if can't update basket, just add new product to basket
                 Arrays.stream(products)
                         .filter(p -> !orderService.increaseCount(user, Integer.parseInt(p.trim())))
-                        .forEach(p -> orderService.addToBasket(user, Integer.parseInt(p.trim())));}
+                        .forEach(p -> orderService.addToBasket(user, Integer.parseInt(p.trim())));
+            }else{
             logger.info("User= {} chose nothing", user.getNickname());
-            req.setAttribute("nullData", "");
+            req.setAttribute("nullData", user.getNickname());}
         } catch (NullPointerException e) {logger.error(e);}
         doGet(req, resp);
     }

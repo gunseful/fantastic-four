@@ -1,5 +1,7 @@
 package app.model.user;
 
+import app.enums.Roles;
+
 import java.util.Objects;
 
 public class User {
@@ -8,8 +10,6 @@ public class User {
     private String name;
     private String nickname;
     private String password;
-    private boolean isAdministrator;
-    private boolean isInBlackList;
     private String role;
 
     public User() {
@@ -35,12 +35,9 @@ public class User {
     }
 
     public boolean isInBlackList() {
-        return isInBlackList;
+        return role.equalsIgnoreCase(Roles.BLOCKED.name());
     }
 
-    public void setInBlackList(boolean inBlackList) {
-        isInBlackList = inBlackList;
-    }
 
     public String getNickname() {
         return nickname;
@@ -56,14 +53,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public boolean isAdministrator() {
-        return isAdministrator;
-    }
-
-    public void setAdministrator(boolean isAdministrator) {
-        this.isAdministrator = isAdministrator;
     }
 
     public int getId() {
@@ -84,29 +73,30 @@ public class User {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id &&
+                Objects.equals(name, user.name) &&
+                Objects.equals(nickname, user.nickname) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(role, user.role);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, nickname, password, role);
+    }
+
+    @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", password='" + password + '\'' +
-                ", isAdministrator=" + isAdministrator;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return id == user.id &&
-                isAdministrator == user.isAdministrator &&
-                Objects.equals(name, user.name) &&
-                Objects.equals(nickname, user.nickname) &&
-                Objects.equals(password, user.password);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, nickname, password, isAdministrator);
+                ", role='" + role + '\'' +
+                '}';
     }
 }

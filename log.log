@@ -1,0 +1,439 @@
+2019-09-08 18:53:09,529 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-08 18:53:09,954 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] Connected to database 
+2019-09-08 18:53:09,954 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] Connected to database 
+2019-09-08 18:53:09,955 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] Connected to database 
+2019-09-08 18:53:09,956 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] Connected to database 
+2019-09-08 18:53:09,956 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] Connected to database 
+2019-09-08 18:53:09,957 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] total size of connection: 5 
+2019-09-08 18:53:27,901 INFO a.c.s.AbstractServlet [http-nio-8081-exec-1] User=2 has been log in 
+2019-09-08 18:53:27,906 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-1] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-08 18:55:09,676 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-08 18:55:10,128 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 18:55:10,130 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 18:55:10,131 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 18:55:10,132 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 18:55:10,134 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 18:55:10,134 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-08 18:55:20,197 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-2] User= 2 is not found in database 
+2019-09-08 18:55:21,808 INFO a.c.s.AbstractServlet [http-nio-8081-exec-6] User=2 has been log in 
+2019-09-08 18:55:21,811 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-6] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-08 18:58:55,935 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-08 18:58:56,361 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 18:58:56,362 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 18:58:56,362 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 18:58:56,363 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 18:58:56,364 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 18:58:56,364 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-08 18:59:04,873 INFO a.c.s.AbstractServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-09-08 18:59:04,877 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-4] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-08 18:59:04,901 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-6] a 
+2019-09-08 19:00:18,926 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-08 19:00:19,451 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:00:19,452 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:00:19,452 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:00:19,453 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:00:19,454 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:00:19,455 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-08 19:00:26,571 INFO a.c.s.AbstractServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-09-08 19:00:26,575 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-3] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-08 19:01:47,592 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-08 19:01:48,023 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:01:48,024 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:01:48,025 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:01:48,025 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:01:48,026 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:01:48,027 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-08 19:02:02,384 INFO a.c.s.AbstractServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-09-08 19:02:10,276 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID= 639E01E94B18FC349C5578DBA32E5C40 
+2019-09-08 19:02:10,280 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] User=2 has out 
+2019-09-08 19:02:13,196 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-8] User= 123 is not found in database 
+2019-09-08 19:02:29,371 INFO a.c.s.AbstractServlet [http-nio-8081-exec-1] User=gunseful has been log in 
+2019-09-08 19:02:33,700 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] user id=2 has been updated 
+2019-09-08 19:02:35,144 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= 77361AD5622822317316140572BEE6DB 
+2019-09-08 19:02:35,145 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] User=GUNSEFUL has out 
+2019-09-08 19:02:37,235 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-2] User=2 is in black list 
+2019-09-08 19:02:53,988 INFO a.c.s.AbstractServlet [http-nio-8081-exec-6] User=gunseful has been log in 
+2019-09-08 19:02:59,935 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] Product 1384 has been deleted from product list 
+2019-09-08 19:03:14,398 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] Product 0 has been added to product list 
+2019-09-08 19:05:45,581 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-08 19:05:46,029 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:05:46,030 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:05:46,031 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:05:46,032 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:05:46,033 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-08 19:05:46,034 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-08 19:06:40,696 INFO a.c.s.AbstractServlet [http-nio-8081-exec-5] User=gunseful has been log in 
+2019-09-08 19:06:43,753 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] Product 123 has been added to product list 
+2019-09-08 19:06:45,867 INFO a.c.d.AbstractDao [http-nio-8081-exec-2] Product 123 has been added to product list 
+2019-09-08 19:07:01,745 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] user id=2 has been updated 
+2019-09-08 19:07:04,387 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-4] JSESSIONID= E53A28B247E0FC28A515D51E3B09D447 
+2019-09-08 19:07:04,392 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-4] User=GUNSEFUL has out 
+2019-09-17 20:20:14,906 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 20:20:15,390 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 20:20:15,391 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 20:20:15,392 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 20:20:15,393 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 20:20:15,393 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 20:20:15,394 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-17 20:20:30,327 INFO a.c.s.AbstractServlet [http-nio-8081-exec-2] User=2 has been log in 
+2019-09-17 20:21:32,861 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-7] java.lang.NullPointerException 
+2019-09-17 20:21:37,320 INFO a.c.s.AbstractServlet [http-nio-8081-exec-1] User=2 has been log in 
+2019-09-17 20:21:43,428 INFO a.c.s.AbstractServlet [http-nio-8081-exec-2] selected ru language 
+2019-09-17 20:21:45,803 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] JSESSIONID= A5EF623ECCD2C57C58143DE97FDE2426 
+2019-09-17 20:21:45,809 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] User=2 has out 
+2019-09-17 20:52:38,943 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 20:52:39,444 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] Connected to database 
+2019-09-17 20:52:39,446 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] Connected to database 
+2019-09-17 20:52:39,447 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] Connected to database 
+2019-09-17 20:52:39,448 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] Connected to database 
+2019-09-17 20:52:39,449 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] Connected to database 
+2019-09-17 20:52:39,450 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] total size of connection: 5 
+2019-09-17 20:53:07,108 INFO a.c.s.AbstractServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-09-17 20:53:11,169 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-9] org.apache.jasper.JasperException: Произошла ошибка при обработке [/views/common/orders.jsp] в строке [31]
+
+28: <div>
+29:     <p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
+30:     <form name="input" method="post">
+31:         <c:if test="${user.isAdministrator()}">
+32:             <p class="ex1" style="font-size:15px;">${bundle.getObject("admin")} </p>
+33:             <p class="ex1" style="font-size:15px;">${bundle.getObject("orders.hint")} </p>
+34:         </c:if>
+
+
+Stacktrace: 
+2019-09-17 20:54:52,261 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 20:54:52,622 ERROR a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 20:54:52,633 ERROR a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 20:54:52,641 ERROR a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 20:54:52,651 ERROR a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 20:54:52,672 ERROR a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 20:54:52,676 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] total size of connection: 0 
+2019-09-17 20:55:43,777 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(10)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 20:55:43,952 ERROR a.c.p.ConnectionPool [RMI TCP Connection(10)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 20:55:43,960 ERROR a.c.p.ConnectionPool [RMI TCP Connection(10)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 20:55:43,968 ERROR a.c.p.ConnectionPool [RMI TCP Connection(10)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 20:55:43,977 ERROR a.c.p.ConnectionPool [RMI TCP Connection(10)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 20:55:43,986 ERROR a.c.p.ConnectionPool [RMI TCP Connection(10)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 20:55:43,987 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(10)-127.0.0.1] total size of connection: 0 
+2019-09-17 20:56:18,053 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 20:56:18,482 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 20:56:18,483 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 20:56:18,484 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 20:56:18,484 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 20:56:18,485 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 20:56:18,486 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-17 20:56:27,058 INFO a.c.s.AbstractServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-09-17 20:56:29,126 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-7] org.apache.jasper.JasperException: Произошла ошибка при обработке [/views/common/orders.jsp] в строке [79]
+
+76:     <div>
+77:         <form name="input" method="post">
+78:             <c:if test="${!orders.isEmpty()}">
+79:                 <c:if test="${user.isAdministrator()}">
+80:                     <p>${bundle.getObject("orders.admin")}</p>
+81:                 </c:if>
+82:                 <c:if test="${!user.isAdministrator()}">
+
+
+Stacktrace: 
+2019-09-17 20:58:05,008 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 20:58:05,453 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-17 20:58:05,454 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-17 20:58:05,455 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-17 20:58:05,456 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-17 20:58:05,457 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-17 20:58:05,458 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] total size of connection: 5 
+2019-09-17 20:58:12,361 INFO a.c.s.AbstractServlet [http-nio-8081-exec-4] User=2 has been log in 
+2019-09-17 20:58:18,286 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-10] JSESSIONID= D95A0A882F1AE0A17DF95D6E067A62FD 
+2019-09-17 20:58:18,289 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-10] User=2 has out 
+2019-09-17 21:34:51,134 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 21:34:51,359 ERROR a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 21:34:51,368 ERROR a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 21:34:51,378 ERROR a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 21:34:51,387 ERROR a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 21:34:51,395 ERROR a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-17 21:34:51,396 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 0 
+2019-09-17 21:36:10,512 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 21:36:11,047 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:36:11,048 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:36:11,049 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:36:11,050 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:36:11,051 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:36:11,051 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-17 21:36:19,227 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-1] User= 2 is not found in database 
+2019-09-17 21:36:21,224 INFO a.c.s.AbstractServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-17 21:36:28,995 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID= 127376C86EF2CD87141EB710D24C090B 
+2019-09-17 21:36:28,995 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] User=2 has out 
+2019-09-17 21:36:52,317 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-9] User= gunseful is not found in database 
+2019-09-17 21:36:56,907 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-3] User= gunseful is not found in database 
+2019-09-17 21:37:02,910 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-8] User= gunseful is not found in database 
+2019-09-17 21:38:02,684 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 21:38:03,115 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:38:03,116 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:38:03,117 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:38:03,118 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:38:03,119 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:38:03,120 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-17 21:38:11,769 INFO a.c.s.AbstractServlet [http-nio-8081-exec-1] User=2 has been log in 
+2019-09-17 21:38:16,264 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID= 1080E9B5814C1F7D786079DD58B68F8B 
+2019-09-17 21:38:16,266 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] User=2 has out 
+2019-09-17 21:38:30,262 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] New User GUNSEFUL2 has been added to database 
+2019-09-17 21:38:30,263 INFO a.c.s.p.RegistrationServlet [http-nio-8081-exec-9] registration new user = GUNSEFUL2 
+2019-09-17 21:38:35,576 INFO a.c.s.AbstractServlet [http-nio-8081-exec-5] User=gunseful2 has been log in 
+2019-09-17 21:38:36,826 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID= 19E5F8ACDBAE658938D7C2F0F34E3A08 
+2019-09-17 21:38:36,826 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] User=GUNSEFUL2 has out 
+2019-09-17 21:40:06,635 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 21:40:07,081 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:40:07,085 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:40:07,087 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:40:07,087 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:40:07,089 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:40:07,089 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-17 21:40:20,435 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-2] User=2 is in black list 
+2019-09-17 21:40:27,393 INFO a.c.s.AbstractServlet [http-nio-8081-exec-7] User=gunseful has been log in 
+2019-09-17 21:40:30,433 ERROR a.c.d.AbstractDao [http-nio-8081-exec-1] Can't execute getResultList org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "IS_BLOCKED" не найден
+Column "IS_BLOCKED" not found; SQL statement:
+SELECT * FROM USERS WHERE IS_BLOCKED = ? [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:205)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:77)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:349)
+	at app.controller.dao.AbstractDao.getResultList(AbstractDao.java:63)
+	at app.controller.dao.UserDao.getBlackList(UserDao.java:52)
+	at app.controller.service.UserServiceImpl.getBlackList(UserServiceImpl.java:18)
+	at app.controller.servlets.storeservlets.admin.BlackListServlet.doGet(BlackListServlet.java:23)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AccessFilter.doFilter(AccessFilter.java:28)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at app.controller.servlets.filters.AuthenticationFilter.doFilter(AuthenticationFilter.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2019-09-17 21:40:30,437 ERROR a.c.s.s.a.BlackListServlet [http-nio-8081-exec-1] java.lang.IllegalStateException: org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "IS_BLOCKED" не найден
+Column "IS_BLOCKED" not found; SQL statement:
+SELECT * FROM USERS WHERE IS_BLOCKED = ? [42122-199] 
+2019-09-17 21:42:14,550 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 21:42:14,976 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-17 21:42:14,978 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-17 21:42:14,979 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-17 21:42:14,979 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-17 21:42:14,980 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-17 21:42:14,981 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] total size of connection: 5 
+2019-09-17 21:42:25,323 INFO a.c.s.AbstractServlet [http-nio-8081-exec-2] User=gunseful has been log in 
+2019-09-17 21:42:29,741 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] user id=2 has been updated 
+2019-09-17 21:42:35,983 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-3] org.apache.jasper.JasperException: Произошла ошибка при обработке [/views/common/orders.jsp] в строке [94]
+
+91:                     ${bundle.getObject("orders.order")} ${order.getId()}, ${bundle.getObject("orders.creation")} ${order.getCreationDate()}
+92:                     <br>
+93:                     <c:if test="${isAdmin}">
+94:                         <c:if test="${!order.getUser().isInBlackList()}">
+95:                             <p>
+96:                                 ${bundle.getObject("orders.client.title")}${order.getUser().getNickname()}  <button class="w3-button w3-padding-small w3-red" style="vertical-align:middle" name="block" value="${order.getUser().getId()}"><span>${bundle.getObject("orders.client.block")}</span></button>
+97:                         </c:if>
+
+
+Stacktrace: 
+2019-09-17 21:42:40,242 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-6] org.apache.jasper.JasperException: Произошла ошибка при обработке [/views/common/orders.jsp] в строке [94]
+
+91:                     ${bundle.getObject("orders.order")} ${order.getId()}, ${bundle.getObject("orders.creation")} ${order.getCreationDate()}
+92:                     <br>
+93:                     <c:if test="${isAdmin}">
+94:                         <c:if test="${!order.getUser().isInBlackList()}">
+95:                             <p>
+96:                                 ${bundle.getObject("orders.client.title")}${order.getUser().getNickname()}  <button class="w3-button w3-padding-small w3-red" style="vertical-align:middle" name="block" value="${order.getUser().getId()}"><span>${bundle.getObject("orders.client.block")}</span></button>
+97:                         </c:if>
+
+
+Stacktrace: 
+2019-09-17 21:44:37,443 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-17 21:44:37,889 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:44:37,890 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:44:37,891 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:44:37,892 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:44:37,893 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-17 21:44:37,893 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-17 21:44:47,486 INFO a.c.s.AbstractServlet [http-nio-8081-exec-2] User=gunseful has been log in 
+2019-09-17 21:44:52,817 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] user id=2 has been updated 
+2019-09-17 21:44:55,846 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] user id=2 has been updated 
+2019-09-17 21:45:01,220 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] user id=2 has been updated 
+2019-09-17 21:45:03,392 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] user id=2 has been updated 
+2019-09-17 21:45:04,330 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= 8DE537C41D287BDB263CA587EE34ADC0 
+2019-09-17 21:45:04,333 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] User=GUNSEFUL has out 
+2019-09-18 17:55:09,970 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 17:55:10,513 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 17:55:10,515 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 17:55:10,516 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 17:55:10,516 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 17:55:10,517 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 17:55:10,518 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-18 17:56:50,108 INFO a.c.s.AbstractServlet [http-nio-8081-exec-8] User=2 has been log in 
+2019-09-18 17:56:53,274 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] product id=1449has been added to order id=1673 
+2019-09-18 17:56:53,276 INFO a.c.s.AbstractServlet [http-nio-8081-exec-10] User= 2 chose nothing 
+2019-09-18 17:56:56,010 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] update product id=1449 count(2) in order id=1673 
+2019-09-18 17:56:56,010 INFO a.c.s.AbstractServlet [http-nio-8081-exec-5] User= 2 chose nothing 
+2019-09-18 17:57:00,850 INFO a.c.d.AbstractDao [http-nio-8081-exec-6] product id=1208has been added to order id=1673 
+2019-09-18 17:57:00,850 INFO a.c.s.AbstractServlet [http-nio-8081-exec-6] User= 2 chose nothing 
+2019-09-18 17:57:07,431 INFO a.c.d.AbstractDao [http-nio-8081-exec-2] update product id=1449 count(3) in order id=1673 
+2019-09-18 17:57:08,196 INFO a.c.d.AbstractDao [http-nio-8081-exec-6] update product id=1449 count(4) in order id=1673 
+2019-09-18 17:57:08,790 INFO a.c.d.AbstractDao [http-nio-8081-exec-4] update product id=1208 count(2) in order id=1673 
+2019-09-18 17:57:09,300 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] update product id=1208 count(3) in order id=1673 
+2019-09-18 17:57:10,378 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] Order 1673 has been updated 
+2019-09-18 17:57:10,378 INFO a.c.s.AbstractServlet [http-nio-8081-exec-9] User=2 makes order 
+2019-09-18 17:57:10,382 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] User 2 has created new order 
+2019-09-18 17:57:10,386 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-9] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-18 17:57:15,408 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] Order 1673 has been updated 
+2019-09-18 17:57:21,697 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] product id=1449 has been deleted from order id=1673 
+2019-09-18 17:57:21,698 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] product id=1208 has been deleted from order id=1673 
+2019-09-18 17:57:21,704 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] order 1673 has been deleted from order list 
+2019-09-18 17:57:24,927 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] product id=1208has been added to order id=1705 
+2019-09-18 17:57:24,927 INFO a.c.s.AbstractServlet [http-nio-8081-exec-10] User= 2 chose nothing 
+2019-09-18 17:57:56,109 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] product id=1240has been added to order id=1705 
+2019-09-18 17:57:56,110 INFO a.c.s.AbstractServlet [http-nio-8081-exec-7] User= 2 chose nothing 
+2019-09-18 17:59:16,789 INFO a.c.s.AbstractServlet [http-nio-8081-exec-5] User= 2 chose nothing 
+2019-09-18 17:59:54,145 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 17:59:54,651 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 17:59:54,652 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 17:59:54,653 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 17:59:54,654 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 17:59:54,655 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 17:59:54,655 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:00:25,220 INFO a.c.s.AbstractServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-09-18 18:00:33,403 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] update product id=1240 count(2) in order id=1705 
+2019-09-18 18:00:35,757 INFO a.c.s.AbstractServlet [http-nio-8081-exec-1] User= 2 chose nothing 
+2019-09-18 18:00:40,622 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] product id=1208 has been deleted from order id=1705 
+2019-09-18 18:00:41,653 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] update product id=1240 count(3) in order id=1705 
+2019-09-18 18:00:43,399 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] Order 1705 has been updated 
+2019-09-18 18:00:43,400 INFO a.c.s.AbstractServlet [http-nio-8081-exec-5] User=2 makes order 
+2019-09-18 18:00:43,409 INFO a.c.d.AbstractDao [http-nio-8081-exec-5] User 2 has created new order 
+2019-09-18 18:00:43,412 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-5] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-18 18:00:45,889 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-8] JSESSIONID= 4D3BA851129CC0103703B966B3453A4B 
+2019-09-18 18:00:45,889 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-8] User=2 has out 
+2019-09-18 18:00:51,735 INFO a.c.s.AbstractServlet [http-nio-8081-exec-7] User=gunseful has been log in 
+2019-09-18 18:01:08,679 INFO a.c.d.AbstractDao [http-nio-8081-exec-7] Product iPhone 11 PRO has been added to product list 
+2019-09-18 18:01:10,946 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] Product 1449 has been deleted from product list 
+2019-09-18 18:01:12,309 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] Product 1448 has been deleted from product list 
+2019-09-18 18:01:16,431 INFO a.c.d.AbstractDao [http-nio-8081-exec-6] user id=2 has been updated 
+2019-09-18 18:01:18,898 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] product id=1240 has been deleted from order id=1705 
+2019-09-18 18:01:18,900 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] order 1705 has been deleted from order list 
+2019-09-18 18:01:20,232 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-2] JSESSIONID= FBC62C5143D54ACFB161FBF303623BCB 
+2019-09-18 18:01:20,232 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-2] User=GUNSEFUL has out 
+2019-09-18 18:02:53,694 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 18:02:53,927 ERROR a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-18 18:02:53,943 ERROR a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-18 18:02:53,950 ERROR a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-18 18:02:53,958 ERROR a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-18 18:02:53,970 ERROR a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-09-18 18:02:53,970 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] total size of connection: 0 
+2019-09-18 18:03:42,577 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 18:03:43,013 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:03:43,015 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:03:43,016 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:03:43,017 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:03:43,018 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:03:43,018 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:03:51,141 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-1] User=2 is in black list 
+2019-09-18 18:03:56,122 INFO a.c.s.AbstractServlet [http-nio-8081-exec-6] User=gunseful has been log in 
+2019-09-18 18:03:59,249 INFO a.c.d.AbstractDao [http-nio-8081-exec-4] user id=2 has been updated 
+2019-09-18 18:03:59,827 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] JSESSIONID= FF341169FBC6844BA6C97AED0C36EE5F 
+2019-09-18 18:03:59,827 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-7] User=GUNSEFUL has out 
+2019-09-18 18:04:02,099 INFO a.c.s.AbstractServlet [http-nio-8081-exec-6] User=2 has been log in 
+2019-09-18 18:04:03,355 INFO a.c.s.AbstractServlet [http-nio-8081-exec-10] User= 2 chose nothing 
+2019-09-18 18:11:31,511 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 18:11:31,948 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:11:31,949 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:11:31,950 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:11:31,951 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:11:31,952 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:11:31,953 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:11:54,195 INFO a.c.s.AbstractServlet [http-nio-8081-exec-7] selected en language 
+2019-09-18 18:11:55,631 INFO a.c.s.AbstractServlet [http-nio-8081-exec-10] selected fr language 
+2019-09-18 18:11:57,116 INFO a.c.s.AbstractServlet [http-nio-8081-exec-4] selected ru language 
+2019-09-18 18:12:56,126 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 18:12:56,538 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-18 18:12:56,539 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-18 18:12:56,540 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-18 18:12:56,540 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-18 18:12:56,541 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] Connected to database 
+2019-09-18 18:12:56,542 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(5)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:13:27,217 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 18:13:27,656 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:13:27,658 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:13:27,659 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:13:27,660 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:13:27,661 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:13:27,661 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:14:26,840 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 18:14:27,305 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:14:27,306 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:14:27,307 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:14:27,308 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:14:27,309 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:14:27,310 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:17:50,633 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 18:17:51,104 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:17:51,105 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:17:51,106 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:17:51,107 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:17:51,109 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:17:51,109 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:18:24,522 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 18:18:24,978 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:18:24,980 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:18:24,981 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:18:24,982 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:18:24,982 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-09-18 18:18:24,983 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:18:42,314 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-8] java.lang.NullPointerException 

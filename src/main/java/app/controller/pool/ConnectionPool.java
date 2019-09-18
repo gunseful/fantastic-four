@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.channels.NoConnectionPendingException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -19,6 +20,9 @@ public class ConnectionPool {
     private static final int MAX_SIZE = 5;
     private BlockingQueue<Connection> queue;
     private final static ConnectionPool connectionPool = new ConnectionPool();
+    private int deadConnections = 0;
+
+
 
     private ConnectionPool() {
         logger.debug("inside ConnectionPool constructor");
@@ -55,8 +59,9 @@ public class ConnectionPool {
 
     public Connection getConnection() {
         try {
-//            logger.debug("size before getting connection" + queue.size());
-            //            logger.debug("size after getting connection" + queue.size());
+            if(deadConnections==MAX_SIZE){
+                throw new NoConnectionPendingException();
+            }
             return queue.take();
         } catch (InterruptedException e) {
             throw new IllegalStateException(e);
@@ -65,12 +70,11 @@ public class ConnectionPool {
 
     public void releaseConnection(Connection con) {
         try {
-//            logger.debug("size before releasing connection" + queue.size());
-            //todo check if connection still alive
             if(con.isValid(0)) {
                 queue.put(con);
+            }else{
+                deadConnections++;
             }
-//            logger.debug("size after releasing connection" + queue.size());
         } catch (InterruptedException | SQLException e) {
             throw new IllegalStateException(e);
         }

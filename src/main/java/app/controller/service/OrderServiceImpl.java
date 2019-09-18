@@ -3,6 +3,7 @@ package app.controller.service;
 import app.controller.dao.OrderDao;
 import app.controller.dao.ProductOrderDao;
 import app.controller.dao.UserDao;
+import app.enums.States;
 import app.model.products.Order;
 import app.model.products.Product;
 import app.model.products.ProductOrder;
@@ -38,14 +39,14 @@ public class OrderServiceImpl implements OrderService {
             return newOrder;
         });
         order.setCreationDate(Date.valueOf(LocalDate.now()));
-        order.setState("ORDERED");
+        order.setState(States.ORDERED.name());
         orderDao.update(order);
     }
 
     @Override
     public void payOrder(int id) {
         Order order = orderDao.findById(id).orElseThrow(IllegalStateException::new);
-        order.setState("PAID");
+        order.setState(States.PAID.name());
         orderDao.update(order);
     }
 

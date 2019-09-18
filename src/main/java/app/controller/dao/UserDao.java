@@ -37,21 +37,20 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
 
     @Override
     public void update(User user) {
-        saveOrUpdate("UPDATE USERS SET NICKNAME = ?, PASSWORD = ?, NAME = ?, IS_ADMIN=?, IS_BLOCKED=? WHERE ID = ?", preparedStatement -> {
+        saveOrUpdate("UPDATE USERS SET NICKNAME = ?, PASSWORD = ?, NAME = ?, ROLE=? WHERE ID = ?", preparedStatement -> {
             preparedStatement.setString(1, user.getNickname());
             preparedStatement.setString(2, user.getPassword());
             preparedStatement.setString(3, user.getName());
-            preparedStatement.setBoolean(4, user.isAdministrator());
-            preparedStatement.setBoolean(5, user.isInBlackList());
-            preparedStatement.setInt(6, user.getId());
+            preparedStatement.setString(4, user.getRole());
+            preparedStatement.setInt(5, user.getId());
         });
         logger.info("user id=" + user.getId() + " has been updated");
     }
 
     @Override
     public List<User> getBlackList() {
-        return getResultList("SELECT * FROM USERS WHERE IS_BLOCKED = ?", preparedStatement ->
-                preparedStatement.setBoolean(1, true));
+        return getResultList("SELECT * FROM USERS WHERE ROLE = ?", preparedStatement ->
+                preparedStatement.setString(1, "BLOCKED"));
     }
 
     @Override
@@ -80,10 +79,10 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
                 user.setName(name);
                 String role = resultSet.getString("ROLE");
                 user.setRole(role);
-                boolean isAdmin = resultSet.getBoolean("IS_ADMIN");
-                user.setAdministrator(isAdmin);
-                boolean isBlocked = resultSet.getBoolean("IS_BLOCKED");
-                user.setInBlackList(isBlocked);
+//                boolean isAdmin = resultSet.getBoolean("IS_ADMIN");
+//                user.setAdministrator(isAdmin);
+//                boolean isBlocked = resultSet.getBoolean("IS_BLOCKED");
+//                user.setInBlackList(isBlocked);
                 result.add(user);
             }
             return result;

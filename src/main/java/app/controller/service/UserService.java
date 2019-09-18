@@ -12,8 +12,6 @@ public interface UserService {
 
     Optional<User> authorize(String nickname, String password);
 
-    User getUserByNickname(String nickname);
-
     boolean checkBlackList(User user);
 
     void addToBlackList(int id);

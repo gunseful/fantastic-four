@@ -1,5 +1,6 @@
 package app.model.products;
 
+import app.enums.States;
 import app.model.user.User;
 
 import java.sql.Date;
@@ -10,7 +11,6 @@ public class Order {
     private int id;
     private Date creationDate;
     private List<Product> products;
-    private boolean isPaid=false;
     private int customerId;
     private User user;
     private String state;
@@ -21,14 +21,6 @@ public class Order {
 
     public int getId() {
         return id;
-    }
-
-    public boolean isPaid() {
-        return isPaid;
-    }
-
-    public void setPaid(boolean paid) {
-        isPaid = paid;
     }
 
     public void setId(int id) {
@@ -75,9 +67,11 @@ public class Order {
         this.state = state;
     }
 
+    public boolean isPaid() {
+        return state.equals(States.PAID.name());
+    }
+
     public int totalPrice(){
-        if(state.equals("PAID")){
-            isPaid=true;}
         int total = 0;
         for(Product product : this.products){
             total += product.getPrice()*product.getCount();
@@ -91,7 +85,6 @@ public class Order {
         if (o == null || getClass() != o.getClass()) return false;
         Order order = (Order) o;
         return id == order.id &&
-                isPaid == order.isPaid &&
                 customerId == order.customerId &&
                 Objects.equals(creationDate, order.creationDate) &&
                 Objects.equals(products, order.products) &&
@@ -101,7 +94,7 @@ public class Order {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, creationDate, products, isPaid, customerId, user, state);
+        return Objects.hash(id, creationDate, products, customerId, user, state);
     }
 
     @Override
@@ -111,7 +104,7 @@ public class Order {
             sb.append("<br>").append(product.toString());
         }
         String s;
-        if(state.equals("PAID")){
+        if(state.equals(States.PAID.name())){
             s = "Оплачено";
         }else{
             s = "Неоплачено";

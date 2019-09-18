@@ -15,6 +15,7 @@ import java.util.Set;
 public abstract class AbstractServlet extends HttpServlet {
 
     private static final String USER = "user";
+
     public static Logger logger = LogManager.getLogger();
 
     protected final OrderServiceImpl orderService = new OrderServiceImpl();
@@ -34,4 +35,6 @@ public abstract class AbstractServlet extends HttpServlet {
     protected User user(HttpServletRequest request) {
         return (User) request.getSession().getAttribute(USER);
     }
+
+
 }

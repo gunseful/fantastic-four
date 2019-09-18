@@ -1,6 +1,7 @@
 package app.controller.servlets.prestoreservlets;
 
 import app.controller.servlets.AbstractServlet;
+import app.enums.Roles;
 import app.model.user.User;
 
 import javax.servlet.RequestDispatcher;
@@ -42,6 +43,7 @@ public class LogginServlet extends AbstractServlet {
             doGet(req, resp);
         } else {
             session.setAttribute("user", user);
+            session.setAttribute("isAdmin", user.getRole().equals(Roles.ADMIN.name()));
             session.setMaxInactiveInterval(30 * 60);
             Cookie userName = new Cookie("user", nickname);
             userName.setMaxAge(30 * 60);

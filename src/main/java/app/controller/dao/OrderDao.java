@@ -1,5 +1,6 @@
 package app.controller.dao;
 
+import app.enums.States;
 import app.model.products.Order;
 import app.model.user.User;
 
@@ -48,16 +49,16 @@ public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface {
 
     @Override
     public List<Order> findOrders(User user) {
-        if (user.isAdministrator()) {
+        if (user.getRole().equals("ADMIN")) {
             return getResultList("SELECT * FROM ORDERS WHERE STATE = ? OR STATE = ?", preparedStatement -> {
-                preparedStatement.setString(1, "ORDERED");
-                preparedStatement.setString(2, "PAID");
+                preparedStatement.setString(1, States.ORDERED.name());
+                preparedStatement.setString(2, States.PAID.name());
             });
         } else {
             return getResultList("SELECT * FROM ORDERS WHERE CUSTOMER_ID = ? AND STATE = ? OR STATE = ?", preparedStatement -> {
                 preparedStatement.setInt(1, user.getId());
-                preparedStatement.setString(2, "ORDERED");
-                preparedStatement.setString(3, "PAID");
+                preparedStatement.setString(2, States.ORDERED.name());
+                preparedStatement.setString(3, States.PAID.name());
             });
         }
     }
@@ -66,7 +67,7 @@ public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface {
     public Optional<Order> getUserBasket(User user) {
         return getSingleResult("SELECT * FROM ORDERS WHERE CUSTOMER_ID= ? AND STATE = ? ", preparedStatement -> {
             preparedStatement.setInt(1, user.getId());
-            preparedStatement.setString(2, "NOT_ORDERED");
+            preparedStatement.setString(2, States.NOT_ORDERED.name());
         });
     }
 

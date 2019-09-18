@@ -55,7 +55,7 @@
 <div class="ex2">
     <div>
         <c:if test="${nullData != null}">
-            <p style="font-size:15px;">${bundle.getObject("nulldata")}</p>
+            <p style="font-size:15px;">${nullData}, ${bundle.getObject("nulldata")}</p>
         </c:if>
     </div>
 

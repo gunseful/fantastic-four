@@ -28,7 +28,7 @@
 <div>
     <p class="ex1" style="font-size:15px;">${bundle.getObject("entry")} ${user.getNickname()} </p>
     <form name="input" method="post">
-        <c:if test="${user.isAdministrator()}">
+        <c:if test="${isAdmin}">
             <p class="ex1" style="font-size:15px;">${bundle.getObject("admin")} </p>
             <p class="ex1" style="font-size:15px;">${bundle.getObject("orders.hint")} </p>
         </c:if>
@@ -37,18 +37,18 @@
 <%--button - to the store--%>
 <div>
     <div>
-        <c:if test="${user.isAdministrator()}">
+        <c:if test="${isAdmin}">
         <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block"
                 onclick="location.href='/listAdmin'">${bundle.getObject("tothestore")}
         </button>
         </c:if>
-        <c:if test="${!user.isAdministrator()}">
+        <c:if test="${!isAdmin}">
             <button class="w3-button w3-cyan w3-padding-large w3-large w3-hover-opacity-off btn-block"
                     onclick="location.href='/listClient'">${bundle.getObject("tothestore")}
             </button>
         </c:if>
         <div>
-            <c:if test="${user.isAdministrator()}">
+            <c:if test="${isAdmin}">
                 <button class="w3-button w3-black w3-padding-large w3-large w3-hover-opacity-off btn-block"
                         onclick="location.href='/blacklist'" name="blacklist" type="submit"
                         value="blacklist">${bundle.getObject("blacklist.title")}
@@ -76,10 +76,10 @@
     <div>
         <form name="input" method="post">
             <c:if test="${!orders.isEmpty()}">
-                <c:if test="${user.isAdministrator()}">
+                <c:if test="${isAdmin}">
                     <p>${bundle.getObject("orders.admin")}</p>
                 </c:if>
-                <c:if test="${!user.isAdministrator()}">
+                <c:if test="${!isAdmin}">
                     <p>${bundle.getObject("orders.client")}</p>
                 </c:if>
                 <c:forEach var="order" items="${orders}">
@@ -90,7 +90,7 @@
 
                     ${bundle.getObject("orders.order")} ${order.getId()}, ${bundle.getObject("orders.creation")} ${order.getCreationDate()}
                     <br>
-                    <c:if test="${user.isAdministrator()}">
+                    <c:if test="${isAdmin}">
                         <c:if test="${!order.getUser().isInBlackList()}">
                             <p>
                                 ${bundle.getObject("orders.client.title")}${order.getUser().getNickname()}  <button class="w3-button w3-padding-small w3-red" style="vertical-align:middle" name="block" value="${order.getUser().getId()}"><span>${bundle.getObject("orders.client.block")}</span></button>
@@ -125,7 +125,7 @@
                     <br>_____________________________________________<br>
                 </c:forEach>
                 <input class="w3-button w3-red " type="submit" value=${bundle.getObject("delete")}>
-                <c:if test="${!user.isAdministrator()}">
+                <c:if test="${!isAdmin}">
                     <input class="w3-button w3-black " name="Pay" type="submit" value=${bundle.getObject("orders.pay")}>
                 </c:if>
             </c:if>

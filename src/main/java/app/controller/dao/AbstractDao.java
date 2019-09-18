@@ -16,9 +16,9 @@ public abstract class AbstractDao<T> implements Dao<T> {
 
     public static Logger logger = LogManager.getLogger(AbstractDao.class);
     private ConnectionPool connectionPool = ConnectionPool.getInstance();
-    public static Connection connection = null;
+    private static Connection connection = null;
 
-    public void saveOrUpdate(String sql, StatementTransformer<PreparedStatement> transformer) {
+    void saveOrUpdate(String sql, StatementTransformer<PreparedStatement> transformer) {
         try {
             connection = connectionPool.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -31,9 +31,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
         }
     }
 
-    public void saveOrUpdate(String sql) {
-        saveOrUpdate(sql, t -> {});
-    }
+
 
     @Override
     public Optional<T> findById(int id) {
@@ -41,11 +39,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
                 preparedStatement.setInt(1, id));
     }
 
-    /**
-     * Returns Optional with result. Or empty if nothing found.
-     * Throws exception if there are multiple results.
-     */
-    protected Optional<T> getSingleResult(String sql, StatementTransformer<PreparedStatement> transformer) {
+    Optional<T> getSingleResult(String sql, StatementTransformer<PreparedStatement> transformer) {
         final List<T> resultList = getResultList(sql, transformer);
         if (resultList.size() > 1) {
             throw new NonUniqueResultException("Non single result. Found - " + resultList.size());
@@ -53,11 +47,8 @@ public abstract class AbstractDao<T> implements Dao<T> {
         return resultList.stream().findFirst();
     }
 
-    protected Optional<T> getSingleResult(String sql) {
-        return getSingleResult(sql, t -> {});
-    }
 
-    protected List<T> getResultList(String sql, StatementTransformer<PreparedStatement> transformer) {
+    List<T> getResultList(String sql, StatementTransformer<PreparedStatement> transformer) {
         final Connection connection = connectionPool.getConnection();
         try {
             final PreparedStatement statement = connection.prepareStatement(sql);
@@ -73,7 +64,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
         }
     }
 
-    protected List<T> getResultList(String sql) {
+    List<T> getResultList(String sql) {
         return getResultList(sql, t -> {});
     }
 
