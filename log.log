@@ -437,3 +437,31 @@ Database may be already in use: null. Possible solutions: close all other connec
 2019-09-18 18:18:24,982 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
 2019-09-18 18:18:24,983 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
 2019-09-18 18:18:42,314 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-8] java.lang.NullPointerException 
+2019-09-18 18:47:23,742 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-18 18:47:24,228 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] Connected to database 
+2019-09-18 18:47:24,229 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] Connected to database 
+2019-09-18 18:47:24,230 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] Connected to database 
+2019-09-18 18:47:24,231 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] Connected to database 
+2019-09-18 18:47:24,232 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] Connected to database 
+2019-09-18 18:47:24,233 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] total size of connection: 5 
+2019-09-18 18:47:41,025 INFO a.c.s.AbstractServlet [http-nio-8081-exec-8] selected en language 
+2019-09-18 18:47:42,948 INFO a.c.s.AbstractServlet [http-nio-8081-exec-1] selected ru language 
+2019-09-18 18:47:46,125 INFO a.c.s.AbstractServlet [http-nio-8081-exec-2] User=2 has been log in 
+2019-09-18 18:47:49,290 INFO a.c.d.AbstractDao [http-nio-8081-exec-6] product id=1416has been added to order id=1737 
+2019-09-18 18:47:52,423 INFO a.c.d.AbstractDao [http-nio-8081-exec-10] update product id=1416 count(2) in order id=1737 
+2019-09-18 18:47:53,693 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] Order 1737 has been updated 
+2019-09-18 18:47:53,693 INFO a.c.s.AbstractServlet [http-nio-8081-exec-1] User=2 makes order 
+2019-09-18 18:47:53,698 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] User 2 has created new order 
+2019-09-18 18:47:53,701 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-1] java.lang.IllegalStateException: Cannot forward after response has been committed 
+2019-09-18 18:47:56,520 INFO a.c.d.AbstractDao [http-nio-8081-exec-6] Order 1737 has been updated 
+2019-09-18 18:47:58,471 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] product id=1416 has been deleted from order id=1737 
+2019-09-18 18:47:58,474 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] order 1737 has been deleted from order list 
+2019-09-18 18:48:02,121 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-1] JSESSIONID= 91557DC6E9F53F1196A04872AC523269 
+2019-09-18 18:48:02,126 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-1] User=2 has out 
+2019-09-18 18:48:08,093 INFO a.c.s.AbstractServlet [http-nio-8081-exec-2] User=gunseful has been log in 
+2019-09-18 18:48:12,186 INFO a.c.d.AbstractDao [http-nio-8081-exec-3] Product 123 has been added to product list 
+2019-09-18 18:48:13,626 INFO a.c.d.AbstractDao [http-nio-8081-exec-6] Product 1512 has been deleted from product list 
+2019-09-18 18:48:16,133 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] user id=2 has been updated 
+2019-09-18 18:48:19,777 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] user id=2 has been updated 
+2019-09-18 18:48:20,563 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-10] JSESSIONID= 764EC99DE6DBA62310D37952718ACD1B 
+2019-09-18 18:48:20,563 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-10] User=GUNSEFUL has out 
