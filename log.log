@@ -482,3 +482,93 @@ Database may be already in use: null. Possible solutions: close all other connec
 2019-09-18 18:55:19,353 INFO a.c.s.AbstractServlet [http-nio-8081-exec-9] User=2 has been log in 
 2019-09-18 18:55:20,851 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] JSESSIONID= 0FA5058832E9872448433183FB75C298 
 2019-09-18 18:55:20,853 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-3] User=2 has out 
+2019-09-21 14:09:16,721 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] inside ConnectionPool constructor 
+2019-09-21 14:09:17,250 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] Connected to database 
+2019-09-21 14:09:17,251 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] Connected to database 
+2019-09-21 14:09:17,252 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] Connected to database 
+2019-09-21 14:09:17,252 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] Connected to database 
+2019-09-21 14:09:17,253 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] Connected to database 
+2019-09-21 14:09:17,255 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] total size of connection: 5 
+2019-09-21 14:09:28,748 INFO a.c.s.AbstractServlet [http-nio-8081-exec-9] selected en language 
+2019-09-21 14:09:30,415 INFO a.c.s.AbstractServlet [http-nio-8081-exec-5] selected ru language 
+2019-09-21 14:09:34,325 INFO a.c.s.AbstractServlet [http-nio-8081-exec-5] User=2 has been log in 
+2019-09-21 14:09:37,224 INFO a.c.d.AbstractDao [http-nio-8081-exec-9] product id=1208 has been added to order id=1769 
+2019-09-21 14:09:39,603 INFO a.c.d.AbstractDao [http-nio-8081-exec-4] update product id=1208 count(2) in order id=1769 
+2019-09-21 14:09:40,489 INFO a.c.d.AbstractDao [http-nio-8081-exec-8] update product id=1208 count(1) in order id=1769 
+2019-09-21 14:09:41,022 INFO a.c.d.AbstractDao [http-nio-8081-exec-1] product id=1208 has been deleted from order id=1769 
+2019-09-21 14:09:42,039 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-4] JSESSIONID=FB383E0F94486B7944ADAF2B0244B0CA 
+2019-09-21 14:09:42,039 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-4] User=2 has out 
+2019-09-21 15:05:33,006 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-7] User=2 is not found in database 
+2019-09-21 15:05:34,853 INFO a.c.s.AbstractServlet [http-nio-8081-exec-1] User=2 has been log in 
+2019-10-05 14:07:12,894 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] inside ConnectionPool constructor 
+2019-10-05 14:07:13,142 ERROR a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:07:13,150 ERROR a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:07:13,158 ERROR a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:07:13,165 ERROR a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:07:13,172 ERROR a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:07:13,174 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(2)-127.0.0.1] total size of connection: 0 
+2019-10-05 14:08:11,790 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] inside ConnectionPool constructor 
+2019-10-05 14:08:11,976 ERROR a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:08:11,984 ERROR a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:08:11,992 ERROR a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:08:12,000 ERROR a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:08:12,006 ERROR a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:08:12,008 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(7)-127.0.0.1] total size of connection: 0 
+2019-10-05 14:09:05,982 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-10-05 14:09:06,492 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-10-05 14:09:06,493 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-10-05 14:09:06,495 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-10-05 14:09:06,496 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-10-05 14:09:06,498 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-10-05 14:09:06,500 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-10-05 14:09:13,734 INFO a.c.s.AbstractServlet [http-nio-8081-exec-3] User=2 has been log in 
+2019-10-05 14:10:20,868 INFO a.c.s.AbstractServlet [http-nio-8081-exec-7] selected en language 
+2019-10-05 14:10:24,277 INFO a.c.s.AbstractServlet [http-nio-8081-exec-4] selected ru language 
+2019-10-05 14:12:42,547 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID=8A934DE9994D9A74D72E240D3A13C63A 
+2019-10-05 14:12:42,547 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] User=2 has out 
+2019-10-05 14:12:46,360 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-5] java.lang.NullPointerException 
+2019-10-05 14:13:12,711 INFO a.c.s.AbstractServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-10-05 14:14:48,859 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] inside ConnectionPool constructor 
+2019-10-05 14:14:49,121 ERROR a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:14:49,132 ERROR a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:14:49,142 ERROR a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:14:49,152 ERROR a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:14:49,164 ERROR a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199] 
+2019-10-05 14:14:49,166 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(6)-127.0.0.1] total size of connection: 0 
+2019-10-05 14:15:37,231 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] inside ConnectionPool constructor 
+2019-10-05 14:15:37,675 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-10-05 14:15:37,677 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-10-05 14:15:37,678 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-10-05 14:15:37,679 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-10-05 14:15:37,680 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] Connected to database 
+2019-10-05 14:15:37,682 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(3)-127.0.0.1] total size of connection: 5 
+2019-10-05 14:15:45,777 INFO a.c.s.AbstractServlet [http-nio-8081-exec-1] User=2 has been log in 
+2019-10-05 14:29:06,626 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] inside ConnectionPool constructor 
+2019-10-05 14:29:07,060 INFO a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] Connected to database 
+2019-10-05 14:29:07,061 INFO a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] Connected to database 
+2019-10-05 14:29:07,062 INFO a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] Connected to database 
+2019-10-05 14:29:07,062 INFO a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] Connected to database 
+2019-10-05 14:29:07,063 INFO a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] Connected to database 
+2019-10-05 14:29:07,065 DEBUG a.c.p.ConnectionPool [RMI TCP Connection(4)-127.0.0.1] total size of connection: 5 
+2019-10-05 14:29:42,171 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-3] User=gunseful is not found in database 
+2019-10-05 14:29:45,471 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-7] User=gunseful is not found in database 
+2019-10-05 14:29:48,878 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-2] User=gunseful is not found in database 
+2019-10-05 14:29:52,271 ERROR a.c.s.AbstractServlet [http-nio-8081-exec-6] User=admin is not found in database 
+2019-10-05 14:29:54,370 INFO a.c.s.AbstractServlet [http-nio-8081-exec-10] User=2 has been log in 
+2019-10-05 14:29:58,663 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] JSESSIONID=7C3279B425CB94C2AD640FE00137EF96 
+2019-10-05 14:29:58,663 INFO a.c.s.p.LogoutServlet [http-nio-8081-exec-9] User=2 has out 

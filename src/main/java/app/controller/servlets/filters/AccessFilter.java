@@ -23,6 +23,7 @@ public class AccessFilter extends AbstractServlet implements Filter{
                 var user = user(req);
                 if (!availablePagesByRoles.get(user.getRole()).contains(uri)) {
                     res.sendError(403);
+                    return;
                 }
             }
         filterChain.doFilter(servletRequest, servletResponse);

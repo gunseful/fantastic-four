@@ -32,7 +32,6 @@ public abstract class AbstractDao<T> implements Dao<T> {
     }
 
 
-
     @Override
     public Optional<T> findById(int id) {
         return getSingleResult((String.format("SELECT * FROM %s WHERE ID = ?", tableName())), preparedStatement ->
@@ -54,7 +53,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
             final PreparedStatement statement = connection.prepareStatement(sql);
             transformer.transform(statement);
             final ResultSet resultSet = statement.executeQuery();
-            //Structural pattern - `Template method`
+            //Structural pattern - Template method
             return parseResultSet(resultSet);
         } catch (SQLException e) {
             logger.error("Can't execute getResultList", e);
@@ -65,7 +64,12 @@ public abstract class AbstractDao<T> implements Dao<T> {
     }
 
     List<T> getResultList(String sql) {
-        return getResultList(sql, t -> {});
+        return getResultList(sql, t -> {
+        });
+    }
+
+    public List<T> getAll() {
+        return getResultList(String.format("Select * from %s", tableName()));
     }
 
     protected abstract String tableName();

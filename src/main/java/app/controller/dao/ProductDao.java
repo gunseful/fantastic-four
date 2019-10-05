@@ -22,11 +22,6 @@ public class ProductDao extends AbstractDao<Product> implements ProductDaoIntefa
     }
 
     @Override
-    public List<Product> getAll() {
-        return getResultList(String.format("Select * from %s", tableName()));
-    }
-
-    @Override
     public void update(Product product) {
         saveOrUpdate("UPDATE PRODUCTS SET NAME = ?, PRICE = ? WHERE ID = ?", preparedStatement -> {
             preparedStatement.setString(1, product.getName());

@@ -26,11 +26,6 @@ public class UserDao extends AbstractDao<User> implements UserDaoInterface {
     }
 
     @Override
-    public List<User> getAll() {
-        return getResultList("SELECT * FROM USERS");
-    }
-
-    @Override
     public Optional<User> findByNickName(String nickname) {
         return getSingleResult("SELECT * FROM USERS WHERE NICKNAME = ?", preparedStatement -> preparedStatement.setString(1, nickname));
     }

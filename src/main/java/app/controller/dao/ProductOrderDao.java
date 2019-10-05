@@ -26,11 +26,6 @@ public class ProductOrderDao extends AbstractDao<ProductOrder> implements Produc
     }
 
     @Override
-    public List<ProductOrder> getAll() {
-        return getResultList("SELECT * FROM PRODUCTS_ORDERS");
-    }
-
-    @Override
     public void update(ProductOrder productOrder) {
             saveOrUpdate("UPDATE PRODUCTS_ORDERS SET COUNT = ? WHERE PRODUCT_ID = ? AND ORDER_ID = ?", preparedStatement -> {
                 preparedStatement.setInt(1, productOrder.getCount());

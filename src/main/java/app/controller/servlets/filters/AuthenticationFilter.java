@@ -2,8 +2,6 @@ package app.controller.servlets.filters;
 
 import app.controller.servlets.AbstractServlet;
 import app.model.user.User;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -16,8 +14,6 @@ import java.util.ResourceBundle;
 
 @WebFilter("/AuthenticationFilter")
 public class AuthenticationFilter extends AbstractServlet implements Filter {
-    public static Logger logger = LogManager.getLogger();
-
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
         //creating request and response

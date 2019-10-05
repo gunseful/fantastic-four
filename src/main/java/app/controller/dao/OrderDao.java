@@ -24,11 +24,6 @@ public class OrderDao extends AbstractDao<Order> implements OrderDaoInterface {
     }
 
     @Override
-    public List<Order> getAll() {
-        return getResultList("SELECT * FROM ORDERS");
-    }
-
-    @Override
     public void update(Order order) {
         saveOrUpdate("UPDATE ORDERS SET CUSTOMER_ID = ?, CREATEDAT = ?, STATE = ? WHERE ID = ?", preparedStatement -> {
             preparedStatement.setInt(1, order.getCustomerId());

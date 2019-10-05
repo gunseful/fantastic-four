@@ -43,7 +43,7 @@ public class RegistrationServlet extends AbstractServlet {
                 logger.info("user = {} is already exist", user.getNickname());
             }else{
                 logger.error("failed registration");
-                req.setAttribute("fail", "");
+                req.setAttribute("fail", "fail");
             }
         }catch (Exception e){
             logger.error(e);

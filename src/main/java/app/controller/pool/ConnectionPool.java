@@ -22,8 +22,6 @@ public class ConnectionPool {
     private final static ConnectionPool connectionPool = new ConnectionPool();
     private int deadConnections = 0;
 
-
-
     private ConnectionPool() {
         logger.debug("inside ConnectionPool constructor");
         queue = new ArrayBlockingQueue<>(MAX_SIZE);
@@ -83,7 +81,7 @@ public class ConnectionPool {
     private Connection makeConnection(Properties properties) throws SQLException {
         Connection connection;
         connection = DriverManager.getConnection(properties.getProperty("URL"), properties);
-        logger.debug("Connected to database");
+        logger.info("Connected to database");
         return connection;
     }
 }
