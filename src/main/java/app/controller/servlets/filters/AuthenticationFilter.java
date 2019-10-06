@@ -34,10 +34,10 @@ public class AuthenticationFilter extends AbstractServlet implements Filter {
             //if there is no current user, which has logged in person who use webapp have access only to 3 pages - home, loggin and registration
             //else - all except as described above
             if (!isLoggedIn) {
-                if (!availablePagesPagesBeforeLogin.contains(uri)) {
+                if (!availablePagesBeforeLogin.contains(uri)) {
                     res.sendRedirect("/loggin");
                 }
-            } else if (availablePagesPagesBeforeLogin.contains(uri) && !uri.equals("/LangServlet")) {
+            } else if (availablePagesBeforeLogin.contains(uri) && !uri.equals("/LangServlet")) {
                     var user = (User) session.getAttribute("user");
                     res.sendRedirect(homePagesByRoles.get(user.getRole()));
                     return;

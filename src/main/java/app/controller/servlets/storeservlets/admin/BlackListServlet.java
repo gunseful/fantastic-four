@@ -30,7 +30,6 @@ public class BlackListServlet extends AbstractServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         //getting UserService to work with database
         UserService userService = new UserServiceImpl();
-        try {
             //getting parameters from "usersForDelete" as an array
             var users = req.getParameterValues("userForDelete");
             if (users != null) {
@@ -39,9 +38,6 @@ public class BlackListServlet extends AbstractServlet {
             }else{
                 req.setAttribute("nullData", "");
             }
-        } catch (NullPointerException e) {
-            logger.error(e);
-        }
         doGet(req, resp);
     }
 }

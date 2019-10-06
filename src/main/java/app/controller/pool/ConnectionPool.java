@@ -6,7 +6,6 @@ import org.apache.logging.log4j.Logger;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.channels.NoConnectionPendingException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,18 +13,20 @@ import java.util.Properties;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 public class ConnectionPool {
 
     public static Logger logger = LogManager.getLogger();
     private static final int MAX_SIZE = 5;
     private BlockingQueue<Connection> queue;
     private final static ConnectionPool connectionPool = new ConnectionPool();
-    private int deadConnections = 0;
+    private Properties properties = new Properties();
+
 
     private ConnectionPool() {
         logger.debug("inside ConnectionPool constructor");
         queue = new ArrayBlockingQueue<>(MAX_SIZE);
-        Properties properties = new Properties();
         try {
             InputStream inputStream = getClass().getClassLoader().getResourceAsStream("connection.properties");
             if (inputStream!=null){
@@ -57,10 +58,7 @@ public class ConnectionPool {
 
     public Connection getConnection() {
         try {
-            if(deadConnections==MAX_SIZE){
-                throw new NoConnectionPendingException();
-            }
-            return queue.take();
+            return queue.poll(5, SECONDS);
         } catch (InterruptedException e) {
             throw new IllegalStateException(e);
         }
@@ -71,7 +69,7 @@ public class ConnectionPool {
             if(con.isValid(0)) {
                 queue.put(con);
             }else{
-                deadConnections++;
+                queue.put(makeConnection(properties));
             }
         } catch (InterruptedException | SQLException e) {
             throw new IllegalStateException(e);

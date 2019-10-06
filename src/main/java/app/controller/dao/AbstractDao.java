@@ -21,13 +21,25 @@ public abstract class AbstractDao<T> implements Dao<T> {
     void saveOrUpdate(String sql, StatementTransformer<PreparedStatement> transformer) {
         try {
             connection = connectionPool.getConnection();
+            connection.setAutoCommit(false);
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             transformer.transform(preparedStatement);
             preparedStatement.executeUpdate();
+            connection.commit();
+            connection.setAutoCommit(true);
         } catch (SQLException e) {
+            rollback();
             logger.error("Fail connect to database", e);
         } finally {
             connectionPool.releaseConnection(connection);
+        }
+    }
+
+    private void rollback() {
+        try {
+            connection.rollback();
+        } catch (SQLException ex) {
+            logger.error("can't rollback", ex);
         }
     }
 
